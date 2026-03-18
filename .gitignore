@@ -1,15 +1,19 @@
-# Archivos de configuración de agentes
+# Archivos de configuración de agentes y herramientas
 .agent/
 .gemini/
 ui-ux-pro-max-skill/
 .awesome-skills-library/
 
-# Archivos temporales y de datos
+# Archivos de datos temporales (no necesarios para producción)
 data_dump.json
 full_data.txt
 raw_data.json
 raw_data.txt
 
-# OS metadata
+# Listas de tareas y gestión interna
+PENDIENTES.md
+
+# Metadatos del sistema operativo
 .DS_Store
 Thumbs.db
+desktop.ini
