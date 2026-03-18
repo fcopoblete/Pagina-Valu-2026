@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://centrovalu.cl/sitemap.xml

@@ -1,0 +1,683 @@
+<!--
+Archivo: quienes-somos.html
+Descripción: Documentación de la historia, misión, visión y valores de Centro Valu.
+Última modificación: 2026-03-16
+Autor: Antigravity (AI Assistant)
+-->
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Centro Valu | Nuestra Filosofía de Salud Integral en Coquimbo</title>
+    <meta name="description"
+        content="Conoce la historia, misión y valores de Centro Valu. Un equipo multidisciplinario dedicado a mejorar la calidad de vida y el bienestar emocional en Coquimbo.">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://centrovalu.cl/quienes-somos.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://centrovalu.cl/quienes-somos.html">
+    <meta property="og:title" content="Sobre Centro Valu | Salud Integral en Coquimbo">
+    <meta property="og:description" content="Conoce nuestro propósito y al equipo que hace posible una salud de nivel superior en Coquimbo.">
+    <meta property="og:image" content="https://centrovalu.cl/assets/brand/og-image.jpg">
+
+    <!-- Google Tag (gtag.js) - Google Ads / Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-CONVERSION_ID');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'META_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            verde: '#ddf4f4',
+                            verde_text: '#4a8d8d',
+                            lila: '#efdff5',
+                            lila_text: '#8b6991',
+                            beige: '#f2ead5',
+                            rosa: '#f3d5d5',
+                            durazno: '#f7e3d0',
+                            azul: '#dbebf3',
+                        },
+                        primary: {
+                            100: '#ddf4f4',
+                            500: '#75cfcf',
+                            600: '#4a8d8d',
+                            700: '#2d5a5a',
+                            dark: '#2d5a5a',
+                        },
+                        secondary: {
+                            50: '#efdff5',
+                            500: '#a881af',
+                            600: '#8b6991',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Abhaya Libre', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .glow-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            transform: scale(0);
+            transition: transform 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        .glow-effect:hover::after {
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body class="bg-[#f8fafc] text-slate-900 font-sans antialiased">
+    <!-- SKIP LINK (Accesibilidad) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl">
+        Saltar al contenido principal
+    </a>
+
+    <!-- HEADER: GLASSMORPHISM REFINADO (ESTANDARIZADO) -->
+    <header class="fixed top-0 w-full z-50 px-4 md:px-8 py-4 transition-all duration-300" id="main-header">
+        <div
+            class="max-w-7xl mx-auto glass-card rounded-2xl shadow-premium border border-white/40 flex justify-between items-center h-20 px-4 md:px-6">
+
+            <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) -->
+            <div class="flex items-center justify-start flex-grow min-w-0 pr-4">
+                <a href="index.html" class="flex items-center gap-3 sm:gap-4 group transition-all max-w-full">
+                    <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu"
+                        width="160" height="64"
+                        class="h-8 sm:h-12 md:h-16 w-auto shrink-0 group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col text-left ml-1 min-w-0 overflow-hidden">
+                        <span
+                            class="font-display font-bold text-xs sm:text-lg md:text-xl text-primary-900 leading-none truncate">Centro
+                            Valu</span>
+                        <span
+                            class="text-[8px] sm:text-[10px] md:text-[11px] tracking-tight uppercase text-primary-600 font-black mt-1 truncate">Excelencia
+                            en Salud</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- TÍTULO CENTRAL -->
+            <div class="absolute left-1/2 -translate-x-1/2 hidden sm:block">
+                <span
+                    class="font-display font-bold text-lg md:text-xl text-primary-800 whitespace-nowrap uppercase tracking-widest">Quiénes
+                    Somos</span>
+            </div>
+
+            <!-- DERECHA: RESERVAR + MENÚ -->
+            <div class="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
+                <a href="formulario-contacto.html"
+                    class="bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
+                    Contáctanos
+                </a>
+                <button id="menu-toggle" aria-label="Abrir menú de navegación"
+                    class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-100 text-primary-700 hover:bg-primary-200 transition-colors shadow-sm shrink-0">
+                    <svg id="menu-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <svg id="close-icon" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- PANEL LATERAL (DRAWER) MÓVIL -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
+            <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300"
+                id="menu-content">
+                <div class="flex justify-between items-center mb-12">
+                    <span class="font-display font-bold text-xl text-primary-900">Menú</span>
+                    <button id="menu-close" aria-label="Cerrar menú"
+                        class="h-10 w-10 flex items-center justify-center rounded-lg bg-slate-100 text-slate-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="space-y-6">
+                    <li><a href="index.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Inicio</a>
+                    </li>
+                    <li><a href="quienes-somos.html"
+                            class="mobile-link text-2xl font-bold text-primary-600 transition-colors">Quiénes
+                            somos</a>
+                    </li>
+                    <li>
+                        <button id="convenios-toggle"
+                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            Convenios
+                            <svg id="convenios-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="convenios-submenu"
+                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
+                            <ul class="py-4 px-6 space-y-4">
+                                <li>
+                                    <a href="convenios.html#colegios"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
+                                </li>
+                                <li>
+                                    <a href="convenios.html#empresas"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="profesionales.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
+                            Equipo</a>
+                    </li>
+                    <li>
+                        <button id="specialties-toggle"
+                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            Especialidades
+                            <svg id="specialties-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="specialties-submenu"
+                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
+                            <ul class="py-4 px-6 space-y-4">
+                                <li><a href="psicologia.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a>
+                                </li>
+                                <li><a href="pediatria.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a>
+                                </li>
+                                <li><a href="fonoaudiologia.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Fonoaudiología</a>
+                                </li>
+                                <li><a href="terapia-ocupacional.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Terapia
+                                        Ocupacional</a></li>
+                                <li><a href="psicopedagogia.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="index.html#contacto"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
+                    </li>
+                    <li class="pt-8 border-t border-slate-100">
+                        <a href="formulario-contacto.html"
+                            class="mobile-link group flex items-center justify-center gap-3 w-full bg-primary-600 text-white text-center py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 glow-effect transition-all hover:scale-[1.02] active:scale-[0.98]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Formulario de contacto
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-auto pb-8 border-t border-slate-100 pt-8">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Contacto Directo</p>
+                    <p class="text-lg font-bold text-slate-900">+569 7245 4921</p>
+                    <p class="text-sm text-slate-500">centrovalu@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="main-content" class="pt-40 pb-20 lg:pt-56 lg:pb-32 relative overflow-hidden bg-white">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary-100/50 rounded-full blur-[100px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                <div class="lg:col-span-12 text-center mb-16 px-4">
+                    <span
+                        class="text-primary-600 font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 block">¡Bienvenidos
+                        a Centro VALÚ, Salud Integral!</span>
+                    <h1
+                        class="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-slate-900 leading-tight mb-8">
+                        Acompañamos tu bienestar con un enfoque <br class="hidden sm:block"><span
+                            class="text-primary-600 italic">humano, profesional y accesible.</span>
+                    </h1>
+                    <p class="max-w-3xl mx-auto text-slate-500 text-lg sm:text-xl leading-relaxed">
+                        Creemos que todos merecen atención de calidad, por eso trabajamos con un equipo
+                        interdisciplinario,
+                        especializado y comprometido con una atención cálida, cercana y basada en evidencia.
+                    </p>
+
+                </div>
+            </div>
+            <div class="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[21/9] mb-20">
+                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=1200"
+                    alt="Equipo de profesionales interdisciplinarios de Centro Valu"
+                    width="1200" height="514"
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
+    </main>
+
+    <!-- NUESTRO PROPÓSITO Y FILOSOFÍA -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="absolute top-1/2 left-0 -translate-x-1/2 w-96 h-96 bg-primary-100/30 rounded-full blur-[100px]">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- PROPÓSITO -->
+                <div class="relative z-10">
+                    <div
+                        class="inline-flex items-center gap-3 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100 mb-6">
+                        <span class="text-2xl">🌱</span>
+                        <span class="font-bold text-slate-900 uppercase tracking-widest text-xs">Nuestro
+                            Propósito</span>
+                    </div>
+                    <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+                        Una alternativa <span class="text-primary-600 italic">cercana</span> a la salud pública.
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        Diseñamos cada rincón de nuestro centro pensando en ti: un lugar seguro, libre de juicios,
+                        donde puedas iniciar un proceso de transformación personal, acompañado por un equipo que
+                        realmente se involucra.
+                    </p>
+                    <div class="bg-primary-600/5 border-l-4 border-primary-500 p-6 rounded-r-2xl italic text-slate-700">
+                        "La salud debe ser un derecho, no un privilegio."
+                    </div>
+                </div>
+
+                <!-- FILOSOFÍA -->
+                <div class="bg-white p-8 lg:p-12 rounded-[3rem] shadow-premium border border-white">
+                    <div class="flex items-center gap-3 mb-10">
+                        <span class="text-2xl">🤝</span>
+                        <h3 class="font-display text-3xl font-bold text-slate-900">Nuestra Filosofía</h3>
+                    </div>
+                    <div class="grid gap-6">
+                        <div class="flex gap-4 items-start group">
+                            <div
+                                class="h-10 w-10 shrink-0 rounded-xl bg-brand-verde flex items-center justify-center text-primary-600 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Interdisciplina</h4>
+                                <p class="text-sm text-slate-500">Atención integral en un solo lugar.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group">
+                            <div
+                                class="h-10 w-10 shrink-0 rounded-xl bg-brand-lila flex items-center justify-center text-secondary-600 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Colaboración Clínica</h4>
+                                <p class="text-sm text-slate-500">Trabajo clínico conjunto y constante.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group">
+                            <div
+                                class="h-10 w-10 shrink-0 rounded-xl bg-brand-beige flex items-center justify-center text-slate-700 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.246.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.246.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Ética y Formación</h4>
+                                <p class="text-sm text-slate-500">Formación continua y ética profesional.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group">
+                            <div
+                                class="h-10 w-10 shrink-0 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">Accesibilidad Real</h4>
+                                <p class="text-sm text-slate-500">Salud accesible con Fonasa e Isapres.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-3 bg-secondary-50 px-4 py-2 rounded-full shadow-sm border border-secondary-100 mb-6 font-bold text-secondary-600 uppercase tracking-widest text-xs">
+                    <span>🕊️</span> Nuestra Historia
+                </div>
+                <h2 class="font-display text-4xl font-bold text-slate-900">Un propósito nacido en <br
+                        class="hidden sm:block"> tiempos de crisis.</h2>
+            </div>
+
+            <div
+                class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary-200 before:to-transparent">
+
+                <!-- 2020 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-primary-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-sm">
+                        2020</div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-3xl bg-slate-50 border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                        <h4 class="font-bold text-slate-900 mb-2">Raíces de Solidaridad</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            VALÚ nace en plena pandemia con un propósito claro: acompañar y contener.
+                            Ofrecimos gratuitamente todos nuestros servicios como un gesto de solidaridad concreta.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-secondary-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-sm">
+                        2021</div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-3xl bg-slate-50 border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                        <h4 class="font-bold text-slate-900 mb-2">El Centro Físico</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Abrimos nuestro centro físico con la misma vocación social, ampliando servicios
+                            para hacer de la salud un espacio accesible y profesional para todos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ACTUALIDAD -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" />
+                        </svg>
+                    </div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-3xl bg-slate-50 border border-slate-100 shadow-sm transition-all hover:shadow-md">
+                        <h4 class="font-bold text-slate-900 mb-2">Impacto Comunitario</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Desarrollamos programas de salud mental en colegios y organizaciones, con un enfoque
+                            constructivista que pone a las personas en el centro de cada proceso.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTROS VALORES -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 mb-16">Nuestros Valores</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="p-8 bg-white rounded-3xl shadow-soft hover:scale-105 transition-transform">
+                    <h4 class="font-bold text-primary-600 uppercase tracking-widest text-xs mb-4">Empatía</h4>
+                    <p class="text-slate-500 text-sm italic">Sentir y pensar junto al otro.</p>
+                </div>
+                <div class="p-8 bg-white rounded-3xl shadow-soft hover:scale-105 transition-transform">
+                    <h4 class="font-bold text-secondary-600 uppercase tracking-widest text-xs mb-4">Excelencia</h4>
+                    <p class="text-slate-500 text-sm italic">Rigor científico y formación constante.</p>
+                </div>
+                <div class="p-8 bg-white rounded-3xl shadow-soft hover:scale-105 transition-transform">
+                    <h4 class="font-bold text-slate-900 uppercase tracking-widest text-xs mb-4">Integridad</h4>
+                    <p class="text-slate-500 text-sm italic">Obrar con honestidad y transparencia.</p>
+                </div>
+                <div class="p-8 bg-white rounded-3xl shadow-soft hover:scale-105 transition-transform">
+                    <h4 class="font-bold text-primary-600 uppercase tracking-widest text-xs mb-4">Innovación</h4>
+                    <p class="text-slate-500 text-sm italic">Nuevas miradas para viejos desafíos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
+    <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 px-4">
+                <!-- COLUMNA 1: BRANDING -->
+                <div class="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
+                    <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu Footer" width="160" height="64" class="h-16 w-auto mb-6" loading="lazy">
+                    <div class="flex items-center gap-3 mb-4 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+                        <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Convenio Fonasa" width="16" height="16" class="h-4 w-auto">
+                        <span class="text-[10px] font-black text-slate-400 tracking-widest uppercase">Convenio con Fonasa</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
+                        Excelencia en salud multidisciplinaria para toda la familia en el corazón de Coquimbo.
+                    </p>
+                </div>
+
+                <!-- COLUMNA 2: NAVEGACIÓN -->
+                <div class="md:col-span-1 text-center md:text-left">
+                    <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Misión y Equipo</h5>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Inicio</a></li>
+                        <li><a href="quienes-somos.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Quiénes Somos</a></li>
+                        <li><a href="profesionales.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Nuestro Equipo</a></li>
+                        <li><a href="index.html#contacto" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Ubicación</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 3: SERVICIOS -->
+                <div class="md:col-span-1 text-center md:text-left">
+                    <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Servicios</h5>
+                    <ul class="space-y-4">
+                        <li><a href="psicologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicología</a></li>
+                        <li><a href="pediatria.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Pediatría</a></li>
+                        <li><a href="fonoaudiologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
+                        <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios Colegios</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 4: CONTACTO -->
+                <div class="md:col-span-1 text-center md:text-left">
+                    <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Contacto Directo</h5>
+                    <ul class="space-y-4">
+                        <li class="flex flex-col gap-1">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Teléfono</span>
+                            <!-- Versión Desktop -->
+                            <span class="hidden md:block text-sm font-bold text-slate-700 tracking-tight">+569 7245 4921</span>
+                            <!-- Versión Móvil (WhatsApp) -->
+                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">
+                                +569 7245 4921
+                            </a>
+                        </li>
+                        <li class="flex flex-col gap-1">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email</span>
+                            <a href="mailto:centrovalu@gmail.com" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors">centrovalu@gmail.com</a>
+                        </li>
+                        <li class="pt-4">
+                            <a href="formulario-contacto.html" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300 text-center md:text-left">
+                    &copy; 2024 Centro Valu. Excelencia en Salud Coquimbo.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Logic
+        // Mobile Menu Logic Unificada
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuContent = document.getElementById('menu-content');
+        const menuClose = document.getElementById('menu-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('opacity-0');
+            if (isOpen) {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                menuContent.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            } else {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                menuContent.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', toggleMenu);
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) toggleMenu();
+            });
+        }
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                menuContent.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Submenu Specialties Logic
+        const specialtiesToggle = document.getElementById('specialties-toggle');
+        const specialtiesSubmenu = document.getElementById('specialties-submenu');
+        const specialtiesChevron = document.getElementById('specialties-chevron');
+
+        if (specialtiesToggle) {
+            specialtiesToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
+                if (isOpen) {
+                    specialtiesSubmenu.style.maxHeight = '0px';
+                    specialtiesChevron.classList.remove('rotate-180');
+                } else {
+                    specialtiesSubmenu.style.maxHeight = specialtiesSubmenu.scrollHeight + 'px';
+                    specialtiesChevron.classList.add('rotate-180');
+                }
+            });
+        }
+
+        // Submenu Convenios Logic
+        const conveniosToggle = document.getElementById('convenios-toggle');
+        const conveniosSubmenu = document.getElementById('convenios-submenu');
+        const conveniosChevron = document.getElementById('convenios-chevron');
+
+        if (conveniosToggle) {
+            conveniosToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
+                if (isOpen) {
+                    conveniosSubmenu.style.maxHeight = '0px';
+                    conveniosChevron.classList.remove('rotate-180');
+                } else {
+                    conveniosSubmenu.style.maxHeight = conveniosSubmenu.scrollHeight + 'px';
+                    conveniosChevron.classList.add('rotate-180');
+                }
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.querySelector('.glass-card').classList.add('shadow-2xl');
+            } else {
+                header.classList.remove('py-2');
+                header.querySelector('.glass-card').classList.remove('shadow-2xl');
+            }
+        });
+    </script>
+    <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
+    <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n."
+        target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
+        class="fixed bottom-10 right-10 h-16 w-16 bg-[#25D366] text-white rounded-2xl shadow-[0_20px_40px_-5px_rgba(37,211,102,0.3)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[60] group overflow-hidden animate-float">
+        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+        <svg class="h-8 w-8 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.412.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <!-- Tracking Conversión WhatsApp -->
+    <script>
+        document.getElementById('whatsapp-btn').addEventListener('click', function() {
+            // Google Ads
+            gtag('event', 'conversion', {
+                'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
+            });
+            // Meta Pixel
+            fbq('track', 'Contact');
+        });
+    </script>
+</body>
+
+</html>

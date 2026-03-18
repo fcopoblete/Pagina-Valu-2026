@@ -1,0 +1,15 @@
+# Archivos de configuración de agentes
+.agent/
+.gemini/
+ui-ux-pro-max-skill/
+.awesome-skills-library/
+
+# Archivos temporales y de datos
+data_dump.json
+full_data.txt
+raw_data.json
+raw_data.txt
+
+# OS metadata
+.DS_Store
+Thumbs.db

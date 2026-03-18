@@ -1,0 +1,17 @@
+[
+  { "nombre": "Gabriela Pereira", "especialidad": "Fonoaudiología", "cargo": "Fonoaudióloga", "resumen": "Atención profesional en Fonoaudiología para Centro Valu.", "img": "gabriela-pereira.webp", "bg": "brand-rosa" },
+  { "nombre": "Ulda Castillo", "especialidad": "Fonoaudiología", "cargo": "Fonoaudióloga", "resumen": "Atención profesional en Fonoaudiología para Centro Valu.", "img": "ulda-castillo.webp", "bg": "primary-100" },
+  { "nombre": "Bruno Araya", "especialidad": "Fonoaudiología", "cargo": "Fonoaudiólogo", "resumen": "Atención profesional en Fonoaudiología para Centro Valu.", "img": "placeholder", "bg": "brand-lila" },
+  { "nombre": "Erik Navarro", "especialidad": "Psicología", "cargo": "Psicólogo", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "erik-navarro.webp", "bg": "brand-beige" },
+  { "nombre": "Benjamín Alarcón", "especialidad": "Psicología", "cargo": "Psicólogo", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "benjamin-alarcon.webp", "bg": "brand-rosa" },
+  { "nombre": "Josefa Arias", "especialidad": "Psicología", "cargo": "Psicóloga", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "josefa-arias.webp", "bg": "primary-100" },
+  { "nombre": "Eva Aguayo", "especialidad": "Psicología", "cargo": "Psicóloga", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "eva-aguayo.webp", "bg": "brand-lila" },
+  { "nombre": "Magdalena Zepeda", "especialidad": "Psicología", "cargo": "Psicóloga", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "magdalena-zepeda.webp", "bg": "brand-beige" },
+  { "nombre": "Valentina González", "especialidad": "Psicología", "cargo": "Psicóloga", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "valentina-gonzalez.webp", "bg": "brand-rosa" },
+  { "nombre": "Cristopher Espejo", "especialidad": "Psicología", "cargo": "Psicólogo", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "cristopher-espejo.webp", "bg": "primary-100" },
+  { "nombre": "María Muñoz", "especialidad": "Psicología", "cargo": "Psicóloga", "resumen": "Atención profesional en Psicología para Centro Valu.", "img": "maria-muñoz.webp", "bg": "brand-beige" },
+  { "nombre": "Valeria Alfaro", "especialidad": "Terapia Ocupacional", "cargo": "Terapeuta Ocupacional", "resumen": "Atención profesional en Terapia Ocupacional para Centro Valu.", "img": "valeria-alfaro.webp", "bg": "brand-rosa" },
+  { "nombre": "Valentina Jiménez", "especialidad": "Psicología", "cargo": "Psicóloga / Directora", "resumen": "Fundadora y Directora de Centro Valu, liderando un equipo comprometido con la salud integral.", "img": "placeholder", "bg": "primary-500" },
+  { "nombre": "Eugenia Ortiz", "especialidad": "Pediatría", "cargo": "Pediatra", "resumen": "Atención médica especializada para el cuidado y bienestar integral de niños y adolescentes.", "img": "placeholder", "bg": "primary-100" },
+  { "nombre": "Pamela Tarifeño", "especialidad": "Psicopedagogía", "cargo": "Psicopedagoga", "resumen": "Especialista en potenciar el aprendizaje y desarrollo cognitivo en diversas etapas educativas.", "img": "placeholder", "bg": "brand-lila" }
+]

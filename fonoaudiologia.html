@@ -1,0 +1,848 @@
+<!--
+Archivo: fonoaudiologia.html
+Descripción: Información sobre el servicio de Fonoaudiología y especialistas.
+Última modificación: 2026-03-16
+Autor: Antigravity (AI Assistant)
+-->
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonoaudiología en Coquimbo y La Serena | Centro Valu - Terapia del Lenguaje</title>
+    <meta name="description"
+        content="Centro Valu Coquimbo: Especialistas en Fonoaudiología. Terapia del lenguaje, habla y deglución para niños y adultos en Coquimbo y La Serena con convenio Fonasa.">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://centrovalu.cl/fonoaudiologia.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://centrovalu.cl/fonoaudiologia.html">
+    <meta property="og:title" content="Fonoaudiología en Coquimbo y La Serena | Centro Valu">
+    <meta property="og:description" content="Terapia del lenguaje y fonoaudiología integral con enfoque profesional y convenio Fonasa en Centro Valu Coquimbo.">
+    <meta property="og:image" content="https://centrovalu.cl/assets/brand/og-fonoaudiologia.jpg">
+
+    <!-- Google Tag (gtag.js) - Google Ads / Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-CONVERSION_ID');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'META_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- JSON-LD: Medical WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Servicio de Fonoaudiología - Centro Valu Coquimbo",
+      "description": "Evaluación y tratamiento fonoaudiológico para niños y adultos en Coquimbo.",
+      "medicalSpecialty": "SpeechTherapy",
+      "mainEntity": {
+        "@type": "MedicalBusiness",
+        "name": "Centro Valu",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Parque Nacional Lauca 1612",
+          "addressLocality": "Coquimbo",
+          "addressRegion": "Coquimbo y La Serena",
+          "addressCountry": "CL"
+        }
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            verde: '#ddf4f4',
+                            verde_text: '#4a8d8d',
+                            lila: '#efdff5',
+                            lila_text: '#8b6991',
+                            beige: '#f2ead5',
+                            rosa: '#f3d5d5',
+                            durazno: '#f7e3d0',
+                            azul: '#dbebf3',
+                        },
+                        primary: {
+                            100: '#ddf4f4',
+                            500: '#75cfcf',
+                            600: '#4a8d8d',
+                            700: '#2d5a5a',
+                            dark: '#2d5a5a',
+                        },
+                        secondary: {
+                            50: '#efdff5',
+                            500: '#a881af',
+                            600: '#8b6991',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Abhaya Libre', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .glow-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            transform: scale(0);
+            transition: transform 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        .proSwiper .swiper-slide {
+            height: auto;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f8fafc] text-slate-900 font-sans antialiased">
+    <!-- SKIP LINK (Accesibilidad) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl">
+        Saltar al contenido principal
+    </a>
+
+    <!-- HEADER: GLASSMORPHISM REFINADO (ESTANDARIZADO) -->
+    <header class="fixed top-0 w-full z-50 px-4 md:px-8 py-4 transition-all duration-300" id="main-header">
+        <div
+            class="max-w-7xl mx-auto glass-card rounded-2xl shadow-premium border border-white/40 flex justify-between items-center h-20 px-4 md:px-6">
+
+            <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) -->
+            <div class="flex items-center justify-start flex-grow min-w-0 pr-4">
+                <a href="index.html" class="flex items-center gap-3 sm:gap-4 group transition-all max-w-full">
+                    <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu"
+                        width="160" height="64"
+                        class="h-8 sm:h-12 md:h-16 w-auto shrink-0 group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col text-left ml-1 min-w-0 overflow-hidden">
+                        <span
+                            class="font-display font-bold text-xs sm:text-lg md:text-xl text-primary-900 leading-none truncate">Centro
+                            Valu</span>
+                        <span
+                            class="text-[8px] sm:text-[10px] md:text-[11px] tracking-tight uppercase text-primary-600 font-black mt-1 truncate">Excelencia
+                            en Salud</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- TÍTULO CENTRAL -->
+            <div class="absolute left-1/2 -translate-x-1/2 hidden sm:block">
+                <span
+                    class="font-display font-bold text-lg md:text-xl text-primary-800 whitespace-nowrap uppercase tracking-widest">Fonoaudiología</span>
+            </div>
+
+            <!-- DERECHA: RESERVAR + MENÚ -->
+            <div class="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
+                <a href="formulario-contacto.html?especialidad=fonoaudiologia"
+                    class="bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
+                    Contáctanos
+                </a>
+                <button id="menu-toggle" aria-label="Abrir menú de navegación"
+                    class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-100 text-primary-700 hover:bg-primary-200 transition-colors shadow-sm shrink-0">
+                    <svg id="menu-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <svg id="close-icon" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- PANEL LATERAL (DRAWER) MÓVIL -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
+            <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300"
+                id="menu-content">
+                <div class="flex justify-between items-center mb-12">
+                    <span class="font-display font-bold text-xl text-primary-900">Menú</span>
+                    <button id="menu-close" aria-label="Cerrar menú"
+                        class="h-10 w-10 flex items-center justify-center rounded-lg bg-slate-100 text-slate-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="space-y-6">
+                    <li><a href="index.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Inicio</a>
+                    </li>
+                    <li><a href="quienes-somos.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes
+                            somos</a>
+                    </li>
+                    <li>
+                        <button id="convenios-toggle"
+                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            Convenios
+                            <svg id="convenios-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="convenios-submenu"
+                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
+                            <ul class="py-4 px-6 space-y-4">
+                                <li>
+                                    <a href="convenios.html#colegios"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
+                                </li>
+                                <li>
+                                    <a href="convenios.html#empresas"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="profesionales.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
+                            Equipo</a>
+                    </li>
+                    <li>
+                        <button id="specialties-toggle"
+                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            Especialidades
+                            <svg id="specialties-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="specialties-submenu"
+                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
+                            <ul class="py-4 px-6 space-y-4">
+                                <li><a href="psicologia.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a>
+                                </li>
+                                <li><a href="pediatria.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a>
+                                </li>
+                                <li><a href="fonoaudiologia.html"
+                                        class="mobile-link block text-lg font-semibold text-primary-600">Fonoaudiología</a>
+                                </li>
+                                <li><a href="terapia-ocupacional.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Terapia
+                                        Ocupacional</a></li>
+                                <li><a href="psicopedagogia.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="index.html#contacto"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
+                    </li>
+                    <li class="pt-8 border-t border-slate-100">
+                        <a href="formulario-contacto.html?especialidad=fonoaudiologia"
+                            class="mobile-link group flex items-center justify-center gap-3 w-full bg-primary-600 text-white text-center py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 glow-effect transition-all hover:scale-[1.02] active:scale-[0.98]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Formulario de contacto
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-auto pb-8 border-t border-slate-100 pt-8">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Contacto Directo</p>
+                    <p class="text-lg font-bold text-slate-900">+569 7245 4921</p>
+                    <p class="text-sm text-slate-500">centrovalu@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="main-content" class="pt-40 pb-20 lg:pt-56 lg:pb-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6">
+                    <h1 class="font-display text-5xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
+                        Fonoaudiología <br><span class="text-secondary-500 italic">Comunicación y Voz.</span>
+                    </h1>
+                    <div
+                        class="mb-8 inline-flex items-center gap-3 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
+                        <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Fonasa" class="h-6 w-auto">
+                        <span class="text-xs font-bold text-primary-700 uppercase tracking-widest">Convenio con
+                            Fonasa</span>
+                    </div>
+                    <p class="mt-8 text-lg text-slate-500 leading-relaxed border-l-4 border-secondary-500 pl-6">
+                        Especialistas en la rehabilitación del lenguaje, habla, voz y deglución para todas las edades.
+                    </p>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="#detalles"
+                            class="px-8 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all">
+                            Detalles del Servicio
+                        </a>
+                        <a href="#equipo"
+                            class="px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-xl font-bold hover:bg-slate-50 transition-all">
+                            Ver Profesionales
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 lg:mt-0 lg:col-span-6">
+                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800"
+                            alt="Sesión de fonoaudiología para rehabilitación del lenguaje en Centro Valu"
+                            width="800" height="600"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- DETALLES -->
+    <section id="detalles" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-display text-4xl font-bold text-slate-900 mb-10">Áreas de Atención</h2>
+            <div class="prose prose-lg text-slate-600 space-y-6">
+                <p>Nuestra intervención se basa en la evidencia científica y el trato amoroso, buscando siempre la mejor
+                    comunicación posible para nuestros pacientes.</p>
+                <div class="space-y-4">
+                    <div
+                        class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:bg-slate-50 transition-all">
+                        <div class="h-6 w-6 text-secondary-500 mt-1">✓</div>
+                        <p>Trastornos del Lenguaje (TEL/TDL).</p>
+                    </div>
+                    <div
+                        class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:bg-slate-50 transition-all">
+                        <div class="h-6 w-6 text-secondary-500 mt-1">✓</div>
+                        <p>Dificultades en el Habla y la Articulación.</p>
+                    </div>
+                    <div
+                        class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:bg-slate-50 transition-all">
+                        <div class="h-6 w-6 text-secondary-500 mt-1">✓</div>
+                        <p>Terapia de la Voz y Deglución.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 p-10 bg-secondary-50 rounded-[2rem] border border-secondary-100">
+                <h3 class="font-display text-2xl font-bold text-secondary-900 mb-4">Comunicación Sin Barreras</h3>
+                <p class="text-secondary-800">Creemos que cada voz merece ser escuchada. Acompañamos el proceso de
+                    rehabilitación con paciencia y profesionalismo.</p>
+                <div class="mt-8">
+                    <a href="formulario-contacto.html?especialidad=fonoaudiologia"
+                        class="inline-flex bg-secondary-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary-700 transition-all">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESIONALES RELACIONADOS: CARRUSEL SWIPER -->
+    <section id="equipo" class="py-24 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-display text-4xl font-bold text-slate-900 mb-16 text-center">Nuestros Fonoaudiólogos</h2>
+
+            <div class="swiper proSwiper pb-12">
+                <div class="swiper-wrapper">
+                    <!-- PROFESIONAL: Bruno Araya -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
+                            data-pro-id="bruno-araya">
+                            <div
+                                class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-brand-lila/20 text-brand-lila flex items-center justify-center">
+                                <span class="font-display text-4xl opacity-20">Valu</span>
+                            </div>
+                            <h4 class="font-bold text-xl text-slate-900">Bruno Araya</h4>
+                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-4">Fonoaudiólogo</p>
+                            <div class="mt-auto">
+                                <button class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
+                                    Ver Perfil
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROFESIONAL: Gabriela Pereira -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="pro-card group bg-white p-6 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
+                            data-pro-id="gabriela-pereira">
+                            <div
+                                class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-brand-rosa/20 text-brand-rosa flex items-center justify-center">
+                                <img src="assets/img/team/gabriela-pereira.webp?v=top_framed" alt="Fonoaudióloga Gabriela Pereira"
+                                    width="200" height="200" loading="lazy"
+                                    class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <h4 class="font-bold text-xl text-slate-900">Gabriela Pereira</h4>
+                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-4">Fonoaudióloga</p>
+                            <div class="mt-auto">
+                                <button class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
+                                    Ver Perfil
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROFESIONAL: Ulda Castillo -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
+                            data-pro-id="ulda-castillo">
+                            <div
+                                class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-primary-100/20 text-primary-500 flex items-center justify-center">
+                                <img src="assets/img/team/ulda-castillo.webp?v=top_framed" alt="Fonoaudióloga Ulda Castillo"
+                                    width="200" height="200" loading="lazy"
+                                    class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <h4 class="font-bold text-xl text-slate-900">Ulda Castillo</h4>
+                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-4">Fonoaudióloga</p>
+                            <div class="mt-auto">
+                                <button class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
+                                    Ver Perfil
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-next !text-primary-600"></div>
+                <div class="swiper-button-prev !text-primary-600"></div>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="profesionales.html"
+                    class="inline-flex items-center text-primary-600 font-bold hover:gap-2 transition-all">Ver todo el
+                    equipo <span class="ml-2">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- BRANDING MINIMALISTA -->
+            <div class="flex flex-col items-center mb-10">
+                <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu Footer" width="120" height="48" class="h-12 w-auto mb-3" loading="lazy">
+                <div class="flex items-center gap-2">
+                    <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Logotipo Fonasa footer"
+                        width="12" height="12" class="h-3 w-auto opacity-70" loading="lazy">
+                    <span class="text-[9px] font-bold text-slate-400 tracking-widest uppercase">Convenio con
+                        Fonasa</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 md:gap-16 text-center">
+                <!-- COLUMNA 1: NAVEGACIÓN -->
+                <div>
+                    <h5
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center justify-center gap-2">
+                        <span class="w-4 h-px bg-slate-200"></span> Menú
+                    </h5>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="font-bold text-slate-600 hover:text-primary-600 transition-colors text-sm">Inicio</a>
+                        </li>
+                        <li><a href="quienes-somos.html"
+                                class="font-bold text-slate-600 hover:text-primary-600 transition-colors text-sm">Quiénes
+                                somos</a></li>
+                        <li><a href="profesionales.html"
+                                class="font-bold text-slate-600 hover:text-primary-600 transition-colors text-sm">Nuestro
+                                Equipo</a></li>
+                        <li><a href="index.html#contacto"
+                                class="font-bold text-slate-600 hover:text-primary-600 transition-colors text-sm">Ubicación</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 2: SECCIONES -->
+                <div>
+                    <h5
+                        class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center justify-center gap-2">
+                        <span class="w-4 h-px bg-slate-200"></span> Servicios
+                    </h5>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#especialidades"
+                                class="font-bold text-slate-600 hover:text-primary-600 transition-colors text-sm">Especialidades</a>
+                        </li>
+                        <li class="flex flex-col gap-1">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Teléfono</span>
+                            <!-- Versión Desktop -->
+                            <span class="hidden md:block text-sm font-bold text-slate-700 tracking-tight">+569 7245 4921</span>
+                            <!-- Versión Móvil (WhatsApp) -->
+                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">
+                                +569 7245 4921
+                            </a>
+                        </li>
+                        <li><a href="convenios.html"
+                                class="font-bold text-slate-600 hover:text-primary-600 transition-colors text-sm">Convenios</a>
+                        </li>
+                        <li><a href="formulario-contacto.html"
+                                class="font-bold text-primary-600 hover:underline transition-colors text-sm">Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mt-10 pt-6 border-t border-slate-50 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300">
+                &copy; 2024 Centro Valu. Excelencia en Salud Coquimbo.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- PANEL LATERAL: DETALLES DE PROFESIONAL (DRAWER) -->
+    <div id="pro-drawer-overlay"
+        class="fixed inset-0 z-[70] bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500">
+        <div id="pro-drawer-content"
+            class="absolute right-0 top-0 h-full w-full max-w-2xl bg-white/90 backdrop-blur-xl shadow-2xl translate-x-full transition-transform duration-500 ease-out flex flex-col border-l border-white/20">
+            
+            <button id="close-pro-drawer" class="absolute top-6 right-6 h-12 w-12 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 18L18 6M6 6l12 12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="flex-grow overflow-y-auto custom-scrollbar p-8 md:p-12">
+                <div id="pro-details-target"></div>
+            </div>
+
+            <div class="p-8 border-t border-slate-100 bg-slate-50/50">
+                <a href="formulario-contacto.html" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
+                    CONTÁCTANOS
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const proDataExtended = {
+            "bruno-araya": {
+                nombre: "Bruno Araya",
+                cargo: "Fonoaudiólogo",
+                img: "assets/img/team/placeholder.webp",
+                bg: "bg-brand-lila/20",
+                especialidad: "Fonoaudiología",
+                formacion: [
+                    "Fonoaudiólogo, Licenciado en Fonoaudiología.",
+                    "Especialista en comunicación y deglución."
+                ],
+                descripcion: "Atención profesional en Fonoaudiología para Centro Valu, brindando apoyo integral en las diversas etapas del desarrollo."
+            },
+            "gabriela-pereira": {
+                nombre: "Gabriela Pereira",
+                cargo: "Fonoaudióloga",
+                img: "assets/img/team/gabriela-pereira.webp",
+                bg: "bg-brand-rosa/20",
+                especialidad: "Fonoaudiología",
+                formacion: [
+                    "Diplomado en motricidad orofacial.",
+                    "Diplomado condición del espectro autista (enfoque de derechos).",
+                    "Diplomado de integración sensorial CEA y TDAH.",
+                    "Certificación ADOS.",
+                    "Especialización en tartamudez infantil.",
+                    "Especialista en evaluación post frenectomía y abordaje miofuncional."
+                ],
+                descripcion: "Fonoaudióloga con experiencia en primera infancia, adolescentes y adultos. Se desempeña en el abordaje de voz, tartamudez y motricidad orofacial. Integra el juego libre y la metodología A.M.A.R in sus intervenciones, favoreciendo procesos terapéuticos significativos y respetuosos."
+            },
+            "ulda-castillo": {
+                nombre: "Ulda Castillo",
+                cargo: "Fonoaudióloga",
+                img: "assets/img/team/ulda-castillo.webp",
+                bg: "bg-primary-100/20",
+                especialidad: "Fonoaudiología",
+                formacion: [
+                    "Diplomada experto en autismo (intervención clínica).",
+                    "Metodología TEACCH y Enfoque CLAP.",
+                    "Pasantía clínica en motricidad orofacial IROF.",
+                    "Certificada en Trastornos del desarrollo del lenguaje.",
+                    "Experta en evaluación fonoaudiológica en Espectro Autista."
+                ],
+                descripcion: "Fonoaudióloga que trabaja desde la mirada del modelo AMAR, especializada en atención en neurodivergencia desde un enfoque afirmativo. Incorpora la terapia de juego como estrategia principal para favorecer la motivación y el aprendizaje significativo, integrando permanentemente a las familias."
+            }
+        };
+
+        const proDrawerOverlay = document.getElementById('pro-drawer-overlay');
+        const proDrawerContent = document.getElementById('pro-drawer-content');
+        const closeProDrawer = document.getElementById('close-pro-drawer');
+        const proDetailsTarget = document.getElementById('pro-details-target');
+
+        function openDrawer(proId) {
+            const data = proDataExtended[proId];
+            if (!data) return;
+
+            const hasImage = !data.img.includes('placeholder.webp');
+            const bgClass = data.bg || 'bg-brand-lila/20';
+
+            proDetailsTarget.innerHTML = `
+                <div class="flex flex-col gap-8">
+                    <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center shadow-inner">
+                        ${hasImage ? `
+                            <img src="${data.img}" alt="${data.nombre}" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500">
+                        ` : `
+                            <span class="text-primary-300 font-display text-8xl">Valu</span>
+                        `}
+                    </div>
+                    <div>
+                        <span class="text-primary-600 font-bold text-xs uppercase tracking-[0.2em] mb-2 block">${data.especialidad}</span>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900">${data.nombre}</h2>
+                        <p class="text-slate-400 font-medium mt-2">${data.cargo}</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Descripción Profesional</h5>
+                        <p class="text-slate-600 leading-relaxed text-lg">${data.descripcion}</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Formación y Especialidades</h5>
+                        <ul class="grid gap-4">
+                            ${data.formacion.map(item => `
+                                <li class="flex items-start gap-3 text-slate-600">
+                                    <svg class="w-5 h-5 text-primary-500 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="font-medium">${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            proDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            proDrawerContent.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            proDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+            proDrawerContent.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.open-pro-drawer')) {
+                const card = e.target.closest('.pro-card');
+                const proId = card.getAttribute('data-pro-id');
+                openDrawer(proId);
+            }
+        });
+
+        if (closeProDrawer) closeProDrawer.addEventListener('click', closeDrawer);
+        if (proDrawerOverlay) {
+            proDrawerOverlay.addEventListener('click', (e) => {
+                if (e.target === proDrawerOverlay) closeDrawer();
+            });
+        }
+
+        // Mobile Menu Logic
+        // Mobile Menu Logic Unificada
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuContent = document.getElementById('menu-content');
+        const menuClose = document.getElementById('menu-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('opacity-0');
+            if (isOpen) {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                menuContent.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            } else {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                menuContent.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', toggleMenu);
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) toggleMenu();
+            });
+        }
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                menuContent.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Submenu Specialties Logic
+        const specialtiesToggle = document.getElementById('specialties-toggle');
+        const specialtiesSubmenu = document.getElementById('specialties-submenu');
+        const specialtiesChevron = document.getElementById('specialties-chevron');
+
+        if (specialtiesToggle) {
+            specialtiesToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
+                if (isOpen) {
+                    specialtiesSubmenu.style.maxHeight = '0px';
+                    specialtiesChevron.classList.remove('rotate-180');
+                } else {
+                    specialtiesSubmenu.style.maxHeight = specialtiesSubmenu.scrollHeight + 'px';
+                    specialtiesChevron.classList.add('rotate-180');
+                }
+            });
+        }
+
+        // Submenu Convenios Logic
+        const conveniosToggle = document.getElementById('convenios-toggle');
+        const conveniosSubmenu = document.getElementById('convenios-submenu');
+        const conveniosChevron = document.getElementById('convenios-chevron');
+
+        if (conveniosToggle) {
+            conveniosToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
+                if (isOpen) {
+                    conveniosSubmenu.style.maxHeight = '0px';
+                    conveniosChevron.classList.remove('rotate-180');
+                } else {
+                    conveniosSubmenu.style.maxHeight = conveniosSubmenu.scrollHeight + 'px';
+                    conveniosChevron.classList.add('rotate-180');
+                }
+            });
+        }
+
+        // Experiencia Dinámica
+        function updateExperience() {
+            const currentYear = new Date().getFullYear();
+            document.querySelectorAll('.dynamic-exp').forEach(span => {
+                const startYear = parseInt(span.getAttribute('data-start-year'));
+                if (!isNaN(startYear)) {
+                    span.textContent = currentYear - startYear;
+                }
+            });
+        }
+        updateExperience();
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.querySelector('.glass-card').classList.add('shadow-2xl');
+            } else {
+                header.classList.remove('py-2');
+                header.querySelector('.glass-card').classList.remove('shadow-2xl');
+            }
+        });
+    </script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.proSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+    <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
+    <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Fonoaudiolog%C3%ADa."
+        target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
+        class="fixed bottom-10 right-10 h-16 w-16 bg-[#25D366] text-white rounded-2xl shadow-[0_20px_40px_-5px_rgba(37,211,102,0.3)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[60] group overflow-hidden animate-float">
+        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+        <svg class="h-8 w-8 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.412.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <!-- Tracking Conversión WhatsApp -->
+    <script>
+        document.getElementById('whatsapp-btn').addEventListener('click', function() {
+            // Google Ads
+            gtag('event', 'conversion', {
+                'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
+            });
+            // Meta Pixel
+            fbq('track', 'Contact');
+        });
+    </script>
+</body>
+
+</html>

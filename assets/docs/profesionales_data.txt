@@ -1,0 +1,28 @@
+Nombre |Especialidad|Cargo|Cita o Lema|Resumen del profesional|Formacion (Titulos , etc.)|Comentario
+
+Gabriela Pereira|Fonoauudiologia|Fonoaudiologa||||
+
+Ulda Castillo|Fonoauudiologia|Fonoaudiologa||||
+
+Bruno Araya|Fonoauudiologia|Fonoaudiologo||||
+
+Erik Navarro|Psicologia|Psicologo||||
+
+Benjamin Alarcon|Psicologia|Psicologo||||
+
+Josefa Arias|Psicologia|Psicologa||||
+
+Eva Aguayo|Psicologia|Psicologa||||
+
+Magdalena Zepeda|Psicologia|Psicologa||||
+
+Valentina Gonzalez|Psicologia|Psicologa||||
+
+Cristopher Espejo|Psicologia|Psicologo||||
+
+
+Maria Mu�oz|Psicologia|Psicologa||||
+
+Valeria Alfaro|Terapia ocupacional|Terapeuta ocupacional / T.O||||
+
+
