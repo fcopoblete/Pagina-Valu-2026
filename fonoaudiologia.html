@@ -476,6 +476,30 @@ Autor: Antigravity (AI Assistant)
         </div>
     </section>
 
+    <!-- PANEL LATERAL: DETALLES DE PROFESIONAL (DRAWER) -->
+    <div id="pro-drawer-overlay"
+        class="fixed inset-0 z-[70] bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500">
+        <div id="pro-drawer-content"
+            class="absolute right-0 top-0 h-full w-full max-w-2xl bg-white/90 backdrop-blur-xl shadow-2xl translate-x-full transition-transform duration-500 ease-out flex flex-col border-l border-white/20">
+            
+            <button id="close-pro-drawer" class="absolute top-6 right-6 h-12 w-12 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 18L18 6M6 6l12 12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="flex-grow overflow-y-auto custom-scrollbar p-8 md:p-12">
+                <div id="pro-details-target"></div>
+            </div>
+
+            <div class="p-8 border-t border-slate-100 bg-slate-50/50">
+                <a href="formulario-contacto.html" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
+                    CONTÁCTANOS
+                </a>
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-white py-12 border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <!-- BRANDING MINIMALISTA -->
@@ -549,30 +573,6 @@ Autor: Antigravity (AI Assistant)
         </div>
     </footer>
 
-
-    <!-- PANEL LATERAL: DETALLES DE PROFESIONAL (DRAWER) -->
-    <div id="pro-drawer-overlay"
-        class="fixed inset-0 z-[70] bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500">
-        <div id="pro-drawer-content"
-            class="absolute right-0 top-0 h-full w-full max-w-2xl bg-white/90 backdrop-blur-xl shadow-2xl translate-x-full transition-transform duration-500 ease-out flex flex-col border-l border-white/20">
-            
-            <button id="close-pro-drawer" class="absolute top-6 right-6 h-12 w-12 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors z-10">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path d="M6 18L18 6M6 6l12 12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-
-            <div class="flex-grow overflow-y-auto custom-scrollbar p-8 md:p-12">
-                <div id="pro-details-target"></div>
-            </div>
-
-            <div class="p-8 border-t border-slate-100 bg-slate-50/50">
-                <a href="formulario-contacto.html" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
-                    CONTÁCTANOS
-                </a>
-            </div>
-        </div>
-    </div>
 
     <script>
         const proDataExtended = {

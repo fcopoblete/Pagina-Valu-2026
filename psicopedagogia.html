@@ -380,7 +380,8 @@ Autor: Antigravity (AI Assistant)
                     <!-- PROFESIONAL: Pamela Tarifeño -->
                     <div class="swiper-slide h-auto max-w-sm mx-auto">
                         <div
-                            class="group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col">
+                            class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
+                            data-pro-id="pamela-tarifeno">
                             <div
                                 class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-brand-beige/40 text-brand-beige flex items-center justify-center">
                                 <span class="font-display text-4xl opacity-20">Valu</span>
@@ -388,6 +389,11 @@ Autor: Antigravity (AI Assistant)
                             <h4 class="font-bold text-xl text-slate-900">Pamela Tarifeño</h4>
                             <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-2">Psicopedagoga</p>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Psicopedagoga con Magíster en Gestión Educacional. Especialista en atención a la diversidad, evaluación constructivista y liderazgo educativo.</p>
+                            <div class="mt-auto">
+                                <button class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
+                                    Ver Perfil
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -402,6 +408,30 @@ Autor: Antigravity (AI Assistant)
             </div>
         </div>
     </section>
+
+    <!-- PANEL LATERAL: DETALLES DE PROFESIONAL (DRAWER) -->
+    <div id="pro-drawer-overlay"
+        class="fixed inset-0 z-[70] bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500">
+        <div id="pro-drawer-content"
+            class="absolute right-0 top-0 h-full w-full max-w-2xl bg-white/90 backdrop-blur-xl shadow-2xl translate-x-full transition-transform duration-500 ease-out flex flex-col border-l border-white/20">
+            
+            <button id="close-pro-drawer" class="absolute top-6 right-6 h-12 w-12 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 18L18 6M6 6l12 12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="flex-grow overflow-y-auto custom-scrollbar p-8 md:p-12">
+                <div id="pro-details-target"></div>
+            </div>
+
+            <div class="p-8 border-t border-slate-100 bg-slate-50/50">
+                <a href="formulario-contacto.html" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
+                    CONTÁCTANOS
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
     <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
@@ -568,6 +598,96 @@ Autor: Antigravity (AI Assistant)
                 header.querySelector('.glass-card').classList.remove('shadow-2xl');
             }
         });
+
+        // PANEL LATERAL: DETALLES DE PROFESIONAL (DRAWER)
+        const proDrawerOverlay = document.getElementById('pro-drawer-overlay');
+        const proDrawerContent = document.getElementById('pro-drawer-content');
+        const closeProDrawer = document.getElementById('close-pro-drawer');
+        const proDetailsTarget = document.getElementById('pro-details-target');
+
+        const proDataExtended = {
+            "pamela-tarifeno": {
+                nombre: "Pamela Tarifeño",
+                cargo: "Psicopedagoga / Encargada Centro Valú",
+                img: "assets/img/team/placeholder.webp",
+                especialidad: "Psicopedagogía",
+                formacion: [
+                    "Profesora de Educación General Básica.",
+                    "Psicopedagoga.",
+                    "Magíster en Gestión Educacional y Didáctica del aprendizaje.",
+                    "Postítulo en Matemática.",
+                    "Diplomada en evaluación y atención a la diversidad."
+                ],
+                descripcion: "Profesora y Psicopedagoga con fuerte enfoque social y sólida formación en atención a la diversidad. Lidera procesos que ponen en el centro al ser humano y su individualidad. Cuenta con amplia experiencia en gestión de procesos educativos desde nivel inicial hasta superior."
+            }
+        };
+
+        function openDrawer(proId) {
+            const data = proDataExtended[proId];
+            if (!data) return;
+
+            const hasImage = !data.img.includes('placeholder.webp');
+            const bgClass = data.bg || 'bg-brand-beige/20';
+
+            proDetailsTarget.innerHTML = `
+                <div class="flex flex-col gap-8">
+                    <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center shadow-inner">
+                        ${hasImage ? `
+                            <img src="${data.img}" alt="${data.nombre}" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500">
+                        ` : `
+                            <span class="text-primary-300 font-display text-8xl">Valu</span>
+                        `}
+                    </div>
+                    <div>
+                        <span class="text-primary-600 font-bold text-xs uppercase tracking-[0.2em] mb-2 block">${data.especialidad}</span>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900">${data.nombre}</h2>
+                        <p class="text-slate-400 font-medium mt-2">${data.cargo}</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Descripción Profesional</h5>
+                        <p class="text-slate-600 leading-relaxed text-lg">${data.descripcion}</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Formación y Especialidades</h5>
+                        <ul class="grid gap-4">
+                            ${data.formacion.map(item => `
+                                <li class="flex items-start gap-3 text-slate-600">
+                                    <svg class="w-5 h-5 text-primary-500 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="font-medium">${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            proDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            proDrawerContent.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            proDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+            proDrawerContent.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.open-pro-drawer')) {
+                const card = e.target.closest('.pro-card');
+                const proId = card.getAttribute('data-pro-id');
+                openDrawer(proId);
+            }
+        });
+
+        if (closeProDrawer) closeProDrawer.addEventListener('click', closeDrawer);
+        if (proDrawerOverlay) {
+            proDrawerOverlay.addEventListener('click', (e) => {
+                if (e.target === proDrawerOverlay) closeDrawer();
+            });
+        }
     </script>
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
