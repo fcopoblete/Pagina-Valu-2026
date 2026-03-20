@@ -444,6 +444,25 @@ Autor: Antigravity (AI Assistant)
                                         </select>
                                     </div>
                                 </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 pb-4">
+                                    <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Previsión / Prestación</label>
+                                        <select id="prestacion-selector" name="prestacion"
+                                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 cursor-pointer focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                            onchange="document.getElementById('prestacion-otro-container').classList.toggle('hidden', this.value !== 'Otro'); document.getElementById('prestacion-otro-input').required = (this.value === 'Otro');" required>
+                                            <option value="" disabled selected>Seleccione opción</option>
+                                            <option value="Fonasa">Fonasa</option>
+                                            <option value="Particular">Particular</option>
+                                            <option value="Otro">Otro (Isapre, Seguro...)</option>
+                                        </select>
+                                    </div>
+                                    <div id="prestacion-otro-container" class="group hidden">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Especifique Institución</label>
+                                        <input type="text" id="prestacion-otro-input" name="prestacion_otro"
+                                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                            placeholder="Ej: Colmena, Consalud">
+                                    </div>
+                                </div>
 
                                 <!-- SECCIÓN CUIDADOR (DINÁMICA) -->
                                 <div id="seccion-cuidador" class="mt-8 pt-8 border-t border-slate-100 hidden">
@@ -475,6 +494,12 @@ Autor: Antigravity (AI Assistant)
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-secondary-500/10 focus:border-secondary-500 outline-none transition-all"
                                                 placeholder="12.345.678-9">
                                         </div>
+                                    </div>
+                                    <div class="mt-8 group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Colegio o Institución Educativa del Menor (Opcional si no aplica)</label>
+                                        <input type="text" name="colegio_menor" id="colegio-menor-input"
+                                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-secondary-500/10 focus:border-secondary-500 outline-none transition-all"
+                                            placeholder="Ej: Colegio San José">
                                     </div>
                                 </div>
                             </div>
@@ -958,7 +983,7 @@ Autor: Antigravity (AI Assistant)
             btn.disabled = true;
 
             try {
-                const response = await fetch('https://n8n.sinesfuerzo.cl/webhook/centro-valu-contacto-particular', {
+                const response = await fetch('https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-particular', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -1052,12 +1077,19 @@ Autor: Antigravity (AI Assistant)
                 if (age < 18) {
                     seccionCuidador.classList.remove('hidden');
                     camposCuidador.forEach(input => input.setAttribute('required', 'true'));
+                    const colInput = document.getElementById('colegio-menor-input');
+                    if (colInput) colInput.setAttribute('required', 'true');
                 } else {
                     seccionCuidador.classList.add('hidden');
                     camposCuidador.forEach(input => {
                         input.removeAttribute('required');
                         input.classList.remove('border-red-400', 'bg-red-50');
                     });
+                    const colInput2 = document.getElementById('colegio-menor-input');
+                    if (colInput2) {
+                        colInput2.removeAttribute('required');
+                        colInput2.classList.remove('border-red-400', 'bg-red-50');
+                    }
                 }
                 updateConsentContent(); // Actualizar consentimiento al cambiar la fecha
             });
