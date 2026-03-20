@@ -779,10 +779,15 @@ Autor: Antigravity (AI Assistant)
 
         function changeStep(n) {
             if (n === 1 && !validateCurrentStep()) return;
+            
+            if (currentStep + n > totalSteps) {
+                submitToN8N();
+                return;
+            }
+
             document.getElementById(`step-${currentStep}`).classList.remove('active');
             document.getElementById(`indicator-${currentStep}`).classList.add('opacity-40');
             currentStep += n;
-            if (currentStep > totalSteps) { submitToN8N(); return; }
 
             if (currentStep === 4) updateConsentContent();
 
