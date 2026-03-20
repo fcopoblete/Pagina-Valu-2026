@@ -1,7 +1,7 @@
-<!--
+﻿<!--
 Archivo: contacto-convenios.html
 Descripción: Formulario de contacto para empresas y colegios (convenios).
-Última modificación: 2026-03-16
+Última modificación: 2026-03-20
 Autor: Antigravity (AI Assistant)
 -->
 <!DOCTYPE html>
@@ -142,15 +142,47 @@ Autor: Antigravity (AI Assistant)
             </div>
 
             <!-- TÍTULO CENTRAL -->
-            <div class="absolute left-1/2 -translate-x-1/2 hidden sm:block">
+            <div class="absolute left-1/2 -translate-x-1/2 hidden sm:block lg:hidden">
                 <span
                     class="font-display font-bold text-lg md:text-xl text-primary-800 whitespace-nowrap uppercase tracking-widest">Convenios</span>
             </div>
 
             <!-- DERECHA: MENÚ -->
             <div class="flex items-center justify-end shrink-0">
+
+                <!-- NAV DESKTOP (OPCIÓN 1) -->
+                <nav class="hidden lg:flex items-center gap-8 mr-6">
+                    <a href="index.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
+                    <a href="quienes-somos.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Quiénes somos</a>
+                    <!-- Especialidades Dropdown -->
+                    <div class="relative group">
+                        <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                            <ul class="py-3 px-2 flex flex-col gap-1">
+                                <li><a href="psicologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
+                                <li><a href="pediatria.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
+                                <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
+                                <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
+                                <li><a href="psicopedagogia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Convenios Dropdown -->
+                    <div class="relative group">
+                        <button class="text-primary-600 font-bold hover:text-primary-700 transition-colors flex items-center gap-1">Convenios <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                            <ul class="py-3 px-2 flex flex-col gap-1">
+                                <li><a href="convenios.html#colegios" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Colegios</a></li>
+                                <li><a href="convenios.html#empresas" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Empresas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="profesionales.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Nuestro Equipo</a>
+                </nav>
+                
+                
                 <button id="menu-toggle" aria-label="Abrir menú de navegación"
-                    class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-100 text-primary-700 hover:bg-primary-200 transition-colors shadow-sm shrink-0">
+                    class="lg:hidden h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-100 text-primary-700 hover:bg-primary-200 transition-colors shadow-sm shrink-0">
                     <svg id="menu-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -163,7 +195,7 @@ Autor: Antigravity (AI Assistant)
 
         <!-- PANEL LATERAL (DRAWER) MÓVIL -->
         <div id="mobile-menu"
-            class="fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
+            class="fixed lg:hidden inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
             <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300"
                 id="menu-content">
                 <div class="flex justify-between items-center mb-12">
@@ -218,7 +250,11 @@ Autor: Antigravity (AI Assistant)
                         class="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-primary-50 rounded-full border border-primary-100">
                         <span class="text-[10px] font-bold text-primary-600 uppercase tracking-widest">¿Eres paciente
                             particular?</span>
-                        <a href="formulario-contacto.html"
+                        
+                
+                
+                
+                <a href="formulario-contacto.html"
                             class="text-[10px] font-black text-primary-700 hover:underline">HAZ CLIC AQUÍ</a>
                     </div>
                 </div>
@@ -356,7 +392,7 @@ Autor: Antigravity (AI Assistant)
         </div>
     </main>
 
-    <!-- FOOTER: ESTANDARIZADO -->
+    <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
     <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 px-4">
@@ -365,7 +401,8 @@ Autor: Antigravity (AI Assistant)
                     <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu Footer" width="160" height="64" class="h-16 w-auto mb-6" loading="lazy">
                     <div class="flex items-center gap-3 mb-4 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
                         <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Convenio Fonasa" width="16" height="16" class="h-4 w-auto">
-                        <span class="text-[10px] font-black text-slate-400 tracking-widest uppercase">Convenio con Fonasa</span>
+                        <span class="text-[10px] font-black text-slate-400 tracking-widest uppercase">Excelencia
+                            en Salud</span>
                     </div>
                     <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
                         Excelencia en salud multidisciplinaria para toda la familia en el corazón de Coquimbo.
@@ -392,7 +429,7 @@ Autor: Antigravity (AI Assistant)
                         <li><a href="fonoaudiologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                         <li><a href="terapia-ocupacional.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                         <li><a href="psicopedagogia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
-                        <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios Colegios</a></li>
+                        <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios</a></li>
                     </ul>
                 </div>
 
