@@ -495,8 +495,8 @@ Autor: Antigravity (AI Assistant)
                                                 placeholder="12.345.678-9">
                                         </div>
                                     </div>
-                                    <div class="mt-8 group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Colegio o Institución Educativa del Menor (Opcional si no aplica)</label>
+                                    <div class="mt-8 group hidden" id="colegio-container">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Colegio o Institución Educativa del Menor</label>
                                         <input type="text" name="colegio_menor" id="colegio-menor-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-secondary-500/10 focus:border-secondary-500 outline-none transition-all"
                                             placeholder="Ej: Colegio San José">
@@ -1077,18 +1077,33 @@ Autor: Antigravity (AI Assistant)
                 if (age < 18) {
                     seccionCuidador.classList.remove('hidden');
                     camposCuidador.forEach(input => input.setAttribute('required', 'true'));
+                    
+                    const colContainer = document.getElementById('colegio-container');
                     const colInput = document.getElementById('colegio-menor-input');
-                    if (colInput) colInput.setAttribute('required', 'true');
+                    if (age >= 3) {
+                        if (colContainer) colContainer.classList.remove('hidden');
+                        if (colInput) colInput.setAttribute('required', 'true');
+                    } else {
+                        if (colContainer) colContainer.classList.add('hidden');
+                        if (colInput) {
+                            colInput.removeAttribute('required');
+                            colInput.classList.remove('border-red-400', 'bg-red-50');
+                            colInput.value = '';
+                        }
+                    }
                 } else {
                     seccionCuidador.classList.add('hidden');
                     camposCuidador.forEach(input => {
                         input.removeAttribute('required');
                         input.classList.remove('border-red-400', 'bg-red-50');
                     });
+                    const colContainer = document.getElementById('colegio-container');
                     const colInput2 = document.getElementById('colegio-menor-input');
+                    if (colContainer) colContainer.classList.add('hidden');
                     if (colInput2) {
                         colInput2.removeAttribute('required');
                         colInput2.classList.remove('border-red-400', 'bg-red-50');
+                        colInput2.value = '';
                     }
                 }
                 updateConsentContent(); // Actualizar consentimiento al cambiar la fecha
