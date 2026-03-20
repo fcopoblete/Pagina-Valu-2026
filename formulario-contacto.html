@@ -652,6 +652,14 @@ Autor: Antigravity (AI Assistant)
                                         class="text-xs font-bold text-slate-500 uppercase tracking-wider group-hover:text-primary-600 transition-colors">He
                                         leído y acepto los términos del consentimiento informado.</span>
                                 </label>
+                                <label class="flex items-start gap-4 group cursor-pointer mt-4">
+                                    <input type="checkbox" name="privacidad_terminos"
+                                        class="peer h-6 w-6 shrink-0 rounded-lg border-2 border-slate-300 checked:bg-primary-500 appearance-none mt-0.5"
+                                        required>
+                                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider group-hover:text-primary-600 transition-colors">
+                                        He leído y acepto la <a href="privacidad.html" target="_blank" class="text-primary-500 hover:text-primary-700 underline pointer-events-auto relative z-10 transition-colors">Política de Privacidad</a> y los <a href="terminos.html" target="_blank" class="text-primary-500 hover:text-primary-700 underline pointer-events-auto relative z-10 transition-colors">Términos de Servicio</a>.
+                                    </span>
+                                </label>
                                 <!-- Honeypot Anti-Spam -->
                                 <div style="display: none;" aria-hidden="true">
                                     <label for="website_url">Do not fill this field if you are human:</label>
@@ -754,8 +762,13 @@ Autor: Antigravity (AI Assistant)
             <!-- COPYRIGHT -->
             <div class="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
                 <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300 text-center md:text-left">
-                    &copy; 2024 Centro Valu. Excelencia en Salud Coquimbo.
+                    &copy; 2026 Centro Valu. Todos los derechos reservados.
                 </p>
+                <!-- ENLACES LEGALES -->
+                <div class="flex items-center justify-center md:justify-end gap-6 mt-4 md:mt-0">
+                    <a href="privacidad.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Política de Privacidad</a>
+                    <a href="terminos.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Términos de Servicio</a>
+                </div>
             </div>
         </div>
     </footer>
