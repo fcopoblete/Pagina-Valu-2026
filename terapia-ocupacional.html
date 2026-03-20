@@ -161,10 +161,21 @@ Autor: Antigravity (AI Assistant)
             background: #94a3b8;
         }
     </style>
+
+    <!-- A11Y Focus Rings -->
+    <style>
+        *:focus-visible {
+            outline: 3px solid #75cfcf !important;
+            outline-offset: 3px !important;
+            border-radius: 4px;
+            transition: outline-color 0.2s ease;
+        }
+    </style>
 </head>
 
 <body class="bg-[#f8fafc] text-slate-900 font-sans antialiased">
     <!-- SKIP LINK (Accesibilidad) -->
+    <!-- SKIP LINK (A11Y) -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl">
         Saltar al contenido principal
     </a>
@@ -276,7 +287,7 @@ Autor: Antigravity (AI Assistant)
                             somos</a>
                     </li>
                     <li>
-                        <button id="convenios-toggle"
+                        <button id="convenios-toggle" aria-label="Desplegar convenios"
                             class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
                             Convenios
                             <svg id="convenios-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
@@ -304,7 +315,7 @@ Autor: Antigravity (AI Assistant)
                             Equipo</a>
                     </li>
                     <li>
-                        <button id="specialties-toggle"
+                        <button id="specialties-toggle" aria-label="Desplegar especialidades"
                             class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
                             Especialidades
                             <svg id="specialties-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
