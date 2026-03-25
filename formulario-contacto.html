@@ -428,9 +428,18 @@ Autor: Antigravity (AI Assistant)
                                         <label
                                             class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Fecha
                                             de Nacimiento</label>
-                                        <input type="date" name="fecha_nacimiento"
-                                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
-                                            required>
+                                        <div class="flex gap-2">
+                                            <input type="number" id="dob-day" placeholder="DD" min="1" max="31"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                                required>
+                                            <input type="number" id="dob-month" placeholder="MM" min="1" max="12"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                                required>
+                                            <input type="number" id="dob-year" placeholder="AAAA" min="1900" max="2026"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                                required>
+                                        </div>
+                                        <input type="hidden" name="fecha_nacimiento" id="fecha_nacimiento_hidden">
                                     </div>
                                     <div class="group">
                                         <label
@@ -629,6 +638,26 @@ Autor: Antigravity (AI Assistant)
                                         <textarea name="mensaje" rows="4"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="Describe brevemente el motivo..." required></textarea>
+                                    </div>
+                                    <div class="group">
+                                        <label
+                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">¿Cómo nos conociste?</label>
+                                        <select id="captacion-selector" name="como_nos_conociste"
+                                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 cursor-pointer focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                            required>
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option value="Búsqueda de Google">Búsqueda de Google</option>
+                                            <option value="Instagram">Instagram</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Recomendación">Recomendación</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
+                                    <div id="captacion-otro-container" class="group hidden">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Por favor, especifica</label>
+                                        <input type="text" id="captacion-otro-input" name="como_nos_conociste_otro"
+                                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                            placeholder="Ej: Letrero en la calle, convenio, etc.">
                                     </div>
                                 </div>
                             </div>
@@ -916,11 +945,11 @@ Autor: Antigravity (AI Assistant)
 
         function updateConsentContent() {
             const specialty = document.getElementById('servicio-selector').value;
-            const birthDateInput = document.querySelector('input[name="fecha_nacimiento"]');
+            const birthDateHidden = document.getElementById('fecha_nacimiento_hidden');
             
             let isMinor = false;
-            if (birthDateInput && birthDateInput.value) {
-                const birthDate = new Date(birthDateInput.value);
+            if (birthDateHidden && birthDateHidden.value) {
+                const birthDate = new Date(birthDateHidden.value);
                 const today = new Date();
                 let age = today.getFullYear() - birthDate.getFullYear();
                 const m = today.getMonth() - birthDate.getMonth();
@@ -1058,55 +1087,98 @@ Autor: Antigravity (AI Assistant)
         const rutTutorInput = document.getElementById('rut-tutor-input');
         if (rutTutorInput) formatRUT(rutTutorInput);
 
-        // Lógica de Mayoría de Edad
-        const fechaNacInput = document.querySelector('input[name="fecha_nacimiento"]');
+        // Lógica de Captación "Otro"
+        const captacionSelector = document.getElementById('captacion-selector');
+        const captacionOtroContainer = document.getElementById('captacion-otro-container');
+        const captacionOtroInput = document.getElementById('captacion-otro-input');
+
+        if (captacionSelector && captacionOtroContainer && captacionOtroInput) {
+            captacionSelector.addEventListener('change', () => {
+                if (captacionSelector.value === 'Otro') {
+                    captacionOtroContainer.classList.remove('hidden');
+                    captacionOtroInput.setAttribute('required', 'true');
+                } else {
+                    captacionOtroContainer.classList.add('hidden');
+                    captacionOtroInput.removeAttribute('required');
+                    captacionOtroInput.classList.remove('border-red-400', 'bg-red-50');
+                    captacionOtroInput.value = '';
+                }
+            });
+        }
+
+        // Lógica de Mayoría de Edad y Sincronización de Fecha
+        const dobDay = document.getElementById('dob-day');
+        const dobMonth = document.getElementById('dob-month');
+        const dobYear = document.getElementById('dob-year');
+        const fechaNacHidden = document.getElementById('fecha_nacimiento_hidden');
         const seccionCuidador = document.getElementById('seccion-cuidador');
         const camposCuidador = seccionCuidador ? seccionCuidador.querySelectorAll('input') : [];
 
-        if (fechaNacInput && seccionCuidador) {
-            fechaNacInput.addEventListener('change', () => {
-                const birthDate = new Date(fechaNacInput.value);
-                const today = new Date();
-                let age = today.getFullYear() - birthDate.getFullYear();
-                const m = today.getMonth() - birthDate.getMonth();
-                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                    age--;
-                }
+        function syncAndValidateDate() {
+            const day = dobDay.value.padStart(2, '0');
+            const month = dobMonth.value.padStart(2, '0');
+            const year = dobYear.value;
 
-                if (age < 18) {
-                    seccionCuidador.classList.remove('hidden');
-                    camposCuidador.forEach(input => input.setAttribute('required', 'true'));
+            if (day && month && year && year.length === 4) {
+                const dateStr = `${year}-${month}-${day}`;
+                const testDate = new Date(dateStr);
+                
+                // Validar que sea una fecha real (ej: no 31 de febrero)
+                if (testDate.getFullYear() == year && (testDate.getMonth() + 1) == month && testDate.getDate() == day) {
+                    fechaNacHidden.value = dateStr;
                     
-                    const colContainer = document.getElementById('colegio-container');
-                    const colInput = document.getElementById('colegio-menor-input');
-                    if (age >= 3) {
-                        if (colContainer) colContainer.classList.remove('hidden');
-                        if (colInput) colInput.setAttribute('required', 'true');
+                    const today = new Date();
+                    let age = today.getFullYear() - testDate.getFullYear();
+                    const m = today.getMonth() - testDate.getMonth();
+                    if (m < 0 || (m === 0 && today.getDate() < testDate.getDate())) {
+                        age--;
+                    }
+
+                    if (age < 18) {
+                        seccionCuidador.classList.remove('hidden');
+                        camposCuidador.forEach(input => input.setAttribute('required', 'true'));
+                        
+                        const colContainer = document.getElementById('colegio-container');
+                        const colInput = document.getElementById('colegio-menor-input');
+                        if (age >= 3) {
+                            if (colContainer) colContainer.classList.remove('hidden');
+                            if (colInput) colInput.setAttribute('required', 'true');
+                        } else {
+                            if (colContainer) colContainer.classList.add('hidden');
+                            if (colInput) {
+                                colInput.removeAttribute('required');
+                                colInput.classList.remove('border-red-400', 'bg-red-50');
+                                colInput.value = '';
+                            }
+                        }
                     } else {
+                        seccionCuidador.classList.add('hidden');
+                        camposCuidador.forEach(input => {
+                            input.removeAttribute('required');
+                            input.classList.remove('border-red-400', 'bg-red-50');
+                        });
+                        const colContainer = document.getElementById('colegio-container');
+                        const colInput2 = document.getElementById('colegio-menor-input');
                         if (colContainer) colContainer.classList.add('hidden');
-                        if (colInput) {
-                            colInput.removeAttribute('required');
-                            colInput.classList.remove('border-red-400', 'bg-red-50');
-                            colInput.value = '';
+                        if (colInput2) {
+                            colInput2.removeAttribute('required');
+                            colInput2.classList.remove('border-red-400', 'bg-red-50');
+                            colInput2.value = '';
                         }
                     }
+                    updateConsentContent();
                 } else {
-                    seccionCuidador.classList.add('hidden');
-                    camposCuidador.forEach(input => {
-                        input.removeAttribute('required');
-                        input.classList.remove('border-red-400', 'bg-red-50');
-                    });
-                    const colContainer = document.getElementById('colegio-container');
-                    const colInput2 = document.getElementById('colegio-menor-input');
-                    if (colContainer) colContainer.classList.add('hidden');
-                    if (colInput2) {
-                        colInput2.removeAttribute('required');
-                        colInput2.classList.remove('border-red-400', 'bg-red-50');
-                        colInput2.value = '';
-                    }
+                    fechaNacHidden.value = '';
                 }
-                updateConsentContent(); // Actualizar consentimiento al cambiar la fecha
-            });
+            } else {
+                fechaNacHidden.value = '';
+            }
+        }
+
+        if (dobDay && dobMonth && dobYear) {
+            dobDay.addEventListener('input', syncAndValidateDate);
+            dobMonth.addEventListener('input', syncAndValidateDate);
+            dobYear.addEventListener('input', syncAndValidateDate);
         }
 
         // Mobile Menu Logic Unificada
