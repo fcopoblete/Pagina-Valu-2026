@@ -165,6 +165,64 @@ Autor: Antigravity (AI Assistant)
             border-radius: 4px;
             transition: outline-color 0.2s ease;
         }
+
+        /* Checkbox Personalizado con Ticket */
+        .custom-checkbox-container {
+            position: relative;
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .custom-checkbox-container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.5rem;
+            width: 1.5rem;
+            background-color: #f8fafc;
+            border: 2px solid #cbd5e1;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .custom-checkbox-container:hover input ~ .checkmark {
+            border-color: #75cfcf;
+        }
+
+        .custom-checkbox-container input:checked ~ .checkmark {
+            background-color: #4a8d8d;
+            border-color: #4a8d8d;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .custom-checkbox-container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .custom-checkbox-container .checkmark:after {
+            left: 0.45rem;
+            top: 0.15rem;
+            width: 0.4rem;
+            height: 0.8rem;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
     </style>
 </head>
 
@@ -363,8 +421,8 @@ Autor: Antigravity (AI Assistant)
                     <div class="lg:col-span-8 p-12 lg:p-16 bg-white flex flex-col">
                         <!-- AVISO REDIRECCIÓN INSTITUCIONAL -->
                         <div
-                            class="mb-8 p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-between gap-4 group">
-                            <div class="flex items-center gap-4">
+                            class="mb-8 p-6 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-6 group text-center sm:text-left">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
                                 <div
                                     class="h-10 w-10 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 shrink-0">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -373,14 +431,14 @@ Autor: Antigravity (AI Assistant)
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest leading-tight">
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] leading-tight mb-1">
                                         ¿Eres una institución?</p>
-                                    <p class="text-sm text-slate-600 font-medium">Colegios y empresas tienen un canal
+                                    <p class="text-sm text-slate-600 font-bold">Colegios y empresas tienen un canal
                                         preferencial.</p>
                                 </div>
                             </div>
                             <a href="contacto-convenios.html"
-                                class="whitespace-nowrap bg-white text-primary-600 border border-primary-200 px-4 py-2 rounded-lg text-xs font-bold hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all shadow-sm">
+                                class="w-full sm:w-auto text-center bg-white text-primary-600 border border-primary-200 px-6 py-3 rounded-xl text-xs font-bold hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all shadow-sm">
                                 IR A CONVENIOS
                             </a>
                         </div>
@@ -697,22 +755,27 @@ Autor: Antigravity (AI Assistant)
                                 </div>
                                 <input type="hidden" name="document_version" id="document-version-input"
                                     value="BASE-V1">
-                                <label class="flex items-center gap-4 group cursor-pointer">
-                                    <input type="checkbox" name="consentimiento"
-                                        class="peer h-6 w-6 rounded-lg border-2 border-slate-300 checked:bg-primary-500 appearance-none"
-                                        required>
-                                    <span
-                                        class="text-xs font-bold text-slate-500 uppercase tracking-wider group-hover:text-primary-600 transition-colors">He
-                                        leído y acepto los términos del consentimiento informado.</span>
-                                </label>
-                                <label class="flex items-start gap-4 group cursor-pointer mt-4">
-                                    <input type="checkbox" name="privacidad_terminos"
-                                        class="peer h-6 w-6 shrink-0 rounded-lg border-2 border-slate-300 checked:bg-primary-500 appearance-none mt-0.5"
-                                        required>
-                                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider group-hover:text-primary-600 transition-colors">
-                                        He leído y acepto la <a href="privacidad.html" target="_blank" class="text-primary-500 hover:text-primary-700 underline pointer-events-auto relative z-10 transition-colors">Política de Privacidad</a> y los <a href="terminos.html" target="_blank" class="text-primary-500 hover:text-primary-700 underline pointer-events-auto relative z-10 transition-colors">Términos de Servicio</a>.
-                                    </span>
-                                </label>
+                                <div class="space-y-6 mt-8">
+                                    <label class="flex items-start gap-4 group cursor-pointer bg-slate-50 p-4 rounded-2xl border border-transparent hover:border-primary-100 transition-all">
+                                        <div class="custom-checkbox-container">
+                                            <input type="checkbox" name="consentimiento" required>
+                                            <span class="checkmark"></span>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider leading-relaxed group-hover:text-primary-600 transition-colors">
+                                            He leído y acepto los términos del consentimiento informado detallado anteriormente.
+                                        </span>
+                                    </label>
+
+                                    <label class="flex items-start gap-4 group cursor-pointer bg-slate-50 p-4 rounded-2xl border border-transparent hover:border-primary-100 transition-all">
+                                        <div class="custom-checkbox-container">
+                                            <input type="checkbox" name="privacidad_terminos" required>
+                                            <span class="checkmark"></span>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider leading-relaxed group-hover:text-primary-600 transition-colors">
+                                            Acepto la <a href="privacidad.html" target="_blank" class="text-primary-500 hover:text-primary-700 underline pointer-events-auto relative z-10 transition-colors">Política de Privacidad</a> y los <a href="terminos.html" target="_blank" class="text-primary-500 hover:text-primary-700 underline pointer-events-auto relative z-10 transition-colors">Términos de Servicio</a>.
+                                        </span>
+                                    </label>
+                                </div>
                                 <!-- Honeypot Anti-Spam -->
                                 <div style="display: none;" aria-hidden="true">
                                     <label for="website_url">Do not fill this field if you are human:</label>
@@ -982,10 +1045,29 @@ Autor: Antigravity (AI Assistant)
             const inputs = document.getElementById(`step-${currentStep}`).querySelectorAll('[required]');
             let valid = true;
             inputs.forEach(input => {
-                if (!input.value || (input.type === 'checkbox' && !input.checked)) {
-                    input.classList.add('border-red-400', 'bg-red-50');
+                const isCheckbox = input.type === 'checkbox';
+                const hasError = !input.value || (isCheckbox && !input.checked);
+                
+                if (hasError) {
+                    if (isCheckbox) {
+                        const checkmark = input.nextElementSibling;
+                        if (checkmark && checkmark.classList.contains('checkmark')) {
+                            checkmark.classList.add('border-red-400', 'bg-red-50');
+                        }
+                    } else {
+                        input.classList.add('border-red-400', 'bg-red-50');
+                    }
                     valid = false;
-                } else { input.classList.remove('border-red-400', 'bg-red-50'); }
+                } else {
+                    if (isCheckbox) {
+                        const checkmark = input.nextElementSibling;
+                        if (checkmark && checkmark.classList.contains('checkmark')) {
+                            checkmark.classList.remove('border-red-400', 'bg-red-50');
+                        }
+                    } else {
+                        input.classList.remove('border-red-400', 'bg-red-50');
+                    }
+                }
             });
             return valid;
         }
