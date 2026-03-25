@@ -829,6 +829,7 @@ Autor: Antigravity (AI Assistant)
                 mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
                 menuContent.classList.remove('translate-x-full');
                 document.body.style.overflow = 'hidden';
+            history.pushState({ drawerOpen: true }, '');
             }
         }
 
@@ -1139,6 +1140,7 @@ Autor: Antigravity (AI Assistant)
             const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
             if (scrollContainer) scrollContainer.scrollTop = 0;
             document.body.style.overflow = 'hidden';
+            history.pushState({ drawerOpen: true }, '');
             
             // Actualizar años de experiencia dinámicos
             if (typeof updateExperience === 'function') {
@@ -1146,10 +1148,14 @@ Autor: Antigravity (AI Assistant)
             }
         }
 
-        function closeDrawer() {
+        function closeDrawer(fromPopState = false) {
             proDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
             proDrawerContent.classList.add('translate-x-full');
             document.body.style.overflow = '';
+            
+            if (!fromPopState && history.state && history.state.drawerOpen) {
+                history.back();
+            }
         }
 
         document.addEventListener('click', (e) => {
@@ -1160,12 +1166,19 @@ Autor: Antigravity (AI Assistant)
             }
         });
 
-        if (closeProDrawer) closeProDrawer.addEventListener('click', closeDrawer);
+        if (closeProDrawer) closeProDrawer.addEventListener('click', () => closeDrawer());
         if (proDrawerOverlay) {
             proDrawerOverlay.addEventListener('click', (e) => {
                 if (e.target === proDrawerOverlay) closeDrawer();
             });
         }
+
+        window.addEventListener('popstate', (e) => {
+            if (proDrawerOverlay && !proDrawerOverlay.classList.contains('opacity-0')) {
+                // The user pressed the system back button
+                closeDrawer(true);
+            }
+        });
 
         document.getElementById('whatsapp-btn').addEventListener('click', function () {
             gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP' });
