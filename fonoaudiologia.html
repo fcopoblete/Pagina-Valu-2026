@@ -740,6 +740,11 @@ Autor: Antigravity (AI Assistant)
             const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
             if (scrollContainer) scrollContainer.scrollTop = 0;
             document.body.style.overflow = 'hidden';
+            
+            // Actualizar años de experiencia dinámicos
+            if (typeof updateExperience === 'function') {
+                updateExperience();
+            }
         }
 
         function closeDrawer() {

@@ -644,24 +644,6 @@ Autor: Antigravity (AI Assistant)
                             </div>
                         </div>
                     </div>
-                    <!-- PROFESIONAL: Magdalena Zepeda -->
-                    <div class="swiper-slide h-auto">
-                        <div class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
-                            data-pro-id="magdalena-zepeda">
-                            <div class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-brand-beige/40">
-                                <img src="assets/img/team/magdalena-zepeda.webp?v=top_framed" alt="Magdalena Zepeda"
-                                    class="w-full h-full object-cover" loading="lazy" width="400" height="400">
-                            </div>
-                            <h4 class="font-bold text-xl text-slate-900">Magdalena Zepeda</h4>
-                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-4">Psicóloga</p>
-                            <div class="mt-auto">
-                                <button
-                                    class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
-                                    Ver Perfil
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                     <!-- PROFESIONAL: Maria Muñoz -->
                     <div class="swiper-slide h-auto">
                         <div class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
@@ -690,24 +672,6 @@ Autor: Antigravity (AI Assistant)
                             </div>
                             <h4 class="font-bold text-xl text-slate-900">Valentina Gonzalez</h4>
                             <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-4">Psicóloga</p>
-                            <div class="mt-auto">
-                                <button
-                                    class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
-                                    Ver Perfil
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROFESIONAL: Benjamín Alarcón -->
-                    <div class="swiper-slide h-auto">
-                        <div class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
-                            data-pro-id="benjamin-alarcon">
-                            <div class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-primary-100/20">
-                                <img src="assets/img/team/benjamin-alarcon.webp?v=top_framed" alt="Benjamín Alarcón"
-                                    class="w-full h-full object-cover" loading="lazy" width="400" height="400">
-                            </div>
-                            <h4 class="font-bold text-xl text-slate-900">Benjamín Alarcón</h4>
-                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-4">Psicólogo</p>
                             <div class="mt-auto">
                                 <button
                                     class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
@@ -1019,20 +983,21 @@ Autor: Antigravity (AI Assistant)
         const proDataExtended = {
             "valentina-jimenez": {
                 nombre: "Valentina Jiménez",
-                cargo: "Psicóloga / Directora y Fundadora",
+                cargo: "Psicóloga / Directora",
                 img: "assets/brand/logo-valu.png",
+                bg: "bg-brand-lila/20",
                 especialidad: "Psicología Clínica",
                 formacion: [
                     "Psicóloga, Universidad de La Serena.",
                     "Diplomado en Dinámicas familiares, hijos, padres, pareja y familia extensa.",
                     "Diplomado en Intervención Sistémica en Infancia y Adolescencia.",
                     "Diplomado Familia e Infancia, Herramientas de Intervención.",
-                    "Diplomado Estrategias de inclusión laboral.",
+                    "Diplomado Estrategias de inclusión laboral para personas en situación de discapacidad.",
                     "Diplomado en Selección de Personal.",
                     "Coaching ejecutivo y de equipos, PCA.",
-                    "Metodología A.M.A.R, evaluación en personas con autismo, PAP, abordaje en Post Parto, Trauma Complejo, y Apego."
+                    "Cursos variados en: Metodología A.M.A.R, evaluación autismo, PAP, Post Parto, Trauma Complejo y Apego."
                 ],
-                descripcion: "Psicóloga con 8 años de experiencia clínica, que trabaja desde un enfoque sistémico-vincular. Acompaña familias y parejas en distintos ciclos de la historia vital. Incorpora un enfoque basado en neurociencia, con formación en postparto e hipnoparto, y aborda la línea de apego y trauma en población adulta. Además, realiza atención a niños mediante terapia de juego, desarrollando una intervención cercana, amorosa y técnicamente fundamentada."
+                descripcion: "Psicóloga con <span class='dynamic-exp' data-start-year='2018'>8</span> años de experiencia clínica, que trabaja desde un enfoque sistémico-vincular. Acompaña familias y parejas en distintos ciclos de la historia vital. Incorpora un enfoque basado en neurociencia, con formación en postparto e hipnoparto, y aborda la línea de apego y trauma en población adulta. Además, realiza atención a niños mediante terapia de juego, desarrollando una intervención cercana, amorosa y técnicamente fundamentada."
             },
             "cristopher-espejo": {
                 nombre: "Cristopher Espejo",
@@ -1047,9 +1012,9 @@ Autor: Antigravity (AI Assistant)
                     "Diplomado en Mentalización: Teoría y Abordaje Clínico.",
                     "Diplomado en Terapia Adulto: Sanando las Heridas de la Infancia.",
                     "Diplomado en Evaluación Psicológica Infanto-Juvenil.",
-                    "Estudios en Neurociencias del Trauma Complejo, TCC, autolesiones y suicidio, TCA, adicciones, abuso sexual infantil."
+                    "Estudios en Neurociencias del Trauma Complejo, TCC, autolesiones y suicidio, TCA, adicciones y abuso sexual infantil."
                 ],
-                descripcion: "Psicólogo clínico con especialización en trauma complejo, apego, mentalización y modelos de complejidad. Cuenta con experiencia en dispositivos de salud mental y programas psicosociales orientados al acompañamiento de población infanto-juvenil y adulta. Acompaña procesos complejos con profundidad, ética y rigurosidad, comprendiendo el malestar como parte de trayectorias relacionales y contextuales."
+                descripcion: "Psicólogo clínico con especialización en trauma complejo, apego, mentalización y modelos de complejidad. Cuenta con experiencia en dispositivos de salud mental y programas psicosociales orientados al acompañamiento de población infanto-juvenil y adulta. Acompaña procesos complejos con profundidad, ética y rigurosidad, comprendiendo el malestar como parte de trayectorias relacionales y contextuales, sosteniendo intervenciones respetuosas y centradas en la dignidad de cada persona."
             },
             "erik-navarro": {
                 nombre: "Erik Navarro",
@@ -1058,14 +1023,14 @@ Autor: Antigravity (AI Assistant)
                 especialidad: "Psicología Clínica",
                 formacion: [
                     "Psicólogo, Universidad Central.",
-                    "12 años de experiencia.",
-                    "Magister en psicología clínica, mención en psicoanálisis.",
+                    "<span class='dynamic-exp' data-start-year='2014'>12</span> años de experiencia.",
+                    "Magister © en psicología clínica, mención en psicoanálisis.",
                     "Diplomado psicopatología psicoanalítica.",
                     "Diplomado psicoanálisis y discurso social.",
                     "Diplomado praxis comunitaria.",
-                    "Cursos en: violencia y agresiones, diagnóstico maltrato infantil, trauma y resiliencia, efectos del abuso sexual infantil."
+                    "Cursos variados en: violencia y agresiones, diagnostico maltrato infantil, trauma y resiliencia, abuso sexual infantil, crianza respetuosa."
                 ],
-                descripcion: "Acompaña procesos terapéuticos profundos con adolescentes, adultos y parejas favoreciendo la exploración de la historia vincular, los efectos del trauma y la construcción de sentido de la experiencia subjetiva en el presente. Psicólogo con amplia experiencia en el sistema público y programas especializados de infancia, adolescencia y familias."
+                descripcion: "Acompaña procesos terapéuticos profundos con adolescentes, adultos y parejas favoreciendo la exploración de la historia vincular, los efectos del trauma y la construcción de sentido de la experiencia subjetiva en el presente. Psicólogo con amplia experiencia en el sistema público y programas especializados de infancia, adolescencia y familias. Posee experiencia en terapia grupal, promoviendo espacios de reflexión, elaboración psíquica y sostén terapéutico."
             },
             "eva-aguayo": {
                 nombre: "Eva Aguayo",
@@ -1074,13 +1039,14 @@ Autor: Antigravity (AI Assistant)
                 especialidad: "Psicología Clínica",
                 formacion: [
                     "Psicóloga, Universidad de La Serena.",
-                    "12 años de experiencia.",
+                    "<span class='dynamic-exp' data-start-year='2014'>12</span> años de experiencia.",
                     "Especialización en Psicoterapia Afirmativa LGBTQIA+.",
                     "Diplomado en Abordaje Clínico Multidisciplinario en Adultos en el Espectro Autista.",
                     "Diplomado en Parentalidad y Desarrollo, Fundación Ideas para la Infancia.",
-                    "Diplomado en Terapia Sexual y Sexualidad Humana."
+                    "Diplomado en Terapia Sexual y Sexualidad Humana.",
+                    "Numerosos cursos, seminarios y clases magistrales de actualización permanente."
                 ],
-                descripcion: "Trabajo clínico con población infanto-juvenil y adulta. Acompaña procesos terapéuticos desde un enfoque sistémico, integrando una mirada neuroafirmativa y afirmativa para la población LGBTIQA+, promoviendo espacios seguros, respetuosos e inclusivos. Su quehacer clínico incorpora la consejería en sexualidad y el fortalecimiento de competencias parentales."
+                descripcion: "Trabajo clínico con población infanto-juvenil y adulta. Acompaña procesos terapéuticos desde un enfoque sistémico, integrando una mirada neuroafirmativa y afirmativa para la población LGBTIQA+, promoviendo espacios seguros, respetuosos e inclusivos. Cuenta con experiencia en el sistema público y en el área jurídica. Su quehacer clínico incorpora la consejería en sexualidad, el fortalecimiento de competencias parentales, desde una práctica centrada en la persona."
             },
             "josefa-arias": {
                 nombre: "Josefa Arias",
@@ -1090,22 +1056,9 @@ Autor: Antigravity (AI Assistant)
                 formacion: [
                     "Psicóloga, Universidad Central.",
                     "Especializada en espectro autista desde un enfoque biopsicosocial, neuro-afirmativo y de derechos.",
-                    "Cursos de diagnóstico, evaluación, regulación emocional y procesamiento sensorial en personas dentro del espectro."
+                    "Énfasis en cursos de diagnóstico, evaluación, regulación emocional y procesamiento sensorial en personas dentro del espectro."
                 ],
-                descripcion: "Psicóloga con experiencia en neurodivergencia, trabajando desde un enfoque sistémico con un estilo dinámico y cercano. Realiza intervención clínica con niños y adolescentes, considerando el contexto familiar y escolar. Cuenta con especialización en perfil sensorial, integrando este abordaje en la regulación emocional y el bienestar integral."
-            },
-            "magdalena-zepeda": {
-                nombre: "Magdalena Zepeda",
-                cargo: "Psicóloga",
-                img: "assets/img/team/magdalena-zepeda.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicóloga, Universidad de La Serena.",
-                    "Diplomado en estrategias clínicas en psicoterapia breve para adultos.",
-                    "Diplomado en terapia breve para problemas en adolescencia.",
-                    "Cursos en: Regulación emocional, duelo y autolesión."
-                ],
-                descripcion: "Psicóloga con enfoque sistémico, que acompaña a niños, adolescentes y adultos desde una mirada integral, poniendo en el centro el vínculo terapéutico y la historia familiar. Su trabajo busca favorecer la comprensión de las dinámicas relacionales, promoviendo procesos de cambio significativos y sostenibles."
+                descripcion: "Psicóloga con experiencia en neurodivergencia, trabajando desde un enfoque sistémico con un estilo dinámico y cercano. Realiza intervención clínica con niños y adolescentes, considerando el contexto familiar y escolar. Cuenta con especialización en perfil sensorial, integrando este abordaje en la evaluación y acompañamiento terapéutico para favorecer la regulación emocional, la adaptación y el bienestar integral."
             },
             "maria-munoz": {
                 nombre: "María Muñoz",
@@ -1114,12 +1067,13 @@ Autor: Antigravity (AI Assistant)
                 especialidad: "Psicología Clínica",
                 formacion: [
                     "Universidad Central.",
-                    "16 años de experiencia clínica.",
+                    "<span class='dynamic-exp' data-start-year='2010'>16</span> años de experiencia clínica.",
+                    "Diversas formaciones y estudios.",
                     "Postítulo en terapia sistémica vincular.",
                     "Diplomado en técnicas de intervención en terapia sistémica breve.",
                     "Terapia Floral."
                 ],
-                descripcion: "Terapeuta con 16 años de experiencia clínica, que trabaja desde un enfoque sistémico-vincular, integrando además la terapia floral como complemento al proceso terapéutico. Se especializa en el trabajo con familias, fortalecimiento de los vínculos afectivos y un acompañamiento integral centrado en el bienestar relacional."
+                descripcion: "Terapeuta con <span class='dynamic-exp' data-start-year='2010'>16</span> años de experiencia clínica, que trabaja desde un enfoque sistémico-vincular, integrando además la terapia floral como complemento al proceso terapéutico. Se especializa en el trabajo con familias, acompañando a niños, adolescentes y adultos. Se orienta a la terapia basada en recursos, el fortalecimiento de los vínculos afectivos y un acompañamiento integral, respetuoso y centrado en el bienestar relacional."
             },
             "valentina-gonzalez": {
                 nombre: "Valentina González",
@@ -1131,24 +1085,11 @@ Autor: Antigravity (AI Assistant)
                     "Salud Mental en Adolescentes: Intervención en temáticas críticas.",
                     "Técnicas para la Regulación Emocional en Adultos.",
                     "Terapia Breve del Duelo.",
-                    "TéCNICAS de Psicoterapia Breve.",
+                    "Técnicas de Psicoterapia Breve.",
                     "Introducción al Modelo ODISEA de intervención parental y familiar.",
                     "Formación en institucionalización temprana: efectos y recuperación."
                 ],
-                descripcion: "Psicóloga especializada en primera infancia y niñez, con enfoque en el desarrollo socioemocional y el fortalecimiento del vínculo. Promueve espacios terapéuticos seguros y lúdicos, utilizando el juego como herramienta central de expresión, comprendiendo a la infancia dentro de su sistema familiar."
-            },
-            "benjamin-alarcon": {
-                nombre: "Benjamín Alarcón",
-                cargo: "Psicólogo",
-                img: "assets/img/team/benjamin-alarcon.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicólogo, Universidad de La Serena.",
-                    "Diplomado en enfoque clínico-forense.",
-                    "Formación en área jurídica aplicada a la intervención psicológica y abordaje clínico del abuso sexual infantil.",
-                    "Cursos en instrumentos psicométricos (TRO, CAT-A) y certificaciones en evaluación psicológica clínica."
-                ],
-                descripcion: "Psicólogo con experiencia en la línea jurídica, trabaja desde una mirada centrada en los derechos humanos de NNA. Posee un enfoque sistémico-conductual, orientando su práctica clínica a clarificar procesos, fortalecer la comprensión de vivencias y favorecer la toma de decisiones informadas."
+                descripcion: "Psicóloga especializada en primera infancia y niñez, con enfoque en el desarrollo socioemocional, el fortalecimiento del vínculo y el acompañamiento integral a las familias. Trabaja con niñ@s desde los primeros años de vida, promoviendo espacios terapéuticos seguros, lúdicos y profundamente respetuosos de su mundo interno. Integra el juego como herramienta central de exploración, expresión y elaboración emocional."
             }
         };
 
@@ -1199,6 +1140,11 @@ Autor: Antigravity (AI Assistant)
             const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
             if (scrollContainer) scrollContainer.scrollTop = 0;
             document.body.style.overflow = 'hidden';
+            
+            // Actualizar años de experiencia dinámicos
+            if (typeof updateExperience === 'function') {
+                updateExperience();
+            }
         }
 
         function closeDrawer() {

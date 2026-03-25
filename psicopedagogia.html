@@ -641,6 +641,18 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
+        // Experiencia Dinámica
+        function updateExperience() {
+            const currentYear = new Date().getFullYear();
+            document.querySelectorAll('.dynamic-exp').forEach(span => {
+                const startYear = parseInt(span.getAttribute('data-start-year'));
+                if (!isNaN(startYear)) {
+                    span.textContent = currentYear - startYear;
+                }
+            });
+        }
+        updateExperience();
+
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
@@ -722,6 +734,11 @@ Autor: Antigravity (AI Assistant)
             const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
             if (scrollContainer) scrollContainer.scrollTop = 0;
             document.body.style.overflow = 'hidden';
+            
+            // Actualizar años de experiencia dinámicos
+            if (typeof updateExperience === 'function') {
+                updateExperience();
+            }
         }
 
         function closeDrawer() {

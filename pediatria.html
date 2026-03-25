@@ -692,12 +692,11 @@ Autor: Antigravity (AI Assistant)
                 bg: "bg-primary-100/20",
                 especialidad: "Pediatría",
                 formacion: [
-                    "Médico Pediatra con más de 30 años de experiencia.",
-                    "Ex-directora de instituciones de salud pública.",
-                    "Enfoque en derechos de la infancia y salud integral.",
-                    "Especialista en desarrollo infantil biológico y social."
+                    "Médica Pediatra con más de <span class='dynamic-exp' data-start-year='1994'>30</span> años de experiencia.",
+                    "Ex-directora del Hospital de Coquimbo.",
+                    "Experiencia en servicio público hospitalario y consulta privada."
                 ],
-                descripcion: "Pediatra con una trayectoria de excelencia tanto en el sector público como privado. Su enfoque trasciende el bienestar físico, integrando los derechos de la infancia y una mirada biopsicosocial en cada control y tratamiento pediátrico."
+                descripcion: "Médica Pediatra con más de <span class='dynamic-exp' data-start-year='1994'>30</span> años de experiencia en el servicio público, desarrollada principalmente en el ámbito hospitalario y consulta privada. Su práctica se encuentra enfocada en los derechos de niños, niñas y adolescentes, con una profunda convicción en el acceso universal y oportuno a la salud. Lideró procesos de gestión sanitaria, fortalecimiento institucional y atención centrada en las personas."
             }
         };
 
@@ -747,6 +746,11 @@ Autor: Antigravity (AI Assistant)
             const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
             if (scrollContainer) scrollContainer.scrollTop = 0;
             document.body.style.overflow = 'hidden';
+            
+            // Actualizar años de experiencia dinámicos
+            if (typeof updateExperience === 'function') {
+                updateExperience();
+            }
         }
 
         function closeDrawer() {
