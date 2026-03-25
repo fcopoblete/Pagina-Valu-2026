@@ -23,6 +23,7 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
     - 🔴 **[FALTANTE]** Pamela Tarifeño (Psicopedagogía)
     - 🔴 **[FALTANTE]** Eugenia Ortiz (Pediatría)
     - 🔴 **[FALTANTE]** Bruno Araya (Fonoaudiología)
+    - 🔴 **[FALTANTE]** Valentina Jiménez (Psicología)
 - 🟡 **[EN PROCESO]** Imágenes Hero y Secciones: Reemplazar fotos temporales por fotografías reales.
     *Integraciones listas `assets/img/reales/`:*
     - 🟢 **[COMPLETADO]** `index.html`: `hero-inicio` y `seccion-nosotros`.
@@ -50,6 +51,7 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
 - 🔴 **[FALTANTE]** Google Ads: Configurar `AW-CONVERSION_ID` real.
 - 🔴 **[FALTANTE]** Etiquetas de Conversión: Configurar `LABEL_WHATSAPP`, `LABEL_FORM_PARTICULAR` y `LABEL_FORM_CONVENIOS`.
 - 🔴 **[FALTANTE]** Meta Pixel: Configurar `META_PIXEL_ID` real.
+- 🔴 **[FALTANTE]** Webhooks de Producción: Cambiar URLs `/webhook-test/` a `/webhook/` en ambos formularios una vez finalizadas las pruebas.
 
 ## 📄 Contenido Legal
 - 🟢 **[COMPLETADO]** Crear páginas de Privacidad y Términos.

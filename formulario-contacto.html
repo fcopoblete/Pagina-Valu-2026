@@ -494,6 +494,7 @@ Autor: Antigravity (AI Assistant)
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 required>
                                             <input type="number" id="dob-year" name="anio_nacimiento" placeholder="Año" min="1900" max="2026"
+                                                oninput="if(this.value.length > 4) this.value = this.value.slice(0,4); syncAndValidateDate();"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 required>
                                         </div>
@@ -1012,11 +1013,12 @@ Autor: Antigravity (AI Assistant)
             
             let isMinor = false;
             if (birthDateHidden && birthDateHidden.value) {
-                const birthDate = new Date(birthDateHidden.value);
+                const [y, m, d] = birthDateHidden.value.split('-').map(Number);
+                const birthDate = new Date(y, m - 1, d);
                 const today = new Date();
                 let age = today.getFullYear() - birthDate.getFullYear();
-                const m = today.getMonth() - birthDate.getMonth();
-                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) { age--; }
+                const mon = today.getMonth() - birthDate.getMonth();
+                if (mon < 0 || (mon === 0 && today.getDate() < birthDate.getDate())) { age--; }
                 isMinor = age < 18;
             }
 
@@ -1202,11 +1204,12 @@ Autor: Antigravity (AI Assistant)
             const year = dobYear.value;
 
             if (day && month && year && year.length === 4) {
-                const dateStr = `${year}-${month}-${day}`;
-                const testDate = new Date(dateStr);
+                // Usar componentes numéricos para evitar problemas de zona horaria con strings ISO
+                const testDate = new Date(year, parseInt(month) - 1, parseInt(day));
                 
                 // Validar que sea una fecha real (ej: no 31 de febrero)
                 if (testDate.getFullYear() == year && (testDate.getMonth() + 1) == month && testDate.getDate() == day) {
+                    const dateStr = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
                     fechaNacHidden.value = dateStr;
                     
                     const today = new Date();
