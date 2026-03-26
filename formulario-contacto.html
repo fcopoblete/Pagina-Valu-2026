@@ -845,24 +845,26 @@ Autor: Antigravity (AI Assistant)
                             <input type="hidden" name="version_legales_aceptada" value="v1.0">
                         </form>
 
-                        <!-- SUCCESS MESSAGE -->
-                        <div id="success-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
-                            <div class="h-20 w-20 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-8">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                        <!-- MESSAGE MODAL -->
+                        <div id="message-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden p-4">
+                            <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
+                            <div class="relative bg-white/90 backdrop-blur-xl border border-white/20 p-10 rounded-[2.5rem] shadow-2xl max-w-sm w-full text-center animate-in zoom-in duration-300">
+                                <!-- Icons -->
+                                <div id="modal-icon-success" class="h-20 w-20 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-8 hidden">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <div id="modal-icon-error" class="h-20 w-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-8 hidden">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                </div>
+                                
+                                <h3 id="modal-title" class="font-display text-3xl font-bold text-slate-900 mb-4"></h3>
+                                <p id="modal-description" class="text-slate-500 mb-10 text-sm leading-relaxed"></p>
+                                
+                                <div id="modal-actions" class="flex flex-col gap-3">
+                                    <a id="modal-btn-success" href="index.html" class="px-8 py-3 bg-primary-50 text-primary-600 rounded-xl font-bold hover:bg-primary-100 transition-all hidden text-center">Volver al Inicio</a>
+                                    <button id="modal-btn-error" type="button" onclick="closeModal()" class="px-8 py-3 bg-red-50 text-red-600 rounded-xl font-bold hover:bg-red-100 transition-all hidden">Reintentar</button>
+                                </div>
                             </div>
-                            <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">¡Mensaje Recibido!</h3>
-                            <p class="text-slate-500 mb-10 max-w-sm mx-auto">Gracias por contactarnos. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo a la brevedad.</p>
-                            <a href="index.html" class="px-8 py-3 bg-primary-50 text-primary-600 rounded-xl font-bold hover:bg-primary-100 transition-all">Volver al Inicio</a>
-                        </div>
-
-                        <!-- ERROR MESSAGE -->
-                        <div id="error-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
-                            <div class="h-20 w-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-8">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                            </div>
-                            <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">No se pudo enviar</h3>
-                            <p class="text-slate-500 mb-10 max-w-sm mx-auto">Hubo un problema técnico al procesar tu mensaje. Por favor, intenta de nuevo.</p>
-                            <button type="button" onclick="retryForm()" class="px-8 py-3 bg-red-50 text-red-600 rounded-xl font-bold hover:bg-red-100 transition-all">Reintentar Envío</button>
                         </div>
                     </div>
                 </div>
@@ -1144,34 +1146,38 @@ Autor: Antigravity (AI Assistant)
             return valid;
         }
 
-        function retryForm() {
-            document.getElementById('error-msg').classList.add('hidden');
-            document.getElementById('main-contact-form').classList.remove('hidden');
-            const btn = document.getElementById('nextBtn');
-            btn.textContent = 'REINTENTAR ENVÍO';
-            btn.disabled = false;
+        function closeModal() {
+            document.getElementById('message-modal').classList.add('hidden');
+        }
+
+        function showModal(type, title, desc) {
+            const modal = document.getElementById('message-modal');
+            const successIcon = document.getElementById('modal-icon-success');
+            const errorIcon = document.getElementById('modal-icon-error');
+            const successBtn = document.getElementById('modal-btn-success');
+            const errorBtn = document.getElementById('modal-btn-error');
+            
+            // Reset
+            [successIcon, errorIcon, successBtn, errorBtn].forEach(el => el.classList.add('hidden'));
+            
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-description').textContent = desc;
+            
+            if (type === 'success') {
+                successIcon.classList.remove('hidden');
+                successBtn.classList.remove('hidden');
+            } else {
+                errorIcon.classList.remove('hidden');
+                errorBtn.classList.remove('hidden');
+            }
+            
+            modal.classList.remove('hidden');
         }
 
         async function submitToN8N() {
             const form = document.getElementById('main-contact-form');
             const data = Object.fromEntries(new FormData(form).entries());
             const btn = document.getElementById('nextBtn');
-            const successMsg = document.getElementById('success-msg');
-            const errorMsg = document.getElementById('error-msg');
-            
-            data.tipo_lead = "PARTICULAR";
-            
-            if (data.website_url) {
-                form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                return;
-            }
-            delete data.website_url;
-            
-            btn.textContent = 'ENVIANDO...';
-            btn.disabled = true;
-            
             const now = new Date();
             data.fecha_envio = now.toLocaleDateString('es-CL') + ' ' + now.toLocaleTimeString('es-CL');
 
@@ -1185,17 +1191,16 @@ Autor: Antigravity (AI Assistant)
                 if (response.ok) {
                     gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_FORM_PARTICULAR' });
                     fbq('track', 'Lead');
-                    form.classList.add('hidden');
-                    successMsg.classList.remove('hidden');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    showModal('success', '¡Mensaje Recibido!', 'Gracias por contactarnos. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo a la brevedad.');
+                    btn.textContent = 'ENVIADO CON ÉXITO';
                 } else {
                     throw new Error('Server error');
                 }
             } catch (err) {
                 console.error(err);
-                form.classList.add('hidden');
-                errorMsg.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                btn.disabled = false;
+                btn.textContent = 'REINTENTAR ENVÍO';
+                showModal('error', 'No se pudo enviar', 'Hubo un problema técnico al procesar tu mensaje. Por favor, intenta de nuevo.');
             }
         }
 
@@ -1227,6 +1232,32 @@ Autor: Antigravity (AI Assistant)
                     }
                 }
             }
+            // Phone numbers only & block 'e', '.', etc.
+            const phoneInputs = document.querySelectorAll('input[type="tel"]');
+            phoneInputs.forEach(input => {
+                input.addEventListener('input', (e) => {
+                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                });
+            });
+
+            // Numeric fields: block 'e', 'E', '.', '-'
+            document.querySelectorAll('input[type="number"]').forEach(input => {
+                input.addEventListener('keydown', (e) => {
+                    if (['e', 'E', '.', '-'].includes(e.key)) {
+                        e.preventDefault();
+                    }
+                });
+            });
+
+            // Names only (no numbers)
+            ['nombre', 'apellido_paterno', 'apellido_materno', 'tutor_nombre', 'tutor_apellido', 'especifique_otro_servicio'].forEach(name => {
+                const input = document.querySelector(`input[name="${name}"]`);
+                if (input) {
+                    input.addEventListener('input', (e) => {
+                        e.target.value = e.target.value.replace(/[0-9]/g, '');
+                    });
+                }
+            });
         });
         // Formateo automático de RUT (insertar guion)
         function formatRUT(input) {
@@ -1297,7 +1328,7 @@ Autor: Antigravity (AI Assistant)
                         age--;
                     }
 
-                    if (age < 18) {
+                    if (age < 18 && age >= 0) {
                         seccionCuidador.classList.remove('hidden');
                         camposCuidador.forEach(input => input.setAttribute('required', 'true'));
                         
@@ -1314,6 +1345,10 @@ Autor: Antigravity (AI Assistant)
                                 colInput.value = '';
                             }
                         }
+                    } else if (age > 100) {
+                        alert("La edad máxima permitida es de 100 años.");
+                        dobYear.value = '';
+                        fechaNacHidden.value = '';
                     } else {
                         seccionCuidador.classList.add('hidden');
                         camposCuidador.forEach(input => {
