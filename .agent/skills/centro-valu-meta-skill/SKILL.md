@@ -39,6 +39,16 @@ Cualquier modificación al equipo médico (altas, bajas o modificaciones) DEBE s
 - Nunca uses años fijos (ej. "16 años de experiencia").
 - Usar siempre la etiqueta `<span class="dynamic-exp" data-start-year="YYYY">X</span>` en CUALQUIER mención de años de experiencia para que el JavaScript calcule automáticamente el avance del tiempo.
 
+### 4. Estándar de Imagen y Recorte (CRÍTICO)
+- **Procesamiento Selectivo**: NUNCA actualices todas las fotos en ráfaga de forma automática. Solo procesa aquellas explícitamente indicadas por el usuario o las que falten (indicadas en `PENDIENTES.md`), para evitar alterar versiones ya aprobadas en producción.
+- **Anatomía de la Foto**: Todas las fotografías de profesionales DEBEN seguir este encuadre:
+    1. **Eliminación de Fondo**: Transparencia total.
+    2. **Encuadre Basal (Bottom align)**: La base del torso del profesional debe coincidir con el borde inferior del contenedor (no debe "flotar").
+    3. **Aire Superior (Top breathing)**: Dejar entre un 10% y 15% de espacio vacío sobre la cabeza del profesional.
+    4. **Centrado y Escala**: Centrado horizontal a escala máxima permitida por el aire superior. Usar `object-contain`.
+    5. **Formato y Peso**: WebP optimizado (Máx 1000px altura, peso < 100KB).
+- Si la foto original tiene un fondo complejo, solicita la versión "recortada" o usa la herramienta de remoción de fondo disponible.
+
 ## 🧱 Cambios Globales (Header, Footer, Navegación)
 - Si el usuario te pide modificar el encabezado (`index.html`) o el pie de página y te indica hacerlo *solo en una página*, **DEBES** registrar inmediatamente en `PENDIENTES.md` una tarea requerida para replicar ese mismo cambio en las 10+ páginas restantes del ecosistema, evitando discrepancias de diseño.
 

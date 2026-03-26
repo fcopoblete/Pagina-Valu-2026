@@ -20,10 +20,10 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
 
 ## 🖼️ Activos Visuales Faltantes (Crítico)
 - 🟡 **[EN PROCESO]** Fotos de Profesionales: Falta conseguir las de algunos directores/fundadores:
-    - 🔴 **[FALTANTE]** Pamela Tarifeño (Psicopedagogía)
-    - 🔴 **[FALTANTE]** Eugenia Ortiz (Pediatría)
-    - 🔴 **[FALTANTE]** Bruno Araya (Fonoaudiología)
-    - 🔴 **[FALTANTE]** Valentina Jiménez (Psicología)
+    - 🔴 **[FALTANTE]** Pamela Tarifeño (Psicopedagogía) - *Falta foto original*
+    - 🟢 **[COMPLETADO]** Eugenia Ortiz (Pediatría) - *Imagen optimizada con transparencia*
+    - 🟢 **[COMPLETADO]** Bruno Araya (Fonoaudiología) - *Imagen optimizada con transparencia*
+    - 🟢 **[COMPLETADO]** Valentina Jiménez (Psicología) - *Imagen optimizada con transparencia y encuadre basal*
 - 🟡 **[EN PROCESO]** Imágenes Hero y Secciones: Reemplazar fotos temporales por fotografías reales.
     *Integraciones listas `assets/img/reales/`:*
     - 🟢 **[COMPLETADO]** `index.html`: `hero-inicio` y `seccion-nosotros`.

@@ -488,9 +488,11 @@ Autor: Antigravity (AI Assistant)
                                             de Nacimiento</label>
                                         <div class="flex gap-2">
                                             <input type="number" id="dob-day" name="dia_nacimiento" placeholder="Día" min="1" max="31"
+                                                oninput="if(this.value.length > 2) this.value = this.value.slice(0,2); syncAndValidateDate();"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 required>
                                             <input type="number" id="dob-month" name="mes_nacimiento" placeholder="Mes" min="1" max="12"
+                                                oninput="if(this.value.length > 2) this.value = this.value.slice(0,2); syncAndValidateDate();"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 required>
                                             <input type="number" id="dob-year" name="anio_nacimiento" placeholder="Año" min="1900" max="2026"
@@ -587,7 +589,7 @@ Autor: Antigravity (AI Assistant)
                                                         🇨🇱 +56
                                                     </div>
                                                     <select name="prefijo" id="prefijo-select"
-                                                        class="w-full h-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-3 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer text-transparent font-bold">
+                                                        class="w-full h-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-3 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer text-transparent font-bold appearance-none">
                                                         <option value="+56" data-short="🇨🇱 +56" class="text-slate-900">🇨🇱 +56 (Chile)</option>
                                                         <option value="+58" data-short="🇻🇪 +58" class="text-slate-900">🇻🇪 +58 (Venezuela)</option>
                                                         <option value="+509" data-short="🇭🇹 +509" class="text-slate-900">🇭🇹 +509 (Haití)</option>
@@ -597,6 +599,12 @@ Autor: Antigravity (AI Assistant)
                                                         <option value="+54" data-short="🇦🇷 +54" class="text-slate-900">🇦🇷 +54 (Argentina)</option>
                                                         <option value="+593" data-short="🇪🇨 +593" class="text-slate-900">🇪🇨 +593 (Ecuador)</option>
                                                     </select>
+                                                    <!-- Flecha SVG -->
+                                                    <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                                 <input type="tel" name="telefono"
                                                     class="min-w-0 flex-1 bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
