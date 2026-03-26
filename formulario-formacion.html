@@ -132,21 +132,28 @@ Autor: Antigravity (AI Assistant)
                     <!-- FORM -->
                     <div class="lg:col-span-8 p-12 lg:p-16 bg-white">
                         <form id="formation-form" class="space-y-8">
+                            <!-- FECHA (HIDDEN) -->
+                            <input type="hidden" name="fecha_envio" id="fecha_envio">
+
                             <!-- STEP 1 -->
                             <div id="step-1" class="step-content active">
-                                <h3 class="text-2xl font-display font-bold mb-8 text-slate-900">Datos Profesionales</h3>
+                                <h3 class="text-2xl font-display font-bold mb-8 text-slate-900">Identidad</h3>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div class="group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Nombre Completo</label>
-                                        <input type="text" name="nombre" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Juan Pérez" required>
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Nombre</label>
+                                        <input type="text" name="nombre" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Juan" required>
+                                    </div>
+                                    <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Apellido</label>
+                                        <input type="text" name="apellido" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Pérez" required>
                                     </div>
                                     <div class="group">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">RUT</label>
                                         <input type="text" name="rut" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="12.345.678-9" required>
                                     </div>
-                                    <div class="md:col-span-2 group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Profesión o Especialidad (O Carrera si eres estudiante)</label>
-                                        <input type="text" name="profesion" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Psicólogo Clínico / Estudiante de 5to año" required>
+                                    <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Fecha de Nacimiento</label>
+                                        <input type="date" name="fecha_nacimiento" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" required>
                                     </div>
                                 </div>
                                 <div class="mt-12 flex justify-end">
@@ -156,19 +163,27 @@ Autor: Antigravity (AI Assistant)
 
                             <!-- STEP 2 -->
                             <div id="step-2" class="step-content">
-                                <h3 class="text-2xl font-display font-bold mb-8 text-slate-900">Información de Contacto</h3>
+                                <h3 class="text-2xl font-display font-bold mb-8 text-slate-900">Perfil Profesional y Contacto</h3>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="md:col-span-2 group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Profesión / Carrera</label>
+                                        <input type="text" name="profesion" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Psicólogo Clínico" required>
+                                    </div>
+                                    <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Universidad</label>
+                                        <input type="text" name="universidad" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Universidad de Chile" required>
+                                    </div>
+                                    <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Año de Egreso</label>
+                                        <input type="number" name="anio_egreso" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: 2020" required>
+                                    </div>
+                                    <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">E-mail</label>
+                                        <input type="email" name="email" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="hola@ejemplo.com" required>
+                                    </div>
                                     <div class="group">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Teléfono</label>
                                         <input type="tel" name="telefono" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="+569 1234 5678" required>
-                                    </div>
-                                    <div class="group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Email</label>
-                                        <input type="email" name="email" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="juan.perez@email.com" required>
-                                    </div>
-                                    <div class="md:col-span-2 group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Ciudad / Comuna de Residencia</label>
-                                        <input type="text" name="comuna" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Coquimbo" required>
                                     </div>
                                 </div>
                                 <div class="mt-12 flex justify-between">
@@ -179,20 +194,11 @@ Autor: Antigravity (AI Assistant)
 
                             <!-- STEP 3 -->
                             <div id="step-3" class="step-content">
-                                <h3 class="text-2xl font-display font-bold mb-8 text-slate-900">Interés y Mensaje</h3>
+                                <h3 class="text-2xl font-display font-bold mb-8 text-slate-900">Mensaje Final</h3>
                                 <div class="space-y-8">
                                     <div class="group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Área de Interés</label>
-                                        <select name="interes" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer">
-                                            <option value="formacion">Formación de Practicantes / Pasantías</option>
-                                            <option value="supervision">Supervisión Clínica Individual o Grupal</option>
-                                            <option value="seminarios">Seminarios y Talleres Profesionales</option>
-                                            <option value="otro">Otro / Consulta General</option>
-                                        </select>
-                                    </div>
-                                    <div class="group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Mensaje o Motivo de interés</label>
-                                        <textarea name="mensaje" rows="4" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Cuéntanos un poco más sobre tu interés..." required></textarea>
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Consulta o Motivo de contacto</label>
+                                        <textarea name="mensaje" rows="6" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Cuéntanos un poco más sobre tu interés en formación, supervisión o seminarios..." required></textarea>
                                     </div>
                                 </div>
                                 <div class="mt-12 flex justify-between">
@@ -260,6 +266,10 @@ Autor: Antigravity (AI Assistant)
             const btn = document.getElementById('submit-btn');
             btn.disabled = true;
             btn.innerText = 'Enviando...';
+
+            // Set current date
+            const now = new Date();
+            document.getElementById('fecha_envio').value = now.toLocaleDateString('es-CL') + ' ' + now.toLocaleTimeString('es-CL');
 
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
