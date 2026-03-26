@@ -872,83 +872,7 @@ Autor: Antigravity (AI Assistant)
             }, 1500);
         }
 
-        // Mobile Menu Logic
-        // Mobile Menu Logic Unificada
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuContent = document.getElementById('menu-content');
-        const menuClose = document.getElementById('menu-close');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        function toggleMenu() {
-            const isOpen = !mobileMenu.classList.contains('opacity-0');
-            if (isOpen) {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                menuContent.classList.add('translate-x-full');
-                document.body.style.overflow = '';
-            } else {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                menuContent.classList.remove('translate-x-full');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-        if (menuClose) menuClose.addEventListener('click', toggleMenu);
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) toggleMenu();
-            });
-        }
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                menuContent.classList.add('translate-x-full');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Submenu Specialties Logic
-        const specialtiesToggle = document.getElementById('specialties-toggle');
-        const specialtiesSubmenu = document.getElementById('specialties-submenu');
-        const specialtiesChevron = document.getElementById('specialties-chevron');
-
-        if (specialtiesToggle) {
-            specialtiesToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    specialtiesSubmenu.style.maxHeight = '0px';
-                    specialtiesChevron.classList.remove('rotate-180');
-                } else {
-                    specialtiesSubmenu.style.maxHeight = specialtiesSubmenu.scrollHeight + 'px';
-                    specialtiesChevron.classList.add('rotate-180');
-                }
-            });
-        }
-
-        // Submenu Convenios Logic
-        const conveniosToggle = document.getElementById('convenios-toggle');
-        const conveniosSubmenu = document.getElementById('convenios-submenu');
-        const conveniosChevron = document.getElementById('convenios-chevron');
-
-        if (conveniosToggle) {
-            conveniosToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    conveniosSubmenu.style.maxHeight = '0px';
-                    conveniosChevron.classList.remove('rotate-180');
-                } else {
-                    conveniosSubmenu.style.maxHeight = conveniosSubmenu.scrollHeight + 'px';
-                    conveniosChevron.classList.add('rotate-180');
-                }
-            });
-        }
-
+        
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
@@ -985,7 +909,127 @@ Autor: Antigravity (AI Assistant)
         
         // Ejecutar al cargar
         document.addEventListener('DOMContentLoaded', updateSpecialistCount);
-    </script>
+    
+        // Mobile Menu Logic Unificada con History API para botón 'Atrás'
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuContent = document.getElementById('menu-content');
+        const menuClose = document.getElementById('menu-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        function closeMobileMenu(fromPopState = false) {
+            if (mobileMenu) {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('opacity-100'); // Para casos donde se usaba opactiy-100 directamente
+            }
+            if (menuContent) menuContent.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+            
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+
+            if (!fromPopState && history.state && history.state.mobileMenuOpen) {
+                history.back();
+            }
+        }
+
+        function openMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100');
+            }
+            if (menuContent) menuContent.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+            
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            }
+
+            history.pushState({ mobileMenuOpen: true }, '');
+        }
+
+        function toggleMenu() {
+            if (!mobileMenu) return;
+            // Evaluamos si el menú parece cerrado
+            const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
+            if (isClosed) {
+                openMobileMenu();
+            } else {
+                closeMobileMenu();
+            }
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', toggleMenu);
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) toggleMenu();
+            });
+        }
+
+        if (mobileLinks) {
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
+            });
+        }
+
+        window.addEventListener('popstate', (e) => {
+            if (mobileMenu) {
+                const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
+                if (!isClosed) {
+                    closeMobileMenu(true);
+                }
+            }
+        });
+
+        // Submenu Specialties Logic
+        const specialtiesToggle = document.getElementById('specialties-toggle');
+        const specialtiesSubmenu = document.getElementById('specialties-submenu');
+        const specialtiesChevron = document.getElementById('specialties-chevron');
+
+        if (specialtiesToggle && specialtiesSubmenu && specialtiesChevron) {
+            specialtiesToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
+                if (isOpen) {
+                    specialtiesSubmenu.style.maxHeight = '0px';
+                    specialtiesChevron.classList.remove('rotate-180');
+                } else {
+                    specialtiesSubmenu.style.maxHeight = specialtiesSubmenu.scrollHeight + 'px';
+                    specialtiesChevron.classList.add('rotate-180');
+                }
+            });
+        }
+
+        // Submenu Convenios Logic
+        const conveniosToggle = document.getElementById('convenios-toggle');
+        const conveniosSubmenu = document.getElementById('convenios-submenu');
+        const conveniosChevron = document.getElementById('convenios-chevron');
+
+        if (conveniosToggle && conveniosSubmenu && conveniosChevron) {
+            conveniosToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
+                if (isOpen) {
+                    conveniosSubmenu.style.maxHeight = '0px';
+                    conveniosChevron.classList.remove('rotate-180');
+                } else {
+                    conveniosSubmenu.style.maxHeight = conveniosSubmenu.scrollHeight + 'px';
+                    conveniosChevron.classList.add('rotate-180');
+                }
+            });
+        }
+
+</script>
     <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
     <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n."
         target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
