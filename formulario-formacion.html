@@ -64,6 +64,11 @@ Autor: Antigravity (AI Assistant)
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
+        #prefijo-select option {
+            color: #0f172a !important; /* slate-900 */
+            background-color: white !important;
+        }
+
         .step-content {
             display: none;
         }
@@ -149,11 +154,25 @@ Autor: Antigravity (AI Assistant)
                                     </div>
                                     <div class="group">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">RUT</label>
-                                        <input type="text" name="rut" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="12.345.678-9" required>
+                                        <input type="text" name="rut" id="rut-input" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="12.345.678-9" required>
                                     </div>
                                     <div class="group">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Fecha de Nacimiento</label>
-                                        <input type="date" name="fecha_nacimiento" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" required>
+                                        <div class="flex gap-2">
+                                            <input type="number" id="dob-day" name="dia_nacimiento" placeholder="Día" min="1" max="31"
+                                                oninput="if(this.value.length > 2) this.value = this.value.slice(0,2); syncAndValidateDate();"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                                required>
+                                            <input type="number" id="dob-month" name="mes_nacimiento" placeholder="Mes" min="1" max="12"
+                                                oninput="if(this.value.length > 2) this.value = this.value.slice(0,2); syncAndValidateDate();"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                                required>
+                                            <input type="number" id="dob-year" name="anio_nacimiento" placeholder="Año" min="1900" max="2026"
+                                                oninput="if(this.value.length > 4) this.value = this.value.slice(0,4); syncAndValidateDate();"
+                                                class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
+                                                required>
+                                        </div>
+                                        <input type="hidden" name="fecha_nacimiento" id="fecha_nacimiento_hidden">
                                     </div>
                                 </div>
                                 <div class="mt-12 flex justify-end">
@@ -174,16 +193,47 @@ Autor: Antigravity (AI Assistant)
                                         <input type="text" name="universidad" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Universidad de Chile" required>
                                     </div>
                                     <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Estado Académico</label>
+                                        <select name="estado_academico" id="estado-selector" onchange="toggleAnioEgreso()" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer" required>
+                                            <option value="" disabled selected>Seleccione opción</option>
+                                            <option value="egresado">Egresado / Titulado</option>
+                                            <option value="estudiante">Estudiante</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="group hidden" id="anio-egreso-container">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Año de Egreso</label>
-                                        <input type="number" name="anio_egreso" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: 2020" required>
+                                        <input type="number" name="anio_egreso" id="anio-egreso-input" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: 2020">
+                                    </div>
+                                    <div class="group">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Teléfono</label>
+                                        <div class="flex gap-2 w-full">
+                                            <div class="relative w-28 shrink-0">
+                                                <div id="prefijo-display" class="absolute inset-0 flex items-center px-3 pointer-events-none font-bold text-slate-700">
+                                                    🇨🇱 +56
+                                                </div>
+                                                <select name="prefijo" id="prefijo-select"
+                                                    class="w-full h-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-3 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer text-transparent font-bold appearance-none"
+                                                    onchange="document.getElementById('prefijo-display').innerText = this.options[this.selectedIndex].getAttribute('data-short');">
+                                                    <option value="+56" data-short="🇨🇱 +56" selected>🇨🇱 +56 (Chile)</option>
+                                                    <option value="+58" data-short="🇻🇪 +58">🇻🇪 +58 (Venezuela)</option>
+                                                    <option value="+509" data-short="🇭🇹 +509">🇭🇹 +509 (Haití)</option>
+                                                    <option value="+57" data-short="🇨🇴 +57">🇨🇴 +57 (Colombia)</option>
+                                                    <option value="+51" data-short="🇵🇪 +51">🇵🇪 +51 (Perú)</option>
+                                                    <option value="+591" data-short="🇧🇴 +591">🇧🇴 +591 (Bolivia)</option>
+                                                    <option value="+54" data-short="🇦🇷 +54">🇦🇷 +54 (Argentina)</option>
+                                                    <option value="+593" data-short="🇪🇨 +593">🇪🇨 +593 (Ecuador)</option>
+                                                </select>
+                                                <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" /></svg>
+                                                </div>
+                                            </div>
+                                            <input type="tel" name="telefono" class="min-w-0 flex-1 bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="9 1234 5678" required>
+                                        </div>
                                     </div>
                                     <div class="group">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">E-mail</label>
                                         <input type="email" name="email" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="hola@ejemplo.com" required>
-                                    </div>
-                                    <div class="group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Teléfono</label>
-                                        <input type="tel" name="telefono" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="+569 1234 5678" required>
                                     </div>
                                 </div>
                                 <div class="mt-12 flex justify-between">
@@ -224,13 +274,70 @@ Autor: Antigravity (AI Assistant)
     </main>
 
     <script>
+        // RUT Formatting
+        const rutInput = document.getElementById('rut-input');
+        if (rutInput) {
+            rutInput.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\./g, '').replace('-', '');
+                if (value.length < 2) return;
+                
+                let body = value.slice(0, -1);
+                let dv = value.slice(-1).toUpperCase();
+                
+                let result = '';
+                let count = 0;
+                for (let i = body.length - 1; i >= 0; i--) {
+                    result = body.charAt(i) + result;
+                    count++;
+                    if (count === 3 && i > 0) {
+                        result = '.' + result;
+                        count = 0;
+                    }
+                }
+                e.target.value = result + '-' + dv;
+            });
+        }
+
+        function toggleAnioEgreso() {
+            const selector = document.getElementById('estado-selector');
+            const container = document.getElementById('anio-egreso-container');
+            const input = document.getElementById('anio-egreso-input');
+            
+            if (selector.value === 'egresado') {
+                container.classList.remove('hidden');
+                input.required = true;
+            } else {
+                container.classList.add('hidden');
+                input.required = false;
+                input.value = '';
+            }
+        }
+
+        function syncAndValidateDate() {
+            const day = document.getElementById('dob-day').value.padStart(2, '0');
+            const month = document.getElementById('dob-month').value.padStart(2, '0');
+            const year = document.getElementById('dob-year').value;
+            const hidden = document.getElementById('fecha_nacimiento_hidden');
+
+            if (day && month && year && year.length === 4) {
+                hidden.value = `${year}-${month}-${day}`;
+            } else {
+                hidden.value = '';
+            }
+        }
+
         function nextStep(step) {
-            // Validation simple for example
             const currentStep = document.querySelector('.step-content.active');
-            const inputs = currentStep.querySelectorAll('input[required], textarea[required]');
+            
+            // Re-sync date before validation if we are in step 1
+            if (currentStep.id === 'step-1') {
+                syncAndValidateDate();
+            }
+
+            const inputs = currentStep.querySelectorAll('input[required], textarea[required], select[required]');
             let valid = true;
             inputs.forEach(input => {
-                if (!input.value) {
+                if (!input.value || (input.type === 'number' && input.hasAttribute('min') && parseInt(input.value) < parseInt(input.getAttribute('min')))) {
                     input.classList.add('border-red-300', 'bg-red-50');
                     valid = false;
                 } else {
@@ -238,7 +345,12 @@ Autor: Antigravity (AI Assistant)
                 }
             });
 
-            if(!valid) return;
+            if(!valid) {
+                // Scroll to first error
+                const firstError = currentStep.querySelector('.border-red-300');
+                if(firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
 
             document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active'));
             document.getElementById(`step-${step}`).classList.add('active');
