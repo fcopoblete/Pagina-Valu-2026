@@ -320,6 +320,16 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
+        // Names only (no numbers)
+        ['nombre', 'apellido'].forEach(name => {
+            const input = document.querySelector(`input[name="${name}"]`);
+            if (input) {
+                input.addEventListener('input', (e) => {
+                    e.target.value = e.target.value.replace(/[0-9]/g, '');
+                });
+            }
+        });
+
         function handleAcademicStatusChange() {
             const selector = document.getElementById('estado-selector');
             const egresoContainer = document.getElementById('anio-egreso-container');
@@ -417,6 +427,12 @@ Autor: Antigravity (AI Assistant)
                 if (age < 17) {
                     const errorMsg = document.getElementById('dob-error');
                     errorMsg.innerText = 'Debes ser mayor de 17 años para solicitar formación.';
+                    errorMsg.classList.remove('hidden');
+                    return;
+                }
+                if (age > 100) {
+                    const errorMsg = document.getElementById('dob-error');
+                    errorMsg.innerText = 'Por favor ingrese una fecha de nacimiento válida (máximo 100 años).';
                     errorMsg.classList.remove('hidden');
                     return;
                 }
