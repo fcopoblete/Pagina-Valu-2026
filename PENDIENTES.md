@@ -36,6 +36,7 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
     *FALTAN por conseguir en `assets/img/reales/`:*
     - 🔴 **[FALTANTE]** `quienes-somos.html`: Falta `hero-quienes-somos`, `galeria-espera`, `galeria-pasillo`.
     - 🔴 **[FALTANTE]** `pediatria.html`: Falta `box-pediatria` (box con juguetes).
+    - 🔴 **[FALTANTE]** `formacion.html`: Falta `hero-formacion` (foto real de supervisión o formación).
 - 🟢 **[COMPLETADO]** Branding y Social Media: Set de imágenes OG e Íconos creados e integrados.
 - 🟢 **[COMPLETADO]** Hero Image: Ajustar la visualización responsiva en `index.html`.
 
