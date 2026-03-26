@@ -170,7 +170,7 @@ Autor: Antigravity (AI Assistant)
             <div class="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
                 <!-- NAV DESKTOP (OPCIÓN 1) -->
                 <nav class="hidden lg:flex items-center gap-8 mr-6">
-                    <a href="index.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
+                    <a href="index.html" class="text-primary-600 font-bold hover:text-primary-700 transition-colors">Inicio</a>
                     <a href="quienes-somos.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Quiénes somos</a>
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
@@ -195,10 +195,12 @@ Autor: Antigravity (AI Assistant)
                             </ul>
                         </div>
                     </div>
+                    <a href="formacion.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Formación</a>
                     <a href="profesionales.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Nuestro Equipo</a>
+                    <a href="index.html#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
 
-                <a href="formulario-contacto.html"
+                <a href="contacto-convenios.html"
                     class="bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
                     Contáctanos
                 </a>
@@ -217,7 +219,7 @@ Autor: Antigravity (AI Assistant)
         <!-- PANEL LATERAL (DRAWER) MÓVIL (DESPLAZAMIENTO DESDE LA DERECHA) -->
         <div id="mobile-menu"
             class="fixed lg:hidden inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
-            <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300"
+            <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300 overflow-y-auto"
                 id="menu-content">
                 <div class="flex justify-between items-center mb-12">
                     <span class="font-display font-bold text-xl text-primary-900">Menú</span>
@@ -231,39 +233,11 @@ Autor: Antigravity (AI Assistant)
                 </div>
                 <ul class="space-y-6">
                     <li><a href="index.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Inicio</a>
+                            class="mobile-link text-2xl font-bold text-primary-600 transition-colors">Inicio</a>
                     </li>
                     <li><a href="quienes-somos.html"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes
                             somos</a>
-                    </li>
-                    <li>
-                        <button id="convenios-toggle" aria-label="Desplegar convenios"
-                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
-                            Convenios
-                            <svg id="convenios-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        <div id="convenios-submenu"
-                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
-                            <ul class="py-4 px-6 space-y-4">
-                                <li>
-                                    <a href="convenios.html#colegios"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
-                                </li>
-                                <li>
-                                    <a href="convenios.html#empresas"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="profesionales.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
-                            Equipo</a>
                     </li>
                     <li>
                         <button id="specialties-toggle" aria-label="Desplegar especialidades"
@@ -296,11 +270,42 @@ Autor: Antigravity (AI Assistant)
                             </ul>
                         </div>
                     </li>
+                    <li>
+                        <button id="convenios-toggle" aria-label="Desplegar convenios"
+                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            Convenios
+                            <svg id="convenios-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="convenios-submenu"
+                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
+                            <ul class="py-4 px-6 space-y-4">
+                                <li>
+                                    <a href="convenios.html#colegios"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
+                                </li>
+                                <li>
+                                    <a href="convenios.html#empresas"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="formacion.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Formación</a>
+                    </li>
+                    <li><a href="profesionales.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
+                            Equipo</a>
+                    </li>
                     <li><a href="index.html#contacto"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
                     </li>
                     <li class="pt-8 border-t border-slate-100">
-                        <a href="formulario-contacto.html"
+                        <a href="contacto-convenios.html"
                             class="mobile-link group flex items-center justify-center gap-3 w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white text-center py-4 rounded-xl font-bold text-base shadow-lg shadow-primary-600/20 glow-effect transition-all hover:shadow-xl active:scale-[0.98]">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -598,6 +603,7 @@ Autor: Antigravity (AI Assistant)
                         <li><a href="fonoaudiologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                         <li><a href="terapia-ocupacional.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                         <li><a href="psicopedagogia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                        <li><a href="formacion.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Formación</a></li>
                         <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios</a></li>
                     </ul>
                 </div>
@@ -620,7 +626,7 @@ Autor: Antigravity (AI Assistant)
                             <a href="mailto:centrovalu@gmail.com" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors">centrovalu@gmail.com</a>
                         </li>
                         <li class="pt-4">
-                            <a href="formulario-contacto.html" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar</a>
+                            <a href="contacto-convenios.html" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar</a>
                         </li>
                     </ul>
                 </div>
@@ -668,7 +674,12 @@ Autor: Antigravity (AI Assistant)
                 }
             });
         }
+</script>
 
+    
+
+    <!-- Script inyectado globalmente por unificación -->
+    <script>
         // Mobile Menu Logic Unificada con History API para botón 'Atrás'
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -787,8 +798,7 @@ Autor: Antigravity (AI Assistant)
                 }
             });
         }
-
-</script>
+    </script>
 </body>
 
 </html>

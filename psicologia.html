@@ -250,7 +250,7 @@ Autor: Antigravity (AI Assistant)
             <div class="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
                 <!-- NAV DESKTOP (OPCIÓN 1) -->
                 <nav class="hidden lg:flex items-center gap-8 mr-6">
-                    <a href="index.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
+                    <a href="index.html" class="text-primary-600 font-bold hover:text-primary-700 transition-colors">Inicio</a>
                     <a href="quienes-somos.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Quiénes somos</a>
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
@@ -275,7 +275,9 @@ Autor: Antigravity (AI Assistant)
                             </ul>
                         </div>
                     </div>
+                    <a href="formacion.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Formación</a>
                     <a href="profesionales.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Nuestro Equipo</a>
+                    <a href="index.html#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
 
                 <a href="formulario-contacto.html"
@@ -297,7 +299,7 @@ Autor: Antigravity (AI Assistant)
         <!-- PANEL LATERAL (DRAWER) MÓVIL (DESPLAZAMIENTO DESDE LA DERECHA) -->
         <div id="mobile-menu"
             class="fixed lg:hidden inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
-            <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300"
+            <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300 overflow-y-auto"
                 id="menu-content">
                 <div class="flex justify-between items-center mb-12">
                     <span class="font-display font-bold text-xl text-primary-900">Menú</span>
@@ -311,39 +313,11 @@ Autor: Antigravity (AI Assistant)
                 </div>
                 <ul class="space-y-6">
                     <li><a href="index.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Inicio</a>
+                            class="mobile-link text-2xl font-bold text-primary-600 transition-colors">Inicio</a>
                     </li>
                     <li><a href="quienes-somos.html"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes
                             somos</a>
-                    </li>
-                    <li>
-                        <button id="convenios-toggle" aria-label="Desplegar convenios"
-                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
-                            Convenios
-                            <svg id="convenios-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        <div id="convenios-submenu"
-                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
-                            <ul class="py-4 px-6 space-y-4">
-                                <li>
-                                    <a href="convenios.html#colegios"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
-                                </li>
-                                <li>
-                                    <a href="convenios.html#empresas"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="profesionales.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
-                            Equipo</a>
                     </li>
                     <li>
                         <button id="specialties-toggle" aria-label="Desplegar especialidades"
@@ -375,6 +349,37 @@ Autor: Antigravity (AI Assistant)
                                 </li>
                             </ul>
                         </div>
+                    </li>
+                    <li>
+                        <button id="convenios-toggle" aria-label="Desplegar convenios"
+                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            Convenios
+                            <svg id="convenios-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="convenios-submenu"
+                            class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
+                            <ul class="py-4 px-6 space-y-4">
+                                <li>
+                                    <a href="convenios.html#colegios"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
+                                </li>
+                                <li>
+                                    <a href="convenios.html#empresas"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="formacion.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Formación</a>
+                    </li>
+                    <li><a href="profesionales.html"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
+                            Equipo</a>
                     </li>
                     <li><a href="index.html#contacto"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
@@ -696,6 +701,7 @@ Autor: Antigravity (AI Assistant)
                         <li><a href="fonoaudiologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                         <li><a href="terapia-ocupacional.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                         <li><a href="psicopedagogia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                        <li><a href="formacion.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Formación</a></li>
                         <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios</a></li>
                     </ul>
                 </div>
@@ -780,7 +786,104 @@ Autor: Antigravity (AI Assistant)
                 },
             },
         });
+
+        const proDrawerOverlay = document.getElementById('pro-drawer-overlay');
+        const proDrawerContent = document.getElementById('pro-drawer-content');
+        const closeProDrawer = document.getElementById('close-pro-drawer');
+        const proDetailsTarget = document.getElementById('pro-details-target');
+
+        function openDrawer(proId) {
+            const data = proDataExtended[proId];
+            if (!data) return;
+
+            const isLogo = data.img.includes('logo-valu.png');
+            const bgClass = data.bg || (isLogo ? 'bg-primary-50' : 'bg-primary-100/20');
+
+            proDetailsTarget.innerHTML = `
+                <div class="flex flex-col gap-8">
+                    <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center shadow-inner">
+                        <img src="${data.img}" alt="${data.nombre}" class="${isLogo ? 'w-1/2 h-1/2 object-contain' : 'w-full h-full object-contain p-4'}" loading="lazy" width="400" height="300">
+                    </div>
+                    <div>
+                        <span class="text-primary-600 font-bold text-xs uppercase tracking-[0.2em] mb-2 block">${data.especialidad}</span>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900">${data.nombre}</h2>
+                        <p class="text-slate-400 font-medium mt-2">${data.cargo}</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Descripción Profesional</h5>
+                        <p class="text-slate-600 leading-relaxed text-lg">${data.descripcion}</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Formación y Especialidades</h5>
+                        <ul class="grid gap-4">
+                            ${data.formacion.map(item => `
+                                <li class="flex items-start gap-3 text-slate-600">
+                                    <svg class="w-5 h-5 text-primary-500 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="font-medium">${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            proDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            proDrawerContent.classList.remove('translate-x-full');
+            const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
+            if (scrollContainer) scrollContainer.scrollTop = 0;
+            document.body.style.overflow = 'hidden';
+            history.pushState({ drawerOpen: true }, '');
+            
+            // Actualizar años de experiencia dinámicos
+            if (typeof updateExperience === 'function') {
+                updateExperience();
+            }
+        }
+
+        function closeDrawer(fromPopState = false) {
+            proDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+            proDrawerContent.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+            
+            if (!fromPopState && history.state && history.state.drawerOpen) {
+                history.back();
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.open-pro-drawer')) {
+                const card = e.target.closest('.pro-card');
+                const proId = card.getAttribute('data-pro-id');
+                openDrawer(proId);
+            }
+        });
+
+        if (closeProDrawer) closeProDrawer.addEventListener('click', () => closeDrawer());
+        if (proDrawerOverlay) {
+            proDrawerOverlay.addEventListener('click', (e) => {
+                if (e.target === proDrawerOverlay) closeDrawer();
+            });
+        }
+
+        window.addEventListener('popstate', (e) => {
+            if (proDrawerOverlay && !proDrawerOverlay.classList.contains('opacity-0')) {
+                // The user pressed the system back button
+                closeDrawer(true);
+            }
+        });
+
+        document.getElementById('whatsapp-btn').addEventListener('click', function () {
+            gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP' });
+            fbq('track', 'Contact');
+        });
+    </script>
+
     
+
+    <!-- Script inyectado globalmente por unificación -->
+    <script>
         // Mobile Menu Logic Unificada con History API para botón 'Atrás'
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -899,250 +1002,6 @@ Autor: Antigravity (AI Assistant)
                 }
             });
         }
-
-</script>
-    <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
-    <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Psicolog%C3%ADa."
-        target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
-        class="fixed bottom-10 right-10 h-16 w-16 bg-[#25D366] text-white rounded-2xl shadow-[0_20px_40px_-5px_rgba(37,211,102,0.3)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[60] group overflow-hidden animate-float">
-        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
-        <svg class="h-8 w-8 relative z-10" fill="currentColor" viewBox="0 0 24 24">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.412.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-        </svg>
-    </a>
-
-    <!-- PANEL LATERAL: DETALLES DE PROFESIONAL (DRAWER) -->
-    <div id="pro-drawer-overlay"
-        class="fixed inset-0 z-[70] bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-500">
-        <div id="pro-drawer-content"
-            class="absolute right-0 top-0 h-full w-full max-w-2xl bg-white/90 backdrop-blur-xl shadow-2xl translate-x-full transition-transform duration-500 ease-out flex flex-col border-l border-white/20">
-
-            <button id="close-pro-drawer"
-                class="absolute top-6 right-6 h-12 w-12 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors z-10">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path d="M6 18L18 6M6 6l12 12" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-
-            <div class="flex-grow overflow-y-auto custom-scrollbar p-8 md:p-12">
-                <div id="pro-details-target"></div>
-            </div>
-
-            <div class="p-8 border-t border-slate-100 bg-slate-50/50">
-                <a href="formulario-contacto.html"
-                    class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
-                    CONTÁCTANOS
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const proDataExtended = {
-            "valentina-jimenez": {
-                nombre: "Valentina Jiménez",
-                cargo: "Psicóloga / Directora",
-                img: "assets/img/team/valentina-jimenez.webp",
-                bg: "bg-brand-lila/20",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicóloga, Universidad de La Serena.",
-                    "Diplomado en Dinámicas familiares, hijos, padres, pareja y familia extensa.",
-                    "Diplomado en Intervención Sistémica en Infancia y Adolescencia.",
-                    "Diplomado Familia e Infancia, Herramientas de Intervención.",
-                    "Diplomado Estrategias de inclusión laboral para personas en situación de discapacidad.",
-                    "Diplomado en Selección de Personal.",
-                    "Coaching ejecutivo y de equipos, PCA.",
-                    "Cursos variados en: Metodología A.M.A.R, evaluación autismo, PAP, Post Parto, Trauma Complejo y Apego."
-                ],
-                descripcion: "Psicóloga con <span class='dynamic-exp' data-start-year='2018'>8</span> años de experiencia clínica, que trabaja desde un enfoque sistémico-vincular. Acompaña familias y parejas en distintos ciclos de la historia vital. Incorpora un enfoque basado en neurociencia, con formación en postparto e hipnoparto, y aborda la línea de apego y trauma en población adulta. Además, realiza atención a niños mediante terapia de juego, desarrollando una intervención cercana, amorosa y técnicamente fundamentada."
-            },
-            "cristopher-espejo": {
-                nombre: "Cristopher Espejo",
-                cargo: "Psicólogo",
-                img: "assets/img/team/cristopher-espejo.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicólogo, Universidad Central.",
-                    "Postítulo de Especialización en Trauma Complejo.",
-                    "Postítulo en Psicoterapia: Modelo de Apego & Complejidad (MAC).",
-                    "Postítulo en Primera Infancia (0–6 años): Modelo de Complejidad y Metodología A.M.A.R",
-                    "Diplomado en Mentalización: Teoría y Abordaje Clínico.",
-                    "Diplomado en Terapia Adulto: Sanando las Heridas de la Infancia.",
-                    "Diplomado en Evaluación Psicológica Infanto-Juvenil.",
-                    "Estudios en Neurociencias del Trauma Complejo, TCC, autolesiones y suicidio, TCA, adicciones y abuso sexual infantil."
-                ],
-                descripcion: "Psicólogo clínico con especialización en trauma complejo, apego, mentalización y modelos de complejidad. Cuenta con experiencia en dispositivos de salud mental y programas psicosociales orientados al acompañamiento de población infanto-juvenil y adulta. Acompaña procesos complejos con profundidad, ética y rigurosidad, comprendiendo el malestar como parte de trayectorias relacionales y contextuales, sosteniendo intervenciones respetuosas y centradas en la dignidad de cada persona."
-            },
-            "erik-navarro": {
-                nombre: "Erik Navarro",
-                cargo: "Psicólogo",
-                img: "assets/img/team/erik-navarro.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicólogo, Universidad Central.",
-                    "<span class='dynamic-exp' data-start-year='2014'>12</span> años de experiencia.",
-                    "Magister © en psicología clínica, mención en psicoanálisis.",
-                    "Diplomado psicopatología psicoanalítica.",
-                    "Diplomado psicoanálisis y discurso social.",
-                    "Diplomado praxis comunitaria.",
-                    "Cursos variados en: violencia y agresiones, diagnostico maltrato infantil, trauma y resiliencia, abuso sexual infantil, crianza respetuosa."
-                ],
-                descripcion: "Acompaña procesos terapéuticos profundos con adolescentes, adultos y parejas favoreciendo la exploración de la historia vincular, los efectos del trauma y la construcción de sentido de la experiencia subjetiva en el presente. Psicólogo con amplia experiencia en el sistema público y programas especializados de infancia, adolescencia y familias. Posee experiencia en terapia grupal, promoviendo espacios de reflexión, elaboración psíquica y sostén terapéutico."
-            },
-            "eva-aguayo": {
-                nombre: "Eva Aguayo",
-                cargo: "Psicóloga",
-                img: "assets/img/team/eva-aguayo.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicóloga, Universidad de La Serena.",
-                    "<span class='dynamic-exp' data-start-year='2014'>12</span> años de experiencia.",
-                    "Especialización en Psicoterapia Afirmativa LGBTQIA+.",
-                    "Diplomado en Abordaje Clínico Multidisciplinario en Adultos en el Espectro Autista.",
-                    "Diplomado en Parentalidad y Desarrollo, Fundación Ideas para la Infancia.",
-                    "Diplomado en Terapia Sexual y Sexualidad Humana.",
-                    "Numerosos cursos, seminarios y clases magistrales de actualización permanente."
-                ],
-                descripcion: "Trabajo clínico con población infanto-juvenil y adulta. Acompaña procesos terapéuticos desde un enfoque sistémico, integrando una mirada neuroafirmativa y afirmativa para la población LGBTIQA+, promoviendo espacios seguros, respetuosos e inclusivos. Cuenta con experiencia en el sistema público y en el área jurídica. Su quehacer clínico incorpora la consejería en sexualidad, el fortalecimiento de competencias parentales, desde una práctica centrada en la persona."
-            },
-            "josefa-arias": {
-                nombre: "Josefa Arias",
-                cargo: "Psicóloga",
-                img: "assets/img/team/josefa-arias.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicóloga, Universidad Central.",
-                    "Especializada en espectro autista desde un enfoque biopsicosocial, neuro-afirmativo y de derechos.",
-                    "Énfasis en cursos de diagnóstico, evaluación, regulación emocional y procesamiento sensorial en personas dentro del espectro."
-                ],
-                descripcion: "Psicóloga con experiencia en neurodivergencia, trabajando desde un enfoque sistémico con un estilo dinámico y cercano. Realiza intervención clínica con niños y adolescentes, considerando el contexto familiar y escolar. Cuenta con especialización en perfil sensorial, integrando este abordaje en la evaluación y acompañamiento terapéutico para favorecer la regulación emocional, la adaptación y el bienestar integral."
-            },
-            "maria-munoz": {
-                nombre: "María Muñoz",
-                cargo: "Psicóloga",
-                img: "assets/img/team/maria-muñoz.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicóloga, Universidad Central.",
-                    "<span class='dynamic-exp' data-start-year='2010'>16</span> años de experiencia clínica.",
-                    "Diversas formaciones y estudios.",
-                    "Postítulo en terapia sistémica vincular.",
-                    "Diplomado en técnicas de intervención en terapia sistémica breve.",
-                    "Terapia Floral."
-                ],
-                descripcion: "Terapeuta con <span class='dynamic-exp' data-start-year='2010'>16</span> años de experiencia clínica, que trabaja desde un enfoque sistémico-vincular, integrando además la terapia floral como complemento al proceso terapéutico. Se especializa en el trabajo con familias, acompañando a niños, adolescentes y adultos. Se orienta a la terapia basada en recursos, el fortalecimiento de los vínculos afectivos y un acompañamiento integral, respetuoso y centrado en el bienestar relacional."
-            },
-            "valentina-gonzalez": {
-                nombre: "Valentina González",
-                cargo: "Psicóloga",
-                img: "assets/img/team/valentina-gonzalez.webp",
-                especialidad: "Psicología Clínica",
-                formacion: [
-                    "Psicóloga, Universidad de La Serena.",
-                    "Salud Mental en Adolescentes: Intervención en temáticas críticas.",
-                    "Técnicas para la Regulación Emocional en Adultos.",
-                    "Terapia Breve del Duelo.",
-                    "Técnicas de Psicoterapia Breve.",
-                    "Introducción al Modelo ODISEA de intervención parental y familiar.",
-                    "Formación en institucionalización temprana: efectos y recuperación."
-                ],
-                descripcion: "Psicóloga especializada en primera infancia y niñez, con enfoque en el desarrollo socioemocional, el fortalecimiento del vínculo y el acompañamiento integral a las familias. Trabaja con niñ@s desde los primeros años de vida, promoviendo espacios terapéuticos seguros, lúdicos y profundamente respetuosos de su mundo interno. Integra el juego como herramienta central de exploración, expresión y elaboración emocional."
-            }
-        };
-
-        const proDrawerOverlay = document.getElementById('pro-drawer-overlay');
-        const proDrawerContent = document.getElementById('pro-drawer-content');
-        const closeProDrawer = document.getElementById('close-pro-drawer');
-        const proDetailsTarget = document.getElementById('pro-details-target');
-
-        function openDrawer(proId) {
-            const data = proDataExtended[proId];
-            if (!data) return;
-
-            const isLogo = data.img.includes('logo-valu.png');
-            const bgClass = data.bg || (isLogo ? 'bg-primary-50' : 'bg-primary-100/20');
-
-            proDetailsTarget.innerHTML = `
-                <div class="flex flex-col gap-8">
-                    <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center shadow-inner">
-                        <img src="${data.img}" alt="${data.nombre}" class="${isLogo ? 'w-1/2 h-1/2 object-contain' : 'w-full h-full object-contain p-4'}" loading="lazy" width="400" height="300">
-                    </div>
-                    <div>
-                        <span class="text-primary-600 font-bold text-xs uppercase tracking-[0.2em] mb-2 block">${data.especialidad}</span>
-                        <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900">${data.nombre}</h2>
-                        <p class="text-slate-400 font-medium mt-2">${data.cargo}</p>
-                    </div>
-                    <div class="space-y-6">
-                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Descripción Profesional</h5>
-                        <p class="text-slate-600 leading-relaxed text-lg">${data.descripcion}</p>
-                    </div>
-                    <div class="space-y-6">
-                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Formación y Especialidades</h5>
-                        <ul class="grid gap-4">
-                            ${data.formacion.map(item => `
-                                <li class="flex items-start gap-3 text-slate-600">
-                                    <svg class="w-5 h-5 text-primary-500 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span class="font-medium">${item}</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
-
-            proDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
-            proDrawerContent.classList.remove('translate-x-full');
-            const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
-            if (scrollContainer) scrollContainer.scrollTop = 0;
-            document.body.style.overflow = 'hidden';
-            history.pushState({ drawerOpen: true }, '');
-            
-            // Actualizar años de experiencia dinámicos
-            if (typeof updateExperience === 'function') {
-                updateExperience();
-            }
-        }
-
-        function closeDrawer(fromPopState = false) {
-            proDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
-            proDrawerContent.classList.add('translate-x-full');
-            document.body.style.overflow = '';
-            
-            if (!fromPopState && history.state && history.state.drawerOpen) {
-                history.back();
-            }
-        }
-
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.open-pro-drawer')) {
-                const card = e.target.closest('.pro-card');
-                const proId = card.getAttribute('data-pro-id');
-                openDrawer(proId);
-            }
-        });
-
-        if (closeProDrawer) closeProDrawer.addEventListener('click', () => closeDrawer());
-        if (proDrawerOverlay) {
-            proDrawerOverlay.addEventListener('click', (e) => {
-                if (e.target === proDrawerOverlay) closeDrawer();
-            });
-        }
-
-        window.addEventListener('popstate', (e) => {
-            if (proDrawerOverlay && !proDrawerOverlay.classList.contains('opacity-0')) {
-                // The user pressed the system back button
-                closeDrawer(true);
-            }
-        });
-
-        document.getElementById('whatsapp-btn').addEventListener('click', function () {
-            gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP' });
-            fbq('track', 'Contact');
-        });
     </script>
 </body>
 

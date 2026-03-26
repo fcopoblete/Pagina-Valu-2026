@@ -96,5 +96,13 @@ Para asegurar previsualizaciones profesionales en WhatsApp y redes sociales, tod
     - Se debe actualizar de inmediato ante cualquier tarea faltante.
     - Cada ítem debe ser claro y accionable.
 
+## 🔒 Protocolo de Sincronización y GitHub (CRÍTICO)
+- **Prohibido Push Automático**: Jamás realices un `git push` de forma automática. 
+- **Autorización Explícita**: Antes de subir cualquier cambio al repositorio, DEBES preguntar al usuario y obtener una confirmación directa.
+- **Transparencia**: Indica siempre qué archivos se van a subir y el mensaje de commit propuesto.
+
+> [!CAUTION]
+> El incumplimiento de esta regla puede alterar el flujo de despliegue del usuario. Siempre valida antes de sincronizar con la nube.
+
 > [!IMPORTANT]
 > Nunca uses diseños genéricos o bibliotecas de componentes estándar sin aplicar los tokens de diseño del Centro Valu. La marca se basa en la "calidez clínica".
