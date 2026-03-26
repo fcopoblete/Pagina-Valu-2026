@@ -1158,7 +1158,7 @@ Autor: Antigravity (AI Assistant)
             if (!data) return;
 
             // Renderizar contenido
-            const hasImage = !data.img.includes('placeholder.webp');
+            const hasImage = data.img && !data.img.includes('placeholder.webp');
             const bgClass = data.bg || 'bg-brand-lila/20';
 
             proDetailsTarget.innerHTML = `
