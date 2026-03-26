@@ -330,6 +330,25 @@ Autor: Antigravity (AI Assistant)
             }
         });
 
+        // Block 'e', 'E', '.', '-' in numeric inputs
+        document.querySelectorAll('input[type="number"]').forEach(input => {
+            input.addEventListener('keydown', (e) => {
+                if (['e', 'E', '.', '-'].includes(e.key)) {
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // Year inputs: 4 digits limit on input
+        ['anio_egreso', 'anio_ingreso'].forEach(name => {
+            const input = document.querySelector(`input[name="${name}"]`);
+            if (input) {
+                input.addEventListener('input', (e) => {
+                    if (e.target.value.length > 4) e.target.value = e.target.value.slice(0, 4);
+                });
+            }
+        });
+
         function handleAcademicStatusChange() {
             const selector = document.getElementById('estado-selector');
             const egresoContainer = document.getElementById('anio-egreso-container');
@@ -448,6 +467,8 @@ Autor: Antigravity (AI Assistant)
                 } else if (input.type === 'email' && !input.value.includes('@')) {
                     isInputValid = false;
                 } else if (input.type === 'number' && input.hasAttribute('min') && parseInt(input.value) < parseInt(input.getAttribute('min'))) {
+                    isInputValid = false;
+                } else if ((input.name === 'anio_egreso' || input.name === 'anio_ingreso') && input.value && input.value.length !== 4) {
                     isInputValid = false;
                 }
 
