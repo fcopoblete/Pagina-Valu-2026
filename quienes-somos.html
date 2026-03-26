@@ -13,7 +13,7 @@ Autor: Antigravity (AI Assistant)
     <title>Sobre Centro Valu | Nuestra Filosofía de Salud Integral en Coquimbo</title>
     <meta name="description"
         content="Descubre la misión y visión de Centro Valu. Comprometidos con la salud integral y el bienestar familiar en Coquimbo con calidez y profesionalismo.">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Canonical Link -->
@@ -25,28 +25,30 @@ Autor: Antigravity (AI Assistant)
     <!-- Google Tag (gtag.js) - Google Ads / Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-CONVERSION_ID');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-CONVERSION_ID');
     </script>
 
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'META_PIXEL_ID');
-    fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'META_PIXEL_ID');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -132,7 +134,8 @@ Autor: Antigravity (AI Assistant)
 <body class="bg-[#f8fafc] text-slate-900 font-sans antialiased">
     <!-- SKIP LINK (Accesibilidad) -->
     <!-- SKIP LINK (A11Y) -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl">
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl">
         Saltar al contenido principal
     </a>
 
@@ -144,12 +147,12 @@ Autor: Antigravity (AI Assistant)
             <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) - AHORA CON FLEX-GROW PARA OCUPAR TODO EL ESPACIO RESTANTE -->
             <div class="flex items-center justify-start flex-grow min-w-0 pr-4">
                 <a href="index.html" class="flex items-center gap-3 sm:gap-4 group transition-all max-w-full">
-                    <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu"
-                        width="160" height="64"
+                    <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu" width="160" height="64"
                         class="h-[52px] sm:h-[62px] md:h-[68px] w-auto shrink-0 group-hover:scale-105 transition-transform">
                     <div class="flex flex-col text-left ml-1 min-w-0 overflow-hidden">
                         <span
-                            class="font-display font-bold text-sm sm:text-base md:text-lg text-primary-900 leading-none truncate uppercase tracking-widest mt-1">Centro Valu</span>
+                            class="font-display font-bold text-sm sm:text-base md:text-lg text-primary-900 leading-none truncate uppercase tracking-widest mt-1">Centro
+                            Valu</span>
                         <span
                             class="text-[9px] md:text-[10px] tracking-tight uppercase text-primary-600 font-black mt-1 truncate">Excelencia
                             en Salud</span>
@@ -161,32 +164,63 @@ Autor: Antigravity (AI Assistant)
             <div class="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
                 <!-- NAV DESKTOP (OPCIÓN 1) -->
                 <nav class="hidden lg:flex items-center gap-8 mr-6">
-                    <a href="index.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
-                    <a href="quienes-somos.html" class="text-primary-600 font-bold hover:text-primary-700 transition-colors">Quiénes somos</a>
+                    <a href="index.html"
+                        class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
+                    <a href="quienes-somos.html"
+                        class="text-primary-600 font-bold hover:text-primary-700 transition-colors">Quiénes somos</a>
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
-                        <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <button
+                            class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
-                                <li><a href="psicologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
-                                <li><a href="pediatria.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
-                                <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
-                                <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
-                                <li><a href="psicopedagogia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                                <li><a href="psicologia.html"
+                                        class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a>
+                                </li>
+                                <li><a href="pediatria.html"
+                                        class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a>
+                                </li>
+                                <li><a href="fonoaudiologia.html"
+                                        class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a>
+                                </li>
+                                <li><a href="terapia-ocupacional.html"
+                                        class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia
+                                        Ocupacional</a></li>
+                                <li><a href="psicopedagogia.html"
+                                        class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <!-- Convenios Dropdown -->
                     <div class="relative group">
-                        <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Convenios <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <button
+                            class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Convenios
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
-                                <li><a href="convenios.html#colegios" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Colegios</a></li>
-                                <li><a href="convenios.html#empresas" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Empresas</a></li>
+                                <li><a href="convenios.html#colegios"
+                                        class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Colegios</a>
+                                </li>
+                                <li><a href="convenios.html#empresas"
+                                        class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Empresas</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <a href="profesionales.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Nuestro Equipo</a>
+                    <a href="profesionales.html"
+                        class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Nuestro Equipo</a>
                 </nav>
 
                 <a href="formulario-contacto.html"
@@ -195,11 +229,15 @@ Autor: Antigravity (AI Assistant)
                 </a>
                 <button id="menu-toggle" aria-label="Abrir menú de navegación"
                     class="lg:hidden h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-100 text-primary-700 hover:bg-primary-200 transition-colors shadow-sm shrink-0">
-                    <svg id="menu-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
+                    <svg id="menu-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
-                    <svg id="close-icon" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                    <svg id="close-icon" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -332,11 +370,10 @@ Autor: Antigravity (AI Assistant)
 
                 </div>
             </div>
-            <div class="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl mb-12 bg-slate-100">
+            <div class="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl mb-12 bg-slate-100 aspect-[16/6] md:aspect-[3.33/1]">
                 <img src="assets/img/reales/galeria-fachada.webp"
-                    alt="Fachada e instalaciones de Centro Valu en Coquimbo"
-                    width="1200" height="514"
-                    class="w-full h-auto block">
+                    alt="Fachada e instalaciones de Centro Valu en Coquimbo" width="1200" height="514"
+                    class="w-full h-full object-cover object-[center_66.6%]">
             </div>
         </div>
     </main>
@@ -428,15 +465,19 @@ Autor: Antigravity (AI Assistant)
                             </div>
                         </div>
                         <div class="flex gap-4 items-start group">
-                            <div class="h-10 w-10 shrink-0 rounded-xl bg-brand-azul flex items-center justify-center text-primary-600 group-hover:scale-110 transition-transform">
+                            <div
+                                class="h-10 w-10 shrink-0 rounded-xl bg-brand-azul flex items-center justify-center text-primary-600 group-hover:scale-110 transition-transform">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 mb-1">Inclusión y Diversidad</h4>
-                                <p class="text-sm text-slate-500">Espacios digitales y físicos diseñados para diferentes necesidades de accesibilidad global.</p>
+                                <p class="text-sm text-slate-500">Espacios digitales y físicos diseñados para diferentes
+                                    necesidades de accesibilidad global.</p>
                             </div>
                         </div>
                     </div>
@@ -544,9 +585,12 @@ Autor: Antigravity (AI Assistant)
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 px-4">
                 <!-- COLUMNA 1: BRANDING -->
                 <div class="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
-                    <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu Footer" width="160" height="64" class="h-16 w-auto mb-6" loading="lazy">
-                    <div class="flex items-center gap-3 mb-4 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
-                        <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Convenio Fonasa" width="16" height="16" class="h-4 w-auto" loading="lazy">
+                    <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu Footer" width="160" height="64"
+                        class="h-16 w-auto mb-6" loading="lazy">
+                    <div
+                        class="flex items-center gap-3 mb-4 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+                        <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Convenio Fonasa" width="16"
+                            height="16" class="h-4 w-auto" loading="lazy">
                         <span class="text-[10px] font-black text-slate-400 tracking-widest uppercase">Excelencia
                             en Salud</span>
                     </div>
@@ -557,47 +601,77 @@ Autor: Antigravity (AI Assistant)
 
                 <!-- COLUMNA 2: NAVEGACIÓN -->
                 <div class="md:col-span-1 text-center md:text-left">
-                    <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Misión y Equipo</h5>
+                    <h5
+                        class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">
+                        Misión y Equipo</h5>
                     <ul class="space-y-4">
-                        <li><a href="index.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Inicio</a></li>
-                        <li><a href="quienes-somos.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Quiénes Somos</a></li>
-                        <li><a href="profesionales.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Nuestro Equipo</a></li>
-                        <li><a href="index.html#contacto" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Ubicación</a></li>
+                        <li><a href="index.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Inicio</a>
+                        </li>
+                        <li><a href="quienes-somos.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Quiénes
+                                Somos</a></li>
+                        <li><a href="profesionales.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Nuestro
+                                Equipo</a></li>
+                        <li><a href="index.html#contacto"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Ubicación</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- COLUMNA 3: SERVICIOS -->
                 <div class="md:col-span-1 text-center md:text-left">
-                    <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Servicios</h5>
+                    <h5
+                        class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">
+                        Servicios</h5>
                     <ul class="space-y-4">
-                        <li><a href="psicologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicología</a></li>
-                        <li><a href="pediatria.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Pediatría</a></li>
-                        <li><a href="fonoaudiologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
-                        <li><a href="terapia-ocupacional.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
-                        <li><a href="psicopedagogia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
-                        <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios</a></li>
+                        <li><a href="psicologia.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicología</a>
+                        </li>
+                        <li><a href="pediatria.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Pediatría</a>
+                        </li>
+                        <li><a href="fonoaudiologia.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a>
+                        </li>
+                        <li><a href="terapia-ocupacional.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Terapia
+                                Ocupacional</a></li>
+                        <li><a href="psicopedagogia.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicopedagogía</a>
+                        </li>
+                        <li><a href="convenios.html"
+                                class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- COLUMNA 4: CONTACTO -->
                 <div class="md:col-span-1 text-center md:text-left">
-                    <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Contacto Directo</h5>
+                    <h5
+                        class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">
+                        Contacto Directo</h5>
                     <ul class="space-y-4">
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Teléfono</span>
                             <!-- Versión Desktop -->
-                            <span class="hidden md:block text-sm font-bold text-slate-700 tracking-tight">+569 7245 4921</span>
+                            <span class="hidden md:block text-sm font-bold text-slate-700 tracking-tight">+569 7245
+                                4921</span>
                             <!-- Versión Móvil (WhatsApp) -->
-                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">
+                            <a href="https://wa.me/56972454921"
+                                class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">
                                 +569 7245 4921
                             </a>
                         </li>
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email</span>
-                            <a href="mailto:centrovalu@gmail.com" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors">centrovalu@gmail.com</a>
+                            <a href="mailto:centrovalu@gmail.com"
+                                class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors">centrovalu@gmail.com</a>
                         </li>
                         <li class="pt-4">
-                            <a href="formulario-contacto.html" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar</a>
+                            <a href="formulario-contacto.html"
+                                class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar</a>
                         </li>
                     </ul>
                 </div>
@@ -610,15 +684,19 @@ Autor: Antigravity (AI Assistant)
                 </p>
                 <!-- ENLACES LEGALES -->
                 <div class="flex items-center justify-center md:justify-end gap-6 mt-4 md:mt-0">
-                    <a href="privacidad.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Política de Privacidad</a>
-                    <a href="terminos.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Términos de Servicio</a>
+                    <a href="privacidad.html"
+                        class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Política
+                        de Privacidad</a>
+                    <a href="terminos.html"
+                        class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Términos
+                        de Servicio</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        
+
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
@@ -630,7 +708,7 @@ Autor: Antigravity (AI Assistant)
                 header.querySelector('.glass-card').classList.remove('shadow-2xl');
             }
         });
-    
+
         // Mobile Menu Logic Unificada con History API para botón 'Atrás'
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -647,7 +725,7 @@ Autor: Antigravity (AI Assistant)
             }
             if (menuContent) menuContent.classList.add('translate-x-full');
             document.body.style.overflow = '';
-            
+
             if (menuIcon && closeIcon) {
                 menuIcon.classList.remove('hidden');
                 closeIcon.classList.add('hidden');
@@ -665,7 +743,7 @@ Autor: Antigravity (AI Assistant)
             }
             if (menuContent) menuContent.classList.remove('translate-x-full');
             document.body.style.overflow = 'hidden';
-            
+
             if (menuIcon && closeIcon) {
                 menuIcon.classList.add('hidden');
                 closeIcon.classList.remove('hidden');
@@ -750,7 +828,7 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
-</script>
+    </script>
     <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
     <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n."
         target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
@@ -764,7 +842,7 @@ Autor: Antigravity (AI Assistant)
 
     <!-- Tracking Conversión WhatsApp -->
     <script>
-        document.getElementById('whatsapp-btn').addEventListener('click', function() {
+        document.getElementById('whatsapp-btn').addEventListener('click', function () {
             // Google Ads
             gtag('event', 'conversion', {
                 'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
