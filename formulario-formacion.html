@@ -173,6 +173,7 @@ Autor: Antigravity (AI Assistant)
                                                 required>
                                         </div>
                                         <input type="hidden" name="fecha_nacimiento" id="fecha_nacimiento_hidden">
+                                        <p id="dob-error" class="hidden text-red-500 text-xs mt-2 font-bold"></p>
                                     </div>
                                 </div>
                                 <div class="mt-12 flex justify-end">
@@ -334,30 +335,83 @@ Autor: Antigravity (AI Assistant)
         }
 
         function syncAndValidateDate() {
-            const day = document.getElementById('dob-day').value.padStart(2, '0');
-            const month = document.getElementById('dob-month').value.padStart(2, '0');
-            const year = document.getElementById('dob-year').value;
+            const dayInput = document.getElementById('dob-day');
+            const monthInput = document.getElementById('dob-month');
+            const yearInput = document.getElementById('dob-year');
+            const errorMsg = document.getElementById('dob-error');
+            
+            let day = dayInput.value;
+            let month = monthInput.value;
+            let year = yearInput.value;
             const hidden = document.getElementById('fecha_nacimiento_hidden');
 
+            errorMsg.classList.add('hidden');
+            [dayInput, monthInput, yearInput].forEach(i => i.classList.remove('border-red-300', 'bg-red-50'));
+
+            if (day && (parseInt(day) < 1 || parseInt(day) > 31)) {
+                dayInput.classList.add('border-red-300', 'bg-red-50');
+                errorMsg.innerText = 'Día inválido (1-31)';
+                errorMsg.classList.remove('hidden');
+                hidden.value = '';
+                return false;
+            }
+            if (month && (parseInt(month) < 1 || parseInt(month) > 12)) {
+                monthInput.classList.add('border-red-300', 'bg-red-50');
+                errorMsg.innerText = 'Mes inválido (1-12)';
+                errorMsg.classList.remove('hidden');
+                hidden.value = '';
+                return false;
+            }
+
             if (day && month && year && year.length === 4) {
-                hidden.value = `${year}-${month}-${day}`;
+                hidden.value = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+                return true;
             } else {
                 hidden.value = '';
+                return false;
             }
         }
 
         function nextStep(step) {
             const currentStep = document.querySelector('.step-content.active');
             
-            // Re-sync date before validation if we are in step 1
+            // Validation logic
             if (currentStep.id === 'step-1') {
-                syncAndValidateDate();
+                if (!syncAndValidateDate()) {
+                    return; // syncAndValidateDate already handles UI error
+                }
+                
+                // Age check (17 years)
+                const dob = new Date(document.getElementById('fecha_nacimiento_hidden').value);
+                const today = new Date();
+                let age = today.getFullYear() - dob.getFullYear();
+                const m = today.getMonth() - dob.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+                    age--;
+                }
+
+                if (age < 17) {
+                    const errorMsg = document.getElementById('dob-error');
+                    errorMsg.innerText = 'Debes ser mayor de 17 años para solicitar formación.';
+                    errorMsg.classList.remove('hidden');
+                    return;
+                }
             }
 
             const inputs = currentStep.querySelectorAll('input[required], textarea[required], select[required]');
             let valid = true;
             inputs.forEach(input => {
-                if (!input.value || (input.type === 'number' && input.hasAttribute('min') && parseInt(input.value) < parseInt(input.getAttribute('min')))) {
+                let isInputValid = true;
+                
+                if (!input.value) {
+                    isInputValid = false;
+                } else if (input.type === 'email' && !input.value.includes('@')) {
+                    isInputValid = false;
+                } else if (input.type === 'number' && input.hasAttribute('min') && parseInt(input.value) < parseInt(input.getAttribute('min'))) {
+                    isInputValid = false;
+                }
+
+                if (!isInputValid) {
                     input.classList.add('border-red-300', 'bg-red-50');
                     valid = false;
                 } else {
@@ -366,7 +420,6 @@ Autor: Antigravity (AI Assistant)
             });
 
             if(!valid) {
-                // Scroll to first error
                 const firstError = currentStep.querySelector('.border-red-300');
                 if(firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
