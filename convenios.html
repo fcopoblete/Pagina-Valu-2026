@@ -629,35 +629,6 @@ Autor: Antigravity (AI Assistant)
     </footer>
 
     <script>
-         Unificada
-        
-        
-        
-        
-        
-
-         else {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                menuContent.classList.remove('translate-x-full');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-        if (menuClose) menuClose.addEventListener('click', toggleMenu);
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) toggleMenu();
-            });
-        }
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                menuContent.classList.add('translate-x-full');
-                document.body.style.overflow = '';
-            });
-        });
 
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
@@ -670,15 +641,22 @@ Autor: Antigravity (AI Assistant)
             }
         });
 
-        
-            // Google Ads
-            gtag('event', 'conversion', {
-                'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function() {
+                // Google Ads
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
+                    });
+                }
+                // Meta Pixel
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Contact');
+                }
             });
-            // Meta Pixel
-            fbq('track', 'Contact');
-        });
-    
+        }
+
         // Mobile Menu Logic Unificada con History API para botón 'Atrás'
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
