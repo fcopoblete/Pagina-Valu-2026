@@ -268,7 +268,6 @@ Autor: Antigravity (AI Assistant)
                             </div>
                         </form>
 
-                        <!-- SUCCESS MESSAGE (Hidden by default) -->
                         <div id="success-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
                             <div class="h-20 w-20 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-8">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
@@ -276,6 +275,16 @@ Autor: Antigravity (AI Assistant)
                             <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">¡Solicitud Enviada!</h3>
                             <p class="text-slate-500 mb-10 max-w-sm mx-auto">Nuestro equipo clínico revisará tus antecedentes y se pondrá en contacto contigo a la brevedad.</p>
                             <a href="formacion.html" class="px-8 py-3 bg-primary-50 text-primary-600 rounded-xl font-bold hover:bg-primary-100 transition-all">Volver</a>
+                        </div>
+
+                        <!-- ERROR MESSAGE -->
+                        <div id="error-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
+                            <div class="h-20 w-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-8">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            </div>
+                            <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">Ups, algo falló</h3>
+                            <p class="text-slate-500 mb-10 max-w-sm mx-auto">No pudimos procesar tu solicitud en este momento. Por favor, reintenta el envío.</p>
+                            <button type="button" onclick="retryForm()" class="px-8 py-3 bg-red-50 text-red-600 rounded-xl font-bold hover:bg-red-100 transition-all">Reintentar Envío</button>
                         </div>
                     </div>
                 </div>
@@ -507,6 +516,14 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
+        function retryForm() {
+            document.getElementById('error-msg').classList.add('hidden');
+            document.getElementById('formation-form').classList.remove('hidden');
+            const btn = document.getElementById('submit-btn');
+            btn.disabled = false;
+            btn.innerText = 'Enviar Solicitud';
+        }
+
         document.getElementById('formation-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
@@ -531,16 +548,15 @@ Autor: Antigravity (AI Assistant)
                 if (response.ok) {
                     document.getElementById('formation-form').classList.add('hidden');
                     document.getElementById('success-msg').classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
-                    alert('Hubo un error al enviar el formulario. Por favor intenta nuevamente.');
-                    btn.disabled = false;
-                    btn.innerText = 'Enviar Solicitud';
+                    throw new Error('Server error');
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('No se pudo establecer conexión con el servidor.');
-                btn.disabled = false;
-                btn.innerText = 'Enviar Solicitud';
+                document.getElementById('formation-form').classList.add('hidden');
+                document.getElementById('error-msg').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     </script>

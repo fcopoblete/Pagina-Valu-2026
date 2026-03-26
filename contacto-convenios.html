@@ -468,6 +468,26 @@ Autor: Antigravity (AI Assistant)
 
                     <input type="hidden" name="version_legales_aceptada" value="v1.0">
                         </form>
+
+                        <!-- SUCCESS MESSAGE -->
+                        <div id="success-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
+                            <div class="h-20 w-20 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-8">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">¡Solicitud Enviada!</h3>
+                            <p class="text-slate-500 mb-10 max-w-lg mx-auto">La solicitud de convenio ha sido recibida con éxito. El equipo de Centro Valu se contactará con tu institución a la brevedad para coordinar una reunión.</p>
+                            <a href="index.html" class="px-8 py-3 bg-primary-50 text-primary-600 rounded-xl font-bold hover:bg-primary-100 transition-all">Volver al Inicio</a>
+                        </div>
+
+                        <!-- ERROR MESSAGE -->
+                        <div id="error-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
+                            <div class="h-20 w-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-8">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            </div>
+                            <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">No se pudo procesar</h3>
+                            <p class="text-slate-500 mb-10 max-w-sm mx-auto">Tuvimos un problema técnico enviando tu solicitud. Por favor, reintenta el envío ahora.</p>
+                            <button type="button" onclick="retryForm()" class="px-8 py-3 bg-red-50 text-red-600 rounded-xl font-bold hover:bg-red-100 transition-all">Reintentar Envío</button>
+                        </div>
             </div>
         </div>
     </main>
@@ -564,10 +584,6 @@ Autor: Antigravity (AI Assistant)
     </footer>
 
     <script>
-        );
-    </script>
-
-    <script>
         // Lógica para mostrar campos "Otro"
         const tipoSelect = document.querySelector('select[name="tipo_institucion"]');
         const tipoOtroContainer = document.getElementById('tipo-otro-container');
@@ -604,11 +620,22 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
+        function retryForm() {
+            document.getElementById('error-msg').classList.add('hidden');
+            document.getElementById('convenio-form').classList.remove('hidden');
+            const btn = document.getElementById('submit-btn');
+            btn.disabled = false;
+            btn.innerHTML = `Solicitar Reunión <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>`;
+        }
+
         document.getElementById('convenio-form').addEventListener('submit', async function (e) {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
-            const formData = new FormData(this);
+            const form = this;
+            const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
+            const successMsg = document.getElementById('success-msg');
+            const errorMsg = document.getElementById('error-msg');
 
             // Etiqueta para el backend de n8n
             data.tipo_lead = "CONVENIOS";
@@ -616,8 +643,11 @@ Autor: Antigravity (AI Assistant)
             btn.disabled = true;
             btn.innerHTML = `<svg class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Enviando...`;
 
+            // Add submission date
+            const now = new Date();
+            data.fecha_envio = now.toLocaleDateString('es-CL') + ' ' + now.toLocaleTimeString('es-CL');
+
             try {
-                // Cambia esta URL por el webhook de n8n de convenios si es distinto
                 const response = await fetch('https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-convenios', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -625,23 +655,20 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    // Tracking Conversión Convenios (Google Ads)
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-CONVERSION_ID/LABEL_FORM_CONVENIOS'
-                    });
-                    // Tracking Conversión Convenios (Meta Pixel)
+                    gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_FORM_CONVENIOS' });
                     fbq('track', 'Lead');
                     
-                    alert("¡Excelente! La solicitud de convenio ha sido recibida. El equipo de Centro Valu se contactará con tu institución a la brevedad.");
-                    window.location.href = 'index.html';
+                    form.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
-                    throw new Error();
+                    throw new Error('Server error');
                 }
             } catch (err) {
-                alert("Hubo un error al enviar el formulario. Por favor, intenta de nuevo o contáctanos por WhatsApp.");
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = `Solicitar Reunión <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>`;
+                console.error(err);
+                form.classList.add('hidden');
+                errorMsg.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     

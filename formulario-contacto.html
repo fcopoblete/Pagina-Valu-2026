@@ -844,6 +844,26 @@ Autor: Antigravity (AI Assistant)
                             </div>
                             <input type="hidden" name="version_legales_aceptada" value="v1.0">
                         </form>
+
+                        <!-- SUCCESS MESSAGE -->
+                        <div id="success-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
+                            <div class="h-20 w-20 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-8">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">¡Mensaje Recibido!</h3>
+                            <p class="text-slate-500 mb-10 max-w-sm mx-auto">Gracias por contactarnos. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo a la brevedad.</p>
+                            <a href="index.html" class="px-8 py-3 bg-primary-50 text-primary-600 rounded-xl font-bold hover:bg-primary-100 transition-all">Volver al Inicio</a>
+                        </div>
+
+                        <!-- ERROR MESSAGE -->
+                        <div id="error-msg" class="hidden text-center py-20 animate-in fade-in duration-700">
+                            <div class="h-20 w-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-8">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            </div>
+                            <h3 class="font-display text-4xl font-bold text-slate-900 mb-4">No se pudo enviar</h3>
+                            <p class="text-slate-500 mb-10 max-w-sm mx-auto">Hubo un problema técnico al procesar tu mensaje. Por favor, intenta de nuevo.</p>
+                            <button type="button" onclick="retryForm()" class="px-8 py-3 bg-red-50 text-red-600 rounded-xl font-bold hover:bg-red-100 transition-all">Reintentar Envío</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1124,25 +1144,36 @@ Autor: Antigravity (AI Assistant)
             return valid;
         }
 
+        function retryForm() {
+            document.getElementById('error-msg').classList.add('hidden');
+            document.getElementById('main-contact-form').classList.remove('hidden');
+            const btn = document.getElementById('nextBtn');
+            btn.textContent = 'REINTENTAR ENVÍO';
+            btn.disabled = false;
+        }
+
         async function submitToN8N() {
             const form = document.getElementById('main-contact-form');
             const data = Object.fromEntries(new FormData(form).entries());
             const btn = document.getElementById('nextBtn');
+            const successMsg = document.getElementById('success-msg');
+            const errorMsg = document.getElementById('error-msg');
             
-            // Etiqueta para identificar el origen
             data.tipo_lead = "PARTICULAR";
             
-            // Honeypot check
             if (data.website_url) {
-                console.warn('Bot detectado.');
-                alert("¡Excelente! Tus datos han sido recibidos. Te contactaremos pronto.");
-                window.location.href = 'index.html';
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
                 return;
             }
             delete data.website_url;
             
             btn.textContent = 'ENVIANDO...';
             btn.disabled = true;
+            
+            const now = new Date();
+            data.fecha_envio = now.toLocaleDateString('es-CL') + ' ' + now.toLocaleTimeString('es-CL');
 
             try {
                 const response = await fetch('https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-particular', {
@@ -1152,22 +1183,19 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    // Tracking Conversión Formulario (Google Ads)
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-CONVERSION_ID/LABEL_FORM_PARTICULAR'
-                    });
-                    // Tracking Conversión Formulario (Meta Pixel)
+                    gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_FORM_PARTICULAR' });
                     fbq('track', 'Lead');
-                    
-                    alert("¡Excelente! Tus datos han sido recibidos. Te contactaremos pronto.");
-                    window.location.href = 'index.html';
+                    form.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
-                    throw new Error();
+                    throw new Error('Server error');
                 }
             } catch (err) {
-                alert("Hubo un error al enviar el formulario. Por favor, intenta de nuevo o contáctanos por WhatsApp.");
-                btn.textContent = 'REINTENTAR ENVÍO';
-                btn.disabled = false;
+                console.error(err);
+                form.classList.add('hidden');
+                errorMsg.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
 
