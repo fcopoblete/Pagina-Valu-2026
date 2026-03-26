@@ -194,16 +194,25 @@ Autor: Antigravity (AI Assistant)
                                     </div>
                                     <div class="group">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Estado Académico</label>
-                                        <select name="estado_academico" id="estado-selector" onchange="toggleAnioEgreso()" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer" required>
+                                        <select name="estado_academico" id="estado-selector" onchange="handleAcademicStatusChange()" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer" required>
                                             <option value="" disabled selected>Seleccione opción</option>
                                             <option value="egresado">Egresado / Titulado</option>
                                             <option value="estudiante">Estudiante</option>
                                             <option value="otro">Otro</option>
                                         </select>
                                     </div>
+                                    <!-- Campos Condicionales -->
                                     <div class="group hidden" id="anio-egreso-container">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Año de Egreso</label>
                                         <input type="number" name="anio_egreso" id="anio-egreso-input" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: 2020">
+                                    </div>
+                                    <div class="group hidden" id="anio-ingreso-container">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Año de Ingreso</label>
+                                        <input type="number" name="anio_ingreso" id="anio-ingreso-input" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: 2024">
+                                    </div>
+                                    <div class="group hidden" id="otro-estado-container">
+                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Especifique Estado</label>
+                                        <input type="text" name="otro_estado" id="otro-estado-input" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all" placeholder="Ej: Pasante externo, Investigador">
                                     </div>
                                     <div class="group">
                                         <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Teléfono</label>
@@ -298,18 +307,29 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
-        function toggleAnioEgreso() {
+        function handleAcademicStatusChange() {
             const selector = document.getElementById('estado-selector');
-            const container = document.getElementById('anio-egreso-container');
-            const input = document.getElementById('anio-egreso-input');
+            const egresoContainer = document.getElementById('anio-egreso-container');
+            const ingresoContainer = document.getElementById('anio-ingreso-container');
+            const otroContainer = document.getElementById('otro-estado-container');
             
+            const egresoInput = document.getElementById('anio-egreso-input');
+            const ingresoInput = document.getElementById('anio-ingreso-input');
+            const otroInput = document.getElementById('otro-estado-input');
+
+            // Reset all
+            [egresoContainer, ingresoContainer, otroContainer].forEach(c => c.classList.add('hidden'));
+            [egresoInput, ingresoInput, otroInput].forEach(i => { i.required = false; i.value = ''; });
+
             if (selector.value === 'egresado') {
-                container.classList.remove('hidden');
-                input.required = true;
-            } else {
-                container.classList.add('hidden');
-                input.required = false;
-                input.value = '';
+                egresoContainer.classList.remove('hidden');
+                egresoInput.required = true;
+            } else if (selector.value === 'estudiante') {
+                ingresoContainer.classList.remove('hidden');
+                ingresoInput.required = true;
+            } else if (selector.value === 'otro') {
+                otroContainer.classList.remove('hidden');
+                otroInput.required = true;
             }
         }
 
