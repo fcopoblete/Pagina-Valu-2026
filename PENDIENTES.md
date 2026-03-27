@@ -17,6 +17,7 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
 - 🟢 **[COMPLETADO]** Integración n8n Mejorada: Verificar que los webhooks de contacto capturen correctamente todos los campos adicionales.
 - 🟢 **[COMPLETADO]** Formulario Multi-paso: Evaluar la implementación de un formulario de contacto guiado para mejorar la tasa de conversión.
 - 🔴 **[FALTANTE]** Chatbot Inteligente: Desarrollar la lógica activa para el botón flotante (ID `chatbot-placeholder`).
+- 🟡 **[PENDIENTE]** **Verificación de Formularios (CRÍTICO)**: Realizar pruebas de extremo a extremo en los tres formularios (`Particular`, `Convenios`, `Formación`) para asegurar el ruteo correcto y la recepción de datos en n8n tras la unificación de headers/footers.
 
 ## 🖼️ Activos Visuales Faltantes (Crítico)
 - 🟡 **[EN PROCESO]** Fotos de Profesionales: Falta conseguir las de algunos directores/fundadores:
