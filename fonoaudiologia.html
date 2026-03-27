@@ -235,7 +235,13 @@ Autor: Antigravity (AI Assistant)
                     <a href="index.html#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
 
-                <a href="formulario-contacto.html"
+                                <button id="search-open" aria-label="Abrir buscador" 
+                    class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
+                    <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+<a href="formulario-contacto.html"
                     class="bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
                     Contáctanos
                 </a>
@@ -266,6 +272,7 @@ Autor: Antigravity (AI Assistant)
                         </svg>
                     </button>
                 </div>
+                
                 <ul class="space-y-6">
                     <li><a href="index.html"
                             class="mobile-link text-2xl font-bold text-primary-600 transition-colors">Inicio</a>
@@ -340,7 +347,13 @@ Autor: Antigravity (AI Assistant)
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
                     </li>
                     <li class="pt-8 border-t border-slate-100">
-                        <a href="formulario-contacto.html"
+                                        <button id="search-open" aria-label="Abrir buscador" 
+                    class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
+                    <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+<a href="formulario-contacto.html"
                             class="mobile-link group flex items-center justify-center gap-3 w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white text-center py-4 rounded-xl font-bold text-base shadow-lg shadow-primary-600/20 glow-effect transition-all hover:shadow-xl active:scale-[0.98]">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -365,16 +378,20 @@ Autor: Antigravity (AI Assistant)
             <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
                 <div class="lg:col-span-6">
                     <h1 class="font-display text-5xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
-                        Fonoaudiología <br><span class="text-secondary-500 italic">Comunicación y Voz.</span>
+                        Fonoaudiología <br><span class="text-secondary-500 italic">Comunicación y Bienestar.</span>
                     </h1>
                     <div
-                        class="mb-8 inline-flex items-center gap-3 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
-                        <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Fonasa" class="h-6 w-auto" loading="lazy" width="96" height="32">
-                        <span class="text-xs font-bold text-primary-700 uppercase tracking-widest">Convenio con
-                            Fonasa</span>
+                        class="mb-8 p-6 bg-white/80 backdrop-blur-md rounded-3xl border border-primary-100 shadow-sm transition-all hover:shadow-md">
+                        <div class="flex items-center gap-4 mb-3">
+                            <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Fonasa" class="h-8 w-auto" loading="lazy" width="112" height="38">
+                            <span class="text-xs font-black text-primary-700 uppercase tracking-widest">Atención con Fonasa</span>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed font-medium">
+                            Somos uno de los primeros centros en la Región de Coquimbo en contar con atención fonoaudiológica completa a través de <span class="text-primary-600 font-bold">FONASA</span>, acercando la salud a más personas con altos estándares de calidad.
+                        </p>
                     </div>
                     <p class="mt-8 text-lg text-slate-500 leading-relaxed border-l-4 border-secondary-500 pl-6">
-                        Especialistas en la rehabilitación del lenguaje, habla, voz y deglución para todas las edades.
+                        Acompañamiento especializado en comunicación, voz, audición y funciones orales para todas las etapas de la vida.
                     </p>
                     <div class="mt-10 flex flex-wrap gap-4">
                         <a href="#detalles"
@@ -395,69 +412,87 @@ Autor: Antigravity (AI Assistant)
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <!-- DETALLES -->
-    <section id="detalles" class="py-24 bg-white">
+    <section id="detalles" class="py-24 bg-white text-center md:text-left">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-display text-4xl font-bold text-slate-900 mb-10">Áreas de Atención</h2>
-            <div class="prose prose-lg text-slate-600 mb-12">
-                <p>Nuestra intervención se basa en la evidencia científica y el trato amoroso, buscando siempre la mejor
-                    comunicación posible para nuestros usuarios.</p>
-            </div>
+            <h2 class="font-display text-4xl font-bold text-slate-900 mb-6 italic">Expertos en Comunicación</h2>
+            <p class="text-slate-600 text-lg leading-relaxed mb-16">
+                Nuestra intervención se basa en la evidencia científica y un enfoque empático, asegurando procesos de rehabilitación efectivos y centrados en la calidad de vida de cada usuario.
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                <!-- Card 1 -->
-                <div class="p-8 bg-brand-azul/30 rounded-2xl border border-brand-azul transition-all hover:shadow-lg hover:-translate-y-1 group">
-                    <div class="h-10 w-10 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-                    </div>
-                    <h4 class="font-bold text-slate-900 mb-3 text-lg leading-tight">Trastornos del Lenguaje</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed italic">Evaluación e intervención en TEL y TDL para potenciar la comunicación efectiva.</p>
+            <!-- INFANTO-JUVENIL -->
+            <div class="mb-20">
+                <div class="flex items-center justify-center md:justify-start gap-4 mb-10">
+                    <span class="text-4xl">🧒</span>
+                    <h3 class="font-display text-3xl font-bold text-slate-900 leading-tight">Fonoaudiología Infanto-Juvenil</h3>
                 </div>
-                <!-- Card 2 -->
-                <div class="p-8 bg-brand-azul/30 rounded-2xl border border-brand-azul transition-all hover:shadow-lg hover:-translate-y-1 group">
-                    <div class="h-10 w-10 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-brand-azul/30 rounded-3xl border border-brand-azul/50 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🌈</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Estimulación del Lenguaje</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Trabajamos en la construcción de bases sólidas para la comunicación en niños con retrasos del lenguaje y TDL.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 mb-3 text-lg leading-tight">Habla y Articulación</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed italic">Corrección de dificultades fonológicas y de articulación como dislalias y otros.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="p-8 bg-brand-azul/30 rounded-2xl border border-brand-azul transition-all hover:shadow-lg hover:-translate-y-1 group">
-                    <div class="h-10 w-10 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    <div class="p-8 bg-brand-azul/30 rounded-3xl border border-brand-azul/50 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">👄</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Pronunciación y Habla</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Intervención especializada en dislalias y dificultades de articulación para lograr un habla clara y fluida.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 mb-3 text-lg leading-tight">Voz y Deglución</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed italic">Rehabilitación de la función vocal y procesos de alimentación seguros y funcionales.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="p-8 bg-brand-azul/30 rounded-2xl border border-brand-azul transition-all hover:shadow-lg hover:-translate-y-1 group">
-                    <div class="h-10 w-10 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <div class="p-8 bg-brand-azul/30 rounded-3xl border border-brand-azul/50 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🧩</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Comprensión Verbal</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Desarrollo de habilidades de procesamiento auditivo y semántico para una mejor interacción con el entorno.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 mb-3 text-lg leading-tight">Neurodivergencias</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed italic">Abordaje afirmativo en Espectro Autista y TDAH centrado en la conexión y el juego.</p>
-                </div>
-                <!-- Card 5 -->
-                <div class="p-8 bg-brand-azul/30 rounded-2xl border border-brand-azul transition-all hover:shadow-lg hover:-translate-y-1 group col-span-1 md:col-span-2 lg:col-span-1">
-                    <div class="h-10 w-10 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    <div class="p-8 bg-brand-azul/30 rounded-3xl border border-brand-azul/50 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🎒</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Apoyo Escolar</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Reforzamiento de las herramientas de comunicación necesarias para el éxito en el aprendizaje y la convivencia escolar.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 mb-3 text-lg leading-tight">Fonoaudiología Adulto</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed italic">Recuperación integral del lenguaje, habla y deglución en adultos y personas mayores.</p>
                 </div>
             </div>
 
-            <div class="mt-16 p-10 bg-secondary-50 rounded-[2rem] border border-secondary-100">
-                <h3 class="font-display text-2xl font-bold text-secondary-900 mb-4">Comunicación Sin Barreras</h3>
-                <p class="text-secondary-800">Creemos que cada voz merece ser escuchada. Acompañamos el proceso de
-                    rehabilitación con paciencia y profesionalismo.</p>
+            <!-- ADULTOS Y ESPECIALIDADES -->
+            <div class="mb-20">
+                <div class="flex items-center justify-center md:justify-start gap-4 mb-10">
+                    <span class="text-4xl">👤</span>
+                    <h3 class="font-display text-3xl font-bold text-slate-900 leading-tight">Fonoaudiología en Adultos</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🎤</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Voz Profesional</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Entrenamiento y rehabilitación para docentes, oradores y personas con fatiga vocal o disfonía.</p>
+                    </div>
+                    <div class="p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🧠</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Rehabilitación ACV</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Recuperación de las facultades del habla y del lenguaje tras accidentes cerebrovasculares u otros daños neurológicos.</p>
+                    </div>
+                    <div class="p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🥄</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Terapia de Deglución</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Evaluación y tratamiento de la disfagia para garantizar procesos de alimentación seguros y eficaces.</p>
+                    </div>
+                    <div class="p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">👂</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Orientación Auditiva</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Evaluación auditiva integral y acompañamiento personalizado en la selección y adaptación de audífonos.</p>
+                    </div>
+                    <div class="p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all md:col-span-2">
+                        <span class="text-3xl mb-4 block">🌊</span>
+                        <h4 class="font-bold text-slate-900 mb-2">Fluidez y Tartamudez</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed text-center md:text-left">Estrategias modernas para el control de la fluidez del habla, enfocadas en la confianza y la naturalidad de la comunicación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 bg-secondary-50 rounded-[2.5rem] border border-secondary-100 text-center md:text-left">
+                <h3 class="font-display text-2xl font-bold text-secondary-900 mb-4 italic">Salud Integral a tu alcance</h3>
+                <p class="text-secondary-800 text-lg">Acompañamos el proceso de rehabilitación con la calidez y el profesionalismo que nos caracteriza, siempre enfocados en tu bienestar.</p>
                 <div class="mt-8">
                     <a href="formulario-contacto.html?especialidad=fonoaudiologia"
-                        class="inline-flex bg-secondary-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary-700 transition-all">
-                        Contáctanos
+                        class="inline-flex bg-secondary-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-secondary-700 hover:shadow-xl hover:shadow-secondary-600/20 transition-all uppercase tracking-widest text-sm">
+                        RESERVA TU HORA
                     </a>
                 </div>
             </div>
@@ -473,7 +508,7 @@ Autor: Antigravity (AI Assistant)
                 <div class="swiper-wrapper">
                     <!-- PROFESIONAL: Bruno Araya -->
                     <div class="swiper-slide h-auto">
-                        <div
+                        <div id="bruno-araya"
                             class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
                             data-pro-id="bruno-araya">
                             <div
@@ -493,7 +528,7 @@ Autor: Antigravity (AI Assistant)
                     </div>
                     <!-- PROFESIONAL: Gabriela Pereira -->
                     <div class="swiper-slide h-auto">
-                        <div
+                        <div id="gabriela-pereira"
                             class="pro-card group bg-white p-6 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
                             data-pro-id="gabriela-pereira">
                             <div
@@ -513,7 +548,7 @@ Autor: Antigravity (AI Assistant)
                     </div>
                     <!-- PROFESIONAL: Ulda Castillo -->
                     <div class="swiper-slide h-auto">
-                        <div
+                        <div id="ulda-castillo"
                             class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
                             data-pro-id="ulda-castillo">
                             <div
@@ -666,53 +701,7 @@ Autor: Antigravity (AI Assistant)
 
 
     <script>
-        const proDataExtended = {
-            "bruno-araya": {
-                nombre: "Bruno Araya",
-                cargo: "Fonoaudiólogo",
-                img: "assets/img/team/bruno-araya.webp",
-                bg: "bg-brand-lila/20",
-                especialidad: "Fonoaudiología",
-                formacion: [
-                    "Fonoaudiólogo, Universidad XX.",
-                    "Especialista en comunicación y deglución."
-                ],
-                descripcion: "Atención profesional en Fonoaudiología para Centro Valu, brindando apoyo integral en las diversas etapas del desarrollo."
-            },
-            "gabriela-pereira": {
-                nombre: "Gabriela Pereira",
-                cargo: "Fonoaudióloga",
-                img: "assets/img/team/gabriela-pereira.webp",
-                bg: "bg-brand-rosa/20",
-                especialidad: "Fonoaudiología",
-                formacion: [
-                    "Fonoaudióloga, Universidad XX.",
-                    "Diplomado en motricidad orofacial.",
-                    "Diplomado condición del espectro autista (enfoque de derechos).",
-                    "Diplomado de integración sensorial CEA y TDAH.",
-                    "Certificación ADOS.",
-                    "Especialización en tartamudez infantil.",
-                    "Especialista en evaluación post frenectomía y abordaje miofuncional."
-                ],
-                descripcion: "Fonoaudióloga con experiencia en primera infancia, adolescentes y adultos. Se desempeña en el abordaje de voz, tartamudez y motricidad orofacial. Integra el juego libre y la metodología A.M.A.R in sus intervenciones, favoreciendo procesos terapéuticos significativos y respetuosos."
-            },
-            "ulda-castillo": {
-                nombre: "Ulda Castillo",
-                cargo: "Fonoaudióloga",
-                img: "assets/img/team/ulda-castillo.webp",
-                bg: "bg-primary-100/20",
-                especialidad: "Fonoaudiología",
-                formacion: [
-                    "Fonoaudióloga, Universidad XX.",
-                    "Diplomada experto en autismo (intervención clínica).",
-                    "Metodología TEACCH y Enfoque CLAP.",
-                    "Pasantía clínica en motricidad orofacial IROF.",
-                    "Certificada en Trastornos del desarrollo del lenguaje.",
-                    "Experta en evaluación fonoaudiológica en Espectro Autista."
-                ],
-                descripcion: "Fonoaudióloga que trabaja desde la mirada del modelo AMAR, especializada en atención en neurodivergencia desde un enfoque afirmativo. Incorpora la terapia de juego como estrategia principal para favorecer la motivación y el aprendizaje significativo, integrando permanentemente a las familias."
-            }
-        };
+
 
         const proDrawerOverlay = document.getElementById('pro-drawer-overlay');
         const proDrawerContent = document.getElementById('pro-drawer-content');
@@ -992,7 +981,26 @@ Autor: Antigravity (AI Assistant)
                 }
             });
         }
+
+        // --- AUTO-APERTURA DESDE BUSCADOR ---
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const proCard = document.getElementById(hash);
+                if (proCard && typeof openDrawer === 'function') {
+                    setTimeout(() => {
+                        proCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        openDrawer(hash);
+                    }, 500);
+                }
+            }
+        });
     </script>
+    <script src="assets/js/pro-data.js"></script>
+    <script src="assets/js/search-data.js"></script>
+    <script src="assets/js/search-logic.js"></script>
 </body>
 
 </html>
+
+

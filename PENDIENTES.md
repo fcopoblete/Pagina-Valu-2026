@@ -10,7 +10,7 @@ Nombre del autor: Antigravity
 Este archivo contiene las tareas que deben realizarse a futuro para mejorar la experiencia, el diseño o la funcionalidad del ecosistema digital de Centro Valu.
 
 ## 🚀 Próximas Implementaciones
-- 🔴 **[FALTANTE]** **Universidades de Especialistas (CRÍTICO)**: Conseguir y reemplazar "Universidad XX" en los perfiles de: Pamela Tarifeño (Psicopedagogía), Eugenia Ortiz (Pediatría), Gabriela Pereira (Fonoaudiología), Ulda Castillo (Fonoaudiología), Bruno Araya (Fonoaudiología) y Valeria Alfaro (Terapia Ocupacional).
+- 🔴 **[FALTANTE]** **Universidades de Especialistas (CRÍTICO)**: Conseguir y reemplazar "Universidad XX" en los perfiles de: Pamela Tarifeño (Psicopedagogía), Eugenia Ortiz (Pediatría), Gabriela Pereira (Fonoaudiología), Ulda Castillo (Fonoaudiología), Bruno Araya (Fonoaudiología) y Valeria Alfaro (Terapia Ocupacional). Sincronizado con CSV del 2026-03-27.
 - 🟢 **[COMPLETADO]** **Replicar Header Global**: Copiar el Header modificado de `index.html` (logo un 30% más grande y texto tipográfico ajustado) a todas las demás subpáginas del sitio.
 - 🟢 **[COMPLETADO]** Especialidades: Cambiar información de especialidades según la opinión de Pamela.
 - 🟢 **[COMPLETADO]** Optimización de Menú Móvil: Revisar el ancho y comportamiento en dispositivos de gran escala (desktops).

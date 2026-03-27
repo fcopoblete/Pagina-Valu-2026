@@ -26,10 +26,10 @@ Eres el especialista senior encargado de la integridad técnica y visual de Cent
 ## 👩‍⚕️ Protocolo de Gestión de Profesionales
 Cualquier modificación al equipo médico (altas, bajas o modificaciones) DEBE seguir estas reglas inquebrantables:
 
-### 1. Sincronización Doble Obligatoria
-- Cuando se agrega o elimina un profesional, el cambio DEBE realizarse simultáneamente en DOS lugares:
-  1. En el listado maestro `profesionales.html` (tanto en las tarjetas HTML como en el objeto JavaScript `proDataExtended`).
-  2. En la página individual de su especialidad (ej. `psicologia.html`, `pediatria.html`).
+### 1. Single Source of Truth (SSoT)
+- Toda la información del equipo profesional (nombres, cargos, especialidades, descripciones y formación) DEBE residir exclusivamente en `assets/js/pro-data.js`.
+- Las páginas individuales (`psicologia.html`, `profesionales.html`, etc.) deben consumir este objeto global para renderizar tanto las tarjetas como los drawers de perfil de forma dinámica.
+- Queda **estrictamente prohibido** definir objetos de datos locales (`proDataExtended`) dentro de los archivos HTML. Cualquier actualización de personal se realiza ÚNICAMENTE en el archivo JS centralizado.
 
 ### 2. Jerarquía de Visualización
 - **Prioridad Directiva**: Valentina Jiménez (Psicología), Pamela Tarifeño (Psicopedagogía), Eugenia Ortiz (Pediatría).
