@@ -4,6 +4,7 @@
  * Definido como variable global para evitar problemas de CORS en entornos locales.
  */
 window.searchData = [
+  // PROFESIONALES
   {
     "type": "professional",
     "name": "Valentina Jiménez",
@@ -108,6 +109,8 @@ window.searchData = [
     "url": "psicopedagogia.html#pamela-tarifeno",
     "img": "assets/img/team/placeholder.webp"
   },
+
+  // ESPECIALIDADES (PÁGINAS PRINCIPALES)
   {
     "type": "service",
     "name": "Psicología",
@@ -143,6 +146,135 @@ window.searchData = [
     "url": "psicopedagogia.html",
     "keywords": ["aprendizaje", "estudio", "colegio", "escuela", "reforzamiento"]
   },
+
+  // SUB-SERVICIOS ESPECÍFICOS (PSICOLOGÍA)
+  {
+    "type": "service",
+    "name": "Terapia Infanto",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-infanto",
+    "keywords": ["niños", "niñas", "juego", "conducta", "infantil"]
+  },
+  {
+    "type": "service",
+    "name": "Terapia Adolescente",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-adolescente",
+    "keywords": ["jovenes", "identidad", "pubertad", "estudios", "emociones"]
+  },
+  {
+    "type": "service",
+    "name": "Terapia de Adultos",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-adultos",
+    "keywords": ["crecimiento", "crisis", "bienestar", "individual"]
+  },
+  {
+    "type": "service",
+    "name": "Terapia Parental",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-parental",
+    "keywords": ["padres", "madres", "crianza", "herramientas", "cuidadores"]
+  },
+  {
+    "type": "service",
+    "name": "Terapia Familiar",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-familiar",
+    "keywords": ["hogar", "vinculos", "comunicacion", "familia", "sistémico"]
+  },
+  {
+    "type": "service",
+    "name": "Terapia de Pareja",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-pareja",
+    "keywords": ["relacion", "amor", "crisis", "novios", "esposos"]
+  },
+  {
+    "type": "service",
+    "name": "Terapia Perinatal",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-perinatal",
+    "keywords": ["embarazo", "postparto", "maternidad", "bebe", "gestacion"]
+  },
+  {
+    "type": "service",
+    "name": "Terapia Online",
+    "category": "Psicología",
+    "url": "psicologia.html#psico-online",
+    "keywords": ["videollamada", "distancia", "remoto", "internet", "casa"]
+  },
+
+  // SUB-SERVICIOS ESPECÍFICOS (FONOAUDIOLOGÍA)
+  {
+    "type": "service",
+    "name": "Terapia de Deglución",
+    "category": "Fonoaudiología",
+    "url": "fonoaudiologia.html#terapia-deglucion",
+    "keywords": ["tragar", "comer", "disfagia", "alimentacion", "segura"]
+  },
+  {
+    "type": "service",
+    "name": "Estimulación Temprana",
+    "category": "Fonoaudiología",
+    "url": "fonoaudiologia.html#estimulacion-temprana",
+    "keywords": ["bebes", "primeros pasos", "habla", "desarrollo", "prevencion"]
+  },
+  {
+    "type": "service",
+    "name": "Voz Profesional",
+    "category": "Fonoaudiología",
+    "url": "fonoaudiologia.html#voz-profesional",
+    "keywords": ["profesores", "cantantes", "disfonia", "garganta", "cuerdas vocales"]
+  },
+  {
+    "type": "service",
+    "name": "Rehabilitación ACV",
+    "category": "Fonoaudiología",
+    "url": "fonoaudiologia.html#rehabilitacion-acv",
+    "keywords": ["derrame", "infarto cerebral", "afasia", "neurologico", "recuperacion"]
+  },
+
+  // SUB-SERVICIOS ESPECÍFICOS (TERAPIA OCUPACIONAL)
+  {
+    "type": "service",
+    "name": "Integración Sensorial",
+    "category": "Terapia Ocupacional",
+    "url": "terapia-ocupacional.html#to-sensorial",
+    "keywords": ["estímulos", "texturas", "ruidos", "perfil sensorial", "regulacion"]
+  },
+  {
+    "type": "service",
+    "name": "Actividades de la Vida Diaria (AVD)",
+    "category": "Terapia Ocupacional",
+    "url": "terapia-ocupacional.html#to-avd",
+    "keywords": ["autonomia", "bañarse", "vestirse", "comer solo", "independencia"]
+  },
+  {
+    "type": "service",
+    "name": "Selectividad Alimentaria",
+    "category": "Terapia Ocupacional",
+    "url": "terapia-ocupacional.html#to-alimentaria",
+    "keywords": ["comer", "mañoso", "texturas comida", "dieta restringida"]
+  },
+
+  // SUB-SERVICIOS ESPECÍFICOS (PEDIATRÍA)
+  {
+    "type": "service",
+    "name": "Control Niño Sano",
+    "category": "Pediatría",
+    "url": "pediatria.html#ped-nino-sano",
+    "keywords": ["chequeo", "crecimiento", "peso", "talla", "vacunas"]
+  },
+  {
+    "type": "service",
+    "name": "Consultoría en Lactancia",
+    "category": "Pediatría",
+    "url": "pediatria.html#ped-nutricion",
+    "keywords": ["pecho", "amamantar", "leche materna", "dolor", "bebe"]
+  },
+
+  // PÁGINAS GENERALES
   {
     "type": "page",
     "name": "Convenios",
@@ -166,11 +298,5 @@ window.searchData = [
     "name": "Ubicación y Dirección (Coquimbo)",
     "url": "index.html#contacto",
     "keywords": ["donde estan", "ubicacion", "direccion", "calle", "llegar", "sucursal", "coquimbo", "parque nacional lauca"]
-  },
-  {
-    "type": "page",
-    "name": "Horarios de Atención",
-    "url": "index.html#contacto",
-    "keywords": ["horario", "abierto", "atencion", "sabado", "mañana", "tarde", "lunes a viernes"]
   }
 ];

@@ -191,9 +191,18 @@
         }).join('');
     }
 
-    // 5. Lógica de Filtrado
+    // 5. Lógica de Filtrado (Normalización para ignorar tildes y mayúsculas)
+    const normalizeText = (text) => {
+        if (!text) return "";
+        return text.toString()
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
+    };
+
     input.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase().trim();
+        const query = normalizeText(e.target.value);
         if (query === '') {
             renderResults([]);
             return;
@@ -203,13 +212,14 @@
         if (searchData.length === 0) initSearchData();
 
         const filtered = searchData.filter(item => {
-            const inName = item.name ? item.name.toLowerCase().includes(query) : false;
-            const inKeywords = item.keywords ? item.keywords.some(k => k.toLowerCase().includes(query)) : false;
-            const inSpecialty = item.specialty ? item.specialty.toLowerCase().includes(query) : false;
-            return inName || inKeywords || inSpecialty;
+            const name = normalizeText(item.name);
+            const specialty = normalizeText(item.specialty);
+            const inKeywords = item.keywords ? item.keywords.some(k => normalizeText(k).includes(query)) : false;
+            
+            return name.includes(query) || inKeywords || specialty.includes(query);
         });
 
-        // Ordenar: Servicios y Páginas primero, luego Profesionales
+        // Ordenar: Servicios y Páginas primero (mejor UX), luego Profesionales
         filtered.sort((a, b) => {
             const priority = { 'page': 1, 'service': 1, 'professional': 2 };
             return (priority[a.type] || 3) - (priority[b.type] || 3);
@@ -248,6 +258,15 @@
         if (e.target.closest('#search-open')) {
             e.preventDefault();
             openSearch();
+        }
+    });
+
+    // Cerrar buscador al hacer clic en un resultado (especialmente para anclas en la misma página)
+    resultsArea.addEventListener('click', (e) => {
+        if (e.target.closest('.search-item')) {
+            // El navegador seguirá el enlace por sí solo, 
+            // nosotros solo nos aseguramos de cerrar el modal.
+            closeSearch();
         }
     });
 
