@@ -9,13 +9,17 @@ Autor: Antigravity (AI Assistant)
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Formación Clínica y Supervisión | Centro Valu</title>
     <meta name="description"
         content="Espacio de formación para psicólogos, supervisión clínica y seminarios profesionales en Centro Valu Coquimbo y Online.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="assets/brand/logo-valu.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Centro Valu">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -62,11 +66,28 @@ Autor: Antigravity (AI Assistant)
         .glass-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .glow-effect:hover::after {
             transform: scale(1);
+        }
+    
+        /* iOS Normalization & Tap Highlight */
+        input, button, textarea, select {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        .rounded-xl { border-radius: 0.75rem !important; }
+        .rounded-2xl { border-radius: 1rem !important; }
+        .rounded-3xl { border-radius: 1.5rem !important; }
+        .rounded-\[2rem\] { border-radius: 2rem !important; }
+        .rounded-\[2\.5rem\] { border-radius: 2.5rem !important; }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
         }
     </style>
 </head>

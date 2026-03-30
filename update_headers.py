@@ -53,6 +53,44 @@ def update_header(file_path):
 
     content = add_hidden_header_button(content)
 
+    # 4. Apple/iOS Optimizations (Metadata)
+    if 'viewport-fit=cover' not in content:
+        content = content.replace('content="width=device-width, initial-scale=1.0"', 'content="width=device-width, initial-scale=1.0, viewport-fit=cover"')
+    
+    apple_meta = """    <link rel="apple-touch-icon" href="assets/brand/logo-valu.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Centro Valu">"""
+    
+    if 'apple-mobile-web-app-capable' not in content:
+        content = content.replace('<link rel="icon" type="image/png" href="favicon.png">', '<link rel="icon" type="image/png" href="favicon.png">\n' + apple_meta)
+
+    # 5. CSS Compatibility (Webkit)
+    if '-webkit-backdrop-filter' not in content:
+        content = content.replace('backdrop-filter: blur(12px);', 'backdrop-filter: blur(12px);\n            -webkit-backdrop-filter: blur(12px);')
+    
+    # Global iOS/Safari fixes in the first <style> block
+    ios_css = """
+        /* iOS Normalization & Tap Highlight */
+        input, button, textarea, select {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        .rounded-xl { border-radius: 0.75rem !important; }
+        .rounded-2xl { border-radius: 1rem !important; }
+        .rounded-3xl { border-radius: 1.5rem !important; }
+        .rounded-\[2rem\] { border-radius: 2rem !important; }
+        .rounded-\[2\.5rem\] { border-radius: 2.5rem !important; }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }"""
+    
+    if '-webkit-tap-highlight-color' not in content:
+        # Insert before the closing </style> of the first style block (usually focus rings or animations)
+        content = content.replace('</style>', ios_css + '\n    </style>', 1)
+
     if content != original_content:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)

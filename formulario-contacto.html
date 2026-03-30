@@ -9,13 +9,17 @@ Autor: Antigravity (AI Assistant)
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Contacto | Centro Valu Coquimbo - Reserva tu Hora</title>
     <meta name="description"
         content="Reserva tu hora en Centro Valu. Atención especializada en Psicología, Fonoaudiología, Terapia Ocupacional y Pediatría en Coquimbo.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="assets/brand/logo-valu.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Centro Valu">
 
     <!-- Canonical Link -->
     <meta property="og:image" content="https://centrovalu.cl/assets/brand/og-image.png">
@@ -92,6 +96,7 @@ Autor: Antigravity (AI Assistant)
         .glass-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
@@ -154,6 +159,22 @@ Autor: Antigravity (AI Assistant)
         #prefijo-select option {
             color: #0f172a !important; /* slate-900 */
             background-color: white !important;
+        }
+    
+        /* iOS Normalization & Tap Highlight */
+        input, button, textarea, select {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        .rounded-xl { border-radius: 0.75rem !important; }
+        .rounded-2xl { border-radius: 1rem !important; }
+        .rounded-3xl { border-radius: 1.5rem !important; }
+        .rounded-\[2rem\] { border-radius: 2rem !important; }
+        .rounded-\[2\.5rem\] { border-radius: 2.5rem !important; }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
         }
     </style>
 
