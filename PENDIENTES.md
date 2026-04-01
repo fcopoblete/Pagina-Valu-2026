@@ -1,7 +1,7 @@
 <!--
 Archivo: PENDIENTES.md
 Descripción: Lista de tareas pendientes y futuras implementaciones para Centro Valu.
-Fecha de ultima modificacion: 2026-03-25
+Fecha de ultima modificacion: 2026-04-01
 Nombre del autor: Antigravity
 -->
 
@@ -10,7 +10,7 @@ Nombre del autor: Antigravity
 Este archivo contiene las tareas que deben realizarse a futuro para mejorar la experiencia, el diseño o la funcionalidad del ecosistema digital de Centro Valu.
 
 ## 🚀 Próximas Implementaciones
-- 🔴 **[FALTANTE]** **Universidades de Especialistas (CRÍTICO)**: Conseguir y reemplazar "Universidad XX" en los perfiles de: Pamela Tarifeño (Psicopedagogía), Eugenia Ortiz (Pediatría), Gabriela Pereira (Fonoaudiología), Ulda Castillo (Fonoaudiología), Bruno Araya (Fonoaudiología) y Valeria Alfaro (Terapia Ocupacional). Sincronizado con CSV del 2026-03-27.
+- 🟢 **[COMPLETADO]** **Universidades de Especialistas**: Actualización realizada basada en el CSV de profesionales.
 - 🟢 **[COMPLETADO]** **Replicar Header Global**: Copiar el Header modificado de `index.html` (logo un 30% más grande y texto tipográfico ajustado) a todas las demás subpáginas del sitio.
 - 🟢 **[COMPLETADO]** Especialidades: Cambiar información de especialidades según la opinión de Pamela.
 - 🟢 **[COMPLETADO]** Optimización de Menú Móvil: Revisar el ancho y comportamiento en dispositivos de gran escala (desktops).
@@ -45,15 +45,20 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
 - 🟢 **[COMPLETADO]** Accesibilidad (Prioridad ALTA): Skip Links, anillos de enfoque, aria-labels integrados.
 - 🟢 **[COMPLETADO]** Performance (Prioridad MEDIA): width/height en base y loading="lazy" habilitados.
 - 🟡 **[EN PROCESO]** SEO Local (Requiere Revisión Manual antes de Producción):
-    - 🟡 **[PENDIENTE]** Verificar el campo "Dirección" en el JSON-LD de `MedicalBusiness`.
-    - 🟡 **[PENDIENTE]** Chequear los textos `alt` de todas las imágenes. Re-enriquecer si cambian las fotos visuales.
-    - 🟡 **[PENDIENTE]** Subir formalmente el `sitemap.xml` a Google Search Console.
+    - 🟢 **[COMPLETADO]** Verificar el campo "Dirección" en el JSON-LD de `MedicalBusiness`.
+    - 🟢 **[COMPLETADO]** Chequear los textos `alt` de todas las imágenes y enriquecer para SEO local.
+    - 🟢 **[COMPLETADO]** Generar y actualizar el `sitemap.xml` (Listo para subir a GSC).
 
 ## 🛠️ Integraciones Técnicas (IDs Requeridos)
-- 🔴 **[FALTANTE]** Google Ads: Configurar `AW-CONVERSION_ID` real.
+- 🟢 **[COMPLETADO]** Google Ads: Configurado con ID real `AW-16532397408`.
 - 🔴 **[FALTANTE]** Etiquetas de Conversión: Configurar `LABEL_WHATSAPP`, `LABEL_FORM_PARTICULAR` y `LABEL_FORM_CONVENIOS`.
 - 🔴 **[FALTANTE]** Meta Pixel: Configurar `META_PIXEL_ID` real.
-- 🔴 **[FALTANTE]** Webhooks de Producción: Cambiar URLs `/webhook-test/` a `/webhook/` en ambos formularios una vez finalizadas las pruebas.
+- 🟢 **[COMPLETADO]** Webhooks de Producción: Cambiadas URLs `/webhook-test/` a `/webhook/` en todos los formularios.
+
+## 📄 Consentimientos Informados (Crítico)
+- 🔴 **[FALTANTE]** **Documento Pediatría**: Generar el PDF específico para atención pediátrica (actualmente redirigido a Psicología Niños como fallback).
+- 🔴 **[FALTANTE]** **Versiones de Adultos TO / PSP**: Verificar si Terapia Ocupacional y Psicopedagogía requieren una versión diferenciada para adultos (actualmente usan una versión única).
+- 🟡 **[PENDIENTE]** **Validación Legal**: Revisar que los textos de los resúmenes inyectados en el Paso 4 del formulario cumplan con la normativa vigente de cada especialidad.
 
 ## 📄 Contenido Legal
 - 🟢 **[COMPLETADO]** Crear páginas de Privacidad y Términos.

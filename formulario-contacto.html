@@ -27,12 +27,12 @@ Autor: Antigravity (AI Assistant)
     <link rel="canonical" href="https://centrovalu.cl/formulario-contacto.html" />
 
     <!-- Google Tag (gtag.js) - Google Ads / Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16532397408"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-CONVERSION_ID');
+      gtag('config', 'AW-16532397408');
     </script>
 
     <!-- Meta Pixel Code -->
@@ -985,8 +985,429 @@ Autor: Antigravity (AI Assistant)
     </footer>
 
     <script>
-        // Funciones de utilidad para Mobile Menu y Precios
+        // Configuración y Estado Global
+        let currentStep = 1;
+        const totalSteps = 4;
+        const WEBHOOK_URL = 'https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-particular';
+
+        // Protocolos por Especialidad (Mapeo Real a PDF)
+        const protocols = {
+            'Psicología': {
+                'niño': {
+                    version: 'PSI-NIÑ-V1',
+                    summary: 'La atención psicológica infanto-juvenil en Centro Valu requiere el consentimiento de ambos padres o tutores legales (Ley 20.584 y 21.331). Se garantiza la confidencialidad del menor, salvo riesgo vital.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA NIÑOS V1.pdf'
+                },
+                'adulto': {
+                    version: 'PSI-ADU-V1',
+                    summary: 'La psicoterapia para adultos se rige por el secreto profesional y la Ley de Derechos y Deberes del Paciente. Las sesiones son de 45-50 min y requieren compromiso de asistencia.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA ADULTOS V1.pdf'
+                }
+            },
+            'Pediatría': { // Fallback a protocolos de niños
+                'niño': {
+                    version: 'PED-GEN-V1',
+                    summary: 'La atención pediátrica se enfoca en el desarrollo integral. Al no contar con protocolo específico, se rige por las normas generales de atención pediátrica y consentimiento de tutores.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA NIÑOS V1.pdf'
+                },
+                'adulto': {
+                    version: 'PED-GEN-V1',
+                    summary: 'Atención médica pediátrica/adolescente para mayores de edad. Se aplican protocolos de confidencialidad médica estándar.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA ADULTOS V1.pdf'
+                }
+            },
+            'Fonoaudiología': {
+                'niño': {
+                    version: 'FONO-NIÑ-V1',
+                    summary: 'La terapia fonoaudiológica para niños requiere participación activa de los padres en el refuerzo del lenguaje y comunicación en casa para resultados óptimos.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO FONO NIÑOS V1.pdf'
+                },
+                'adulto': {
+                    version: 'FONO-ADU-V1',
+                    summary: 'Servicio de fonoaudiología para adultos (habla, deglución, voz). Se requiere evaluación inicial para definir el plan de rehabilitación.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO FONOAUDIOLOGIA V1.pdf'
+                }
+            },
+            'Terapia Ocupacional': {
+                'niño': {
+                    version: 'TO-NIÑ-V1',
+                    summary: 'Enfoque en Integración Sensorial y Autonomía. Es fundamental la entrega de informes escolares previos para una evaluación integral.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO TERAPIA OCUPACIONAL V1.pdf'
+                },
+                'adulto': {
+                    version: 'TO-ADU-V1',
+                    summary: 'Rehabilitación física o cognitiva para adultos. Se enfoca en la recuperación de actividades de la vida diaria.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO TERAPIA OCUPACIONAL V1.pdf'
+                }
+            },
+            'Psicopedagogía': {
+                'niño': {
+                    version: 'PSP-NIÑ-V1',
+                    summary: 'Apoyo en procesos de aprendizaje. Se requiere consentimiento informado de tutores y colaboración con el equipo escolar del menor.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOPEDAGOGIA V1.pdf'
+                },
+                'adulto': {
+                    version: 'PSP-ADU-V1',
+                    summary: 'Evaluación y apoyo en procesos de aprendizaje para adultos. Orientado a educación superior o recalificación laboral.',
+                    link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOPEDAGOGIA V1.pdf'
+                }
+            }
+        };
+
+        // 1. NAVEGACIÓN ENTRE PASOS
+        function changeStep(n) {
+            const steps = document.querySelectorAll('.step-content');
+            
+            // Si intentamos avanzar, validamos el paso actual
+            if (n === 1) {
+                if (!validateStep(currentStep)) return;
+            }
+
+            // Actualizar paso actual
+            currentStep += n;
+            
+            // Límites
+            if (currentStep < 1) currentStep = 1;
+            if (currentStep > totalSteps) {
+                currentStep = totalSteps;
+                return;
+            }
+
+            // Mostrar/Ocultar Pasos
+            steps.forEach((step, index) => {
+                step.classList.toggle('active', (index + 1) === currentStep);
+            });
+
+            // Actualizar Indicadores Laterales
+            document.querySelectorAll('[id^="indicator-"]').forEach((ind, i) => {
+                const stepIdx = i + 1;
+                if (stepIdx === currentStep) {
+                    ind.classList.remove('opacity-40');
+                    ind.querySelector('div').classList.remove('bg-white/20');
+                    ind.querySelector('div').classList.add('bg-white', 'text-primary-600');
+                } else if (stepIdx < currentStep) {
+                    ind.classList.remove('opacity-40');
+                    ind.querySelector('div').classList.add('bg-white/20');
+                    ind.querySelector('div').classList.remove('bg-white', 'text-primary-600');
+                } else {
+                    ind.classList.add('opacity-40');
+                    ind.querySelector('div').classList.add('bg-white/20');
+                    ind.querySelector('div').classList.remove('bg-white', 'text-primary-600');
+                }
+            });
+
+            // Actualizar Botones de Navegación
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            prevBtn.classList.toggle('hidden', currentStep === 1);
+            
+            if (currentStep === totalSteps) {
+                nextBtn.innerHTML = 'ENVIAR SOLICITUD <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                nextBtn.classList.remove('bg-primary-500');
+                nextBtn.classList.add('bg-primary-600');
+                nextBtn.onclick = null; // Removemos el onclick para que el 'submit' del form capture el evento
+                nextBtn.type = "submit";
+            } else {
+                nextBtn.innerHTML = 'SIGUIENTE <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                nextBtn.classList.add('bg-primary-500');
+                nextBtn.classList.remove('bg-primary-600');
+                nextBtn.type = "button";
+                nextBtn.onclick = () => changeStep(1);
+            }
+
+            // Scroll al inicio del formulario para facilitar lectura en móvil
+            document.getElementById('main-contact-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // 2. VALIDACIÓN DE CAMPOS POR PASO
+        function validateStep(step) {
+            const currentStepEl = document.getElementById(`step-${step}`);
+            const inputs = currentStepEl.querySelectorAll('input[required], select[required], textarea[required]');
+            let isValid = true;
+
+            // Validación especial para Paso 1: Fecha de Nacimiento
+            if (step === 1) {
+                if (!syncAndValidateDate()) {
+                    isValid = false;
+                }
+            }
+
+            inputs.forEach(input => {
+                if (input.type === 'checkbox') {
+                    if (!input.checked) {
+                        input.closest('.custom-checkbox-container').classList.add('ring-2', 'ring-red-500', 'ring-offset-2');
+                        isValid = false;
+                    } else {
+                        input.closest('.custom-checkbox-container').classList.remove('ring-2', 'ring-red-500');
+                    }
+                } else {
+                    if (!input.value || input.value.trim() === '') {
+                        input.classList.add('border-red-500', 'ring-4', 'ring-red-500/10');
+                        isValid = false;
+                    } else if (input.type === 'email' && !input.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        input.classList.add('border-red-500', 'ring-4', 'ring-red-500/10');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('border-red-500', 'ring-4', 'ring-red-500/10');
+                    }
+                }
+            });
+
+            if (!isValid) {
+                const firstError = currentStepEl.querySelector('.border-red-500, .ring-red-500');
+                if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            return isValid;
+        }
+
+        // 3. VALIDACIÓN DE FECHA Y LÓGICA DE TUTOR
+        function syncAndValidateDate() {
+            const dInput = document.getElementById('dob-day');
+            const mInput = document.getElementById('dob-month');
+            const yInput = document.getElementById('dob-year');
+            const d = dInput.value;
+            const m = mInput.value;
+            const y = yInput.value;
+            const hidden = document.getElementById('fecha_nacimiento_hidden');
+            const errorMsg = document.getElementById('dob-error');
+            const seccionCuidador = document.getElementById('seccion-cuidador');
+            const inputsTutor = seccionCuidador.querySelectorAll('input');
+
+            errorMsg.classList.add('hidden');
+            [dInput, mInput, yInput].forEach(i => i.classList.remove('border-red-500'));
+
+            if (!d || !m || !y) {
+                if(d || m || y) {
+                    errorMsg.textContent = "Fecha incompleta";
+                    errorMsg.classList.remove('hidden');
+                }
+                return false;
+            }
+
+            const birthDate = new Date(y, m - 1, d);
+            const today = new Date();
+            
+            if (birthDate > today || y < 1910 || birthDate.getDate() != d) {
+                errorMsg.textContent = "Fecha inválida";
+                errorMsg.classList.remove('hidden');
+                [dInput, mInput, yInput].forEach(i => i.classList.add('border-red-500'));
+                return false;
+            }
+
+            // Formato ISO para n8n
+            hidden.value = `${y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`;
+
+            // Cálculo de edad: Si es menor de 18 años, mostrar sección tutor
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            if (age < 18) {
+                seccionCuidador.classList.remove('hidden');
+                // Hacer obligatorios los campos del tutor si es menor
+                inputsTutor.forEach(input => {
+                  if (input.name !== 'colegio_menor') input.required = true;
+                });
+                
+                // Mostrar campo colegio si es menor de 18
+                document.getElementById('colegio-container').classList.remove('hidden');
+            } else {
+                seccionCuidador.classList.add('hidden');
+                inputsTutor.forEach(input => {
+                    input.required = false;
+                    input.value = '';
+                });
+                document.getElementById('colegio-container').classList.add('hidden');
+            }
+
+            return true;
+        }
+
+        // 4. PROTOCOLOS DINÁMICOS POR SERVICIO
+        function updateConsentContent() {
+            const servicio = document.getElementById('servicio-selector').value;
+            const birthYear = document.getElementById('dob-year').value;
+            const birthMonth = document.getElementById('dob-month').value;
+            const birthDay = document.getElementById('dob-day').value;
+            
+            const today = new Date();
+            let isMinor = true; // Por defecto asumimos menor para seguridad en Pediatría/Infantil
+
+            if (birthYear && birthMonth && birthDay) {
+                const birthDate = new Date(birthYear, birthMonth - 1, birthDay);
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const m = today.getMonth() - birthDate.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                isMinor = age < 18;
+            } else if (birthYear) {
+                // Cálculo rápido si solo está el año
+                isMinor = (today.getFullYear() - parseInt(birthYear)) < 18;
+            }
+
+            const category = isMinor ? 'niño' : 'adulto';
+            const protocolData = protocols[servicio] || protocols['Psicología'];
+            const protocol = protocolData[category] || protocolData['niño'];
+            
+            const summaryEl = document.getElementById('consent-summary');
+            const linkEl = document.getElementById('consent-full-link');
+            const versionEl = document.getElementById('document-version-input');
+            const alertEl = document.getElementById('age-specialty-alert');
+
+            if (summaryEl) {
+                summaryEl.innerHTML = `<p class="font-bold text-slate-900 mb-2">Protocolo de ${servicio} (${category.toUpperCase()})</p><p>${protocol.summary}</p>`;
+            }
+            if (linkEl) {
+                linkEl.href = protocol.link;
+                linkEl.textContent = `VER DOCUMENTO COMPLETO: ${protocol.version} (PDF)`;
+            }
+            if (versionEl) versionEl.value = protocol.version;
+
+            // Alerta si el servicio es infantil (TO, Fono, Ped) y el usuario es mayor de 18
+            const isInfantil = ['Terapia Ocupacional', 'Fonoaudiología', 'Pediatría', 'Psicopedagogía'].includes(servicio);
+            if (isInfantil && !isMinor) {
+                alertEl.classList.remove('hidden');
+            } else {
+                alertEl.classList.add('hidden');
+            }
+        }
+
+        // 5. FORMATEADORES DE ENTRADA (RUT y Teléfono)
+        function formatRUT(rut) {
+            let valor = rut.value.replace(/\./g, '').replace('-', '');
+            if (valor.length < 2) return;
+            const cuerpo = valor.slice(0, -1);
+            const dv = valor.slice(-1).toUpperCase();
+            rut.value = cuerpo.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + '-' + dv;
+        }
+
+        document.getElementById('rut-input').addEventListener('input', function(e) { formatRUT(e.target); });
+        
+        const rutTutorInput = document.getElementById('rut-tutor-input');
+        if (rutTutorInput) {
+            rutTutorInput.addEventListener('input', function(e) { formatRUT(e.target); });
+        }
+
+        // Prefijo Select Logic
+        const prefijoSelect = document.getElementById('prefijo-select');
+        const prefijoDisplay = document.getElementById('prefijo-display');
+        if (prefijoSelect && prefijoDisplay) {
+            prefijoSelect.addEventListener('change', function() {
+                const selectedOption = this.options[this.selectedIndex];
+                prefijoDisplay.textContent = selectedOption.getAttribute('data-short');
+            });
+        }
+
+        // 6. ENVÍO DEL FORMULARIO A n8n
+        document.getElementById('main-contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Última validación de consentimiento
+            if (!validateStep(totalSteps)) return;
+
+            const nextBtn = document.getElementById('nextBtn');
+            const originalText = nextBtn.innerHTML;
+            nextBtn.disabled = true;
+            nextBtn.innerHTML = '<span class="flex items-center gap-2"><svg class="animate-spin h-5 w-5 text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> ENVIANDO...</span>';
+
+            // Preparar Datos
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Añadir metadatos
+            data.fecha_envio = new Date().toLocaleString('es-CL');
+            data.url_origen = window.location.href;
+            data.dispositivo = navigator.userAgent;
+
+            try {
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    showModal('success', '¡Recibido!', 'Tu solicitud ha sido enviada exitosamente. Nuestro equipo se contactará contigo vía WhatsApp o Email pronto.');
+                    this.reset();
+                    // Volver al paso 1 visualmente
+                    document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active'));
+                    document.getElementById('step-1').classList.add('active');
+                    currentStep = 1;
+                    // Resetear indicadores
+                    document.querySelectorAll('[id^="indicator-"]').forEach((ind, i) => {
+                        if(i === 0) {
+                            ind.classList.remove('opacity-40');
+                            ind.querySelector('div').classList.add('bg-white', 'text-primary-600');
+                        } else {
+                            ind.classList.add('opacity-40');
+                            ind.querySelector('div').classList.remove('bg-white', 'text-primary-600');
+                        }
+                    });
+                } else {
+                    throw new Error('Response not OK');
+                }
+            } catch (error) {
+                console.error('Error al enviar formulario:', error);
+                showModal('error', 'Error en el envío', 'No pudimos procesar tu solicitud. Por favor contactanos directamente por WhatsApp.');
+                nextBtn.disabled = false;
+                nextBtn.innerHTML = originalText;
+            }
+        });
+
+        // 7. GESTIÓN DE MODALES
+        function showModal(type, title, desc) {
+            const modal = document.getElementById('message-modal');
+            const titleEl = document.getElementById('modal-title');
+            const descEl = document.getElementById('modal-description');
+            
+            document.getElementById('modal-icon-success').classList.toggle('hidden', type !== 'success');
+            document.getElementById('modal-icon-error').classList.toggle('hidden', type !== 'error');
+            document.getElementById('modal-btn-success').classList.toggle('hidden', type !== 'success');
+            document.getElementById('modal-btn-error').classList.toggle('hidden', type !== 'error');
+
+            titleEl.textContent = title;
+            descEl.textContent = desc;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('message-modal').classList.add('hidden');
+        }
+
+        // 8. FUNCIONES DE UTILIDAD (MOBILE MENU Y SCROLL)
         const menuToggle = document.getElementById('menu-toggle');
+
+        // Inicialización y Listeners Adicionales
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar contenido de consentimiento
+            updateConsentContent();
+
+            // Listener para '¿Cómo nos conociste?'
+            const captacionSelector = document.getElementById('captacion-selector');
+            const captacionOtroContainer = document.getElementById('captacion-otro-container');
+            const captacionOtroInput = document.getElementById('captacion-otro-input');
+
+            if (captacionSelector) {
+                captacionSelector.addEventListener('change', function() {
+                    const isOtro = this.value === 'Otro';
+                    captacionOtroContainer.classList.toggle('hidden', !isOtro);
+                    captacionOtroInput.required = isOtro;
+                });
+            }
+
+            // Listener para cambios en la fecha para actualizar alertas de especialidad
+            ['dob-day', 'dob-month', 'dob-year'].forEach(id => {
+                document.getElementById(id).addEventListener('input', syncAndValidateDate);
+                document.getElementById(id).addEventListener('change', updateConsentContent);
+            });
+        });
+
+        // 9. NAVEGACIÓN Y MENÚ MÓVIL (EXISTENTE)
         const mobileMenu = document.getElementById('mobile-menu');
         const menuContent = document.getElementById('menu-content');
         const menuClose = document.getElementById('menu-close');

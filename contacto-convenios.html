@@ -27,12 +27,12 @@ Autor: Antigravity (AI Assistant)
     <meta property="twitter:image" content="https://centrovalu.cl/assets/brand/og-image.png">
 
     <!-- Google Tag (gtag.js) - Google Ads / Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16532397408"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-CONVERSION_ID');
+      gtag('config', 'AW-16532397408');
     </script>
 
     <!-- Meta Pixel Code -->
@@ -702,14 +702,14 @@ Autor: Antigravity (AI Assistant)
             data.fecha_envio = now.toLocaleDateString('es-CL') + ' ' + now.toLocaleTimeString('es-CL');
 
             try {
-                const response = await fetch('https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-convenios', {
+                const response = await fetch('https://n8n.sinesfuerzo.cl/webhook/centro-valu-contacto-convenios', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
 
                 if (response.ok) {
-                    gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_FORM_CONVENIOS' });
+                    gtag('event', 'conversion', { 'send_to': 'AW-16532397408/LABEL_FORM_CONVENIOS' });
                     fbq('track', 'Lead');
                     
                     showModal('success', '¡Solicitud Enviada!', 'La solicitud de convenio ha sido recibida con éxito. El equipo de Centro Valu se contactará con tu institución a la brevedad para coordinar una reunión.');
@@ -741,7 +741,7 @@ Autor: Antigravity (AI Assistant)
         document.getElementById('whatsapp-btn').addEventListener('click', function() {
             // Google Ads
             gtag('event', 'conversion', {
-                'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
+                'send_to': 'AW-16532397408/LABEL_WHATSAPP'
             });
             // Meta Pixel
             fbq('track', 'Contact');
