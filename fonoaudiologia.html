@@ -201,17 +201,17 @@ Autor: Antigravity (AI Assistant)
         Saltar al contenido principal
     </a>
 
-    <!-- HEADER: GLASSMORPHISM REFINADO (ESTANDARIZADO) -->
     <header class="fixed top-0 w-full z-50 px-4 md:px-8 py-4 transition-all duration-300" id="main-header">
         <div
             class="max-w-7xl mx-auto glass-card rounded-2xl shadow-premium border border-white/40 flex justify-between items-center h-24 px-4 md:px-6">
 
-            <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) - AHORA CON SHRINK-0 PARA MANTENERSE FIJO A LA IZQUIERDA -->
+            <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) -->
             <div class="flex items-center justify-start shrink-0 pr-4">
                 <a href="index.html" class="flex items-center gap-3 sm:gap-4 group transition-all max-w-full">
                     <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu"
                         width="160" height="64"
-                        class="h-[52px] sm:h-[62px] md:h-[68px] w-auto shrink-0 group-hover:scale-105 transition-transform">
+                        class="h-[52px] sm:h-[62px] md:h-[68px] w-auto shrink-0 group-hover:scale-105 transition-transform"
+                        loading="eager">
                     <div class="flex flex-col text-left ml-1 min-w-0 overflow-hidden">
                         <span
                             class="font-display font-bold text-sm sm:text-base md:text-xl text-primary-900 leading-none truncate uppercase tracking-widest mt-1">Centro Valu</span>
@@ -222,26 +222,26 @@ Autor: Antigravity (AI Assistant)
                 </a>
             </div>
 
-            <!-- DERECHA: RESERVAR + MENÚ - AHORA CON FLEX-GROW PARA OCUPAR EL ESPACIO RESTANTE -->
+            <!-- DERECHA: RESERVAR + MENÚ -->
             <div class="flex items-center justify-end gap-2 sm:gap-x-4 flex-grow">
-                <!-- NAV DESKTOP (OPCIÓN 1) -->
+                <!-- NAV DESKTOP -->
                 <nav class="hidden lg:flex items-center gap-x-5 mr-4">
-                    <a href="index.html" class="text-primary-600 font-bold hover:text-primary-700 transition-colors">Inicio</a>
+                    <a href="index.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
                     <a href="quienes-somos.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Quiénes somos</a>
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
-                        <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+                        <button class="text-primary-600 font-bold hover:text-primary-700 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
                                 <li><a href="psicologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
                                 <li><a href="pediatria.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
-                                <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
+                                <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-xl transition-colors">Fonoaudiología</a></li>
                                 <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                                 <li><a href="psicopedagogia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                                <li><a href="test-evaluaciones.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Tests & Evaluaciones</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Convenios Dropdown -->
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Convenios <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
@@ -256,7 +256,7 @@ Autor: Antigravity (AI Assistant)
                     <a href="index.html#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
 
-                                <button id="search-open" aria-label="Abrir buscador" 
+                <button id="search-open" aria-label="Abrir buscador" 
                     class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
                     <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -278,7 +278,7 @@ Autor: Antigravity (AI Assistant)
             </div>
         </div>
 
-        <!-- PANEL LATERAL (DRAWER) MÓVIL (DESPLAZAMIENTO DESDE LA DERECHA) -->
+        <!-- PANEL LATERAL (DRAWER) MÓVIL -->
         <div id="mobile-menu"
             class="fixed lg:hidden inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
             <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300 overflow-y-auto"
@@ -295,16 +295,11 @@ Autor: Antigravity (AI Assistant)
                 </div>
                 
                 <ul class="space-y-6">
-                    <li><a href="index.html"
-                            class="mobile-link text-2xl font-bold text-primary-600 transition-colors">Inicio</a>
-                    </li>
-                    <li><a href="quienes-somos.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes
-                            somos</a>
-                    </li>
+                    <li><a href="index.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Inicio</a></li>
+                    <li><a href="quienes-somos.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes somos</a></li>
                     <li>
                         <button id="specialties-toggle" aria-label="Desplegar especialidades"
-                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            class="flex items-center justify-between w-full text-2xl font-bold text-primary-600 transition-colors group text-left">
                             Especialidades
                             <svg id="specialties-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -315,21 +310,12 @@ Autor: Antigravity (AI Assistant)
                         <div id="specialties-submenu"
                             class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
                             <ul class="py-4 px-6 space-y-4">
-                                <li><a href="psicologia.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a>
-                                </li>
-                                <li><a href="pediatria.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a>
-                                </li>
-                                <li><a href="fonoaudiologia.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Fonoaudiología</a>
-                                </li>
-                                <li><a href="terapia-ocupacional.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Terapia
-                                        Ocupacional</a></li>
-                                <li><a href="psicopedagogia.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a>
-                                </li>
+                                <li><a href="psicologia.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a></li>
+                                <li><a href="pediatria.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a></li>
+                                <li><a href="fonoaudiologia.html" class="mobile-link block text-lg font-bold text-primary-600">Fonoaudiología</a></li>
+                                <li><a href="terapia-ocupacional.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Terapia Ocupacional</a></li>
+                                <li><a href="psicopedagogia.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a></li>
+                                <li><a href="test-evaluaciones.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Tests & Evaluaciones</a></li>
                             </ul>
                         </div>
                     </li>
@@ -346,40 +332,18 @@ Autor: Antigravity (AI Assistant)
                         <div id="convenios-submenu"
                             class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
                             <ul class="py-4 px-6 space-y-4">
-                                <li>
-                                    <a href="convenios.html#colegios"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
-                                </li>
-                                <li>
-                                    <a href="convenios.html#empresas"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
-                                </li>
+                                <li><a href="convenios.html#colegios" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a></li>
+                                <li><a href="convenios.html#empresas" class="block block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="formacion.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Formación</a>
-                    </li>
-                    <li><a href="profesionales.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
-                            Equipo</a>
-                    </li>
-                    <li><a href="index.html#contacto"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
-                    </li>
+                    <li><a href="formacion.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Formación</a></li>
+                    <li><a href="profesionales.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro Equipo</a></li>
+                    <li><a href="index.html#contacto" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a></li>
+                    <li><a href="index.html#precios" id="mobile-prices-open" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Precios</a></li>
                     <li class="pt-8 border-t border-slate-100">
-                                        <button id="search-open" aria-label="Abrir buscador" 
-                    class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
-                    <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </button>
-<a href="formulario-contacto.html"
+                        <a href="formulario-contacto.html"
                             class="mobile-link group flex items-center justify-center gap-3 w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white text-center py-4 rounded-xl font-bold text-base shadow-lg shadow-primary-600/20 glow-effect transition-all hover:shadow-xl active:scale-[0.98]">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
                             Formulario de contacto
                         </a>
                     </li>
@@ -731,101 +695,83 @@ Autor: Antigravity (AI Assistant)
     </footer>
 
 
+    <!-- SCRIPTS CORE: NAVEGACIÓN Y COMPONENTES -->
     <script>
+        /**
+         * initCoreNavigation: Maneja menú móvil, precios y buscador.
+         */
+        const initCoreNavigation = () => {
+            try {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuContent = document.getElementById('menu-content');
 
+                const openMenu = () => {
+                    mobileMenu?.classList.replace('opacity-0', 'opacity-100');
+                    mobileMenu?.classList.remove('pointer-events-none');
+                    menuContent?.classList.remove('translate-x-full');
+                    document.body.style.overflow = 'hidden';
+                };
 
-        const proDrawerOverlay = document.getElementById('pro-drawer-overlay');
-        const proDrawerContent = document.getElementById('pro-drawer-content');
-        const closeProDrawer = document.getElementById('close-pro-drawer');
-        const proDetailsTarget = document.getElementById('pro-details-target');
+                const closeMenu = () => {
+                    mobileMenu?.classList.replace('opacity-100', 'opacity-0');
+                    mobileMenu?.classList.add('pointer-events-none');
+                    menuContent?.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
+                };
 
-        function openDrawer(proId) {
-            const data = proDataExtended[proId];
-            if (!data) return;
+                // -- Delegación General Navegación --
+                document.addEventListener('click', (e) => {
+                    if (e.target.closest('#menu-toggle')) openMenu();
+                    else if (e.target.closest('#menu-close') || (mobileMenu && e.target === mobileMenu)) closeMenu();
+                    else if (e.target.closest('#mobile-prices-open')) {
+                        // El enlace ahora lleva directamente a index.html#precios
+                    }
+                    
+                    // -- Control de Submenús (Especialidades / Convenios) --
+                    const specToggle = e.target.closest('#specialties-toggle');
+                    if (specToggle) {
+                        const submenu = document.getElementById('specialties-submenu');
+                        const chevron = document.getElementById('specialties-chevron');
+                        if (submenu && chevron) {
+                            const isOpen = submenu.style.maxHeight && submenu.style.maxHeight !== '0px';
+                            if (isOpen) {
+                                submenu.style.maxHeight = '0px';
+                                chevron.classList.remove('rotate-180');
+                            } else {
+                                submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                                chevron.classList.add('rotate-180');
+                            }
+                        }
+                    }
 
-            const hasImage = !data.img.includes('placeholder.webp');
-            const bgClass = data.bg || 'bg-brand-lila/20';
+                    const convToggle = e.target.closest('#convenios-toggle');
+                    if (convToggle) {
+                        const submenu = document.getElementById('convenios-submenu');
+                        const chevron = document.getElementById('convenios-chevron');
+                        if (submenu && chevron) {
+                            const isOpen = submenu.style.maxHeight && submenu.style.maxHeight !== '0px';
+                            if (isOpen) {
+                                submenu.style.maxHeight = '0px';
+                                chevron.classList.remove('rotate-180');
+                            } else {
+                                submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                                chevron.classList.add('rotate-180');
+                            }
+                        }
+                    }
+                });
 
-            proDetailsTarget.innerHTML = `
-                <div class="flex flex-col gap-8">
-                    <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center shadow-inner">
-                        ${hasImage ? `
-                            <img src="${data.img}" alt="${data.nombre}" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="300">
-                        ` : `
-                            <span class="text-primary-300 font-display text-8xl">Valu</span>
-                        `}
-                    </div>
-                    <div>
-                        <span class="text-primary-600 font-bold text-xs uppercase tracking-[0.2em] mb-2 block">${data.especialidad}</span>
-                        <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900">${data.nombre}</h2>
-                        <p class="text-slate-400 font-medium mt-2">${data.cargo}</p>
-                    </div>
-                    <div class="space-y-6">
-                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Descripción Profesional</h5>
-                        <p class="text-slate-600 leading-relaxed text-lg">${data.descripcion}</p>
-                    </div>
-                    <div class="space-y-6">
-                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Formación y Especialidades</h5>
-                        <ul class="grid gap-4">
-                            ${data.formacion.map(item => `
-                                <li class="flex items-start gap-3 text-slate-600">
-                                    <svg class="w-5 h-5 text-primary-500 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span class="font-medium">${item}</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
+                console.log('Nav OK');
+            } catch (err) { console.error('Error Nav:', err); }
+        };
 
-            proDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
-            proDrawerContent.classList.remove('translate-x-full');
-            const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
-            if (scrollContainer) scrollContainer.scrollTop = 0;
-            document.body.style.overflow = 'hidden';
-            history.pushState({ drawerOpen: true }, '');
-            
-            // Actualizar años de experiencia dinámicos
-            if (typeof updateExperience === 'function') {
-                updateExperience();
-            }
-        }
-
-        function closeDrawer(fromPopState = false) {
-            proDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
-            proDrawerContent.classList.add('translate-x-full');
-            document.body.style.overflow = '';
-            
-            if (!fromPopState && history.state && history.state.drawerOpen) {
-                history.back();
-            }
-        }
-
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.open-pro-drawer')) {
-                const card = e.target.closest('.pro-card');
-                const proId = card.getAttribute('data-pro-id');
-                openDrawer(proId);
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            initCoreNavigation();
         });
-
-        if (closeProDrawer) closeProDrawer.addEventListener('click', () => closeDrawer());
-        if (proDrawerOverlay) {
-            proDrawerOverlay.addEventListener('click', (e) => {
-                if (e.target === proDrawerOverlay) closeDrawer();
-            });
-        }
-
-        window.addEventListener('popstate', (e) => {
-            if (proDrawerOverlay && !proDrawerOverlay.classList.contains('opacity-0')) {
-                // The user pressed the system back button
-                closeDrawer(true);
-            }
-        });
-
-        
+    </script>
+    <script src="assets/js/drawer-logic.js"></script>
+    </script>
+    <script>
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
@@ -841,32 +787,37 @@ Autor: Antigravity (AI Assistant)
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.proSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            },
-        });
-</script>
+        const initVisualComponents = () => {
+            try {
+                new Swiper('.proSwiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+            } catch (err) { console.error('Error Swiper:', err); }
+        };
+        document.addEventListener('DOMContentLoaded', initVisualComponents);
+    </script>
     <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
     <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Fonoaudiolog%C3%ADa."
         target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
@@ -892,145 +843,12 @@ Autor: Antigravity (AI Assistant)
 
     
 
-    <!-- Script inyectado globalmente por unificación -->
-    <script>
-        // Mobile Menu Logic Unificada con History API para botón 'Atrás'
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuContent = document.getElementById('menu-content');
-        const menuClose = document.getElementById('menu-close');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-
-        function closeMobileMenu(fromPopState = false) {
-            if (mobileMenu) {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.remove('opacity-100'); // Para casos donde se usaba opactiy-100 directamente
-            }
-            if (menuContent) menuContent.classList.add('translate-x-full');
-            document.body.style.overflow = '';
-            
-            if (menuIcon && closeIcon) {
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            }
-
-            if (!fromPopState && history.state && history.state.mobileMenuOpen) {
-                history.back();
-            }
-        }
-
-        function openMobileMenu() {
-            if (mobileMenu) {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100');
-            }
-            if (menuContent) menuContent.classList.remove('translate-x-full');
-            document.body.style.overflow = 'hidden';
-            
-            if (menuIcon && closeIcon) {
-                menuIcon.classList.add('hidden');
-                closeIcon.classList.remove('hidden');
-            }
-
-            history.pushState({ mobileMenuOpen: true }, '');
-        }
-
-        function toggleMenu() {
-            if (!mobileMenu) return;
-            // Evaluamos si el menú parece cerrado
-            const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-            if (isClosed) {
-                openMobileMenu();
-            } else {
-                closeMobileMenu();
-            }
-        }
-
-        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-        if (menuClose) menuClose.addEventListener('click', toggleMenu);
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) toggleMenu();
-            });
-        }
-
-        if (mobileLinks) {
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    closeMobileMenu();
-                });
-            });
-        }
-
-        window.addEventListener('popstate', (e) => {
-            if (mobileMenu) {
-                const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-                if (!isClosed) {
-                    closeMobileMenu(true);
-                }
-            }
-        });
-
-        // Submenu Specialties Logic
-        const specialtiesToggle = document.getElementById('specialties-toggle');
-        const specialtiesSubmenu = document.getElementById('specialties-submenu');
-        const specialtiesChevron = document.getElementById('specialties-chevron');
-
-        if (specialtiesToggle && specialtiesSubmenu && specialtiesChevron) {
-            specialtiesToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    specialtiesSubmenu.style.maxHeight = '0px';
-                    specialtiesChevron.classList.remove('rotate-180');
-                } else {
-                    specialtiesSubmenu.style.maxHeight = specialtiesSubmenu.scrollHeight + 'px';
-                    specialtiesChevron.classList.add('rotate-180');
-                }
-            });
-        }
-
-        // Submenu Convenios Logic
-        const conveniosToggle = document.getElementById('convenios-toggle');
-        const conveniosSubmenu = document.getElementById('convenios-submenu');
-        const conveniosChevron = document.getElementById('convenios-chevron');
-
-        if (conveniosToggle && conveniosSubmenu && conveniosChevron) {
-            conveniosToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    conveniosSubmenu.style.maxHeight = '0px';
-                    conveniosChevron.classList.remove('rotate-180');
-                } else {
-                    conveniosSubmenu.style.maxHeight = conveniosSubmenu.scrollHeight + 'px';
-                    conveniosChevron.classList.add('rotate-180');
-                }
-            });
-        }
-
-        // --- AUTO-APERTURA DESDE BUSCADOR ---
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const proCard = document.getElementById(hash);
-                if (proCard && typeof openDrawer === 'function') {
-                    setTimeout(() => {
-                        proCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        openDrawer(hash);
-                    }, 500);
-                }
-            }
-        });
-    </script>
+    <!-- SCRIPTS ADICIONALES: BÚSQUEDA Y CARRUSELES -->
     <script src="assets/js/pro-data.js"></script>
     <script src="assets/js/search-data.js"></script>
     <script src="assets/js/search-logic.js"></script>
-</body>
+
+    </body>
 
 </html>
 

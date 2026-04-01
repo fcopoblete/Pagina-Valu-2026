@@ -21,41 +21,135 @@ Autor: Antigravity (AI Assistant)
     <meta name="apple-mobile-web-app-title" content="Centro Valu">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Abhaya Libre (Display) & Poppins (Body) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
+                        // PALETA OFICIAL: Centro Valu
                         brand: {
-                            verde: '#ddf4f4',
-                            verde_text: '#4a8d8d',
+                            verde: '#ddf4f4',      // Protagonista (Fondo)
+                            verde_text: '#4a8d8d', // Contraste para texto
                             lila: '#efdff5',
                             lila_text: '#8b6991',
+                            beige: '#f2ead5',
+                            rosa: '#f3d5d5',
+                            durazno: '#f7e3d0',
+                            azul: '#dbebf3',
                         },
                         primary: {
-                            100: '#ddf4f4',
-                            500: '#75cfcf',
-                            600: '#4a8d8d',
-                            700: '#2d5a5a',
+                            50: '#f0fdf9',
+                            100: '#ddf4f4', // Oficial
+                            500: '#75cfcf', // Intermedio
+                            600: '#4a8d8d', // Texto legible
+                            700: '#2d5a5a', // Dark
+                            dark: '#2d5a5a',
+                        },
+                        secondary: {
+                            50: '#efdff5', // Lila oficial
+                            500: '#a881af',
+                            600: '#8b6991', // Texto lila legible
+                        },
+                        slate: {
+                            900: '#0f172a',
                         }
                     },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],
                         display: ['Abhaya Libre', 'serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -10px rgba(221, 244, 244, 0.3)',
+                        'premium': '0 20px 50px -12px rgba(15, 23, 42, 0.12)',
                     }
                 }
             }
         }
     </script>
     <style>
+        /* REFACTOR: Animaciones personalizadas (Frontend Design) */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
-    
+
+        .step-content {
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .glow-effect:hover::after {
+            transform: scale(1);
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 8s infinite ease-in-out;
+        }
+
+        .animate-bounce-subtle {
+            animation: bounce-subtle 4s infinite ease-in-out;
+        }
+    </style>
+
+    <!-- A11Y Focus Rings -->
+    <style>
+        *:focus-visible {
+            outline: 3px solid #75cfcf !important;
+            outline-offset: 3px !important;
+            border-radius: 4px;
+            transition: outline-color 0.2s ease;
+        }
+
         /* iOS Normalization & Tap Highlight */
         input, button, textarea, select {
             -webkit-appearance: none;
@@ -72,16 +166,6 @@ Autor: Antigravity (AI Assistant)
             -webkit-tap-highlight-color: transparent;
         }
     </style>
-
-    <!-- A11Y Focus Rings -->
-    <style>
-        *:focus-visible {
-            outline: 3px solid #75cfcf !important;
-            outline-offset: 3px !important;
-            border-radius: 4px;
-            transition: outline-color 0.2s ease;
-        }
-    </style>
 </head>
 
 <body class="bg-[#f8fafc] text-slate-900 font-sans antialiased">
@@ -89,7 +173,7 @@ Autor: Antigravity (AI Assistant)
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl">
         Saltar al contenido principal
     </a>
-    <!-- HEADER (Simplificado para consistencia) -->
+    <!-- HEADER: GLASSMORPHISM REFINADO -->
     <header class="fixed top-0 w-full z-50 px-4 md:px-8 py-4 transition-all duration-300" id="main-header">
         <div
             class="max-w-7xl mx-auto glass-card rounded-2xl shadow-premium border border-white/40 flex justify-between items-center h-24 px-4 md:px-6">
@@ -126,6 +210,7 @@ Autor: Antigravity (AI Assistant)
                                 <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                                 <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                                 <li><a href="psicopedagogia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                                <li><a href="test-evaluaciones.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Tests & Evaluaciones</a></li>
                             </ul>
                         </div>
                     </div>
@@ -144,13 +229,13 @@ Autor: Antigravity (AI Assistant)
                     <a href="index.html#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
 
-                                <button id="search-open" aria-label="Abrir buscador" 
+                <button id="search-open" aria-label="Abrir buscador" 
                     class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
                     <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </button>
-<a href="formulario-contacto.html"
+                <a href="formulario-contacto.html"
                     class="hidden sm:flex bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
                     Contáctanos
                 </a>
@@ -218,6 +303,9 @@ Autor: Antigravity (AI Assistant)
                                 <li><a href="psicopedagogia.html"
                                         class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a>
                                 </li>
+                                <li><a href="test-evaluaciones.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Tests & Evaluaciones</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -254,6 +342,9 @@ Autor: Antigravity (AI Assistant)
                     </li>
                     <li><a href="index.html#contacto"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
+                    </li>
+                    <li><a href="index.html#precios" id="mobile-prices-open"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Precios</a>
                     </li>
                     <li class="pt-8 border-t border-slate-100">
                         <a href="formulario-contacto.html"
@@ -320,7 +411,6 @@ Autor: Antigravity (AI Assistant)
         </div>
     </main>
 
-    <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
     <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
     <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
@@ -414,9 +504,31 @@ Autor: Antigravity (AI Assistant)
 
     
 
-    <!-- Script inyectado globalmente por unificación -->
+    <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
+    <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n."
+        target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
+        class="fixed bottom-10 right-10 h-16 w-16 bg-[#25D366] text-white rounded-2xl shadow-[0_20px_40px_-5px_rgba(37,211,102,0.3)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[60] group overflow-hidden animate-float">
+        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+        <svg class="h-8 w-8 relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.412.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
     <script>
-        // Mobile Menu Logic Unificada con History API para botón 'Atrás'
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.querySelector('.glass-card').classList.add('shadow-2xl');
+            } else {
+                header.classList.remove('py-2');
+                header.querySelector('.glass-card').classList.remove('shadow-2xl');
+            }
+        });
+
+        // Mobile Menu Logic
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuContent = document.getElementById('menu-content');
@@ -425,120 +537,72 @@ Autor: Antigravity (AI Assistant)
         const menuIcon = document.getElementById('menu-icon');
         const closeIcon = document.getElementById('close-icon');
 
-        function closeMobileMenu(fromPopState = false) {
-            if (mobileMenu) {
+        function toggleMenu() {
+            const isOpened = !mobileMenu.classList.contains('opacity-0');
+            if (isOpened) {
                 mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.remove('opacity-100'); // Para casos donde se usaba opactiy-100 directamente
-            }
-            if (menuContent) menuContent.classList.add('translate-x-full');
-            document.body.style.overflow = '';
-            
-            if (menuIcon && closeIcon) {
+                menuContent.classList.add('translate-x-full');
                 menuIcon.classList.remove('hidden');
                 closeIcon.classList.add('hidden');
-            }
-
-            if (!fromPopState && history.state && history.state.mobileMenuOpen) {
-                history.back();
-            }
-        }
-
-        function openMobileMenu() {
-            if (mobileMenu) {
+                document.body.style.overflow = '';
+            } else {
                 mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100');
-            }
-            if (menuContent) menuContent.classList.remove('translate-x-full');
-            document.body.style.overflow = 'hidden';
-            
-            if (menuIcon && closeIcon) {
+                menuContent.classList.remove('translate-x-full');
                 menuIcon.classList.add('hidden');
                 closeIcon.classList.remove('hidden');
-            }
-
-            history.pushState({ mobileMenuOpen: true }, '');
-        }
-
-        function toggleMenu() {
-            if (!mobileMenu) return;
-            // Evaluamos si el menú parece cerrado
-            const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-            if (isClosed) {
-                openMobileMenu();
-            } else {
-                closeMobileMenu();
+                document.body.style.overflow = 'hidden';
             }
         }
 
         if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
         if (menuClose) menuClose.addEventListener('click', toggleMenu);
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) toggleMenu();
-            });
-        }
-
-        if (mobileLinks) {
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    closeMobileMenu();
-                });
-            });
-        }
-
-        window.addEventListener('popstate', (e) => {
-            if (mobileMenu) {
-                const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-                if (!isClosed) {
-                    closeMobileMenu(true);
-                }
-            }
+        if (mobileMenu) mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) toggleMenu();
         });
+        mobileLinks.forEach(link => link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('opacity-0')) toggleMenu();
+        }));
 
-        // Submenu Specialties Logic
+        // Submenus
         const specialtiesToggle = document.getElementById('specialties-toggle');
         const specialtiesSubmenu = document.getElementById('specialties-submenu');
         const specialtiesChevron = document.getElementById('specialties-chevron');
+        if (specialtiesToggle) specialtiesToggle.addEventListener('click', () => {
+            const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
+            specialtiesSubmenu.style.maxHeight = isOpen ? '0px' : specialtiesSubmenu.scrollHeight + 'px';
+            specialtiesChevron.classList.toggle('rotate-180', !isOpen);
+        });
 
-        if (specialtiesToggle && specialtiesSubmenu && specialtiesChevron) {
-            specialtiesToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    specialtiesSubmenu.style.maxHeight = '0px';
-                    specialtiesChevron.classList.remove('rotate-180');
-                } else {
-                    specialtiesSubmenu.style.maxHeight = specialtiesSubmenu.scrollHeight + 'px';
-                    specialtiesChevron.classList.add('rotate-180');
-                }
-            });
-        }
-
-        // Submenu Convenios Logic
         const conveniosToggle = document.getElementById('convenios-toggle');
         const conveniosSubmenu = document.getElementById('convenios-submenu');
         const conveniosChevron = document.getElementById('convenios-chevron');
+        if (conveniosToggle) conveniosToggle.addEventListener('click', () => {
+            const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
+            conveniosSubmenu.style.maxHeight = isOpen ? '0px' : conveniosSubmenu.scrollHeight + 'px';
+            conveniosChevron.classList.toggle('rotate-180', !isOpen);
+        });
+    </script>
 
-        if (conveniosToggle && conveniosSubmenu && conveniosChevron) {
-            conveniosToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    conveniosSubmenu.style.maxHeight = '0px';
-                    conveniosChevron.classList.remove('rotate-180');
-                } else {
-                    conveniosSubmenu.style.maxHeight = conveniosSubmenu.scrollHeight + 'px';
-                    conveniosChevron.classList.add('rotate-180');
+    <!-- Tracking Conversión WhatsApp -->
+    <script>
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function() {
+                // Google Ads
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
+                    });
+                }
+                // Meta Pixel
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Contact');
                 }
             });
         }
     </script>
-    <script src="assets/js/pro-data.js"></script>
-    <script src="assets/js/search-data.js"></script>
-    <script src="assets/js/search-logic.js"></script>
-</body>
+
+    </body>
 </html>
 
 

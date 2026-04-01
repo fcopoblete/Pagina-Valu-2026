@@ -1,8 +1,9 @@
 /**
  * Archivo: assets/js/pro-data.js
  * Descripción: Base de datos centralizada de profesionales de Centro Valu.
- *              Incluye descripción detallada, formación y metadatos para los perfiles.
- * Fecha de última modificación: 2026-03-27
+ *              Datos actualizados desde CSV y optimizados para lectura premium.
+ *              Se han removido cargos redundantes de la sección de formación.
+ * Fecha de última modificación: 2026-04-01
  * Autor: Antigravity (AI Assistant)
  */
 
@@ -14,16 +15,13 @@ window.proDataExtended = {
         bg: "bg-brand-lila/20",
         especialidad: "Psicología",
         formacion: [
-            "Psicóloga, Universidad de La Serena.",
             "Diplomado en Dinámicas familiares, hijos, padres, pareja y familia extensa.",
             "Diplomado en Intervención Sistémica en Infancia y Adolescencia.",
             "Diplomado Familia e Infancia, Herramientas de Intervención.",
-            "Diplomado Estrategias de inclusión laboral para personas en situación de discapacidad.",
-            "Diplomado en Selección de Personal.",
             "Coaching ejecutivo y de equipos, PCA.",
-            "Formaciones en Metodología A.M.A.R, evaluación en personas con autismo, PAP, abordaje en Post Parto, Trauma Complejo y Apego."
+            "Especialización en Metodología A.M.A.R, Autismo, Trauma Complejo y Apego."
         ],
-        descripcion: "Psicóloga con <span data-start-year='2018' class='dynamic-exp'>8</span> años de experiencia clínica, que trabaja desde un enfoque sistémico-vincular. Acompaña familias y parejas en distintos ciclos de la historia vital. Incorpora un enfoque basado en neurociencia, con formación en postparto e hipnoparto, y aborda la línea de apego y trauma en población adulta. Además, realiza atención a niños mediante terapia de juego, desarrollando una intervención cercana, amorosa y técnicamente fundamentada."
+        descripcion: "Psicóloga y Directora de Centro Valú con <span data-start-year='2017' class='dynamic-exp'>8</span> años de experiencia clínica. Se especializa en el enfoque sistémico-vincular, acompañando a familias y parejas a través de la neurociencia. Posee formación avanzada en postparto, trauma en adultos y terapia de juego para niños, liderando un equipo humano comprometido con la excelencia."
     },
     "erik-navarro": {
         nombre: "Erik Navarro",
@@ -32,14 +30,13 @@ window.proDataExtended = {
         bg: "bg-brand-beige/40",
         especialidad: "Psicología",
         formacion: [
-            "Psicólogo, Universidad Central.",
-            "Magister (c) en Psicología Clínica, mención en Psicoanálisis.",
-            "Diplomado Psicopatología Psicoanalítica.",
-            "Diplomado Psicoanálisis y Discurso Social.",
-            "Diplomado Praxis Comunitaria.",
-            "Cursos en: Violencia y agresiones, diagnóstico maltrato infantil, trauma y resiliencia, crianza respetuosa."
+            "Magister en Psicología Clínica, mención en Psicoanálisis.",
+            "Diplomado en Psicopatología Psicoanalítica.",
+            "Diplomado en Psicoanálisis y Discurso Social.",
+            "Diplomado en Praxis Comunitaria.",
+            "Cursos en Diagnóstico de Maltrato Infantil, Trauma, Resiliencia y Crianza Respetuosa."
         ],
-        descripcion: "Psicólogo con <span data-start-year='2014' class='dynamic-exp'>12</span> años de experiencia. Acompaña procesos terapéuticos profundos con adolescentes, adultos y parejas favoreciendo la exploración de la historia vincular, los efectos del trauma y la construcción de sentido de la experiencia subjetiva en el presente. Posee amplia experiencia en el sistema público y programas especializados de infancia, adolescencia y familias."
+        descripcion: "Psicólogo con <span data-start-year='2013' class='dynamic-exp'>12</span> años de trayectoria en el sistema público y privado. Acompaña procesos terapéuticos profundos en adolescentes y adultos, explorando la historia vincular y el trauma para construir nuevos sentidos en la subjetividad presente."
     },
     "eva-aguayo": {
         nombre: "Eva Aguayo",
@@ -48,13 +45,12 @@ window.proDataExtended = {
         bg: "bg-brand-lila/20",
         especialidad: "Psicología",
         formacion: [
-            "Psicóloga, Universidad de La Serena.",
             "Especialización en Psicoterapia Afirmativa LGBTQIA+.",
             "Diplomado en Abordaje Clínico Multidisciplinario en Adultos en el Espectro Autista.",
-            "Diplomado en Parentalidad y Desarrollo (Fundación Ideas para la Infancia).",
+            "Diplomado en Parentalidad y Desarrollo.",
             "Diplomado en Terapia Sexual y Sexualidad Humana."
         ],
-        descripcion: "Psicóloga con <span data-start-year='2014' class='dynamic-exp'>12</span> años de experiencia profesional. Acompaña procesos terapéuticos desde un enfoque sistémico, integrando una mirada neuroafirmativa y afirmativa para la población LGBTIQA+, promoviendo espacios seguros, respetuosos e inclusivos. Su quehacer incorpora la consejería en sexualidad y el fortalecimiento de competencias parentales."
+        descripcion: "Psicóloga clínica con <span data-start-year='2013' class='dynamic-exp'>12</span> años de experiencia profesional. Trabaja desde un enfoque sistémico-vincular y neuroafirmativo, promoviendo espacios seguros de consejería en sexualidad y fortalecimiento del vínculo terapéutico para la comunidad LGBTQIA+."
     },
     "josefa-arias": {
         nombre: "Josefa Arias",
@@ -63,11 +59,11 @@ window.proDataExtended = {
         bg: "bg-primary-100/20",
         especialidad: "Psicología",
         formacion: [
-            "Psicóloga, Universidad Central.",
-            "Especializada en Espectro Autista desde un enfoque biopsicosocial, neuroafirmativo y de derechos.",
-            "Formación en diagnóstico, evaluación, regulación emocional y procesamiento sensorial en personas dentro del espectro."
+            "Especialización en Espectro Autista (Enfoque biopsicosocial y neuroafirmativo).",
+            "Curso de Diagnóstico y Evaluación en Autismo.",
+            "Formación en Regulación Emocional y Procesamiento Sensorial."
         ],
-        descripcion: "Psicóloga con experiencia en neurodivergencia, trabajando desde un enfoque sistémico con un estilo dinámico y cercano. Realiza intervención clínica con niños y adolescentes, considerando el contexto familiar y escolar. Integra el abordaje de perfil sensorial para favorecer la regulación emocional y el bienestar integral."
+        descripcion: "Psicóloga experta en neurodivergencia con enfoque sistémico y dinámico. Realiza intervenciones clínicas con niños y adolescentes integrando el perfil sensorial para favorecer el bienestar integral en los contextos familiar y escolar."
     },
     "valentina-gonzalez": {
         nombre: "Valentina González",
@@ -76,14 +72,13 @@ window.proDataExtended = {
         bg: "bg-brand-rosa/20",
         especialidad: "Psicología",
         formacion: [
-            "Psicóloga, Universidad de La Serena.",
             "Salud Mental en Adolescentes: Intervención en temáticas críticas.",
-            "Técnicas para la Regulación Emocional en Adultos.",
-            "Terapia Breve del Duelo.",
-            "Técnicas de Psicoterapia Breve.",
-            "Formación en el Modelo ODISEA de intervención parental y familiar."
+            "Técnicas de Regulación Emocional en Adultos.",
+            "Especialista en Terapia Breve del Duelo.",
+            "Introducción al Modelo ODISEA de intervención parental.",
+            "Formación en Institucionalización Temprana: Efectos y recuperación."
         ],
-        descripcion: "Psicóloga especializada en primera infancia y niñez, con enfoque en el desarrollo socioemocional, el fortalecimiento del vínculo y el acompañamiento integral a las familias. Integra el juego como herramienta central de exploración, expresión y elaboración emocional, comprendiendo a la infancia dentro de su sistema relacional."
+        descripcion: "Psicóloga especializada en primera infancia y niñez. Centra su práctica en el desarrollo socioemocional y el fortalecimiento del vínculo familiar a través del juego, creando espacios lúdicos y respetuosos que comprenden el mundo interno infantil."
     },
     "cristopher-espejo": {
         nombre: "Cristopher Espejo",
@@ -92,14 +87,13 @@ window.proDataExtended = {
         bg: "bg-primary-100/20",
         especialidad: "Psicología",
         formacion: [
-            "Psicólogo, Universidad Central.",
-            "Postítulo de Especialización en Trauma Complejo.",
+            "Postítulo en Especialización en Trauma Complejo.",
             "Postítulo en Psicoterapia: Modelo de Apego & Complejidad (MAC).",
-            "Postítulo en Primera Infancia (0–6 años): Modelo de Complejidad y Metodología A.M.A.R.",
+            "Postítulo en Primera Infancia (Modelo A.M.A.R).",
             "Diplomado en Mentalización: Teoría y Abordaje Clínico.",
             "Diplomado en Terapia Adulto: Sanando las Heridas de la Infancia."
         ],
-        descripcion: "Psicólogo clínico con especialización en trauma complejo, apego, mentalización y modelos de complejidad. Acompaña procesos complejos con profundidad, ética y rigurosidad, comprendiendo el malestar como parte de trayectorias relacionales y contextuales, centrando sus intervenciones en la dignidad de cada persona."
+        descripcion: "Psicólogo clínico especializado en trauma complejo, apego y mentalización. Con amplia trayectoria en dispositivos de salud mental, aborda procesos terapéuticos rigurosos centrados en la dignidad y las trayectorias relacionales de sus consultantes."
     },
     "maria-munoz": {
         nombre: "María Muñoz",
@@ -108,42 +102,40 @@ window.proDataExtended = {
         bg: "bg-brand-beige/40",
         especialidad: "Psicología",
         formacion: [
-            "Psicóloga, Universidad Central.",
             "Postítulo en Terapia Sistémica Vincular.",
             "Diplomado en Técnicas de Intervención en Terapia Sistémica Breve.",
-            "Terapia Floral."
+            "Especialista en Terapia Floral."
         ],
-        descripcion: "Terapeuta con <span class='dynamic-exp' data-start-year='2010'>16</span> años de trayectoria clínica, que trabaja desde un enfoque sistémico-vincular, integrando la terapia floral como complemento. Se especializa en el trabajo con familias, niños, adolescentes y adultos, fortaleciendo los vínculos afectivos y el bienestar relacional."
+        descripcion: "Terapeuta con <span class='dynamic-exp' data-start-year='2010'>16</span> años de experiencia clínica sistémico-vincular. Se especializa en el bienestar relacional de familias, niños y adultos, utilizando la terapia floral como complemento respetuoso al proceso terapéutico basado en recursos."
     },
     "valeria-alfaro": {
         nombre: "Valeria Alfaro",
         cargo: "Terapeuta Ocupacional",
         img: "assets/img/team/valeria-alfaro.webp?v=top_framed",
         bg: "bg-brand-rosa/20",
+        especialidad: "Terapia Ocupacional",
         formacion: [
-            "Terapeuta Ocupacional, Universidad XX.",
-            "Diplomado en Condición del Espectro Autista: Estrategias de intervención efectiva.",
+            "Diplomado en Condición del Espectro Autista y Enfoque de Derechos.",
             "Diplomado en Selectividad Alimentaria.",
-            "Certificación en Perfil Sensorial en adultos y niños.",
+            "Certificación en Perfil Sensorial (Adultos y Niños).",
             "Certificación en Control de Esfínter."
         ],
-        descripcion: "Posee experiencia en atención clínica, realizando evaluación e intervención en niños, adolescentes y adultos. Ha trabajado en procesos orientados a la autonomía, la participación en actividades de la vida diaria y la integración sensorial, adaptando las intervenciones al contexto familiar desde un enfoque dinámico y centrado en la persona."
+        descripcion: "Especialista en evaluación e intervención clínica orientada a la autonomía y participación en actividades cotidianas. Posee amplia experiencia en integración sensorial, adaptando cada proceso a las necesidades individuales y dinámicas del contexto familiar."
     },
     "gabriela-pereira": {
         nombre: "Gabriela Pereira",
         cargo: "Fonoaudióloga",
         img: "assets/img/team/gabriela-pereira.webp?v=top_framed",
-        bg: "bg-brand-rosa/20",
+        bg: "bg-brand-azul/20",
+        especialidad: "Fonoaudiología",
         formacion: [
-            "Fonoaudióloga, Universidad XX.",
             "Diplomado en Motricidad Orofacial.",
-            "Diplomado Condición del Espectro Autista: Enfoque de derechos e inclusión.",
-            "Diplomado de Integración Sensorial CEA y TDAH.",
+            "Diplomado en Condición del Espectro Autista e Inclusión Escolar.",
             "Certificación ADOS.",
             "Especialización en Tartamudez Infantil.",
-            "Cursos en: Evaluación frenillo lingual, post-frenectomía, respirador oral y apraxia del habla."
+            "Diplomado en Integración Sensorial CEA y TDAH."
         ],
-        descripcion: "Fonoaudióloga con experiencia en primera infancia, adolescentes y adultos. Se desempeña en el abordaje de voz, tartamudez y motricidad orofacial, desarrollando una atención cercana y dinámica. Integra el juego libre, la exploración de espacios y la metodología A.M.A.R en sus intervenciones, favoreciendo procesos terapéuticos significativos y respetuosos centrados en la persona."
+        descripcion: "Fonoaudióloga experta en primera infancia y abordaje de voz, tartamudez y motricidad orofacial. Utiliza el juego libre y la metodología A.M.A.R para favorecer procesos terapéuticos respetuosos, dinámicos y significativos centrados en la persona."
     },
     "ulda-castillo": {
         nombre: "Ulda Castillo",
@@ -152,14 +144,12 @@ window.proDataExtended = {
         bg: "bg-primary-100/20",
         especialidad: "Fonoaudiología",
         formacion: [
-            "Fonoaudióloga, Universidad XX.",
-            "Diplomado Experto en Autismo con enfoque de intervención clínica y calidad de vida.",
-            "Certificada en Metodología TEACCH y Enfoque CLAP.",
-            "Certificada en Trastornos del Desarrollo del Lenguaje (TDL).",
-            "Pasantía clínica en evaluación e intervención de Motricidad Orofacial.",
-            "Cursos en: Apraxia del habla infantil, evaluación fonoaudiológica en TEA y alteración en frenillo lingual."
+            "Expertiz en Autismo con Enfoque Clínico y Calidad de Vida.",
+            "Metodología TEACCH y Enfoque CLAP.",
+            "Certificada en Trastornos del Desarrollo del Lenguaje.",
+            "Pasantía en Evaluación e Intervención de Motricidad Orofacial."
         ],
-        descripcion: "Fonoaudióloga que trabaja desde la mirada del modelo AMAR, con experiencia en TEACCH y CLAP, especializada en atención en neurodivergencia desde un enfoque afirmativo. Incorpora la terapia de juego para favorecer el aprendizaje significativo e integra de manera permanente a los cuidadores en el proceso terapéutico."
+        descripcion: "Fonoaudióloga con especialización en neurodivergencia bajo un enfoque afirmativo y modelo AMAR. Su práctica integra permanentemente a los cuidadores mediante la terapia de juego, entregando orientación metódica y cercana a las familias."
     },
     "bruno-araya": {
         nombre: "Bruno Araya",
@@ -168,38 +158,38 @@ window.proDataExtended = {
         bg: "bg-brand-lila/20",
         especialidad: "Fonoaudiología",
         formacion: [
-            "Fonoaudiólogo, Universidad XX.",
-            "Especialista en Comunicación y Lenguaje.",
-            "Acompañamiento terapéutico integral.",
-            "Atención clínica basada en evidencia."
+            "Diplomado en Neurorrehabilitación.",
+            "Certificación en Manejo de Disfagia (Estándares IDDSI).",
+            "Experto en Rehabilitación de Voz y Funciones Neurocognitivas.",
+            "Certificado en Otoscopía y Lavado de Oídos."
         ],
-        descripcion: "Fonoaudiólogo que brinda atención profesional y acompañamiento terapéutico integral en Centro Valu. Se enfoca en el desarrollo de habilidades comunicativas y el bienestar de sus consultantes a través de un trato cercano y profesional."
+        descripcion: "Fonoaudiólogo especializado en neurorrehabilitación y rehabilitación de voz. Posee amplia experiencia en el acompañamiento de personas mayores y neurodivergentes, integrando un enfoque clínico funcional centrado en la autonomía y calidad de vida."
     },
     "eugenia-ortiz": {
         nombre: "Eugenia Ortiz",
         cargo: "Pediatra",
         img: "assets/img/team/eugenia-ortiz.webp?v=top_framed",
         bg: "bg-primary-100/20",
+        especialidad: "Pediatría",
         formacion: [
-            "Pediatra, Universidad XX.",
-            "Médico Cirujano (Universidad de Chile).",
-            "Ex-directora del Hospital de Coquimbo.",
-            "Líder en gestión sanitaria y salud comunitaria enfocada en derechos de NNA."
+            "30 años de Trayectoria en Salud Pública.",
+            "Líder en Gestión Sanitaria y Atención centrada en el Paciente.",
+            "Enfoque profundo en Derechos de la Niñez y Adolescencia."
         ],
-        descripcion: "Médica Pediatra con más de <span class='dynamic-exp' data-start-year='1994'>30</span> años de experiencia en el servicio público, desarrollada principalmente en el ámbito hospitalario y consulta privada. Su práctica se enfoca en los derechos de niños, niñas y adolescentes, con una profunda convicción en el acceso universal a la salud. Lideró procesos de gestión sanitaria de gran impacto regional."
+        descripcion: "Médica Pediatra con más de <span class='dynamic-exp' data-start-year='1994'>30</span> años de experiencia hospitalaria y privada. Destacada por su labor como ex-directora del Hospital de Coquimbo, lidera procesos clínicos con una firme convicción en el acceso universal, oportuno y respetuoso a la salud infantil."
     },
     "pamela-tarifeno": {
         nombre: "Pamela Tarifeño",
-        cargo: "Psicopedagoga / Encargada Centro Valú",
+        cargo: "Profesora / Encargada Centro Valú",
         img: "assets/img/team/placeholder.webp",
         bg: "bg-brand-beige/20",
+        especialidad: "Encargada",
         formacion: [
-            "Profesora de Educación General Básica, Universidad XX.",
-            "Psicopedagoga.",
             "Magíster en Gestión Educacional y Didáctica del Aprendizaje.",
-            "Postítulo en Matemática.",
-            "Diplomada en Evaluación, Atención a la Diversidad y Terapias Complementarias."
+            "Postítulo en Educación Matemática.",
+            "Diplomada en Evaluación y Atención a la Diversidad.",
+            "Especialista en Terapias Complementarias."
         ],
-        descripcion: "Profesora y Psicopedagoga con un fuerte enfoque social y sólida formación en atención a la diversidad. Trabaja desde un enfoque constructivista del aprendizaje y cuenta con amplia experiencia en gestión educativa. Como encargada de Centro Valú, lidera procesos humanos y estratégicos fundamentales para el desarrollo de cada consultante."
+        descripcion: "Profesora con sólida formación en atención a la diversidad y gestión de equipos. Como encargada de Centro Valú, lidera con un enfoque constructivista procesos educativos que ponen en el centro la individualidad del equipo humano y los consultantes."
     }
 };

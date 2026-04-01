@@ -305,6 +305,7 @@ Autor: Antigravity (AI Assistant)
                                 <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                                 <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                                 <li><a href="psicopedagogia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                                <li><a href="test-evaluaciones.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Tests & Evaluaciones</a></li>
                             </ul>
                         </div>
                     </div>
@@ -397,6 +398,9 @@ Autor: Antigravity (AI Assistant)
                                 <li><a href="psicopedagogia.html"
                                         class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a>
                                 </li>
+                                <li><a href="test-evaluaciones.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Tests & Evaluaciones</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -433,6 +437,9 @@ Autor: Antigravity (AI Assistant)
                     </li>
                     <li><a href="index.html#contacto"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
+                    </li>
+                    <li><a href="#" id="mobile-prices-open"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Precios</a>
                     </li>
                     <li class="pt-8 border-t border-slate-100">
                         <a href="formulario-contacto.html"
@@ -498,6 +505,12 @@ Autor: Antigravity (AI Assistant)
                         <a href="#especialidades" class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-2xl font-bold text-center hover:bg-slate-50 transition-all">
                             Ver especialidades
                         </a>
+                        <button id="open-prices-modal" class="bg-white text-primary-600 border border-primary-200 px-8 py-4 rounded-2xl font-bold text-center hover:bg-primary-50 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM12 14c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
+                            </svg>
+                            Ver aranceles
+                        </button>
                     </div>
                 </div>
                 <div class="lg:col-span-6 mt-12 lg:mt-0 relative" data-aos="fade-left">
@@ -687,11 +700,7 @@ Autor: Antigravity (AI Assistant)
                     </div>
                     <div
                         class="relative h-16 w-16 bg-brand-beige text-slate-900 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-brand-beige/80 transition-colors shadow-inner">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
+                        <span class="text-3xl transform group-hover:scale-110 transition-transform duration-500">🎓</span>
                     </div>
                     <h3 class="font-display text-2xl font-bold mb-4 text-slate-900">Psicopedagogía</h3>
                     <p class="text-slate-500 leading-relaxed mb-8">Acompañamiento especializado para potenciar el
@@ -699,6 +708,30 @@ Autor: Antigravity (AI Assistant)
                     <a href="psicopedagogia.html"
                         class="inline-flex items-center text-sm font-bold text-slate-900 group-hover:translate-x-2 transition-transform">
                         MÁS INFORMACIÓN <span class="ml-2">→</span>
+                    </a>
+                </div>
+
+                <!-- TESTS & EVALUACIONES -->
+                <div
+                    class="group bg-white p-10 rounded-[2rem] border border-slate-100 hover:border-brand-azul shadow-soft hover:shadow-premium transition-all duration-500 relative overflow-hidden">
+                    <div
+                        class="absolute -right-6 -top-6 w-24 h-24 bg-brand-azul rounded-full group-hover:scale-150 transition-transform duration-700 opacity-50">
+                    </div>
+                    <div
+                        class="relative h-16 w-16 bg-brand-azul text-slate-900 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-brand-azul/80 transition-colors shadow-inner">
+                        <span class="text-3xl transform group-hover:scale-110 transition-transform duration-500">🧩</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-slate-900 mb-2">Tests & Evaluaciones</h3>
+                    <div
+                        class="inline-flex items-center gap-1.5 bg-primary-50 px-3 py-1.5 rounded-xl border border-primary-100 shadow-sm mb-6">
+                        <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" class="h-6 w-auto" alt="Fonasa" loading="lazy" width="96" height="32">
+                        <span class="text-[10px] font-bold text-primary-700 uppercase tracking-tight">Convenio con
+                            Fonasa</span>
+                    </div>
+                    <p class="text-slate-500 leading-relaxed mb-8">Realizamos evaluaciones estandarizadas de vanguardia (<b>ADOS-2, ADI-R, WISC-V, TADI</b>) con precisión y calidez humana.</p>
+                    <a href="test-evaluaciones.html"
+                        class="inline-flex items-center text-sm font-bold text-primary-600 group-hover:translate-x-2 transition-transform">
+                        VER EVALUACIONES <span class="ml-2">→</span>
                     </a>
                 </div>
             </div>
@@ -1055,7 +1088,65 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
-</script>
+        // Lógica del Modal de Precios
+        function initPricesModal() {
+            const pricesModal = document.getElementById('prices-modal');
+            const pricesContent = document.getElementById('prices-content');
+            const openPricesBtn = document.getElementById('open-prices-modal');
+            const mobilePricesBtn = document.getElementById('mobile-prices-open');
+            const closePricesBtn = document.getElementById('close-prices-modal');
+
+            if (!pricesModal || !pricesContent || !openPricesBtn || !closePricesBtn) {
+                console.warn("Elementos del modal de precios no encontrados.");
+                return;
+            }
+
+            function openPrices() {
+                pricesModal.classList.remove('opacity-0', 'pointer-events-none');
+                pricesContent.classList.remove('translate-y-12');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closePrices() {
+                pricesModal.classList.add('opacity-0', 'pointer-events-none');
+                pricesContent.classList.add('translate-y-12');
+                document.body.style.overflow = '';
+            }
+
+            openPricesBtn.addEventListener('click', openPrices);
+            if (mobilePricesBtn) {
+                mobilePricesBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openPrices();
+                });
+            }
+            closePricesBtn.addEventListener('click', closePrices);
+            pricesModal.addEventListener('click', (e) => {
+                if (e.target === pricesModal) closePrices();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPricesModal();
+            
+            // Auto-abrir modal si la URL contiene #precios
+            if (window.location.hash === '#precios') {
+                // Pequeño delay para asegurar que todo cargó bien
+                setTimeout(() => {
+                    const openBtn = document.getElementById('open-prices-modal');
+                    if (openBtn) openBtn.click();
+                }, 500);
+            }
+        });
+
+        // También escuchar cambios de hash sin recargar (por si acaso)
+        window.addEventListener('hashchange', () => {
+            if (window.location.hash === '#precios') {
+                const openBtn = document.getElementById('open-prices-modal');
+                if (openBtn) openBtn.click();
+            }
+        });
+    </script>
     <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
     <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n."
         target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
@@ -1078,6 +1169,371 @@ Autor: Antigravity (AI Assistant)
             fbq('track', 'Contact');
         });
     </script>
+    <!-- MODAL DE PRECIOS MODERNO -->
+    <div id="prices-modal" class="fixed inset-0 z-[100] opacity-0 pointer-events-none transition-all duration-500 bg-slate-900/60 backdrop-blur-md flex items-start sm:items-center justify-center p-4 sm:p-8">
+        <!-- Contenedor con scroll interno para móvil -->
+        <div id="prices-content" class="bg-white w-full max-w-2xl rounded-[1.5rem] sm:rounded-[2.5rem] shadow-2xl transition-all duration-500 translate-y-12 overflow-hidden border border-white/20 flex flex-col max-h-[95vh] sm:max-h-[90vh] my-auto">
+            
+            <!-- Cabecera Sticky -->
+            <div class="p-6 sm:p-10 border-b border-slate-50 flex justify-between items-start bg-white z-10">
+                <div>
+                    <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900">Aranceles <span class="text-primary-600">2026</span></h3>
+                    <p class="text-slate-400 font-medium mt-1 text-sm sm:text-base">Valores preferenciales Centro VALÚ</p>
+                </div>
+                <button id="close-prices-modal" class="p-2 sm:p-3 bg-slate-100 hover:bg-slate-200 text-slate-500 rounded-xl sm:rounded-2xl transition-all active:scale-90 shadow-sm" aria-label="Cerrar aranceles">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Cuerpo Scrolleable -->
+            <div class="flex-grow overflow-y-auto custom-scrollbar p-6 sm:p-10">
+                <div class="space-y-12">
+                    
+                    <!-- SECCIÓN: PSICOLOGÍA -->
+                    <div class="space-y-4">
+                        <h4 class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-primary-600 border-b border-primary-50 pb-2">Psicología & Evaluaciones</h4>
+                        <div class="grid gap-3">
+                            <!-- Sesión Individual -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-primary-50/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🧠</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Sesión Individual</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Atención 45 min</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$30.000</span>
+                                    </div>
+                                    <div class="flex flex-col border-l border-slate-200 pl-3 sm:pl-4">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-600 uppercase tracking-tighter">Copago Fonasa</span>
+                                        <span class="font-display font-bold text-primary-600">$14.420</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pareja -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-primary-50/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">👥</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Psicoterapia Pareja</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Sesión 45 min (Valor por integrante)</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$50.000</span>
+                                    </div>
+                                    <div class="flex flex-col border-l border-slate-200 pl-3 sm:pl-4">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-600 uppercase tracking-tighter">Copago Fonasa</span>
+                                        <span class="font-display font-bold text-primary-600">$14.420</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Online -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-primary-50/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">💻</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Psicología Online</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Sesión remota 45 min</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col pr-8">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$21.000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TEST ADOS-2 -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-100/50 rounded-2xl group transition-all hover:bg-primary-50/50 border border-slate-200/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🧩</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Test ADOS-2</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">4 Sesiones + Informe</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col pr-8">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$90.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- WISC-V -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-100/50 rounded-2xl group transition-all hover:bg-primary-50/50 border border-slate-200/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🎓</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Test WISC-V</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Mínimo 4 Sesiones + Informe</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$90.000</span>
+                                    </div>
+                                    <div class="flex flex-col border-l border-slate-200 pl-3 sm:pl-4">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-600 uppercase tracking-tighter">Copago Fonasa</span>
+                                        <span class="font-display font-bold text-primary-600">$14.420</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TADI -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-100/50 rounded-2xl group transition-all hover:bg-primary-50/50 border border-slate-200/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🧸</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Evaluación TADI</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Mínimo 4 Sesiones + Informe</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$90.000</span>
+                                    </div>
+                                    <div class="flex flex-col border-l border-slate-200 pl-3 sm:pl-4">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-600 uppercase tracking-tighter">Copago Fonasa</span>
+                                        <span class="font-display font-bold text-primary-600">$14.420</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ADI-R -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-100/50 rounded-2xl group transition-all hover:bg-primary-50/50 border border-slate-200/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🗣️</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Entrevista ADI-R</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Anamnesis TEA. Mínimo 4 Sesiones + Informe</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$90.000</span>
+                                    </div>
+                                    <div class="flex flex-col border-l border-slate-200 pl-3 sm:pl-4">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-600 uppercase tracking-tighter">Copago Fonasa</span>
+                                        <span class="font-display font-bold text-primary-600">$14.420</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Informe -->
+                            <div class="flex justify-between items-center p-3 sm:p-4 bg-slate-100 rounded-2xl">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">📄</span>
+                                    <p class="font-bold text-slate-900 text-sm">Informe Integral Psicología</p>
+                                </div>
+                                <span class="font-display font-bold text-slate-900">$30.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN: FONOAUDIOLOGÍA -->
+                    <div class="space-y-4">
+                        <h4 class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-secondary-600 border-b border-secondary-50 pb-2">Fonoaudiología</h4>
+                        <div class="grid gap-3">
+                            <!-- Sesión Individual -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-secondary-50/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🗣️</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Sesión Individual</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Atención 30 min</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$25.000</span>
+                                    </div>
+                                    <div class="flex flex-col border-l border-slate-200 pl-3 sm:pl-4">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-600 uppercase tracking-tighter">Copago Fonasa</span>
+                                        <span class="font-display font-bold text-primary-600">$6.300</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Programa Eval -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-secondary-50/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">📊</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Programa Evaluación (4 Sesiones)</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Incluye entrega de informe</p>
+                                    </div>
+                                </div>
+                                <div class="text-right pl-8">
+                                    <span class="font-display font-bold text-slate-900">$75.000</span>
+                                </div>
+                            </div>
+                            <!-- Programa Rehab -->
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-secondary-50/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🔄</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Programa Rehabilitación (4 Sesiones)</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Plan de 4 atenciones</p>
+                                    </div>
+                                </div>
+                                <div class="text-right pl-8">
+                                    <span class="font-display font-bold text-slate-900">$60.000</span>
+                                </div>
+                            </div>
+                            <!-- Informe -->
+                            <div class="flex justify-between items-center p-3 sm:p-4 bg-slate-100 rounded-2xl">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">📄</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm">Informe Fonoaudiología</p>
+                                        <p class="text-[8px] text-slate-400 uppercase font-black tracking-widest">Valor fijo</p>
+                                    </div>
+                                </div>
+                                <span class="font-display font-bold text-slate-900">$30.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN: PEDIATRÍA -->
+                    <div class="space-y-4">
+                        <h4 class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-brand-rosa_text border-b border-brand-rosa/20 pb-2">Pediatría</h4>
+                        <div class="grid gap-3">
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-brand-rosa/10">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">👶</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Control Médico</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Atención 15 min</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 sm:gap-4 text-right shrink-0">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$50.000</span>
+                                    </div>
+                                    <div class="flex flex-col border-l border-slate-200 pl-3 sm:pl-4">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-primary-600 uppercase tracking-tighter">Copago Fonasa</span>
+                                        <span class="font-display font-bold text-primary-600">$7.690</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN: TERAPIA OCUPACIONAL -->
+                    <div class="space-y-4">
+                        <h4 class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-brand-lila_text border-b border-brand-lila/20 pb-2">Terapia Ocupacional</h4>
+                        <div class="grid gap-3">
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-brand-lila/10">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🧩</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Sesión Individual</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Atención 30 min</p>
+                                    </div>
+                                </div>
+                                <div class="text-right pl-8">
+                                    <div class="flex flex-col">
+                                        <span class="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Particular</span>
+                                        <span class="font-display font-bold text-slate-900">$20.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Informe -->
+                            <div class="flex justify-between items-center p-3 sm:p-4 bg-slate-100 rounded-2xl">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">📄</span>
+                                    <p class="font-bold text-slate-900 text-sm">Informe T. Ocupacional</p>
+                                </div>
+                                <span class="font-display font-bold text-slate-900">$30.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN: PSICOPEDAGOGÍA -->
+                    <div class="space-y-4">
+                        <h4 class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-2">Psicopedagogía</h4>
+                        <div class="grid gap-3">
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-slate-100/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">📚</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Apoyo Escolar (1 Sesión)</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Sesión única de 45 min</p>
+                                    </div>
+                                </div>
+                                <div class="text-right pl-8">
+                                    <span class="font-display font-bold text-slate-900">$25.000</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-slate-100/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">📓</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Programa Apoyo (4 Sesiones)</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Programa de 4 sesiones</p>
+                                    </div>
+                                </div>
+                                <div class="text-right pl-8">
+                                    <span class="font-display font-bold text-slate-900">$50.000</span>
+                                </div>
+                            </div>
+                            <!-- Informe -->
+                            <div class="flex justify-between items-center p-3 sm:p-4 bg-slate-100 rounded-2xl">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">📄</span>
+                                    <p class="font-bold text-slate-900 text-sm">Informe Psicopedagogía</p>
+                                </div>
+                                <span class="font-display font-bold text-slate-900">$30.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN: ADICIONALES -->
+                    <div class="space-y-4 pt-2 mb-6">
+                        <h4 class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-primary-600 border-b border-primary-50 pb-2">Servicios Transversales</h4>
+                        <div class="grid gap-3">
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-slate-50 rounded-2xl group transition-all hover:bg-slate-100/50">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🤝</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Coordinación Externa</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Escuelas y Centros Médicos</p>
+                                    </div>
+                                </div>
+                                <div class="text-right pl-8">
+                                    <span class="font-display font-bold text-slate-900">$21.000</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 sm:p-4 bg-brand-verde/10 rounded-2xl group transition-all hover:bg-brand-verde/20">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-xl">🌸</span>
+                                    <div>
+                                        <p class="font-bold text-slate-900 text-sm sm:text-base">Terapia Floral</p>
+                                        <p class="text-[9px] sm:text-[10px] text-slate-400 font-medium uppercase tracking-tighter">Venta frasco flores Bach</p>
+                                    </div>
+                                </div>
+                                <div class="text-right pl-8">
+                                    <span class="font-display font-bold text-slate-900">$10.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
     <script src="assets/js/pro-data.js"></script>
     <script src="assets/js/search-data.js"></script>
     <script src="assets/js/search-logic.js"></script>

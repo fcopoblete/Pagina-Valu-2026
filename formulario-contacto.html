@@ -249,17 +249,15 @@ Autor: Antigravity (AI Assistant)
 
 <body class="bg-[#f8fafc] text-slate-900 font-sans antialiased">
     <!-- SKIP LINK (Accesibilidad) -->
-    <!-- SKIP LINK (A11Y) -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary-600 focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl">
         Saltar al contenido principal
     </a>
 
-    <!-- HEADER: GLASSMORPHISM REFINADO (ESTANDARIZADO) -->
+    <!-- HEADER: GLASSMORPHISM REFINADO -->
     <header class="fixed top-0 w-full z-50 px-4 md:px-8 py-4 transition-all duration-300" id="main-header">
         <div
             class="max-w-7xl mx-auto glass-card rounded-2xl shadow-premium border border-white/40 flex justify-between items-center h-24 px-4 md:px-6">
 
-            <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) - AHORA CON SHRINK-0 PARA MANTENERSE FIJO A LA IZQUIERDA -->
             <div class="flex items-center justify-start shrink-0 pr-4">
                 <a href="index.html" class="flex items-center gap-3 sm:gap-4 group transition-all max-w-full">
                     <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu"
@@ -275,13 +273,10 @@ Autor: Antigravity (AI Assistant)
                 </a>
             </div>
 
-            <!-- DERECHA: RESERVAR + MENÚ - AHORA CON FLEX-GROW PARA OCUPAR EL ESPACIO RESTANTE -->
             <div class="flex items-center justify-end gap-2 sm:gap-x-4 flex-grow">
-                <!-- NAV DESKTOP (OPCIÓN 1) -->
                 <nav class="hidden lg:flex items-center gap-x-5 mr-4">
-                    <a href="index.html" class="text-primary-600 font-bold hover:text-primary-700 transition-colors">Inicio</a>
+                    <a href="index.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
                     <a href="quienes-somos.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Quiénes somos</a>
-                    <!-- Especialidades Dropdown -->
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
@@ -291,10 +286,10 @@ Autor: Antigravity (AI Assistant)
                                 <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                                 <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                                 <li><a href="psicopedagogia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                                <li><a href="test-evaluaciones.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Tests & Evaluaciones</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Convenios Dropdown -->
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Convenios <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
@@ -309,14 +304,14 @@ Autor: Antigravity (AI Assistant)
                     <a href="index.html#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
 
-                                <button id="search-open" aria-label="Abrir buscador" 
+                <button id="search-open" aria-label="Abrir buscador" 
                     class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
                     <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </button>
-<a href="formulario-contacto.html"
-                    class="hidden sm:flex bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
+                <a href="formulario-contacto.html"
+                    class="hidden sm:flex bg-primary-700 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold shadow-lg shadow-primary-700/30 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
                     Contáctanos
                 </a>
                 <button id="menu-toggle" aria-label="Abrir menú de navegación"
@@ -331,7 +326,6 @@ Autor: Antigravity (AI Assistant)
             </div>
         </div>
 
-        <!-- PANEL LATERAL (DRAWER) MÓVIL (DESPLAZAMIENTO DESDE LA DERECHA) -->
         <div id="mobile-menu"
             class="fixed lg:hidden inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
             <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300 overflow-y-auto"
@@ -349,7 +343,7 @@ Autor: Antigravity (AI Assistant)
                 
                 <ul class="space-y-6">
                     <li><a href="index.html"
-                            class="mobile-link text-2xl font-bold text-primary-600 transition-colors">Inicio</a>
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Inicio</a>
                     </li>
                     <li><a href="quienes-somos.html"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes
@@ -382,6 +376,9 @@ Autor: Antigravity (AI Assistant)
                                         Ocupacional</a></li>
                                 <li><a href="psicopedagogia.html"
                                         class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a>
+                                </li>
+                                <li><a href="test-evaluaciones.html"
+                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Tests & Evaluaciones</a>
                                 </li>
                             </ul>
                         </div>
@@ -420,9 +417,12 @@ Autor: Antigravity (AI Assistant)
                     <li><a href="index.html#contacto"
                             class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
                     </li>
+                    <li><a href="index.html#precios" id="mobile-prices-open"
+                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Precios</a>
+                    </li>
                     <li class="pt-8 border-t border-slate-100">
                         <a href="formulario-contacto.html"
-                            class="mobile-link group flex items-center justify-center gap-3 w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white text-center py-4 rounded-xl font-bold text-base shadow-lg shadow-primary-600/20 glow-effect transition-all hover:shadow-xl active:scale-[0.98]">
+                            class="mobile-link group flex items-center justify-center gap-3 w-full bg-primary-700 text-white text-center py-4 rounded-xl font-bold text-base shadow-xl shadow-primary-700/20 glow-effect transition-all active:scale-[0.98]">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -439,6 +439,8 @@ Autor: Antigravity (AI Assistant)
             </div>
         </div>
     </header>
+
+
 
     <!-- FORMULARIO SECTION -->
     <main id="main-content" class="min-h-screen pt-40 pb-20 bg-slate-950 flex items-center">
@@ -906,23 +908,17 @@ Autor: Antigravity (AI Assistant)
         </div>
     </main>
 
-    <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
-    <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
+    <!-- FOOTER: ESTANDARIZADO -->
     <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 px-4">
-                <!-- COLUMNA 1: BRANDING -->
                 <div class="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
                     <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu Footer" width="160" height="64" class="h-16 w-auto mb-6" loading="lazy">
                     <div class="flex items-center gap-3 mb-4 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
                         <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Convenio Fonasa" width="16" height="16" class="h-4 w-auto" loading="lazy">
-                        <span class="text-[10px] font-black text-slate-400 tracking-widest uppercase">Excelencia
-                            en Salud</span>
+                        <span class="text-[10px] font-black text-slate-400 tracking-widest uppercase">Excelencia en Salud</span>
                     </div>
-                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">
-                        Excelencia en salud multidisciplinaria para toda la familia en el corazón de Coquimbo.
-                    </p>
-                    <!-- Redes Sociales -->
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">Excelencia en salud multidisciplinaria para toda la familia en el corazón de Coquimbo.</p>
                     <div class="flex items-center gap-4">
                         <a href="https://www.instagram.com/centrovalu?igsh=OXVycjg0MWh0aGwx" target="_blank" rel="noopener noreferrer" 
                            class="h-10 w-10 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400 hover:bg-primary-50 hover:text-primary-600 transition-all border border-slate-100 shadow-sm group"
@@ -935,7 +931,6 @@ Autor: Antigravity (AI Assistant)
                     </div>
                 </div>
 
-                <!-- COLUMNA 2: NAVEGACIÓN -->
                 <div class="md:col-span-1 text-center md:text-left">
                     <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Misión y Equipo</h5>
                     <ul class="space-y-4">
@@ -946,7 +941,6 @@ Autor: Antigravity (AI Assistant)
                     </ul>
                 </div>
 
-                <!-- COLUMNA 3: SERVICIOS -->
                 <div class="md:col-span-1 text-center md:text-left">
                     <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Servicios</h5>
                     <ul class="space-y-4">
@@ -955,23 +949,19 @@ Autor: Antigravity (AI Assistant)
                         <li><a href="fonoaudiologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                         <li><a href="terapia-ocupacional.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
                         <li><a href="psicopedagogia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                        <li><a href="test-evaluaciones.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Tests & Evaluaciones</a></li>
                         <li><a href="formacion.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Formación</a></li>
                         <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios</a></li>
                     </ul>
                 </div>
 
-                <!-- COLUMNA 4: CONTACTO -->
                 <div class="md:col-span-1 text-center md:text-left">
                     <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Contacto Directo</h5>
                     <ul class="space-y-4">
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Teléfono</span>
-                            <!-- Versión Desktop -->
                             <span class="hidden md:block text-sm font-bold text-slate-700 tracking-tight">+569 7245 4921</span>
-                            <!-- Versión Móvil (WhatsApp) -->
-                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">
-                                +569 7245 4921
-                            </a>
+                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">+569 7245 4921</a>
                         </li>
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email</span>
@@ -984,12 +974,8 @@ Autor: Antigravity (AI Assistant)
                 </div>
             </div>
 
-            <!-- COPYRIGHT -->
             <div class="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300 text-center md:text-left">
-                    &copy; 2026 Centro Valu. Todos los derechos reservados.
-                </p>
-                <!-- ENLACES LEGALES -->
+                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300 text-center md:text-left">&copy; 2026 Centro Valu. Todos los derechos reservados.</p>
                 <div class="flex items-center justify-center md:justify-end gap-6 mt-4 md:mt-0">
                     <a href="privacidad.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Política de Privacidad</a>
                     <a href="terminos.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Términos de Servicio</a>
@@ -999,527 +985,7 @@ Autor: Antigravity (AI Assistant)
     </footer>
 
     <script>
-        let currentStep = 1;
-        const totalSteps = 4;
-
-        function changeStep(n) {
-            if (n === 1 && !validateCurrentStep()) return;
-            
-            if (currentStep + n > totalSteps) {
-                submitToN8N();
-                return;
-            }
-
-            document.getElementById(`step-${currentStep}`).classList.remove('active');
-            document.getElementById(`indicator-${currentStep}`).classList.add('opacity-40');
-            currentStep += n;
-
-            if (currentStep === 4) updateConsentContent();
-
-            document.getElementById(`step-${currentStep}`).classList.add('active');
-            document.getElementById(`indicator-${currentStep}`).classList.remove('opacity-40');
-            document.getElementById('prevBtn').classList.toggle('hidden', currentStep === 1);
-            const nextBtn = document.getElementById('nextBtn');
-            if (currentStep === totalSteps) {
-                nextBtn.textContent = 'FINALIZAR ENVÍO';
-                nextBtn.classList.replace('bg-primary-500', 'bg-slate-900');
-            } else {
-                nextBtn.textContent = 'SIGUIENTE';
-                nextBtn.classList.replace('bg-slate-900', 'bg-primary-500');
-            }
-        }
-
-        const specialtyConsents = {
-            "Psicología": {
-                adulto: {
-                    summary: `<p>Al aceptar este consentimiento para <b>Psicología Adultos</b>, confirmas que comprendes:</p>
-                             <ul class="list-disc ml-5 space-y-2 mt-2">
-                                <li>La confidencialidad de tus sesiones está protegida por la Ley 19.628 y el Código Deontológico.</li>
-                                <li>Tienes derecho a conocer el plan de tratamiento y a interrumpirlo voluntariamente en cualquier momento.</li>
-                                <li>Centro Valu gestionará tus datos clínicos con los más altos estándares de seguridad.</li>
-                             </ul>`,
-                    pdf: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA ADULTOS V1.pdf',
-                    version: 'PSIC-ADUL-V1'
-                },
-                nino: {
-                    summary: `<p>Este consentimiento para <b>Psicología Infantil</b> establece que:</p>
-                             <ul class="list-disc ml-5 space-y-2 mt-2">
-                                <li>La atención psicológica requiere el consentimiento de ambos padres o del tutor legal.</li>
-                                <li>Se garantiza un espacio seguro con enfoque en el desarrollo emocional del menor.</li>
-                                <li>La información compartida con los padres se evaluará según el bienestar del niño.</li>
-                             </ul>`,
-                    pdf: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA NIÑOS V1.pdf',
-                    version: 'PSIC-INF-V1'
-                }
-            },
-            "Pediatría": {
-                nino: {
-                    summary: `<p>De acuerdo a la Ley 19.628 de Protección de Datos Personales, tus datos serán tratados con la máxima confidencialidad informática y clínica. Centro Valu se reserva el derecho de contacto inicial para coordinación de agendas.</p>`,
-                    pdf: '#',
-                    version: 'BASE-V1'
-                }
-            },
-            "Fonoaudiología": {
-                adulto: {
-                    summary: `<p>Para <b>Fonoaudiología Adultos</b>, se informa que:</p>
-                             <ul class="list-disc ml-5 space-y-2 mt-2">
-                                <li>El tratamiento se basará en evaluaciones funcionales previas.</li>
-                                <li>Es fundamental la asistencia regular para el éxito de la terapia.</li>
-                                <li>Los datos de evolución son estrictamente confidenciales.</li>
-                             </ul>`,
-                    pdf: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO FONOAUDIOLOGIA V1.pdf',
-                    version: 'FONO-ADUL-V1'
-                },
-                nino: {
-                    summary: `<p>Para <b>Fonoaudiología Infantil</b>, se informa que:</p>
-                             <ul class="list-disc ml-5 space-y-2 mt-2">
-                                <li>La intervención se realiza a través del juego y actividades lúdicas.</li>
-                                <li>Se requiere la participación activa de la familia en las tareas sugeridas.</li>
-                                <li>Confidencialidad absoluta según normativa legal vigente.</li>
-                             </ul>`,
-                    pdf: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO FONO NIÑOS V1.pdf',
-                    version: 'FONO-INF-V1'
-                }
-            },
-            "Terapia Ocupacional": {
-                nino: {
-                    summary: `<p>Este consentimiento para <b>Terapia Ocupacional</b> detalla:</p>
-                             <ul class="list-disc ml-5 space-y-2 mt-2">
-                                <li>El uso de estrategias lúdicas y funcionales según el objetivo terapéutico.</li>
-                                <li>El compromiso de informar sobre avances y ajustes en el plan de intervención.</li>
-                                <li>Confidencialidad absoluta según normativa legal vigente.</li>
-                             </ul>`,
-                    pdf: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO TERAPIA OCUPACIONAL V1.pdf',
-                    version: 'TO-INF-V1'
-                }
-            },
-            "Psicopedagogía": {
-                nino: {
-                    summary: `<p>Para el servicio de <b>Psicopedagogía</b>:</p>
-                             <ul class="list-disc ml-5 space-y-2 mt-2">
-                                <li>Se abordarán los procesos de aprendizaje mediante estrategias psicopedagógicas.</li>
-                                <li>Se requiere la colaboración del entorno educativo cuando sea necesario.</li>
-                                <li>Toda información brindada está bajo secreto profesional.</li>
-                             </ul>`,
-                    pdf: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOPEDAGOGIA V1.pdf',
-                    version: 'PPED-V1'
-                }
-            },
-            "default": {
-                adulto: {
-                    summary: `<p>De acuerdo a la Ley 19.628 de Protección de Datos Personales, tus datos serán tratados con la máxima confidencialidad informática y clínica. Centro Valu se reserva el derecho de contacto inicial para coordinación de agendas.</p>`,
-                    pdf: '#',
-                    version: 'BASE-V1'
-                }
-            }
-        };
-
-        function updateConsentContent() {
-            const specialty = document.getElementById('servicio-selector').value;
-            const birthDateHidden = document.getElementById('fecha_nacimiento_hidden');
-            
-            let isMinor = false;
-            if (birthDateHidden && birthDateHidden.value) {
-                const [y, m, d] = birthDateHidden.value.split('-').map(Number);
-                const birthDate = new Date(y, m - 1, d);
-                const today = new Date();
-                let age = today.getFullYear() - birthDate.getFullYear();
-                const mon = today.getMonth() - birthDate.getMonth();
-                if (mon < 0 || (mon === 0 && today.getDate() < birthDate.getDate())) { age--; }
-                isMinor = age < 18;
-            }
-
-            const specialtyData = specialtyConsents[specialty] || specialtyConsents['default'];
-            const consentData = isMinor ? (specialtyData.nino || specialtyData.adulto || specialtyConsents['default'].adulto) 
-                                        : (specialtyData.adulto || specialtyData.nino || specialtyConsents['default'].adulto);
-
-            // Lógica de Alerta de Edad vs Especialidad
-            const ageAlert = document.getElementById('age-specialty-alert');
-            if (ageAlert) {
-                // Si es adulto y la especialidad SOLO tiene versión de niño (o es Pediatría)
-                const isPediatria = specialty === 'Pediatría';
-                if (!isMinor && (isPediatria || (!specialtyData.adulto && specialtyData.nino))) {
-                    ageAlert.classList.remove('hidden');
-                } else {
-                    ageAlert.classList.add('hidden');
-                }
-            }
-
-            document.getElementById('consent-summary').innerHTML = consentData.summary;
-            document.getElementById('consent-full-link').href = consentData.pdf;
-            document.getElementById('document-version-input').value = consentData.version;
-        }
-
-        function validateCurrentStep() {
-            const inputs = document.getElementById(`step-${currentStep}`).querySelectorAll('[required]');
-            let valid = true;
-            inputs.forEach(input => {
-                const isCheckbox = input.type === 'checkbox';
-                const hasError = !input.value || (isCheckbox && !input.checked);
-                
-                if (hasError) {
-                    if (isCheckbox) {
-                        const checkmark = input.nextElementSibling;
-                        if (checkmark && checkmark.classList.contains('checkmark')) {
-                            checkmark.classList.add('border-red-400', 'bg-red-50');
-                        }
-                    } else {
-                        input.classList.add('border-red-400', 'bg-red-50');
-                    }
-                    valid = false;
-                } else {
-                    if (isCheckbox) {
-                        const checkmark = input.nextElementSibling;
-                        if (checkmark && checkmark.classList.contains('checkmark')) {
-                            checkmark.classList.remove('border-red-400', 'bg-red-50');
-                        }
-                    } else {
-                        input.classList.remove('border-red-400', 'bg-red-50');
-                    }
-                }
-            });
-            return valid;
-        }
-
-        function closeModal() {
-            document.getElementById('message-modal').classList.add('hidden');
-        }
-
-        function showModal(type, title, desc) {
-            const modal = document.getElementById('message-modal');
-            const successIcon = document.getElementById('modal-icon-success');
-            const errorIcon = document.getElementById('modal-icon-error');
-            const successBtn = document.getElementById('modal-btn-success');
-            const errorBtn = document.getElementById('modal-btn-error');
-            
-            // Reset
-            [successIcon, errorIcon, successBtn, errorBtn].forEach(el => el.classList.add('hidden'));
-            
-            document.getElementById('modal-title').textContent = title;
-            document.getElementById('modal-description').textContent = desc;
-            
-            if (type === 'success') {
-                successIcon.classList.remove('hidden');
-                successBtn.classList.remove('hidden');
-            } else {
-                errorIcon.classList.remove('hidden');
-                errorBtn.classList.remove('hidden');
-            }
-            
-            modal.classList.remove('hidden');
-        }
-
-        async function submitToN8N() {
-            const form = document.getElementById('main-contact-form');
-            const data = Object.fromEntries(new FormData(form).entries());
-            const btn = document.getElementById('nextBtn');
-            const now = new Date();
-            data.fecha_envio = now.toLocaleDateString('es-CL') + ' ' + now.toLocaleTimeString('es-CL');
-
-            try {
-                const response = await fetch('https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-particular', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID/LABEL_FORM_PARTICULAR' });
-                    fbq('track', 'Lead');
-                    showModal('success', '¡Mensaje Recibido!', 'Gracias por contactarnos. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo a la brevedad.');
-                    btn.textContent = 'ENVIADO CON ÉXITO';
-                } else {
-                    throw new Error('Server error');
-                }
-            } catch (err) {
-                console.error(err);
-                btn.disabled = false;
-                btn.textContent = 'REINTENTAR ENVÍO';
-                showModal('error', 'No se pudo enviar', 'Hubo un problema técnico al procesar tu mensaje. Por favor, intenta de nuevo.');
-            }
-        }
-
-        // Leer parámetro de URL para autoseleccionar especialidad
-        window.addEventListener('DOMContentLoaded', () => {
-            // Lógica para el overlay del selector de prefijo
-            const prefijoSelect = document.getElementById('prefijo-select');
-            const prefijoDisplay = document.getElementById('prefijo-display');
-            if (prefijoSelect && prefijoDisplay) {
-                prefijoSelect.addEventListener('change', function () {
-                    const selectedOption = this.options[this.selectedIndex];
-                    prefijoDisplay.textContent = selectedOption.getAttribute('data-short');
-                });
-            }
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const especialidad = urlParams.get('especialidad');
-
-            if (especialidad) {
-                const selector = document.getElementById('servicio-selector');
-                const normalize = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-                const termToMatch = normalize(especialidad);
-
-                // Intentar match con los valores del select
-                for (let option of selector.options) {
-                    if (normalize(option.value).includes(termToMatch)) {
-                        selector.value = option.value;
-                        break;
-                    }
-                }
-            }
-            // Phone numbers only & block 'e', '.', etc.
-            const phoneInputs = document.querySelectorAll('input[type="tel"]');
-            phoneInputs.forEach(input => {
-                input.addEventListener('input', (e) => {
-                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
-                });
-            });
-
-            // Numeric fields: block 'e', 'E', '.', '-'
-            document.querySelectorAll('input[type="number"]').forEach(input => {
-                input.addEventListener('keydown', (e) => {
-                    if (['e', 'E', '.', '-'].includes(e.key)) {
-                        e.preventDefault();
-                    }
-                });
-            });
-
-            // Names only (no numbers)
-            ['nombre', 'apellido_paterno', 'apellido_materno', 'tutor_nombre', 'tutor_apellido', 'especifique_otro_servicio'].forEach(name => {
-                const input = document.querySelector(`input[name="${name}"]`);
-                if (input) {
-                    input.addEventListener('input', (e) => {
-                        e.target.value = e.target.value.replace(/[0-9]/g, '');
-                    });
-                }
-            });
-        });
-        // Formateo automático de RUT (insertar guion)
-        function formatRUT(input) {
-            if (!input) return;
-            input.addEventListener('input', (e) => {
-                let value = e.target.value.replace(/[^0-9kK]/g, '');
-                if (value.length > 1) {
-                    const body = value.slice(0, -1).slice(0, 8); // Max 8 dígitos para el cuerpo
-                    const dv = value.slice(-1).toUpperCase();
-                    e.target.value = body + '-' + dv;
-                } else {
-                    e.target.value = value.toUpperCase();
-                }
-            });
-        }
-
-        const rutInput = document.getElementById('rut-input');
-        if (rutInput) formatRUT(rutInput);
-
-        const rutTutorInput = document.getElementById('rut-tutor-input');
-        if (rutTutorInput) formatRUT(rutTutorInput);
-
-        // Lógica de Captación "Otro"
-        const captacionSelector = document.getElementById('captacion-selector');
-        const captacionOtroContainer = document.getElementById('captacion-otro-container');
-        const captacionOtroInput = document.getElementById('captacion-otro-input');
-
-        if (captacionSelector && captacionOtroContainer && captacionOtroInput) {
-            captacionSelector.addEventListener('change', () => {
-                if (captacionSelector.value === 'Otro') {
-                    captacionOtroContainer.classList.remove('hidden');
-                    captacionOtroInput.setAttribute('required', 'true');
-                } else {
-                    captacionOtroContainer.classList.add('hidden');
-                    captacionOtroInput.removeAttribute('required');
-                    captacionOtroInput.classList.remove('border-red-400', 'bg-red-50');
-                    captacionOtroInput.value = '';
-                }
-            });
-        }
-
-        // Lógica de Mayoría de Edad y Sincronización de Fecha
-        const dobDay = document.getElementById('dob-day');
-        const dobMonth = document.getElementById('dob-month');
-        const dobYear = document.getElementById('dob-year');
-        const fechaNacHidden = document.getElementById('fecha_nacimiento_hidden');
-        const seccionCuidador = document.getElementById('seccion-cuidador');
-        const camposCuidador = seccionCuidador ? seccionCuidador.querySelectorAll('input') : [];
-
-        function syncAndValidateDate() {
-            const dayVal = dobDay.value;
-            const monthVal = dobMonth.value;
-            const yearVal = dobYear.value;
-            const errorElement = document.getElementById('dob-error');
-
-            function resetStyles() {
-                dobDay.classList.remove('border-red-400', 'bg-red-50');
-                dobMonth.classList.remove('border-red-400', 'bg-red-50');
-                dobYear.classList.remove('border-red-400', 'bg-red-50');
-                if (errorElement) {
-                    errorElement.classList.add('hidden');
-                    errorElement.textContent = '';
-                }
-            }
-
-            resetStyles();
-
-            if (!dayVal && !monthVal && !yearVal) {
-                fechaNacHidden.value = '';
-                return;
-            }
-
-            // Validaciones iniciales de rango
-            if (dayVal && (dayVal < 1 || dayVal > 31)) {
-                dobDay.classList.add('border-red-400', 'bg-red-50');
-                if (errorElement) {
-                    errorElement.textContent = 'Día inválido (1-31)';
-                    errorElement.classList.remove('hidden');
-                }
-                return;
-            }
-            if (monthVal && (monthVal < 1 || monthVal > 12)) {
-                dobMonth.classList.add('border-red-400', 'bg-red-50');
-                if (errorElement) {
-                    errorElement.textContent = 'Mes inválido (1-12)';
-                    errorElement.classList.remove('hidden');
-                }
-                return;
-            }
-
-            if (dayVal && monthVal && yearVal && yearVal.length === 4) {
-                const day = dayVal.padStart(2, '0');
-                const month = monthVal.padStart(2, '0');
-                const year = yearVal;
-
-                const testDate = new Date(year, parseInt(month) - 1, parseInt(day));
-                
-                if (testDate.getFullYear() == year && (testDate.getMonth() + 1) == month && testDate.getDate() == day) {
-                    const dateStr = `${year}-${month}-${day}`;
-                    fechaNacHidden.value = dateStr;
-                    
-                    const today = new Date();
-                    let age = today.getFullYear() - testDate.getFullYear();
-                    const m = today.getMonth() - testDate.getMonth();
-                    if (m < 0 || (m === 0 && today.getDate() < testDate.getDate())) {
-                        age--;
-                    }
-
-                    if (age < 0) {
-                        dobYear.classList.add('border-red-400', 'bg-red-50');
-                        if (errorElement) {
-                            errorElement.textContent = 'La fecha no puede ser futura';
-                            errorElement.classList.remove('hidden');
-                        }
-                        fechaNacHidden.value = '';
-                        return;
-                    }
-
-                    if (age > 100) {
-                        dobYear.classList.add('border-red-400', 'bg-red-50');
-                        if (errorElement) {
-                            errorElement.textContent = 'La edad máxima permitida es de 100 años';
-                            errorElement.classList.remove('hidden');
-                        }
-                        fechaNacHidden.value = '';
-                        return;
-                    }
-
-                    // Lógica de Cuidador/Colegio específica de este formulario
-                    if (age < 18) {
-                        seccionCuidador.classList.remove('hidden');
-                        camposCuidador.forEach(input => input.setAttribute('required', 'true'));
-                        
-                        const colContainer = document.getElementById('colegio-container');
-                        const colInput = document.getElementById('colegio-menor-input');
-                        if (age >= 3) {
-                            if (colContainer) colContainer.classList.remove('hidden');
-                            if (colInput) colInput.setAttribute('required', 'true');
-                        } else {
-                            if (colContainer) colContainer.classList.add('hidden');
-                            if (colInput) {
-                                colInput.removeAttribute('required');
-                                colInput.classList.remove('border-red-400', 'bg-red-50');
-                                colInput.value = '';
-                            }
-                        }
-                    } else {
-                        seccionCuidador.classList.add('hidden');
-                        camposCuidador.forEach(input => {
-                            input.removeAttribute('required');
-                            input.classList.remove('border-red-400', 'bg-red-50');
-                        });
-                        const colContainer = document.getElementById('colegio-container');
-                        const colInput2 = document.getElementById('colegio-menor-input');
-                        if (colContainer) colContainer.classList.add('hidden');
-                        if (colInput2) {
-                            colInput2.removeAttribute('required');
-                            colInput2.classList.remove('border-red-400', 'bg-red-50');
-                            colInput2.value = '';
-                        }
-                    }
-                    updateConsentContent();
-                } else {
-                    dobDay.classList.add('border-red-400', 'bg-red-50');
-                    if (errorElement) {
-                        errorElement.textContent = 'Fecha inexistente';
-                        errorElement.classList.remove('hidden');
-                    }
-                    fechaNacHidden.value = '';
-                }
-            } else if (yearVal && yearVal.length > 0 && yearVal.length < 4) {
-                 if (errorElement) {
-                    errorElement.textContent = 'Año incompleto (4 dígitos)';
-                    errorElement.classList.remove('hidden');
-                }
-                fechaNacHidden.value = '';
-            } else {
-                fechaNacHidden.value = '';
-            }
-        }
-
-        if (dobDay && dobMonth && dobYear) {
-            dobDay.addEventListener('input', syncAndValidateDate);
-            dobMonth.addEventListener('input', syncAndValidateDate);
-            dobYear.addEventListener('input', syncAndValidateDate);
-        }
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2');
-                header.querySelector('.glass-card').classList.add('shadow-2xl');
-            } else {
-                header.classList.remove('py-2');
-                header.querySelector('.glass-card').classList.remove('shadow-2xl');
-            }
-        });
-</script>
-    <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
-    <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n."
-        target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
-        class="fixed bottom-10 right-10 h-16 w-16 bg-[#25D366] text-white rounded-2xl shadow-[0_20px_40px_-5px_rgba(37,211,102,0.3)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[60] group overflow-hidden animate-float">
-        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
-        <svg class="h-8 w-8 relative z-10" fill="currentColor" viewBox="0 0 24 24">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.412.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-        </svg>
-    </a>
-
-    <!-- Tracking Conversión WhatsApp -->
-    <script>
-        document.getElementById('whatsapp-btn').addEventListener('click', function() {
-            // Google Ads
-            gtag('event', 'conversion', {
-                'send_to': 'AW-CONVERSION_ID/LABEL_WHATSAPP'
-            });
-            // Meta Pixel
-            fbq('track', 'Contact');
-        });
-    </script>
-
-    
-
-    <!-- Script inyectado globalmente por unificación -->
-    <script>
-        // Mobile Menu Logic Unificada con History API para botón 'Atrás'
+        // Funciones de utilidad para Mobile Menu y Precios
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuContent = document.getElementById('menu-content');
@@ -1531,7 +997,7 @@ Autor: Antigravity (AI Assistant)
         function closeMobileMenu(fromPopState = false) {
             if (mobileMenu) {
                 mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.remove('opacity-100'); // Para casos donde se usaba opactiy-100 directamente
+                mobileMenu.classList.remove('opacity-100');
             }
             if (menuContent) menuContent.classList.add('translate-x-full');
             document.body.style.overflow = '';
@@ -1564,13 +1030,9 @@ Autor: Antigravity (AI Assistant)
 
         function toggleMenu() {
             if (!mobileMenu) return;
-            // Evaluamos si el menú parece cerrado
             const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-            if (isClosed) {
-                openMobileMenu();
-            } else {
-                closeMobileMenu();
-            }
+            if (isClosed) openMobileMenu();
+            else closeMobileMenu();
         }
 
         if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
@@ -1592,13 +1054,11 @@ Autor: Antigravity (AI Assistant)
         window.addEventListener('popstate', (e) => {
             if (mobileMenu) {
                 const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-                if (!isClosed) {
-                    closeMobileMenu(true);
-                }
+                if (!isClosed) closeMobileMenu(true);
             }
         });
 
-        // Submenu Specialties Logic
+        // Submenus en Móvil
         const specialtiesToggle = document.getElementById('specialties-toggle');
         const specialtiesSubmenu = document.getElementById('specialties-submenu');
         const specialtiesChevron = document.getElementById('specialties-chevron');
@@ -1618,7 +1078,6 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
-        // Submenu Convenios Logic
         const conveniosToggle = document.getElementById('convenios-toggle');
         const conveniosSubmenu = document.getElementById('convenios-submenu');
         const conveniosChevron = document.getElementById('convenios-chevron');
@@ -1637,12 +1096,24 @@ Autor: Antigravity (AI Assistant)
                 }
             });
         }
+
+        // Lógica de Scroll para el Header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.querySelector('.glass-card').classList.add('shadow-2xl');
+            } else {
+                header.classList.remove('py-2');
+                header.querySelector('.glass-card').classList.remove('shadow-2xl');
+            }
+        });
+
     </script>
     <script src="assets/js/pro-data.js"></script>
     <script src="assets/js/search-data.js"></script>
     <script src="assets/js/search-logic.js"></script>
 </body>
-
 </html>
 
 

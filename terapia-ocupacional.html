@@ -1,7 +1,7 @@
 <!--
 Archivo: terapia-ocupacional.html
 Descripción: Información sobre el servicio de Terapia Ocupacional en Centro Valu.
-Última modificación: 2026-03-20
+Fecha de última modificación: 2026-04-01
 Autor: Antigravity (AI Assistant)
 -->
 <!DOCTYPE html>
@@ -206,12 +206,13 @@ Autor: Antigravity (AI Assistant)
         <div
             class="max-w-7xl mx-auto glass-card rounded-2xl shadow-premium border border-white/40 flex justify-between items-center h-24 px-4 md:px-6">
 
-            <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) - AHORA CON SHRINK-0 PARA MANTENERSE FIJO A LA IZQUIERDA -->
+            <!-- IZQUIERDA: LOGO DUAL (VALU + FONASA) -->
             <div class="flex items-center justify-start shrink-0 pr-4">
                 <a href="index.html" class="flex items-center gap-3 sm:gap-4 group transition-all max-w-full">
                     <img src="assets/brand/logo-valu.png" alt="Logo Centro Valu"
                         width="160" height="64"
-                        class="h-[52px] sm:h-[62px] md:h-[68px] w-auto shrink-0 group-hover:scale-105 transition-transform">
+                        class="h-[52px] sm:h-[62px] md:h-[68px] w-auto shrink-0 group-hover:scale-105 transition-transform"
+                        loading="eager">
                     <div class="flex flex-col text-left ml-1 min-w-0 overflow-hidden">
                         <span
                             class="font-display font-bold text-sm sm:text-base md:text-xl text-primary-900 leading-none truncate uppercase tracking-widest mt-1">Centro Valu</span>
@@ -222,26 +223,26 @@ Autor: Antigravity (AI Assistant)
                 </a>
             </div>
 
-            <!-- DERECHA: RESERVAR + MENÚ - AHORA CON FLEX-GROW PARA OCUPAR EL ESPACIO RESTANTE -->
+            <!-- DERECHA: RESERVAR + MENÚ -->
             <div class="flex items-center justify-end gap-2 sm:gap-x-4 flex-grow">
-                <!-- NAV DESKTOP (OPCIÓN 1) -->
+                <!-- NAV DESKTOP -->
                 <nav class="hidden lg:flex items-center gap-x-5 mr-4">
-                    <a href="index.html" class="text-primary-600 font-bold hover:text-primary-700 transition-colors">Inicio</a>
+                    <a href="index.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Inicio</a>
                     <a href="quienes-somos.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Quiénes somos</a>
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
-                        <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+                        <button class="text-primary-600 font-bold hover:text-primary-700 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
                                 <li><a href="psicologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
                                 <li><a href="pediatria.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
                                 <li><a href="fonoaudiologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
-                                <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
+                                <li><a href="terapia-ocupacional.html" class="block px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-xl transition-colors">Terapia Ocupacional</a></li>
                                 <li><a href="psicopedagogia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
+                                <li><a href="test-evaluaciones.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Tests & Evaluaciones</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Convenios Dropdown -->
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Convenios <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
                         <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
@@ -256,13 +257,13 @@ Autor: Antigravity (AI Assistant)
                     <a href="index.html#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
 
-                                <button id="search-open" aria-label="Abrir buscador" 
+                <button id="search-open" aria-label="Abrir buscador" 
                     class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
                     <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </button>
-<a href="formulario-contacto.html"
+                <a href="formulario-contacto.html"
                     class="hidden sm:flex bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
                     Contáctanos
                 </a>
@@ -278,7 +279,7 @@ Autor: Antigravity (AI Assistant)
             </div>
         </div>
 
-        <!-- PANEL LATERAL (DRAWER) MÓVIL (DESPLAZAMIENTO DESDE LA DERECHA) -->
+        <!-- PANEL LATERAL (DRAWER) MÓVIL -->
         <div id="mobile-menu"
             class="fixed lg:hidden inset-0 z-40 bg-slate-900/60 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none">
             <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl p-8 flex flex-col translate-x-full transition-transform duration-300 overflow-y-auto"
@@ -295,16 +296,11 @@ Autor: Antigravity (AI Assistant)
                 </div>
                 
                 <ul class="space-y-6">
-                    <li><a href="index.html"
-                            class="mobile-link text-2xl font-bold text-primary-600 transition-colors">Inicio</a>
-                    </li>
-                    <li><a href="quienes-somos.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes
-                            somos</a>
-                    </li>
+                    <li><a href="index.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Inicio</a></li>
+                    <li><a href="quienes-somos.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Quiénes somos</a></li>
                     <li>
                         <button id="specialties-toggle" aria-label="Desplegar especialidades"
-                            class="flex items-center justify-between w-full text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors group text-left">
+                            class="flex items-center justify-between w-full text-2xl font-bold text-primary-600 transition-colors group text-left">
                             Especialidades
                             <svg id="specialties-chevron" class="w-6 h-6 transition-transform duration-300" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -315,21 +311,12 @@ Autor: Antigravity (AI Assistant)
                         <div id="specialties-submenu"
                             class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
                             <ul class="py-4 px-6 space-y-4">
-                                <li><a href="psicologia.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a>
-                                </li>
-                                <li><a href="pediatria.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a>
-                                </li>
-                                <li><a href="fonoaudiologia.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Fonoaudiología</a>
-                                </li>
-                                <li><a href="terapia-ocupacional.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Terapia
-                                        Ocupacional</a></li>
-                                <li><a href="psicopedagogia.html"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a>
-                                </li>
+                                <li><a href="psicologia.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a></li>
+                                <li><a href="pediatria.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a></li>
+                                <li><a href="fonoaudiologia.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Fonoaudiología</a></li>
+                                <li><a href="terapia-ocupacional.html" class="mobile-link block text-lg font-bold text-primary-600">Terapia Ocupacional</a></li>
+                                <li><a href="psicopedagogia.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a></li>
+                                <li><a href="test-evaluaciones.html" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Tests & Evaluaciones</a></li>
                             </ul>
                         </div>
                     </li>
@@ -346,40 +333,18 @@ Autor: Antigravity (AI Assistant)
                         <div id="convenios-submenu"
                             class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
                             <ul class="py-4 px-6 space-y-4">
-                                <li>
-                                    <a href="convenios.html#colegios"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a>
-                                </li>
-                                <li>
-                                    <a href="convenios.html#empresas"
-                                        class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a>
-                                </li>
+                                <li><a href="convenios.html#colegios" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Colegios</a></li>
+                                <li><a href="convenios.html#empresas" class="block block text-lg font-semibold text-slate-500 hover:text-primary-600">Empresas</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="formacion.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Formación</a>
-                    </li>
-                    <li><a href="profesionales.html"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro
-                            Equipo</a>
-                    </li>
-                    <li><a href="index.html#contacto"
-                            class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a>
-                    </li>
+                    <li><a href="formacion.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Formación</a></li>
+                    <li><a href="profesionales.html" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro Equipo</a></li>
+                    <li><a href="index.html#contacto" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a></li>
+                    <li><a href="index.html#precios" id="mobile-prices-open" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Precios</a></li>
                     <li class="pt-8 border-t border-slate-100">
-                                        <button id="search-open" aria-label="Abrir buscador" 
-                    class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors shadow-sm shrink-0">
-                    <svg class="w-5 h-5 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </button>
-<a href="formulario-contacto.html"
+                        <a href="formulario-contacto.html"
                             class="mobile-link group flex items-center justify-center gap-3 w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white text-center py-4 rounded-xl font-bold text-base shadow-lg shadow-primary-600/20 glow-effect transition-all hover:shadow-xl active:scale-[0.98]">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
                             Formulario de contacto
                         </a>
                     </li>
@@ -527,8 +492,6 @@ Autor: Antigravity (AI Assistant)
             </div>
 
             <div class="p-8 border-t border-slate-100 bg-slate-50/50">
-                
-                
                 <a href="formulario-contacto.html" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
                     CONTÁCTANOS
                 </a>
@@ -536,7 +499,6 @@ Autor: Antigravity (AI Assistant)
         </div>
     </div>
 
-    <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
     <!-- FOOTER: ESTANDARIZADO (4 COLUMNAS PREMIUM) -->
     <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
@@ -561,7 +523,7 @@ Autor: Antigravity (AI Assistant)
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
                         </a>
-                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Síguenos en nuestras redes sociales</span>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-4">Centro Valu oficial</span>
                     </div>
                 </div>
 
@@ -583,7 +545,7 @@ Autor: Antigravity (AI Assistant)
                         <li><a href="psicologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicología</a></li>
                         <li><a href="pediatria.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Pediatría</a></li>
                         <li><a href="fonoaudiologia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
-                        <li><a href="terapia-ocupacional.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Terapia Ocupacional</a></li>
+                        <li><a href="terapia-ocupacional.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors font-bold">Terapia Ocupacional</a></li>
                         <li><a href="psicopedagogia.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
                         <li><a href="formacion.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Formación</a></li>
                         <li><a href="convenios.html" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Convenios</a></li>
@@ -596,174 +558,107 @@ Autor: Antigravity (AI Assistant)
                     <ul class="space-y-4">
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Teléfono</span>
-                            <!-- Versión Desktop -->
                             <span class="hidden md:block text-sm font-bold text-slate-700 tracking-tight">+569 7245 4921</span>
-                            <!-- Versión Móvil (WhatsApp) -->
-                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">
-                                +569 7245 4921
-                            </a>
+                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">+569 7245 4921</a>
                         </li>
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email</span>
                             <a href="mailto:centrovalu@gmail.com" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors">centrovalu@gmail.com</a>
                         </li>
                         <li class="pt-4">
-                            <a href="formulario-contacto.html" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar</a>
+                            <a href="formulario-contacto.html" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar ahora</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <!-- COPYRIGHT -->
-            <div class="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300 text-center md:text-left">
-                    &copy; 2026 Centro Valu. Todos los derechos reservados.
-                </p>
-                <!-- ENLACES LEGALES -->
+            <div class="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300">
+                <p class="text-center md:text-left">&copy; 2026 Centro Valu. Todos los derechos reservados.</p>
                 <div class="flex items-center justify-center md:justify-end gap-6 mt-4 md:mt-0">
-                    <a href="privacidad.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Política de Privacidad</a>
-                    <a href="terminos.html" class="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 hover:text-primary-600 transition-colors">Términos de Servicio</a>
+                    <a href="privacidad.html" class="text-slate-400 hover:text-primary-600 transition-colors">Política de Privacidad</a>
+                    <a href="terminos.html" class="text-slate-400 hover:text-primary-600 transition-colors">Términos de Servicio</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- SCRIPTS CORE: NAVEGACIÓN Y COMPONENTES -->
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2');
-                header.querySelector('.glass-card').classList.add('shadow-2xl');
-            } else {
-                header.classList.remove('py-2');
-            }
-        });
+        const initCoreNavigation = () => {
+            try {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuContent = document.getElementById('menu-content');
 
-        // PANEL LATERAL: DETALLES DE PROFESIONAL (DRAWER)
-        const proDrawerOverlay = document.getElementById('pro-drawer-overlay');
-        const proDrawerContent = document.getElementById('pro-drawer-content');
-        const closeProDrawer = document.getElementById('close-pro-drawer');
-        const proDetailsTarget = document.getElementById('pro-details-target');
+                const openMenu = () => {
+                    mobileMenu?.classList.replace('opacity-0', 'opacity-100');
+                    mobileMenu?.classList.remove('pointer-events-none');
+                    menuContent?.classList.remove('translate-x-full');
+                    document.body.style.overflow = 'hidden';
+                };
 
+                const closeMenu = () => {
+                    mobileMenu?.classList.replace('opacity-100', 'opacity-0');
+                    mobileMenu?.classList.add('pointer-events-none');
+                    menuContent?.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
+                };
 
+                document.addEventListener('click', (e) => {
+                    if (e.target.closest('#menu-toggle')) openMenu();
+                    else if (e.target.closest('#menu-close') || (mobileMenu && e.target === mobileMenu)) closeMenu();
+                    
+                    const specToggle = e.target.closest('#specialties-toggle');
+                    if (specToggle) {
+                        const submenu = document.getElementById('specialties-submenu');
+                        const chevron = document.getElementById('specialties-chevron');
+                        if (submenu && chevron) {
+                            const isOpen = submenu.style.maxHeight && submenu.style.maxHeight !== '0px';
+                            submenu.style.maxHeight = isOpen ? '0px' : submenu.scrollHeight + 'px';
+                            chevron.classList.toggle('rotate-180', !isOpen);
+                        }
+                    }
 
-        function openDrawer(proId) {
-            const data = proDataExtended[proId];
-            if (!data) return;
+                    const convToggle = e.target.closest('#convenios-toggle');
+                    if (convToggle) {
+                        const submenu = document.getElementById('convenios-submenu');
+                        const chevron = document.getElementById('convenios-chevron');
+                        if (submenu && chevron) {
+                            const isOpen = submenu.style.maxHeight && submenu.style.maxHeight !== '0px';
+                            submenu.style.maxHeight = isOpen ? '0px' : submenu.scrollHeight + 'px';
+                            chevron.classList.toggle('rotate-180', !isOpen);
+                        }
+                    }
+                });
+            } catch (err) { console.error('Error Nav:', err); }
+        };
 
-            const hasImage = !data.img.includes('placeholder.webp');
-            const bgClass = data.bg || 'bg-brand-lila/20';
-
-            proDetailsTarget.innerHTML = `
-                <div class="flex flex-col gap-8">
-                    <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center shadow-inner">
-                        ${hasImage ? `
-                            <img src="${data.img}" alt="${data.nombre}" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="300">
-                        ` : `
-                            <span class="text-primary-300 font-display text-8xl">Valu</span>
-                        `}
-                    </div>
-                    <div>
-                        <span class="text-primary-600 font-bold text-xs uppercase tracking-[0.2em] mb-2 block">${data.especialidad}</span>
-                        <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900">${data.nombre}</h2>
-                        <p class="text-slate-400 font-medium mt-2">${data.cargo}</p>
-                    </div>
-                    <div class="space-y-6">
-                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Descripción Profesional</h5>
-                        <p class="text-slate-600 leading-relaxed text-lg">${data.descripcion}</p>
-                    </div>
-                    <div class="space-y-6">
-                        <h5 class="text-sm font-black uppercase tracking-widest text-slate-900 border-b border-slate-100 pb-2">Formación y Especialidades</h5>
-                        <ul class="grid gap-4">
-                            ${data.formacion.map(item => `
-                                <li class="flex items-start gap-3 text-slate-600">
-                                    <svg class="w-5 h-5 text-primary-500 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span class="font-medium">${item}</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
-
-            proDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
-            proDrawerContent.classList.remove('translate-x-full');
-            const scrollContainer = proDrawerContent.querySelector('.overflow-y-auto');
-            if (scrollContainer) scrollContainer.scrollTop = 0;
-            document.body.style.overflow = 'hidden';
-            history.pushState({ drawerOpen: true }, '');
-            
-            // Actualizar años de experiencia dinámicos
-            if (typeof updateExperience === 'function') {
-                updateExperience();
-            }
-        }
-
-        function closeDrawer(fromPopState = false) {
-            proDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
-            proDrawerContent.classList.add('translate-x-full');
-            document.body.style.overflow = '';
-            
-            if (!fromPopState && history.state && history.state.drawerOpen) {
-                history.back();
-            }
-        }
-
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.open-pro-drawer')) {
-                const card = e.target.closest('.pro-card');
-                const proId = card.getAttribute('data-pro-id');
-                openDrawer(proId);
-            }
-        });
-
-        if (closeProDrawer) closeProDrawer.addEventListener('click', () => closeDrawer());
-        if (proDrawerOverlay) {
-            proDrawerOverlay.addEventListener('click', (e) => {
-                if (e.target === proDrawerOverlay) closeDrawer();
-            });
-        }
-
-        window.addEventListener('popstate', (e) => {
-            if (proDrawerOverlay && !proDrawerOverlay.classList.contains('opacity-0')) {
-                // The user pressed the system back button
-                closeDrawer(true);
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            initCoreNavigation();
         });
     </script>
+    <script src="assets/js/drawer-logic.js"></script>
+    </script>
 
-    <!-- SWIPER JS -->
+    <!-- SWIPER JS Y LÓGICA VISUAL -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.proSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: false,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
+        const initVisualComponents = () => {
+            try {
+                new Swiper('.proSwiper', {
                     slidesPerView: 1,
-                },
-                1024: {
-                    slidesPerView: 1,
-                },
-            },
-        });
-</script>
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: { delay: 3000, disableOnInteraction: false },
+                    pagination: { el: '.swiper-pagination', clickable: true },
+                    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                    breakpoints: { 640: { slidesPerView: 1 }, 1024: { slidesPerView: 1 } }
+                });
+            } catch (err) { console.error('Error Swiper:', err); }
+        };
+        document.addEventListener('DOMContentLoaded', initVisualComponents);
+    </script>
+    
     <!-- BOTÓN WHATSAPP: CONTACTO DIRECTO -->
     <a href="https://wa.me/56972454921?text=Hola%20Centro%20Valu%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Terapia%20Ocupacional."
         target="_blank" rel="noopener noreferrer" id="whatsapp-btn"
@@ -787,148 +682,10 @@ Autor: Antigravity (AI Assistant)
         });
     </script>
 
-    
-
-    <!-- Script inyectado globalmente por unificación -->
-    <script>
-        // Mobile Menu Logic Unificada con History API para botón 'Atrás'
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuContent = document.getElementById('menu-content');
-        const menuClose = document.getElementById('menu-close');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
-
-        function closeMobileMenu(fromPopState = false) {
-            if (mobileMenu) {
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.remove('opacity-100'); // Para casos donde se usaba opactiy-100 directamente
-            }
-            if (menuContent) menuContent.classList.add('translate-x-full');
-            document.body.style.overflow = '';
-            
-            if (menuIcon && closeIcon) {
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            }
-
-            if (!fromPopState && history.state && history.state.mobileMenuOpen) {
-                history.back();
-            }
-        }
-
-        function openMobileMenu() {
-            if (mobileMenu) {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100');
-            }
-            if (menuContent) menuContent.classList.remove('translate-x-full');
-            document.body.style.overflow = 'hidden';
-            
-            if (menuIcon && closeIcon) {
-                menuIcon.classList.add('hidden');
-                closeIcon.classList.remove('hidden');
-            }
-
-            history.pushState({ mobileMenuOpen: true }, '');
-        }
-
-        function toggleMenu() {
-            if (!mobileMenu) return;
-            // Evaluamos si el menú parece cerrado
-            const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-            if (isClosed) {
-                openMobileMenu();
-            } else {
-                closeMobileMenu();
-            }
-        }
-
-        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-        if (menuClose) menuClose.addEventListener('click', toggleMenu);
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) toggleMenu();
-            });
-        }
-
-        if (mobileLinks) {
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    closeMobileMenu();
-                });
-            });
-        }
-
-        window.addEventListener('popstate', (e) => {
-            if (mobileMenu) {
-                const isClosed = mobileMenu.classList.contains('opacity-0') || mobileMenu.classList.contains('pointer-events-none') || menuContent.classList.contains('translate-x-full');
-                if (!isClosed) {
-                    closeMobileMenu(true);
-                }
-            }
-        });
-
-        // Submenu Specialties Logic
-        const specialtiesToggle = document.getElementById('specialties-toggle');
-        const specialtiesSubmenu = document.getElementById('specialties-submenu');
-        const specialtiesChevron = document.getElementById('specialties-chevron');
-
-        if (specialtiesToggle && specialtiesSubmenu && specialtiesChevron) {
-            specialtiesToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = specialtiesSubmenu.style.maxHeight && specialtiesSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    specialtiesSubmenu.style.maxHeight = '0px';
-                    specialtiesChevron.classList.remove('rotate-180');
-                } else {
-                    specialtiesSubmenu.style.maxHeight = specialtiesSubmenu.scrollHeight + 'px';
-                    specialtiesChevron.classList.add('rotate-180');
-                }
-            });
-        }
-
-        // Submenu Convenios Logic
-        const conveniosToggle = document.getElementById('convenios-toggle');
-        const conveniosSubmenu = document.getElementById('convenios-submenu');
-        const conveniosChevron = document.getElementById('convenios-chevron');
-
-        if (conveniosToggle && conveniosSubmenu && conveniosChevron) {
-            conveniosToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = conveniosSubmenu.style.maxHeight && conveniosSubmenu.style.maxHeight !== '0px';
-                if (isOpen) {
-                    conveniosSubmenu.style.maxHeight = '0px';
-                    conveniosChevron.classList.remove('rotate-180');
-                } else {
-                    conveniosSubmenu.style.maxHeight = conveniosSubmenu.scrollHeight + 'px';
-                    conveniosChevron.classList.add('rotate-180');
-                }
-            });
-        }
-
-        // --- AUTO-APERTURA DESDE BUSCADOR ---
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                const proCard = document.getElementById(hash);
-                if (proCard && typeof openDrawer === 'function') {
-                    setTimeout(() => {
-                        proCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        openDrawer(hash);
-                    }, 500);
-                }
-            }
-        });
-    </script>
+    <!-- SCRIPTS ADICIONALES: BÚSQUEDA -->
     <script src="assets/js/pro-data.js"></script>
     <script src="assets/js/search-data.js"></script>
     <script src="assets/js/search-logic.js"></script>
+
 </body>
-
 </html>
-
-
