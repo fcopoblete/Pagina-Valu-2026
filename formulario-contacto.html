@@ -1332,6 +1332,10 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
+                    // Seguimiento de Conversión
+                    trackGAdsConversion(LABELS.FORM_PARTICULAR);
+                    trackMetaEvent('Lead');
+                    
                     showModal('success', '¡Recibido!', 'Tu solicitud ha sido enviada exitosamente. Nuestro equipo se contactará contigo vía WhatsApp o Email pronto.');
                     this.reset();
                     // Volver al paso 1 visualmente
@@ -1534,6 +1538,7 @@ Autor: Antigravity (AI Assistant)
     <script src="assets/js/pro-data.js"></script>
     <script src="assets/js/search-data.js"></script>
     <script src="assets/js/search-logic.js"></script>
+    <script src="assets/js/tracking-logic.js"></script>
 </body>
 </html>
 

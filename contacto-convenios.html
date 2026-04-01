@@ -709,8 +709,8 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    gtag('event', 'conversion', { 'send_to': 'AW-16532397408/LABEL_FORM_CONVENIOS' });
-                    fbq('track', 'Lead');
+                    trackGAdsConversion(LABELS.FORM_CONVENIOS);
+                    trackMetaEvent('Lead');
                     
                     showModal('success', '¡Solicitud Enviada!', 'La solicitud de convenio ha sido recibida con éxito. El equipo de Centro Valu se contactará con tu institución a la brevedad para coordinar una reunión.');
                     btn.innerHTML = `ENVIADO <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
@@ -736,17 +736,7 @@ Autor: Antigravity (AI Assistant)
         </svg>
     </a>
 
-    <!-- Tracking Conversión WhatsApp -->
-    <script>
-        document.getElementById('whatsapp-btn').addEventListener('click', function() {
-            // Google Ads
-            gtag('event', 'conversion', {
-                'send_to': 'AW-16532397408/LABEL_WHATSAPP'
-            });
-            // Meta Pixel
-            fbq('track', 'Contact');
-        });
-    </script>
+
 
     
 
@@ -874,6 +864,7 @@ Autor: Antigravity (AI Assistant)
     <script src="assets/js/pro-data.js"></script>
     <script src="assets/js/search-data.js"></script>
     <script src="assets/js/search-logic.js"></script>
+    <script src="assets/js/tracking-logic.js"></script>
 </body>
 
 </html>

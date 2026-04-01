@@ -51,7 +51,7 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
 
 ## 🛠️ Integraciones Técnicas (IDs Requeridos)
 - 🟢 **[COMPLETADO]** Google Ads: Configurado con ID real `AW-16532397408`.
-- 🔴 **[FALTANTE]** Etiquetas de Conversión: Configurar `LABEL_WHATSAPP`, `LABEL_FORM_PARTICULAR` y `LABEL_FORM_CONVENIOS`.
+- 🟢 **[COMPLETADO]** Etiquetas de Conversión: Configuradas globalmente para WhatsApp y formularios (`LABEL_WHATSAPP`, `LABEL_FORM_PARTICULAR`, `LABEL_FORM_CONVENIOS`).
 - 🔴 **[FALTANTE]** Meta Pixel: Configurar `META_PIXEL_ID` real.
 - 🟢 **[COMPLETADO]** Webhooks de Producción: Cambiadas URLs `/webhook-test/` a `/webhook/` en todos los formularios.
 
