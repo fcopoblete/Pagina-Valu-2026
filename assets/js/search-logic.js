@@ -169,15 +169,22 @@
                     </a>
                 `;
             } else {
-                const icon = item.type === 'service' ? 
-                    `<svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>` :
-                    `<svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+                let iconContent = '';
+                if (item.icon) {
+                    iconContent = `<span class="text-xl">${item.icon}</span>`;
+                } else if (item.type === 'service') {
+                    iconContent = `<svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+                } else {
+                    iconContent = `<svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+                }
+
                 
                 return `
                     <a href="${item.url}" class="search-item flex items-center gap-4 p-4 rounded-2xl transition-all group">
                         <div class="h-10 w-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm group-hover:border-primary-200">
-                            ${icon}
+                            ${iconContent}
                         </div>
+
                         <div class="flex-grow">
                             <h4 class="font-bold text-slate-900 group-hover:text-primary-600 transition-colors">${item.name}</h4>
                             <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">${item.category || 'Página'}</p>
@@ -189,6 +196,8 @@
                 `;
             }
         }).join('');
+
+
     }
 
     // 5. Lógica de Filtrado (Normalización para ignorar tildes y mayúsculas)
@@ -219,11 +228,24 @@
             return name.includes(query) || inKeywords || specialty.includes(query);
         });
 
-        // Ordenar: Servicios y Páginas primero (mejor UX), luego Profesionales
+        // Ordenar: Aranceles primero si la búsqueda es sobre costos o tests, luego Servicios y Páginas, luego Profesionales
         filtered.sort((a, b) => {
-            const priority = { 'page': 1, 'service': 1, 'professional': 2 };
+            const queryRaw = input.value.toLowerCase();
+            const isPriceQuery = queryRaw.includes('precio') || queryRaw.includes('valor') || queryRaw.includes('cuanto') || queryRaw.includes('costo') || queryRaw.includes('arancel') || queryRaw.includes('ados') || queryRaw.includes('wisc') || queryRaw.includes('tadi');
+            
+            const aIsArancel = a.category === 'Aranceles';
+            const bIsArancel = b.category === 'Aranceles';
+
+            if (isPriceQuery) {
+                if (aIsArancel && !bIsArancel) return -1;
+                if (!aIsArancel && bIsArancel) return 1;
+            }
+
+            const priority = { 'service': 1, 'page': 1, 'professional': 2 };
             return (priority[a.type] || 3) - (priority[b.type] || 3);
         });
+
+
 
         console.log('Busqueda: "' + query + '" - ' + filtered.length + ' resultados.');
         renderResults(filtered);

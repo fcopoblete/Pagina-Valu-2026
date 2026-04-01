@@ -114,6 +114,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Psicología",
+    "icon": "🧠",
     "category": "Especialidad",
     "url": "psicologia.html",
     "keywords": ["terapia", "mental", "emocional", "adultos", "niños", "pareja", "perinatal", "online", "vincular", "trauma", "apego", "psicoanálisis"]
@@ -121,6 +122,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Pediatría",
+    "icon": "👶",
     "category": "Especialidad",
     "url": "pediatria.html",
     "keywords": ["niños", "médico", "bebes", "crecimiento", "niño sano", "lactancia"]
@@ -128,6 +130,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Fonoaudiología",
+    "icon": "🗣️",
     "category": "Especialidad",
     "url": "fonoaudiologia.html",
     "keywords": ["habla", "lenguaje", "voz", "deglución", "tel", "tdl", "articulación", "TEA", "autismo", "AMAR", "TEACCH", "CLAP", "motricidad orofacial", "disfagia", "audífono", "audición", "ACV", "tartamudez", "disfonía", "infanto-juvenil", "adultos"]
@@ -135,6 +138,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia Ocupacional",
+    "icon": "🧤",
     "category": "Especialidad",
     "url": "terapia-ocupacional.html",
     "keywords": ["autonmía", "sensorial", "motricidad", "fina", "diaria", "esfínter", "TEA", "autismo", "selectividad alimentaria", "perfil sensorial", "regulación emocional", "adaptación escolar", "AVD"]
@@ -142,6 +146,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Psicopedagogía",
+    "icon": "📚",
     "category": "Especialidad",
     "url": "psicopedagogia.html",
     "keywords": ["aprendizaje", "estudio", "colegio", "escuela", "reforzamiento"]
@@ -151,6 +156,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia Infanto",
+    "icon": "🧸",
     "category": "Psicología",
     "url": "psicologia.html#psico-infanto",
     "keywords": ["niños", "niñas", "juego", "conducta", "infantil"]
@@ -158,6 +164,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia Adolescente",
+    "icon": "🎒",
     "category": "Psicología",
     "url": "psicologia.html#psico-adolescente",
     "keywords": ["jovenes", "identidad", "pubertad", "estudios", "emociones"]
@@ -165,6 +172,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia de Adultos",
+    "icon": "👤",
     "category": "Psicología",
     "url": "psicologia.html#psico-adultos",
     "keywords": ["crecimiento", "crisis", "bienestar", "individual"]
@@ -172,6 +180,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia Parental",
+    "icon": "👪",
     "category": "Psicología",
     "url": "psicologia.html#psico-parental",
     "keywords": ["padres", "madres", "crianza", "herramientas", "cuidadores"]
@@ -179,6 +188,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia Familiar",
+    "icon": "🏠",
     "category": "Psicología",
     "url": "psicologia.html#psico-familiar",
     "keywords": ["hogar", "vinculos", "comunicacion", "familia", "sistémico"]
@@ -186,6 +196,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia de Pareja",
+    "icon": "💑",
     "category": "Psicología",
     "url": "psicologia.html#psico-pareja",
     "keywords": ["relacion", "amor", "crisis", "novios", "esposos"]
@@ -193,6 +204,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia Perinatal",
+    "icon": "🤰",
     "category": "Psicología",
     "url": "psicologia.html#psico-perinatal",
     "keywords": ["embarazo", "postparto", "maternidad", "bebe", "gestacion"]
@@ -200,6 +212,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia Online",
+    "icon": "💻",
     "category": "Psicología",
     "url": "psicologia.html#psico-online",
     "keywords": ["videollamada", "distancia", "remoto", "internet", "casa"]
@@ -209,6 +222,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Terapia de Deglución",
+    "icon": "🥄",
     "category": "Fonoaudiología",
     "url": "fonoaudiologia.html#terapia-deglucion",
     "keywords": ["tragar", "comer", "disfagia", "alimentacion", "segura"]
@@ -216,6 +230,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Estimulación Temprana",
+    "icon": "🌈",
     "category": "Fonoaudiología",
     "url": "fonoaudiologia.html#estimulacion-temprana",
     "keywords": ["bebes", "primeros pasos", "habla", "desarrollo", "prevencion"]
@@ -223,6 +238,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Voz Profesional",
+    "icon": "🎤",
     "category": "Fonoaudiología",
     "url": "fonoaudiologia.html#voz-profesional",
     "keywords": ["profesores", "cantantes", "disfonia", "garganta", "cuerdas vocales"]
@@ -230,6 +246,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Rehabilitación ACV",
+    "icon": "🧠",
     "category": "Fonoaudiología",
     "url": "fonoaudiologia.html#rehabilitacion-acv",
     "keywords": ["derrame", "infarto cerebral", "afasia", "neurologico", "recuperacion"]
@@ -239,6 +256,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Integración Sensorial",
+    "icon": "✨",
     "category": "Terapia Ocupacional",
     "url": "terapia-ocupacional.html#to-sensorial",
     "keywords": ["estímulos", "texturas", "ruidos", "perfil sensorial", "regulacion"]
@@ -246,6 +264,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Actividades de la Vida Diaria (AVD)",
+    "icon": "🛀",
     "category": "Terapia Ocupacional",
     "url": "terapia-ocupacional.html#to-avd",
     "keywords": ["autonomia", "bañarse", "vestirse", "comer solo", "independencia"]
@@ -253,6 +272,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Selectividad Alimentaria",
+    "icon": "🍎",
     "category": "Terapia Ocupacional",
     "url": "terapia-ocupacional.html#to-alimentaria",
     "keywords": ["comer", "mañoso", "texturas comida", "dieta restringida"]
@@ -262,6 +282,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Control Niño Sano",
+    "icon": "🩺",
     "category": "Pediatría",
     "url": "pediatria.html#ped-nino-sano",
     "keywords": ["chequeo", "crecimiento", "peso", "talla", "vacunas"]
@@ -269,6 +290,7 @@ window.searchData = [
   {
     "type": "service",
     "name": "Consultoría en Lactancia",
+    "icon": "🤱",
     "category": "Pediatría",
     "url": "pediatria.html#ped-nutricion",
     "keywords": ["pecho", "amamantar", "leche materna", "dolor", "bebe"]
@@ -278,25 +300,72 @@ window.searchData = [
   {
     "type": "page",
     "name": "Convenios",
+    "icon": "🤝",
     "url": "convenios.html",
     "keywords": ["isapre", "fonasa", "colegios", "empresas", "descuento"]
   },
   {
     "type": "page",
     "name": "Formación",
+    "icon": "🎓",
     "url": "formacion.html",
     "keywords": ["cursos", "talleres", "profesionales", "estudiantes"]
   },
   {
     "type": "page",
     "name": "Quiénes Somos",
+    "icon": "🏢",
     "url": "quienes-somos.html",
     "keywords": ["historia", "misión", "visión", "centro", "valu"]
   },
   {
     "type": "page",
     "name": "Ubicación y Dirección (Coquimbo)",
+    "icon": "📍",
     "url": "index.html#contacto",
     "keywords": ["donde estan", "ubicacion", "direccion", "calle", "llegar", "sucursal", "coquimbo", "parque nacional lauca"]
+  },
+  {
+    "type": "page",
+    "name": "Lista de Aranceles y Precios 2026",
+    "icon": "💰",
+    "category": "Aranceles",
+    "url": "index.html#precios",
+    "keywords": ["precio", "valor", "costo", "cuanto vale", "pago", "arancel", "fonasa", "particular", "valores"]
+  },
+  {
+    "type": "service",
+    "name": "Test ADOS-2 (Evaluación TEA)",
+    "icon": "🧩",
+    "category": "Tests",
+    "url": "test-evaluaciones.html#ados-2",
+    "keywords": ["ados", "ados2", "ados-2", "tea", "autismo", "evaluacion", "diagnostico"]
+  },
+  {
+    "type": "service",
+    "name": "Entrevista ADI-R",
+    "icon": "🧩",
+    "category": "Tests",
+    "url": "test-evaluaciones.html#adi-r",
+    "keywords": ["adi-r", "adir", "tea", "autismo", "padres", "entrevista"]
+  },
+  {
+    "type": "service",
+    "name": "Evaluación TADI (0-6 años)",
+    "icon": "🧩",
+    "category": "Tests",
+    "url": "test-evaluaciones.html#tadi",
+    "keywords": ["tadi", "desarrollo", "infantil", "bebes", "niños"]
+  },
+  {
+    "type": "service",
+    "name": "Test WISC-V (Inteligencia)",
+    "icon": "🧩",
+    "category": "Tests",
+    "url": "test-evaluaciones.html#wisc-v",
+    "keywords": ["wisc", "wisc5", "wisc-v", "coeficiente", "intelectual", "cognitivo", "escolar"]
   }
 ];
+
+
+
