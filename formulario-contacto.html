@@ -181,10 +181,17 @@ Autor: Antigravity (AI Assistant)
     <!-- A11Y Focus Rings -->
     <style>
         *:focus-visible {
-            outline: 3px solid #75cfcf !important;
-            outline-offset: 3px !important;
+            outline: 3px solid #4a8d8d !important;
+            outline-offset: 4px !important;
             border-radius: 4px;
             transition: outline-color 0.2s ease;
+        }
+
+        /* Mejora d Visibilidad de Datos Críticos (Prioridad Usuario) */
+        .contact-priority-bold {
+            color: #0f172a; /* Slate 900 */
+            font-weight: 800;
+            letter-spacing: -0.02em;
         }
 
         /* Checkbox Personalizado con Ticket */
@@ -279,7 +286,7 @@ Autor: Antigravity (AI Assistant)
                     <a href="quienes-somos.html" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Quiénes somos</a>
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
                                 <li><a href="psicologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
                                 <li><a href="pediatria.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
@@ -292,7 +299,7 @@ Autor: Antigravity (AI Assistant)
                     </div>
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Convenios <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
                                 <li><a href="convenios.html#colegios" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Colegios</a></li>
                                 <li><a href="convenios.html#empresas" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Empresas</a></li>
@@ -517,50 +524,50 @@ Autor: Antigravity (AI Assistant)
                                     Usuario</h3>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Nombre</label>
-                                        <input type="text" name="nombre"
+                                        <label for="nombre-input"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nombre</label>
+                                        <input type="text" name="nombre" id="nombre-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="Ej: Juan" required>
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Apellido
+                                        <label for="apellido_paterno-input"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Apellido
                                             Paterno</label>
-                                        <input type="text" name="apellido_paterno"
+                                        <input type="text" name="apellido_paterno" id="apellido_paterno-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="Pérez" required>
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Apellido
+                                        <label for="apellido_materno-input"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Apellido
                                             Materno <span
                                                 class="text-[10px] lowercase font-normal opacity-60">(Opcional)</span></label>
-                                        <input type="text" name="apellido_materno"
+                                        <input type="text" name="apellido_materno" id="apellido_materno-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="Cotapos">
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">RUT</label>
+                                        <label for="rut-input"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">RUT</label>
                                         <input type="text" name="rut" id="rut-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="12.345.678-9" required>
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Fecha
-                                            de Nacimiento</label>
+                                        <legend
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Fecha
+                                            de Nacimiento</legend>
                                         <div class="flex gap-2">
-                                            <input type="number" id="dob-day" name="dia_nacimiento" placeholder="Día" min="1" max="31"
+                                            <input type="number" id="dob-day" name="dia_nacimiento" placeholder="Día" min="1" max="31" aria-label="Día de nacimiento"
                                                 oninput="if(this.value.length > 2) this.value = this.value.slice(0,2); syncAndValidateDate();"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 required>
-                                            <input type="number" id="dob-month" name="mes_nacimiento" placeholder="Mes" min="1" max="12"
+                                            <input type="number" id="dob-month" name="mes_nacimiento" placeholder="Mes" min="1" max="12" aria-label="Mes de nacimiento"
                                                 oninput="if(this.value.length > 2) this.value = this.value.slice(0,2); syncAndValidateDate();"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 required>
-                                            <input type="number" id="dob-year" name="anio_nacimiento" placeholder="Año" min="1900" max="2026"
+                                            <input type="number" id="dob-year" name="anio_nacimiento" placeholder="Año" min="1900" max="2026" aria-label="Año de nacimiento"
                                                 oninput="if(this.value.length > 4) this.value = this.value.slice(0,4); syncAndValidateDate();"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 required>
@@ -569,9 +576,9 @@ Autor: Antigravity (AI Assistant)
                                         <p id="dob-error" class="hidden text-red-500 text-xs mt-2 font-bold"></p>
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Género</label>
-                                        <select name="genero"
+                                        <label for="genero-input"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Género</label>
+                                        <select name="genero" id="genero-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer">
                                             <option value="masculino">Masculino</option>
                                             <option value="femenino">Femenino</option>
@@ -581,7 +588,7 @@ Autor: Antigravity (AI Assistant)
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 pb-4">
                                     <div class="group">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Previsión / Prestación</label>
+                                        <label for="prestacion-selector" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Previsión / Prestación</label>
                                         <select id="prestacion-selector" name="prestacion"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 cursor-pointer focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             onchange="document.getElementById('prestacion-otro-container').classList.toggle('hidden', this.value !== 'Otro'); document.getElementById('prestacion-otro-input').required = (this.value === 'Otro');" required>
@@ -592,7 +599,7 @@ Autor: Antigravity (AI Assistant)
                                         </select>
                                     </div>
                                     <div id="prestacion-otro-container" class="group hidden">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Especifique Institución</label>
+                                        <label for="prestacion-otro-input" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Especifique Institución</label>
                                         <input type="text" id="prestacion-otro-input" name="prestacion_otro"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="Ej: Colmena, Consalud">
@@ -614,16 +621,16 @@ Autor: Antigravity (AI Assistant)
                                     </div>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div class="group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Nombre
+                                            <label for="nombre_tutor-input"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nombre
                                                 del Tutor</label>
-                                            <input type="text" name="nombre_tutor"
+                                            <input type="text" name="nombre_tutor" id="nombre_tutor-input"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-secondary-500/10 focus:border-secondary-500 outline-none transition-all"
                                                 placeholder="Ej: Maria Pérez">
                                         </div>
                                         <div class="group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">RUT
+                                            <label for="rut-tutor-input"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">RUT
                                                 del Tutor</label>
                                             <input type="text" name="rut_tutor" id="rut-tutor-input"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-secondary-500/10 focus:border-secondary-500 outline-none transition-all"
@@ -631,7 +638,7 @@ Autor: Antigravity (AI Assistant)
                                         </div>
                                     </div>
                                     <div class="mt-8 group hidden" id="colegio-container">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Colegio o Institución Educativa del Menor</label>
+                                        <label for="colegio-menor-input" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Colegio o Institución Educativa del Menor</label>
                                         <input type="text" name="colegio_menor" id="colegio-menor-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-secondary-500/10 focus:border-secondary-500 outline-none transition-all"
                                             placeholder="Ej: Colegio San José">
@@ -647,14 +654,14 @@ Autor: Antigravity (AI Assistant)
                                 <div class="space-y-8">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div class="group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Teléfono</label>
+                                            <label for="telefono-input"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Teléfono</label>
                                             <div class="flex gap-2 w-full">
                                                 <div class="relative w-28 shrink-0">
                                                     <div id="prefijo-display" class="absolute inset-0 flex items-center px-3 pointer-events-none font-bold text-slate-700">
                                                         🇨🇱 +56
                                                     </div>
-                                                    <select name="prefijo" id="prefijo-select"
+                                                    <select name="prefijo" id="prefijo-select" aria-label="Prefijo país"
                                                         class="w-full h-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-3 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer text-transparent font-bold appearance-none">
                                                         <option value="+56" data-short="🇨🇱 +56" class="text-slate-900">🇨🇱 +56 (Chile)</option>
                                                         <option value="+58" data-short="🇻🇪 +58" class="text-slate-900">🇻🇪 +58 (Venezuela)</option>
@@ -672,24 +679,24 @@ Autor: Antigravity (AI Assistant)
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <input type="tel" name="telefono"
+                                                <input type="tel" name="telefono" id="telefono-input"
                                                     class="min-w-0 flex-1 bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                     placeholder="9 1234 5678" required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">E-mail</label>
-                                        <input type="email" name="email"
+                                        <label for="email-input"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">E-mail</label>
+                                        <input type="email" name="email" id="email-input"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="hola@ejemplo.com" required>
                                     </div>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div class="group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Región</label>
-                                            <select name="region"
+                                            <label for="region-selector"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Región</label>
+                                            <select name="region" id="region-selector"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all cursor-pointer" required>
                                                 <option value="" disabled selected>Selecciona tu región</option>
                                                 <option value="Arica y Parinacota">Región de Arica y Parinacota</option>
@@ -711,32 +718,32 @@ Autor: Antigravity (AI Assistant)
                                             </select>
                                         </div>
                                         <div class="group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Ciudad / Comuna</label>
-                                            <input type="text" name="ciudad"
+                                            <label for="ciudad-input"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Ciudad / Comuna</label>
+                                            <input type="text" name="ciudad" id="ciudad-input"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 placeholder="Ej: Calama o Antofagasta" required>
                                         </div>
                                     </div>
                                     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                                         <div class="md:col-span-6 group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Calle</label>
-                                            <input type="text" name="calle"
+                                            <label for="calle-input"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Calle</label>
+                                            <input type="text" name="calle" id="calle-input"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 placeholder="Ej: Avenida Prat" required>
                                         </div>
                                         <div class="md:col-span-3 group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Número</label>
-                                            <input type="text" name="numero"
+                                            <label for="numero-input"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Número</label>
+                                            <input type="text" name="numero" id="numero-input"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 placeholder="Ej: 123" required>
                                         </div>
                                         <div class="md:col-span-3 group">
-                                            <label
-                                                class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Depto / Casa</label>
-                                            <input type="text" name="depto_casa"
+                                            <label for="depto-input"
+                                                class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Depto / Casa</label>
+                                            <input type="text" name="depto_casa" id="depto-input"
                                                 class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                                 placeholder="Opcional">
                                         </div>
@@ -751,8 +758,8 @@ Autor: Antigravity (AI Assistant)
                                     Servicio</h3>
                                 <div class="space-y-8">
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Especialidad
+                                        <label for="servicio-selector"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Especialidad
                                             Requerida</label>
                                         <select id="servicio-selector" name="servicio"
                                             class="w-full bg-slate-100 border-none rounded-2xl p-6 font-bold text-lg text-primary-900 cursor-pointer focus:ring-4 focus:ring-primary-500/10 transition-all"
@@ -765,16 +772,16 @@ Autor: Antigravity (AI Assistant)
                                         </select>
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Motivo
+                                        <label for="mensaje-input"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Motivo
                                             de consulta</label>
-                                        <textarea name="mensaje" rows="4"
+                                        <textarea name="mensaje" id="mensaje-input" rows="4"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="Describe brevemente el motivo..." required></textarea>
                                     </div>
                                     <div class="group">
-                                        <label
-                                            class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">¿Cómo nos conociste?</label>
+                                        <label for="captacion-selector"
+                                            class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">¿Cómo nos conociste?</label>
                                         <select id="captacion-selector" name="como_nos_conociste"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 cursor-pointer focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             required>
@@ -787,7 +794,7 @@ Autor: Antigravity (AI Assistant)
                                         </select>
                                     </div>
                                     <div id="captacion-otro-container" class="group hidden">
-                                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Por favor, especifica</label>
+                                        <label for="captacion-otro-input" class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Por favor, especifica</label>
                                         <input type="text" id="captacion-otro-input" name="como_nos_conociste_otro"
                                             class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 focus:bg-white focus:ring-4 focus:ring-primary-500/10 focus:border-primary-500 outline-none transition-all"
                                             placeholder="Ej: Letrero en la calle, convenio, etc.">
@@ -1320,7 +1327,8 @@ Autor: Antigravity (AI Assistant)
             const data = Object.fromEntries(formData.entries());
             
             // Añadir metadatos
-            data.fecha_envio = new Date().toLocaleString('es-CL');
+            data.tipo_lead = "PARTICULAR";
+            data.fecha_envio = new Date().toLocaleDateString('es-CL') + ' ' + new Date().toLocaleTimeString('es-CL');
             data.url_origen = window.location.href;
             data.dispositivo = navigator.userAgent;
 

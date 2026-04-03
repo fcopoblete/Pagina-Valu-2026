@@ -144,10 +144,17 @@ Autor: Antigravity (AI Assistant)
     <!-- A11Y Focus Rings -->
     <style>
         *:focus-visible {
-            outline: 3px solid #75cfcf !important;
-            outline-offset: 3px !important;
+            outline: 3px solid #4a8d8d !important;
+            outline-offset: 4px !important;
             border-radius: 4px;
             transition: outline-color 0.2s ease;
+        }
+
+        /* Mejora de Visibilidad de Datos Críticos (Prioridad Usuario) */
+        .contact-priority-bold {
+            color: #0f172a; /* Slate 900 */
+            font-weight: 800;
+            letter-spacing: -0.02em;
         }
     </style>
 </head>
@@ -191,7 +198,7 @@ Autor: Antigravity (AI Assistant)
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
                                 <li><a href="psicologia.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
                                 <li><a href="pediatria.html" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
@@ -204,7 +211,7 @@ Autor: Antigravity (AI Assistant)
                     </div>
                     <div class="relative group">
                         <button class="text-slate-500 font-bold hover:text-primary-600 transition-colors flex items-center gap-1">Convenios <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-48 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
                                 <li><a href="convenios.html#colegios" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Colegios</a></li>
                                 <li><a href="convenios.html#empresas" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Empresas</a></li>
@@ -593,16 +600,14 @@ Autor: Antigravity (AI Assistant)
                     <ul class="space-y-4">
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Teléfono</span>
-                            <!-- Versión Desktop -->
-                            <span class="hidden md:block text-sm font-bold text-slate-700 tracking-tight">+569 7245 4921</span>
-                            <!-- Versión Móvil (WhatsApp) -->
-                            <a href="https://wa.me/56972454921" class="md:hidden text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1">
+                            <!-- Versión Desktop y Móvil Unificada -->
+                            <a href="tel:+56972454921" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors tracking-tight contact-priority-bold italic lg:not-italic">
                                 +569 7245 4921
                             </a>
                         </li>
                         <li class="flex flex-col items-center md:items-start gap-1">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email</span>
-                            <a href="mailto:centrovalu@gmail.com" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors">centrovalu@gmail.com</a>
+                            <a href="mailto:centrovalu@gmail.com" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors contact-priority-bold">centrovalu@gmail.com</a>
                         </li>
                         <li class="pt-4">
                             <a href="formulario-contacto.html" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar</a>
