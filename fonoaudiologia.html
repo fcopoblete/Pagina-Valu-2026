@@ -68,7 +68,7 @@ Autor: Antigravity (AI Assistant)
       "description": "Evaluación y tratamiento fonoaudiológico para niños y adultos en Coquimbo.",
       "medicalSpecialty": "SpeechTherapy",
       "mainEntity": {
-        "@type": "MedicalBusiness",
+        "@type": "MedicalClinic",
         "name": "Centro Valu",
         "address": {
           "@type": "PostalAddress",
@@ -76,6 +76,47 @@ Autor: Antigravity (AI Assistant)
           "addressLocality": "Coquimbo",
           "addressRegion": "Coquimbo y La Serena",
           "addressCountry": "CL"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Fonoaudiología",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Estimulación Temprana y Lenguaje"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Tele-fonoaudiología (Atención Online)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Rehabilitación ACV y Neurológica"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Terapia de Voz Profesional"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Deglución y Motricidad Orofacial"
+              }
+            }
+          ]
         }
       }
     }
@@ -365,18 +406,26 @@ Autor: Antigravity (AI Assistant)
                     <h1 class="font-display text-5xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
                         Fonoaudiología <br><span class="text-secondary-500 italic">Comunicación y Bienestar.</span>
                     </h1>
-                    <div
-                        class="mb-8 p-6 bg-white/80 backdrop-blur-md rounded-3xl border border-primary-100 shadow-sm transition-all hover:shadow-md">
-                        <div class="flex items-center gap-4 mb-3">
-                            <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Fonasa" class="h-8 w-auto" loading="lazy" width="112" height="38">
-                            <span class="text-xs font-black text-primary-700 uppercase tracking-widest">Atención con Fonasa</span>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <!-- BANNER: FONASA -->
+                        <div class="inline-flex items-center gap-3 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
+                            <img src="assets/brand/fonasa/Fonasa Logo Vector.svg" alt="Fonasa" class="h-6 w-auto"
+                                loading="lazy" width="96" height="32">
+                            <span class="text-xs font-bold text-primary-700 uppercase tracking-widest">Convenio Fonasa</span>
                         </div>
-                        <p class="text-sm text-slate-600 leading-relaxed font-medium">
-                            Somos uno de los primeros centros en la Región de Coquimbo en contar con atención fonoaudiológica completa a través de <span class="text-primary-600 font-bold">FONASA</span>, acercando la salud a más personas con altos estándares de calidad.
-                        </p>
+                        <!-- BANNER: PRESENCIAL -->
+                        <div class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
+                            <span class="text-sm">📍</span>
+                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Atención Presencial</span>
+                        </div>
+                        <!-- BANNER: ONLINE -->
+                        <div class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
+                            <span class="text-sm">💻</span>
+                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Atención Online</span>
+                        </div>
                     </div>
                     <p class="mt-8 text-lg text-slate-500 leading-relaxed border-l-4 border-secondary-500 pl-6">
-                        Acompañamiento especializado en comunicación, voz, audición y funciones orales para todas las etapas de la vida.
+                        Somos uno de los primeros centros en la Región de Coquimbo en contar con atención fonoaudiológica completa a través de <span class="text-primary-600 font-bold">FONASA</span>, acercando la salud a más personas con altos estándares de calidad. Acompañamiento especializado en comunicación, voz, audición y funciones orales para todas las etapas de la vida.
                     </p>
                     <div class="mt-10 flex flex-wrap gap-4">
                         <a href="#detalles"
@@ -473,10 +522,15 @@ Autor: Antigravity (AI Assistant)
                         <h3 class="font-bold text-slate-900 mb-2">Orientación Auditiva</h3>
                         <p class="text-xs text-slate-500 leading-relaxed">Evaluación auditiva integral y acompañamiento personalizado en la selección y adaptación de audífonos.</p>
                     </div>
-                    <div id="fluidez-adulto" class="scroll-mt-32 p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all md:col-span-2">
+                    <div id="fluidez-adulto" class="scroll-mt-32 p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all">
                         <span class="text-3xl mb-4 block">🌊</span>
                         <h3 class="font-bold text-slate-900 mb-2">Fluidez y Tartamudez</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed text-center md:text-left">Estrategias modernas para el control de la fluidez del habla, enfocadas en la confianza y la naturalidad de la comunicación.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Estrategias modernas para el control de la fluidez del habla, enfocadas en la confianza y naturalidad.</p>
+                    </div>
+                    <div id="fono-online" class="scroll-mt-32 p-8 bg-primary-100/10 rounded-3xl border border-primary-100 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">💻</span>
+                        <h3 class="font-bold text-slate-900 mb-2">Atención Online</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Sesiones adaptadas a la modalidad virtual con la misma calidad de la atención presencial.</p>
                     </div>
                 </div>
             </div>

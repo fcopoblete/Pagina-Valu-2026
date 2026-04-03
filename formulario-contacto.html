@@ -988,26 +988,26 @@ Autor: Antigravity (AI Assistant)
         // Configuración y Estado Global
         let currentStep = 1;
         const totalSteps = 4;
-        const WEBHOOK_URL = 'https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-particular';
+        const WEBHOOK_URL = 'https://n8n.sinesfuerzo.cl/webhook/centro-valu-contacto-particular';
 
         // Protocolos por Especialidad (Mapeo Real a PDF)
         const protocols = {
             'Psicología': {
                 'niño': {
                     version: 'PSI-NIÑ-V1',
-                    summary: 'La atención psicológica infanto-juvenil en Centro Valu requiere el consentimiento de ambos padres o tutores legales (Ley 20.584 y 21.331). Se garantiza la confidencialidad del menor, salvo riesgo vital.',
+                    summary: 'La atención psicológica infanto - juvenil en Centro Valú se realiza con el consentimiento informado de su tutor legal, en concordancia con la normativa vigente. Se garantiza la confidencialidad del menor, salvo riesgo vital.',
                     link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA NIÑOS V1.pdf'
                 },
                 'adulto': {
                     version: 'PSI-ADU-V1',
-                    summary: 'La psicoterapia para adultos se rige por el secreto profesional y la Ley de Derechos y Deberes del Paciente. Las sesiones son de 45-50 min y requieren compromiso de asistencia.',
+                    summary: 'La psicoterapia para adultos se rige por el secreto profesional y la Ley de Derechos y Deberes del Paciente. Las sesiones son de 45 min y requieren compromiso de asistencia.',
                     link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA ADULTOS V1.pdf'
                 }
             },
-            'Pediatría': { // Fallback a protocolos de niños
+            'Pediatría': {
                 'niño': {
                     version: 'PED-GEN-V1',
-                    summary: 'La atención pediátrica se enfoca en el desarrollo integral. Al no contar con protocolo específico, se rige por las normas generales de atención pediátrica y consentimiento de tutores.',
+                    summary: 'La atención pediátrica se enfoca en el desarrollo integral. Se rige por las normas generales de atención pediátrica y consentimiento de tutores.',
                     link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO PSICOLOGIA NIÑOS V1.pdf'
                 },
                 'adulto': {
@@ -1031,7 +1031,7 @@ Autor: Antigravity (AI Assistant)
             'Terapia Ocupacional': {
                 'niño': {
                     version: 'TO-NIÑ-V1',
-                    summary: 'Enfoque en Integración Sensorial y Autonomía. Es fundamental la entrega de informes escolares previos para una evaluación integral.',
+                    summary: 'La atención de Terapia Ocupacional infanto-juvenil en Centro Valú se realiza con consentimiento informado del apoderado, incluyendo evaluación y tratamiento con enfoque en integración sensorial y autonomía. Se resguarda la confidencialidad, salvo en situaciones de riesgo para el bienestar del niño, niña o adolescente.',
                     link: 'assets/docs/consentimientos/CONSENTIMIENTO INFORMADO TERAPIA OCUPACIONAL V1.pdf'
                 },
                 'adulto': {

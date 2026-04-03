@@ -68,7 +68,7 @@ Autor: Antigravity (AI Assistant)
       "description": "Intervención terapéutica para el desarrollo de la autonomía en niños en Coquimbo.",
       "medicalSpecialty": "OccupationalTherapy",
       "mainEntity": {
-        "@type": "MedicalBusiness",
+        "@type": "MedicalClinic",
         "name": "Centro Valu",
         "address": {
           "@type": "PostalAddress",
@@ -76,6 +76,40 @@ Autor: Antigravity (AI Assistant)
           "addressLocality": "Coquimbo",
           "addressRegion": "Coquimbo y La Serena",
           "addressCountry": "CL"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Terapia Ocupacional",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Integración Sensorial"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Autonomía y Actividades de la Vida Diaria (AVD)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Regulación Emocional y Conductual"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Evaluación de Perfil Sensorial"
+              }
+            }
+          ]
         }
       }
     }
@@ -366,6 +400,13 @@ Autor: Antigravity (AI Assistant)
                     <h1 class="font-display text-5xl lg:text-7xl font-bold text-slate-900 leading-tight">
                         Terapia <br><span class="text-secondary-500 italic">Ocupacional.</span>
                     </h1>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <!-- BANNER: PRESENCIAL -->
+                        <div class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
+                            <span class="text-sm">📍</span>
+                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Atención Presencial</span>
+                        </div>
+                    </div>
                     <p class="mt-8 text-lg text-slate-500 leading-relaxed border-l-4 border-secondary-500 pl-6">
                         Desarrollamos herramientas para la vida diaria y procesamiento sensorial efectivo desde una
                         mirada integral y personalizada.

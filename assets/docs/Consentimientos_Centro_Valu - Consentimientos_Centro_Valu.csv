@@ -1,0 +1,14 @@
+Especialidad,Rango,Version,Resumen Protocolo
+Psicología,Niño,PSI-NIÑ-V1,"La atención psicológica infanto - juvenil en Centro Valú se realiza con el consentimiento informado de su tutor legal, en concordancia con la normativa vigente. Se garantiza la confidencialidad del menor, salvo riesgo vital."
+Psicología,Adulto,PSI-ADU-V1,La psicoterapia para adultos se rige por el secreto profesional y la Ley de Derechos y Deberes del Paciente. Las sesiones son de 45 min y requieren compromiso de asistencia.
+Pediatría,Niño,PED-GEN-V1,La atención pediátrica se enfoca en el desarrollo integral. Se rige por las normas generales de atención pediátrica y consentimiento de tutores.
+Pediatría,Adulto,PED-GEN-V1,Atención médica pediátrica/adolescente para mayores de edad. Se aplican protocolos de confidencialidad médica estándar.
+Fonoaudiología,Niño,FONO-NIÑ-V1,La terapia fonoaudiológica para niños requiere participación activa de los padres en el refuerzo del lenguaje y comunicación en casa para resultados óptimos.
+Fonoaudiología,Adulto,FONO-ADU-V1,"Servicio de fonoaudiología para adultos (habla, deglución, voz). Se requiere evaluación inicial para definir el plan de rehabilitación."
+Terapia Ocupacional,Niño,TO-NIÑ-V1,"La atención de Terapia Ocupacional infanto-juvenil en Centro Valú se realiza con consentimiento informado del apoderado, incluyendo evaluación y tratamiento con enfoque en integración sensorial y autonomía. 
+Se resguarda la confidencialidad, salvo en situaciones de riesgo para el bienestar del niño, niña o adolescente."
+Terapia Ocupacional,Adulto,TO-ADU-V1,Rehabilitación física o cognitiva para adultos. Se enfoca en la recuperación de actividades de la vida diaria.
+Psicopedagogía,Niño,PSP-NIÑ-V1,Apoyo en procesos de aprendizaje. Se requiere consentimiento informado de tutores y colaboración con el equipo escolar del menor.
+Psicopedagogía,Adulto,PSP-ADU-V1,Evaluación y apoyo en procesos de aprendizaje para adultos. Orientado a educación superior o recalificación laboral.
+GENERAL,Todos,v1.0,He leído y acepto los términos del consentimiento informado detallado anteriormente.
+GENERAL,Todos,v1.0,Acepto la Política de Privacidad y los Términos de Servicio.

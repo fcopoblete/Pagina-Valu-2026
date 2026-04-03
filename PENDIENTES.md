@@ -44,21 +44,31 @@ Este archivo contiene las tareas que deben realizarse a futuro para mejorar la e
 ## 📊 Salud Digital y SEO
 - 🟢 **[COMPLETADO]** Accesibilidad (Prioridad ALTA): Skip Links, anillos de enfoque, aria-labels integrados.
 - 🟢 **[COMPLETADO]** Performance (Prioridad MEDIA): width/height en base y loading="lazy" habilitados.
-- 🟡 **[EN PROCESO]** SEO Local (Requiere Revisión Manual antes de Producción):
-    - 🟢 **[COMPLETADO]** Verificar el campo "Dirección" en el JSON-LD de `MedicalBusiness`.
-    - 🟢 **[COMPLETADO]** Chequear los textos `alt` de todas las imágenes y enriquecer para SEO local.
-    - 🟢 **[COMPLETADO]** Generar y actualizar el `sitemap.xml` (Listo para subir a GSC).
+- 🟢 **[COMPLETADO]** **Optimización SEO/IA (Gemini/SGE)**: JSON-LD enriquecido en todas las especialidades, formación y convenios para indexación profunda.
+- 🟢 **[COMPLETADO]** SEO Local (Dirección, Alts, Sitemap generados).
 
-## 🛠️ Integraciones Técnicas (IDs Requeridos)
-- 🟢 **[COMPLETADO]** Google Ads: Configurado con ID real `AW-16532397408`.
-- 🟢 **[COMPLETADO]** Etiquetas de Conversión: Configuradas globalmente para WhatsApp y formularios (`LABEL_WHATSAPP`, `LABEL_FORM_PARTICULAR`, `LABEL_FORM_CONVENIOS`).
-- 🔴 **[FALTANTE]** Meta Pixel: Configurar `META_PIXEL_ID` real.
-- 🟢 **[COMPLETADO]** Webhooks de Producción: Cambiadas URLs `/webhook-test/` a `/webhook/` en todos los formularios.
+## 📝 Tareas Pendientes del Usuario (Acción Requerida)
+Estas tareas requieren acceso a cuentas externas o activos físicos que solo el usuario puede gestionar:
+
+1.  **Google Search Console**:
+    - [ ] Registrar la propiedad `https://centrovalu.cl`.
+    - [ ] Cargar el archivo `sitemap.xml` para acelerar la indexación.
+    - [ ] Solicitar indexación manual de la URL principal en la herramienta de inspección.
+2.  **Google Business Profile (Maps)**:
+    - [ ] Verificar que la dirección y el teléfono coincidan exactamente con la web.
+    - [ ] Subir fotos reales del centro (fachada, recepción, boxes) para mejorar el SEO local.
+3.  **Meta Pixel**:
+    - [ ] Proporcionar el `META_PIXEL_ID` real para reemplazar el placeholder en el código.
+4.  **Validación de Formularios**:
+    - [ ] Realizar pruebas reales de envío en los 3 formularios para confirmar la recepción en n8n.
 
 ## 📄 Consentimientos Informados (Crítico)
-- 🔴 **[FALTANTE]** **Documento Pediatría**: Generar el PDF específico para atención pediátrica (actualmente redirigido a Psicología Niños como fallback).
-- 🔴 **[FALTANTE]** **Versiones de Adultos TO / PSP**: Verificar si Terapia Ocupacional y Psicopedagogía requieren una versión diferenciada para adultos (actualmente usan una versión única).
-- 🟡 **[PENDIENTE]** **Validación Legal**: Revisar que los textos de los resúmenes inyectados en el Paso 4 del formulario cumplan con la normativa vigente de cada especialidad.
+- 🔴 **[FALTANTE]** **Documento Pediatría**: Generar el PDF específico para atención pediátrica.
+- 🔴 **[FALTANTE]** **Versiones de Adultos TO / PSP**: Verificar si requieren una versión diferenciada para adultos.
+- 🟡 **[PENDIENTE]** **Validación Legal**: Revisar los textos legales inyectados en el Paso 4 de los formularios.
+
+---
+*Nota: Este archivo debe ser actualizado visualmente por el asistente AI cada vez que una tarea cambie de estado.*
 
 ## 📄 Contenido Legal
 - 🟢 **[COMPLETADO]** Crear páginas de Privacidad y Términos.

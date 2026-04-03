@@ -67,7 +67,7 @@ Autor: Antigravity (AI Assistant)
       "description": "Apoyo especializado para superar barreras del aprendizaje en Coquimbo.",
       "medicalSpecialty": "EducationalPsychology",
       "mainEntity": {
-        "@type": "MedicalBusiness",
+        "@type": "MedicalClinic",
         "name": "Centro Valu",
         "address": {
           "@type": "PostalAddress",
@@ -75,6 +75,40 @@ Autor: Antigravity (AI Assistant)
           "addressLocality": "Coquimbo",
           "addressRegion": "Coquimbo y La Serena",
           "addressCountry": "CL"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Psicopedagogía",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Evaluación Psicopedagógica Integral"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Técnicas y Hábitos de Estudio"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Refuerzo Académico Personalizado"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Apoyo en Dificultades del Aprendizaje"
+              }
+            }
+          ]
         }
       }
     }
@@ -351,6 +385,13 @@ Autor: Antigravity (AI Assistant)
                     <h1 class="font-display text-5xl lg:text-7xl font-bold text-slate-900 leading-tight">
                         Psicopedagogía <br><span class="text-primary-600 italic">Aprendizaje Efectivo.</span>
                     </h1>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <!-- BANNER: PRESENCIAL -->
+                        <div class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
+                            <span class="text-sm">📍</span>
+                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Atención Presencial</span>
+                        </div>
+                    </div>
                     <p class="mt-8 text-lg text-slate-500 leading-relaxed border-l-4 border-primary-500 pl-6">
                         Acompañamiento especializado para potenciar el aprendizaje y superar desafíos académicos con
                         estrategias personalizadas y motivadoras.
