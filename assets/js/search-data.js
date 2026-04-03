@@ -117,7 +117,7 @@ window.searchData = [
     "icon": "🧠",
     "category": "Especialidad",
     "url": "psicologia.html",
-    "keywords": ["terapia", "mental", "emocional", "adultos", "niños", "pareja", "perinatal", "online", "vincular", "trauma", "apego", "psicoanálisis"]
+    "keywords": ["terapia", "mental", "emocional", "adultos", "niños", "pareja", "perinatal", "online", "presencial", "vincular", "trauma", "apego", "psicoanálisis"]
   },
   {
     "type": "service",
@@ -125,7 +125,7 @@ window.searchData = [
     "icon": "👶",
     "category": "Especialidad",
     "url": "pediatria.html",
-    "keywords": ["niños", "médico", "bebes", "crecimiento", "niño sano", "lactancia"]
+    "keywords": ["niños", "médico", "bebes", "crecimiento", "niño sano", "lactancia", "online", "presencial", "telemedicina"]
   },
   {
     "type": "service",
@@ -133,7 +133,7 @@ window.searchData = [
     "icon": "🗣️",
     "category": "Especialidad",
     "url": "fonoaudiologia.html",
-    "keywords": ["habla", "lenguaje", "voz", "deglución", "tel", "tdl", "articulación", "TEA", "autismo", "AMAR", "TEACCH", "CLAP", "motricidad orofacial", "disfagia", "audífono", "audición", "ACV", "tartamudez", "disfonía", "infanto-juvenil", "adultos"]
+    "keywords": ["habla", "lenguaje", "voz", "deglución", "tel", "tdl", "articulación", "TEA", "autismo", "AMAR", "TEACCH", "CLAP", "motricidad orofacial", "disfagia", "audífono", "audición", "ACV", "tartamudez", "disfonía", "infanto-juvenil", "adultos", "online", "presencial"]
   },
   {
     "type": "service",
@@ -141,7 +141,7 @@ window.searchData = [
     "icon": "🧤",
     "category": "Especialidad",
     "url": "terapia-ocupacional.html",
-    "keywords": ["autonmía", "sensorial", "motricidad", "fina", "diaria", "esfínter", "TEA", "autismo", "selectividad alimentaria", "perfil sensorial", "regulación emocional", "adaptación escolar", "AVD"]
+    "keywords": ["autonmía", "sensorial", "motricidad", "fina", "diaria", "esfínter", "TEA", "autismo", "selectividad alimentaria", "perfil sensorial", "regulación emocional", "adaptación escolar", "AVD", "presencial"]
   },
   {
     "type": "service",
@@ -149,7 +149,7 @@ window.searchData = [
     "icon": "📚",
     "category": "Especialidad",
     "url": "psicopedagogia.html",
-    "keywords": ["aprendizaje", "estudio", "colegio", "escuela", "reforzamiento"]
+    "keywords": ["aprendizaje", "estudio", "colegio", "escuela", "reforzamiento", "presencial"]
   },
 
   // SUB-SERVICIOS ESPECÍFICOS (PSICOLOGÍA)
@@ -364,6 +364,22 @@ window.searchData = [
     "category": "Tests",
     "url": "test-evaluaciones.html#wisc-v",
     "keywords": ["wisc", "wisc5", "wisc-v", "coeficiente", "intelectual", "cognitivo", "escolar"]
+  },
+  {
+    "type": "service",
+    "name": "Atención Online (Ver Especialidades)",
+    "icon": "💻",
+    "category": "Modalidad",
+    "url": "index.html#especialidades",
+    "keywords": ["remoto", "videollamada", "distancia", "telemedicina", "casa", "internet", "en línea", "zoom", "meet"]
+  },
+  {
+    "type": "service",
+    "name": "Atención Presencial",
+    "icon": "📍",
+    "category": "Modalidad",
+    "url": "index.html#contacto",
+    "keywords": ["sucursal", "oficina", "box", "centro", "coquimbo", "en persona", "físico", "lugar"]
   }
 ];
 
