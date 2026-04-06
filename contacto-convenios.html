@@ -713,7 +713,7 @@ Autor: Antigravity (AI Assistant)
             const now = new Date();
             data.fecha_envio = now.toLocaleDateString('es-CL') + ' ' + now.toLocaleTimeString('es-CL');
             data.dispositivo = getDeviceLabel();
-            data.lead_id = self.crypto.randomUUID ? self.crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(16).slice(2);
+            data.lead_id = Math.random().toString(36).substring(2, 10).toUpperCase();
 
             try {
                 const response = await fetch('https://n8n.sinesfuerzo.cl/webhook-test/centro-valu-contacto-convenios', {
