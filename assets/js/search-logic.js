@@ -231,7 +231,7 @@
         // Ordenar: Aranceles primero si la búsqueda es sobre costos o tests, luego Servicios y Páginas, luego Profesionales
         filtered.sort((a, b) => {
             const queryRaw = input.value.toLowerCase();
-            const isPriceQuery = queryRaw.includes('precio') || queryRaw.includes('valor') || queryRaw.includes('cuanto') || queryRaw.includes('costo') || queryRaw.includes('arancel') || queryRaw.includes('ados') || queryRaw.includes('wisc') || queryRaw.includes('tadi');
+            const isPriceQuery = queryRaw.includes('precio') || queryRaw.includes('valor') || queryRaw.includes('cuanto') || queryRaw.includes('costo') || queryRaw.includes('arancel') || queryRaw.includes('isapre') || queryRaw.includes('fonasa') || queryRaw.includes('ados') || queryRaw.includes('wisc') || queryRaw.includes('tadi');
             
             const aIsArancel = a.category === 'Aranceles';
             const bIsArancel = b.category === 'Aranceles';
