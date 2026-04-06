@@ -27,11 +27,13 @@ Autor: Antigravity (AI Assistant)
     <link rel="canonical" href="https://centrovalu.cl/formulario-contacto" />
 
     <!-- Google Tag (gtag.js) - Google Ads / Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16532397408"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H3VL1BL9Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
+      gtag('config', 'G-8H3VL1BL9Y');
       gtag('config', 'AW-16532397408');
     </script>
 
@@ -1341,7 +1343,10 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    // Seguimiento de Conversión
+                    // Seguimiento de Conversión (GA4 + GAds)
+                    if (typeof trackEvent === 'function') {
+                        trackEvent('formulario_success', 'success');
+                    }
                     trackGAdsConversion(LABELS.FORM_PARTICULAR);
                     trackMetaEvent('Lead');
                     

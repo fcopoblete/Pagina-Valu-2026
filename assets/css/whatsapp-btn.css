@@ -1,0 +1,82 @@
+/**
+ * Archivo: whatsapp-btn.css
+ * Descripción: Estilos para el botón flotante de WhatsApp con estética Glassmorphism.
+ * Última modificación: 2026-04-06
+ * Autor: Antigravity (AI Assistant)
+ */
+
+.wa-floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    background: rgba(37, 211, 102, 0.85); /* Verde WhatsApp con transparencia */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.wa-floating-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    background: rgba(37, 211, 102, 0.95);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+}
+
+.wa-floating-btn:active {
+    transform: scale(0.95);
+}
+
+.wa-floating-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+/* Tooltip */
+.wa-floating-btn::before {
+    content: "¡Contáctanos!";
+    position: absolute;
+    right: 80px;
+    background: white;
+    color: #1e293b;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.wa-floating-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
+    right: 70px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 640px) {
+    .wa-floating-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 54px;
+        height: 54px;
+    }
+    
+    .wa-floating-btn::before {
+        display: none; /* Hide tooltip on small mobile */
+    }
+}

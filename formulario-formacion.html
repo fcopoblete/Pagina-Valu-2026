@@ -14,11 +14,18 @@ Autor: Antigravity (AI Assistant)
     <meta name="description" content="Solicita información sobre formación clínica, supervisión y seminarios en Centro Valu.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="assets/brand/logo-valu.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Centro Valu">
+
+    <!-- Google Tag (gtag.js) - Google Ads / Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H3VL1BL9Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8H3VL1BL9Y');
+      gtag('config', 'AW-16532397408');
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -125,6 +132,9 @@ Autor: Antigravity (AI Assistant)
             letter-spacing: -0.02em;
         }
     </style>
+
+    <!-- WhatsApp Floating Button CSS -->
+    <link rel="stylesheet" href="assets/css/whatsapp-btn.css">
 </head>
 
 <body class="bg-[#f8fafc] text-slate-900 font-sans antialiased">
@@ -909,6 +919,10 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
+                    // Seguimiento de Conversión (GA4 + GAds)
+                    if (typeof trackEvent === 'function') {
+                        trackEvent('formulario_success', 'success');
+                    }
                     showModal('success', '¡Solicitud Enviada!', 'Tu postulación ha sido recibida con éxito. Nuestro equipo clínico revisará tus antecedentes y se pondrá en contacto contigo a la brevedad.', data.lead_id);
                     btn.innerText = 'ENVIADO';
                 } else {
@@ -1049,6 +1063,7 @@ Autor: Antigravity (AI Assistant)
     <script src="assets/js/pro-data.js"></script>
     <script src="assets/js/search-data.js"></script>
     <script src="assets/js/search-logic.js"></script>
+    <script src="assets/js/tracking-logic.js"></script>
     <!-- MESSAGE MODAL (Moved to bottom for correct portal/viewport behavior) -->
     <div id="message-modal" class="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4 py-12 hidden">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
