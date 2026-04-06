@@ -863,6 +863,18 @@ Autor: Antigravity (AI Assistant)
             return "PC / Desktop";
         }
 
+        function calculateAge(birthDateString) {
+            if (!birthDateString) return null;
+            const birthday = new Date(birthDateString);
+            const today = new Date();
+            let age = today.getFullYear() - birthday.getFullYear();
+            const m = today.getMonth() - birthday.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
         document.getElementById('formation-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
@@ -877,6 +889,7 @@ Autor: Antigravity (AI Assistant)
             const data = Object.fromEntries(formData.entries());
             data.tipo_lead = "FORMACION";
             data.dispositivo = getDeviceLabel();
+            data.edad = calculateAge(data.fecha_nacimiento);
 
             try {
                 // WEBHOOK PROVIDED BY USER

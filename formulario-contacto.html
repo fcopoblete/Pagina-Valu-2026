@@ -1310,12 +1310,24 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
-        // 6. DETECCIÓN DE DISPOSITIVO
+        // 6. DETECCIÓN DE DISPOSITIVO Y EDAD
         function getDeviceLabel() {
             const ua = navigator.userAgent;
             if (/android/i.test(ua)) return "Android";
             if (/iPad|iPhone|iPod|Macintosh/i.test(ua)) return "Apple";
             return "PC / Desktop";
+        }
+
+        function calculateAge(birthDateString) {
+            if (!birthDateString) return null;
+            const birthday = new Date(birthDateString);
+            const today = new Date();
+            let age = today.getFullYear() - birthday.getFullYear();
+            const m = today.getMonth() - birthday.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+                age--;
+            }
+            return age;
         }
 
         // 7. ENVÍO DEL FORMULARIO A n8n
@@ -1339,6 +1351,7 @@ Autor: Antigravity (AI Assistant)
             data.fecha_envio = new Date().toLocaleDateString('es-CL') + ' ' + new Date().toLocaleTimeString('es-CL');
             data.url_origen = window.location.href;
             data.dispositivo = getDeviceLabel();
+            data.edad = calculateAge(data.fecha_nacimiento);
 
             try {
                 const response = await fetch(WEBHOOK_URL, {
