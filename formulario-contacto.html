@@ -1,7 +1,7 @@
 <!--
 Archivo: formulario-contacto.html
 Descripción: Formulario multi-paso para contacto de usuarios individuales.
-Última modificación: 2026-03-20
+Última modificación: 2026-04-06
 Autor: Antigravity (AI Assistant)
 -->
 <!DOCTYPE html>
@@ -1310,7 +1310,15 @@ Autor: Antigravity (AI Assistant)
             });
         }
 
-        // 6. ENVÍO DEL FORMULARIO A n8n
+        // 6. DETECCIÓN DE DISPOSITIVO
+        function getDeviceLabel() {
+            const ua = navigator.userAgent;
+            if (/android/i.test(ua)) return "Android";
+            if (/iPad|iPhone|iPod|Macintosh/i.test(ua)) return "Apple";
+            return "PC / Desktop";
+        }
+
+        // 7. ENVÍO DEL FORMULARIO A n8n
         document.getElementById('main-contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -1330,7 +1338,7 @@ Autor: Antigravity (AI Assistant)
             data.tipo_lead = "PARTICULAR";
             data.fecha_envio = new Date().toLocaleDateString('es-CL') + ' ' + new Date().toLocaleTimeString('es-CL');
             data.url_origen = window.location.href;
-            data.dispositivo = navigator.userAgent;
+            data.dispositivo = getDeviceLabel();
 
             try {
                 const response = await fetch(WEBHOOK_URL, {

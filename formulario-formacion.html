@@ -1,7 +1,7 @@
 <!--
 Archivo: formulario-formacion.html
 Descripción: Formulario especializado para profesionales interesados en formación y supervisión clínica.
-Última modificación: 2026-03-26
+Última modificación: 2026-04-06
 Autor: Antigravity (AI Assistant)
 -->
 <!DOCTYPE html>
@@ -856,6 +856,13 @@ Autor: Antigravity (AI Assistant)
             modal.classList.remove('hidden');
         }
 
+        function getDeviceLabel() {
+            const ua = navigator.userAgent;
+            if (/android/i.test(ua)) return "Android";
+            if (/iPad|iPhone|iPod|Macintosh/i.test(ua)) return "Apple";
+            return "PC / Desktop";
+        }
+
         document.getElementById('formation-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
@@ -869,6 +876,7 @@ Autor: Antigravity (AI Assistant)
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
             data.tipo_lead = "FORMACION";
+            data.dispositivo = getDeviceLabel();
 
             try {
                 // WEBHOOK PROVIDED BY USER
