@@ -496,6 +496,19 @@ Autor: Antigravity (AI Assistant)
                             <h3 id="modal-title" class="font-display text-3xl font-bold text-slate-900 mb-4"></h3>
                             <p id="modal-description" class="text-slate-500 mb-10 text-sm leading-relaxed"></p>
                             
+                            <!-- Sección de Lead ID Visual -->
+                            <div id="lead-id-display" class="hidden mb-8 p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col items-center gap-2 animate-in fade-in zoom-in duration-500">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">ID de Seguimiento</span>
+                                <div class="flex items-center gap-3">
+                                    <code id="display-lead-id" class="text-lg font-mono font-bold text-primary-600 tracking-wider"></code>
+                                    <button type="button" onclick="copyLeadId()" id="copy-btn" class="p-2 bg-white rounded-xl border border-slate-200 text-slate-400 hover:text-primary-600 hover:border-primary-200 transition-all shadow-sm group" title="Copiar ID">
+                                        <svg class="w-4 h-4 group-active:scale-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
                             <div id="modal-actions" class="flex flex-col gap-3">
                                 <a id="modal-btn-success" href="/" class="px-8 py-3 bg-primary-50 text-primary-600 rounded-xl font-bold hover:bg-primary-100 transition-all hidden text-center">Volver al Inicio</a>
                                 <button id="modal-btn-error" type="button" onclick="closeModal()" class="px-8 py-3 bg-red-50 text-red-600 rounded-xl font-bold hover:bg-red-100 transition-all hidden">Reintentar</button>
@@ -832,18 +845,27 @@ Autor: Antigravity (AI Assistant)
             document.getElementById('message-modal').classList.add('hidden');
         }
 
-        function showModal(type, title, desc) {
+        function showModal(type, title, desc, leadId = null) {
             const modal = document.getElementById('message-modal');
             const successIcon = document.getElementById('modal-icon-success');
             const errorIcon = document.getElementById('modal-icon-error');
             const successBtn = document.getElementById('modal-btn-success');
             const errorBtn = document.getElementById('modal-btn-error');
+            const leadContainer = document.getElementById('lead-id-display');
+            const leadDisplay = document.getElementById('display-lead-id');
             
             // Reset
             [successIcon, errorIcon, successBtn, errorBtn].forEach(el => el.classList.add('hidden'));
             
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-description').textContent = desc;
+
+            if (type === 'success' && leadId) {
+                leadDisplay.textContent = leadId;
+                leadContainer.classList.remove('hidden');
+            } else {
+                leadContainer.classList.add('hidden');
+            }
             
             if (type === 'success') {
                 successIcon.classList.remove('hidden');
@@ -854,6 +876,25 @@ Autor: Antigravity (AI Assistant)
             }
             
             modal.classList.remove('hidden');
+        }
+
+        async function copyLeadId() {
+            const leadId = document.getElementById('display-lead-id').textContent;
+            const btn = document.getElementById('copy-btn');
+            const originalHTML = btn.innerHTML;
+
+            try {
+                await navigator.clipboard.writeText(leadId);
+                btn.innerHTML = '<svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>';
+                btn.classList.add('border-green-200', 'bg-green-50');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.classList.remove('border-green-200', 'bg-green-50');
+                }, 2000);
+            } catch (err) {
+                console.error('Error al copiar:', err);
+            }
         }
 
         function getDeviceLabel() {
@@ -901,7 +942,7 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    showModal('success', '¡Solicitud Enviada!', 'Tu postulación ha sido recibida con éxito. Nuestro equipo clínico revisará tus antecedentes y se pondrá en contacto contigo a la brevedad.');
+                    showModal('success', '¡Solicitud Enviada!', 'Tu postulación ha sido recibida con éxito. Nuestro equipo clínico revisará tus antecedentes y se pondrá en contacto contigo a la brevedad.', data.lead_id);
                     btn.innerText = 'ENVIADO';
                 } else {
                     throw new Error('Server error');
