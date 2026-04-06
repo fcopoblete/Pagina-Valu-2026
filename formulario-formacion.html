@@ -890,6 +890,7 @@ Autor: Antigravity (AI Assistant)
             data.tipo_lead = "FORMACION";
             data.dispositivo = getDeviceLabel();
             data.edad = calculateAge(data.fecha_nacimiento);
+            data.lead_id = self.crypto.randomUUID ? self.crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(16).slice(2);
 
             try {
                 // WEBHOOK PROVIDED BY USER
