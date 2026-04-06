@@ -709,6 +709,11 @@ Autor: Antigravity (AI Assistant)
             }
             
             modal.classList.remove('hidden');
+            
+            // Auto-scroll al inicio para centrar la atención si es éxito
+            if (type === 'success') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
 
         async function copyLeadId() {
