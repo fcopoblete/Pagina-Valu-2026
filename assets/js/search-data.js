@@ -117,7 +117,7 @@ window.searchData = [
     "icon": "🧠",
     "category": "Especialidad",
     "url": "psicologia.html",
-    "keywords": ["terapia", "mental", "emocional", "adultos", "niños", "pareja", "perinatal", "online", "presencial", "vincular", "trauma", "apego", "psicoanálisis"]
+    "keywords": ["terapia", "mental", "emocional", "adultos", "niños", "pareja", "perinatal", "online", "presencial", "vincular", "trauma", "apego", "psicoanálisis", "isapre", "fonasa"]
   },
   {
     "type": "service",
@@ -125,7 +125,7 @@ window.searchData = [
     "icon": "👶",
     "category": "Especialidad",
     "url": "pediatria.html",
-    "keywords": ["niños", "médico", "bebes", "crecimiento", "niño sano", "lactancia", "online", "presencial", "telemedicina"]
+    "keywords": ["niños", "médico", "bebes", "crecimiento", "niño sano", "lactancia", "online", "presencial", "telemedicina", "isapre", "fonasa"]
   },
   {
     "type": "service",
@@ -133,7 +133,7 @@ window.searchData = [
     "icon": "🗣️",
     "category": "Especialidad",
     "url": "fonoaudiologia.html",
-    "keywords": ["habla", "lenguaje", "voz", "deglución", "tel", "tdl", "articulación", "TEA", "autismo", "AMAR", "TEACCH", "CLAP", "motricidad orofacial", "disfagia", "audífono", "audición", "ACV", "tartamudez", "disfonía", "infanto-juvenil", "adultos", "online", "presencial"]
+    "keywords": ["habla", "lenguaje", "voz", "deglución", "tel", "tdl", "articulación", "TEA", "autismo", "AMAR", "TEACCH", "CLAP", "motricidad orofacial", "disfagia", "audífono", "audición", "ACV", "tartamudez", "disfonía", "infanto-juvenil", "adultos", "online", "presencial", "isapre", "fonasa"]
   },
   {
     "type": "service",
@@ -302,7 +302,7 @@ window.searchData = [
     "name": "Convenios",
     "icon": "🤝",
     "url": "convenios.html",
-    "keywords": ["isapre", "fonasa", "colegios", "empresas", "descuento"]
+    "keywords": ["colegios", "empresas", "descuento", "institucional", "alianza"]
   },
   {
     "type": "page",
@@ -331,7 +331,7 @@ window.searchData = [
     "icon": "💰",
     "category": "Aranceles",
     "url": "index.html#precios",
-    "keywords": ["precio", "valor", "costo", "cuanto vale", "pago", "arancel", "fonasa", "particular", "valores"]
+    "keywords": ["precio", "valor", "costo", "cuanto vale", "pago", "arancel", "fonasa", "isapre", "particular", "valores"]
   },
   {
     "type": "service",
