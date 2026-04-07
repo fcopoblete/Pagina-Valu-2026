@@ -1343,12 +1343,10 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    // Seguimiento de Conversión (GA4 + GAds)
-                    if (typeof trackEvent === 'function') {
-                        trackEvent('formulario_success', 'success');
+                    // Seguimiento de Conversión Unificado (GA4, GAds, Meta)
+                    if (typeof trackLead === 'function') {
+                        trackLead(data);
                     }
-                    trackGAdsConversion(LABELS.FORM_PARTICULAR);
-                    trackMetaEvent('Lead');
                     
                     showModal('success', '¡Recibido!', 'Tu solicitud ha sido enviada exitosamente. Nuestro equipo se contactará contigo vía WhatsApp o Email pronto.', data.lead_id);
                     this.reset();

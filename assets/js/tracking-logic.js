@@ -78,21 +78,58 @@ function injectWhatsAppButton() {
  * @param {string} eventName - Nombre del evento
  * @param {object} params - Parámetros adicionales
  */
+/**
+ * Función genérica para disparar eventos en GA4.
+ * @param {string} eventName - Nombre del evento
+ * @param {object} params - Parámetros adicionales
+ */
 function trackEvent(eventName, params = {}) {
     if (typeof gtag === 'function') {
+        // Asegurarse de que params sea un objeto
+        const eventParams = typeof params === 'object' ? params : { 'value': params };
+        
         // Enviar a GA4
-        gtag('event', eventName, params);
-        
-        // Si el evento mapea a una conversión de GAds, podrías enviarla aquí también
-        // Ejemplo simplificado: si es un formulario exitoso, enviar a GAds
-        if (eventName.includes('success')) {
-            const labelKey = eventName.toUpperCase();
-            if (LABELS[labelKey]) {
-                trackGAdsConversion(LABELS[labelKey]);
-            }
-        }
-        
-        console.log(`[Tracking] Evento disparado: ${eventName}`, params);
+        gtag('event', eventName, eventParams);
+        console.log(`[Tracking] Evento disparado: ${eventName}`, eventParams);
+    }
+}
+
+/**
+ * Función centralizada para el seguimiento de leads exitosos.
+ * Reemplaza las llamadas manuales en los formularios.
+ */
+function trackLead(data) {
+    const params = {
+        'content_type': 'lead',
+        'item_category': data.tipo_lead || 'General',
+        'lead_id': data.lead_id || 'N/A',
+        'specialty': data.especialidad || data.profesion || 'General',
+        'device': data.dispositivo || 'N/A'
+    };
+    
+    // 1. Google Analytics (Evento estándar)
+    trackEvent('generate_lead', params);
+    
+    // 2. Google Ads Conversion
+    const gadsLabel = getGAdsLabelByLeadType(data.tipo_lead);
+    if (gadsLabel) trackGAdsConversion(gadsLabel);
+    
+    // 3. Meta Pixel
+    trackMetaEvent('Lead', { 
+        content_name: params.specialty,
+        content_category: params.item_category 
+    });
+}
+
+/**
+ * Mapeo interno de tipos de lead a etiquetas de Google Ads.
+ */
+function getGAdsLabelByLeadType(type) {
+    switch (type) {
+        case 'PARTICULAR': return LABELS.FORM_CONTACTO;
+        case 'CONVENIOS': return LABELS.FORM_CONVENIOS;
+        case 'FORMACION': return LABELS.FORM_FORMACION;
+        default: return null;
     }
 }
 
@@ -114,8 +151,26 @@ function trackGAdsConversion(label) {
 function trackMetaEvent(event, params = {}) {
     if (typeof fbq === 'function') {
         fbq('track', event, params);
-        console.log(`[Tracking] Meta Event: ${event}`, params);
+        console.log(`[Tracking] Meta Pixel: ${event}`, params);
     }
+}
+
+/**
+ * Configura listeners globales para clics en enlaces de contacto directo.
+ */
+function setupGlobalClickTracking() {
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        
+        if (href.startsWith('tel:')) {
+            trackEvent('contact_click', { 'method': 'phone', 'value': href.replace('tel:', '') });
+        } else if (href.startsWith('mailto:')) {
+            trackEvent('contact_click', { 'method': 'email', 'value': href.replace('mailto:', '') });
+        }
+    });
 }
 
 /**
@@ -123,5 +178,6 @@ function trackMetaEvent(event, params = {}) {
  */
 document.addEventListener('DOMContentLoaded', function() {
     injectWhatsAppButton();
-    console.log('[Tracking] Sistema de seguimiento GA4 + WhatsApp inicializado.');
+    setupGlobalClickTracking();
+    console.log('[Tracking] Sistema de seguimiento GA4 optimizado e inicializado.');
 });

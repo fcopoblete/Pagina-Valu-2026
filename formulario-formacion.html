@@ -921,9 +921,9 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    // Seguimiento de Conversión (GA4 + GAds)
-                    if (typeof trackEvent === 'function') {
-                        trackEvent('formulario_success', 'success');
+                    // Seguimiento de Conversión Unificado (GA4, GAds, Meta)
+                    if (typeof trackLead === 'function') {
+                        trackLead(data);
                     }
                     showModal('success', '¡Solicitud Enviada!', 'Tu postulación ha sido recibida con éxito. Nuestro equipo clínico revisará tus antecedentes y se pondrá en contacto contigo a la brevedad.', data.lead_id);
                     btn.innerText = 'ENVIADO';

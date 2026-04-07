@@ -738,12 +738,10 @@ Autor: Antigravity (AI Assistant)
                 });
 
                 if (response.ok) {
-                    // Seguimiento de Conversión (GA4 + GAds)
-                    if (typeof trackEvent === 'function') {
-                        trackEvent('formulario_success', 'success');
+                    // Seguimiento de Conversión Unificado (GA4, GAds, Meta)
+                    if (typeof trackLead === 'function') {
+                        trackLead(data);
                     }
-                    trackGAdsConversion(LABELS.FORM_CONVENIOS);
-                    trackMetaEvent('Lead');
                     
                     showModal('success', '¡Solicitud Enviada!', 'La solicitud de convenio ha sido recibida con éxito. El equipo de Centro Valu se contactará con tu institución a la brevedad para coordinar una reunión.', data.lead_id);
                     btn.innerHTML = `ENVIADO <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
