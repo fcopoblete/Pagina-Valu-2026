@@ -17,6 +17,13 @@ const LABELS = {
     FORM_FORMACION: 'form_formacion_success'
 };
 
+// Configuración de Webhooks n8n
+const WEBHOOKS = {
+    PARTICULAR: 'https://n8n.sinesfuerzo.cl/webhook/centro-valu-contacto-particular',
+    CONVENIOS: 'https://n8n.sinesfuerzo.cl/webhook/centro-valu-contacto-convenios',
+    FORMACION: 'https://n8n.sinesfuerzo.cl/webhook/Contacto_Formacion'
+};
+
 /**
  * Inyecta dinámicamente el botón de WhatsApp si no existe en el DOM.
  */
@@ -79,12 +86,35 @@ function trackEvent(eventName, params = {}) {
         // Si el evento mapea a una conversión de GAds, podrías enviarla aquí también
         // Ejemplo simplificado: si es un formulario exitoso, enviar a GAds
         if (eventName.includes('success')) {
-            gtag('event', 'conversion', {
-                'send_to': `${GADS_ID}/${LABELS[eventName.toUpperCase()] || 'default'}`
-            });
+            const labelKey = eventName.toUpperCase();
+            if (LABELS[labelKey]) {
+                trackGAdsConversion(LABELS[labelKey]);
+            }
         }
         
         console.log(`[Tracking] Evento disparado: ${eventName}`, params);
+    }
+}
+
+/**
+ * Envía una conversión a Google Ads si el sistema está configurado.
+ */
+function trackGAdsConversion(label) {
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': `${GADS_ID}/${label}`
+        });
+        console.log(`[Tracking] GAds Conversion: ${label}`);
+    }
+}
+
+/**
+ * Envía un evento a Meta Pixel (Facebook) si el sistema está configurado.
+ */
+function trackMetaEvent(event, params = {}) {
+    if (typeof fbq === 'function') {
+        fbq('track', event, params);
+        console.log(`[Tracking] Meta Event: ${event}`, params);
     }
 }
 

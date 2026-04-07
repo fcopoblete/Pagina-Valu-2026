@@ -976,7 +976,7 @@ Autor: Antigravity (AI Assistant)
         // Configuración y Estado Global
         let currentStep = 1;
         const totalSteps = 4;
-        const WEBHOOK_URL = 'https://n8n.sinesfuerzo.cl/webhook/centro-valu-contacto-particular';
+
 
         // Protocolos por Especialidad (Mapeo Real a PDF)
         const protocols = {
@@ -1336,7 +1336,7 @@ Autor: Antigravity (AI Assistant)
             data.lead_id = Math.random().toString(36).substring(2, 10).toUpperCase();
 
             try {
-                const response = await fetch(WEBHOOK_URL, {
+                const response = await fetch(WEBHOOKS.PARTICULAR, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
