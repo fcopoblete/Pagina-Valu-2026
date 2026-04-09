@@ -1309,7 +1309,7 @@ Autor: Antigravity (AI Assistant)
             const data = Object.fromEntries(formData.entries());
             
             // Añadir metadatos
-            data.tipo_lead = "LLENADO_DE_DATOS";
+            data.tipo_lead = "Datos";
             data.fecha_envio = new Date().toLocaleDateString('es-CL') + ' ' + new Date().toLocaleTimeString('es-CL');
             data.url_origen = window.location.href;
             data.dispositivo = getDeviceLabel();
