@@ -87,7 +87,7 @@ window.searchData = [
   },
   {
     "type": "professional",
-    "name": "Ulda Castillo",
+    "name": "Ulda Vasquez",
     "specialty": "Fonoaudiología",
     "position": "Fonoaudióloga",
     "url": "fonoaudiologia.html#ulda-castillo",

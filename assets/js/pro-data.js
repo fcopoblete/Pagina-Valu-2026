@@ -138,7 +138,7 @@ window.proDataExtended = {
         descripcion: "Fonoaudióloga experta en primera infancia y abordaje de voz, tartamudez y motricidad orofacial. Utiliza el juego libre y la metodología A.M.A.R para favorecer procesos terapéuticos respetuosos, dinámicos y significativos centrados en la persona."
     },
     "ulda-castillo": {
-        nombre: "Ulda Castillo",
+        nombre: "Ulda Vasquez",
         cargo: "Fonoaudióloga",
         img: "assets/img/team/ulda-castillo.webp?v=top_framed",
         bg: "bg-primary-100/20",
