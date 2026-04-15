@@ -3,7 +3,7 @@
  * Descripción: Base de datos centralizada de profesionales de Centro Valu.
  *              Datos actualizados desde CSV y optimizados para lectura premium.
  *              Se han removido cargos redundantes de la sección de formación.
- * Fecha de última modificación: 2026-04-01
+ * Fecha de última modificación: 2026-04-15
  * Autor: Antigravity (AI Assistant)
  */
 
@@ -159,7 +159,7 @@ window.proDataExtended = {
         especialidad: "Fonoaudiología",
         formacion: [
             "Diplomado en Neurorrehabilitación.",
-            "Certificación en Manejo de Disfagia (Estándares IDDSI).",
+            "Manejo en Disfagia (Estándares IDDSI).",
             "Experto en Rehabilitación de Voz y Funciones Neurocognitivas.",
             "Certificado en Otoscopía y Lavado de Oídos."
         ],
