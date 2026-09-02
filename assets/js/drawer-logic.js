@@ -1,7 +1,7 @@
 /**
  * Archivo: assets/js/drawer-logic.js
- * Descripción: Lógica centralizada para el Drawer de Perfiles de Profesionales.
- * Fecha de última modificación: 2026-04-01
+ * Descripción: Lógica centralizada para el Drawer de Perfiles de Profesionales (placeholder de alta visibilidad).
+ * Fecha de última modificación: 2026-09-02
  * Autor: Antigravity (AI Assistant)
  */
 
@@ -34,11 +34,14 @@
 
         proDetailsTarget.innerHTML = `
             <div class="flex flex-col gap-8">
-                <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center shadow-inner">
+                <div class="relative aspect-video rounded-3xl overflow-hidden ${bgClass} flex items-center justify-center p-6 shadow-inner">
                     ${hasImage ? `
                         <img src="${data.img}" alt="${data.nombre}" class="w-full h-full object-contain p-4 transition-transform duration-500" loading="lazy">
                     ` : `
-                        <span class="text-primary-300 font-display text-8xl">Valu</span>
+                        <div class="flex flex-col items-center justify-center text-center">
+                            <img src="assets/brand/logo-valu.png" alt="Centro Valú" class="h-20 w-auto object-contain mb-3 drop-shadow-sm" loading="lazy">
+                            <span class="text-primary-700 font-display text-4xl font-bold tracking-wider">Centro Valú</span>
+                        </div>
                     `}
                 </div>
                 <div>

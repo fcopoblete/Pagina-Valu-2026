@@ -1,7 +1,8 @@
 /**
  * Archivo: search-data.js
- * Descripción: Datos del buscador de Centro Valu.
- * Definido como variable global para evitar problemas de CORS en entornos locales.
+ * Descripción: Datos del buscador de Centro Valu (incorporados nuevos psicólogos).
+ * Fecha de última modificación: 2026-09-02
+ * Autor: Antigravity (AI Assistant)
  */
 window.searchData = [
   // PROFESIONALES
@@ -60,6 +61,30 @@ window.searchData = [
     "position": "Psicóloga",
     "url": "psicologia.html#maria-munoz",
     "img": "assets/img/team/maria-muñoz.webp"
+  },
+  {
+    "type": "professional",
+    "name": "Nicolás Schifferli",
+    "specialty": "Psicología",
+    "position": "Psicólogo",
+    "url": "psicologia.html#nicolas-schifferli",
+    "img": "assets/img/team/placeholder.webp"
+  },
+  {
+    "type": "professional",
+    "name": "Susana Riquelme Pinto",
+    "specialty": "Psicología",
+    "position": "Psicóloga",
+    "url": "psicologia.html#susana-riquelme",
+    "img": "assets/img/team/placeholder.webp"
+  },
+  {
+    "type": "professional",
+    "name": "Priscilla Figueroa García",
+    "specialty": "Psicología",
+    "position": "Psicóloga",
+    "url": "psicologia.html#priscilla-figueroa",
+    "img": "assets/img/team/placeholder.webp"
   },
   {
     "type": "professional",

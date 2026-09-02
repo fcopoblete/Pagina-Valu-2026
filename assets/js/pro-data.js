@@ -1,9 +1,8 @@
 /**
  * Archivo: assets/js/pro-data.js
  * Descripción: Base de datos centralizada de profesionales de Centro Valu.
- *              Datos actualizados desde CSV y optimizados para lectura premium.
- *              Se han removido cargos redundantes de la sección de formación.
- * Fecha de última modificación: 2026-04-15
+ *              Datos actualizados con incorporación de nuevos psicólogos (Nicolás Schifferli, Susana Riquelme, Priscilla Figueroa).
+ * Fecha de última modificación: 2026-09-02
  * Autor: Antigravity (AI Assistant)
  */
 
@@ -107,6 +106,50 @@ window.proDataExtended = {
             "Especialista en Terapia Floral."
         ],
         descripcion: "Terapeuta con <span class='dynamic-exp' data-start-year='2010'>16</span> años de experiencia clínica sistémico-vincular. Se especializa en el bienestar relacional de familias, niños y adultos, utilizando la terapia floral como complemento respetuoso al proceso terapéutico basado en recursos."
+    },
+    "nicolas-schifferli": {
+        nombre: "Nicolás Schifferli",
+        cargo: "Psicólogo",
+        img: "assets/img/team/placeholder.webp",
+        bg: "bg-brand-lila/20",
+        especialidad: "Psicología",
+        formacion: [
+            "Postítulo Especialista en Terapia Sistémica Breve (c) – Centro de Estudios Sistémicos.",
+            "Diplomado de Postítulo en Psicoterapia Sistémica Familiar – Universidad de Chile (2023).",
+            "Diplomado Internacional en Estrategias Clínicas en Psicoterapia Breve en Adultos – ADIPA (2022).",
+            "Psicología – Universidad de Las Américas, Quito, Ecuador / Santiago, Chile.",
+            "Especializaciones en Terapia de Parejas, Trastorno de Pánico, VIF y Abordaje de Adolescentes."
+        ],
+        descripcion: "Psicólogo con más de <span class='dynamic-exp' data-start-year='2016'>10</span> años de experiencia clínica, dedicado principalmente a la terapia de parejas, familiar, adultos y adolescentes. Desde un enfoque sistémico-relacional y estratégico de terapia breve, promueve nuevas herramientas para abordar el malestar y fortalecer relaciones saludables."
+    },
+    "susana-riquelme": {
+        nombre: "Susana Riquelme Pinto",
+        cargo: "Psicóloga",
+        img: "assets/img/team/placeholder.webp",
+        bg: "bg-brand-beige/40",
+        especialidad: "Psicología",
+        formacion: [
+            "Psicología – Universidad del Mar, Antofagasta.",
+            "Diplomado en Intervenciones Terapéuticas en Segunda Infancia y Adolescencia – ADIPA.",
+            "Especialización en evaluación de neurodivergencias: autismo, TDAH, altas capacidades y doble excepcionalidad.",
+            "Certificación y formación en WISC-V, WAIS-IV, ADOS-2 y ABAS-II.",
+            "Formación en evaluación neuropsicológica, funciones ejecutivas y psicodiagnóstico.",
+            "Formación en Terapia Cognitivo-Conductual, ACT, Terapia Narrativa y evaluación laboral (STAR, DISC)."
+        ],
+        descripcion: "Psicóloga clínica con amplia experiencia en neurodivergencias y evaluación psicológica integral en niños, adolescentes y adultos. Combina un enfoque sistémico-relacional con herramientas cognitivo-conductuales y ACT, ofreciendo un espacio de escucha empático y riguroso."
+    },
+    "priscilla-figueroa": {
+        nombre: "Priscilla Figueroa García",
+        cargo: "Psicóloga",
+        img: "assets/img/team/placeholder.webp",
+        bg: "bg-primary-100/20",
+        especialidad: "Psicología",
+        formacion: [
+            "Psicóloga, mención Clínica-Comunitaria – Universidad Academia de Humanismo Cristiano.",
+            "Formación en el ámbito laboral, género e intervención comunitaria.",
+            "Especialización en procesos de revinculación familiar, fortalecimiento de relaciones y reconstrucción de alianzas."
+        ],
+        descripcion: "Psicóloga con más de <span class='dynamic-exp' data-start-year='2011'>15</span> años de trayectoria profesional en los ámbitos clínico, comunitario y educacional. Desde un enfoque sistémico, acompaña a niños, adolescentes, adultos y familias en procesos de revinculación con un estilo cercano y orientado a soluciones concretas."
     },
     "valeria-alfaro": {
         nombre: "Valeria Alfaro",
