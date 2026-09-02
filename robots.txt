@@ -1,3 +1,8 @@
+# Archivo: robots.txt
+# Descripción: Directivas de rastreo para buscadores y motores de IA en Centro Valu.
+# Fecha de última modificación: 2026-09-02
+# Autor: Antigravity (AI Assistant)
+
 User-agent: *
 Allow: /
 
