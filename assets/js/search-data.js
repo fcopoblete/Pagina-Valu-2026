@@ -68,23 +68,23 @@ window.searchData = [
     "specialty": "Psicología",
     "position": "Psicólogo",
     "url": "psicologia.html#nicolas-schifferli",
-    "img": "assets/img/team/placeholder.webp"
+    "img": "assets/img/team/nicolas-schifferli.webp"
   },
   {
     "type": "professional",
-    "name": "Susana Riquelme Pinto",
+    "name": "Susana Riquelme",
     "specialty": "Psicología",
     "position": "Psicóloga",
     "url": "psicologia.html#susana-riquelme",
-    "img": "assets/img/team/placeholder.webp"
+    "img": "assets/img/team/susana-riquelme.webp"
   },
   {
     "type": "professional",
-    "name": "Priscilla Figueroa García",
+    "name": "Priscilla Figueroa",
     "specialty": "Psicología",
     "position": "Psicóloga",
     "url": "psicologia.html#priscilla-figueroa",
-    "img": "assets/img/team/placeholder.webp"
+    "img": "assets/img/team/priscilla-figueroa.webp"
   },
   {
     "type": "professional",

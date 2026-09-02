@@ -110,7 +110,7 @@ window.proDataExtended = {
     "nicolas-schifferli": {
         nombre: "Nicolás Schifferli",
         cargo: "Psicólogo",
-        img: "assets/img/team/placeholder.webp",
+        img: "assets/img/team/nicolas-schifferli.webp",
         bg: "bg-brand-lila/20",
         especialidad: "Psicología",
         formacion: [
@@ -123,9 +123,9 @@ window.proDataExtended = {
         descripcion: "Psicólogo con más de <span class='dynamic-exp' data-start-year='2016'>10</span> años de experiencia clínica, dedicado principalmente a la terapia de parejas, familiar, adultos y adolescentes. Desde un enfoque sistémico-relacional y estratégico de terapia breve, promueve nuevas herramientas para abordar el malestar y fortalecer relaciones saludables."
     },
     "susana-riquelme": {
-        nombre: "Susana Riquelme Pinto",
+        nombre: "Susana Riquelme",
         cargo: "Psicóloga",
-        img: "assets/img/team/placeholder.webp",
+        img: "assets/img/team/susana-riquelme.webp",
         bg: "bg-brand-beige/40",
         especialidad: "Psicología",
         formacion: [
@@ -139,9 +139,9 @@ window.proDataExtended = {
         descripcion: "Psicóloga clínica con amplia experiencia en neurodivergencias y evaluación psicológica integral en niños, adolescentes y adultos. Combina un enfoque sistémico-relacional con herramientas cognitivo-conductuales y ACT, ofreciendo un espacio de escucha empático y riguroso."
     },
     "priscilla-figueroa": {
-        nombre: "Priscilla Figueroa García",
+        nombre: "Priscilla Figueroa",
         cargo: "Psicóloga",
-        img: "assets/img/team/placeholder.webp",
+        img: "assets/img/team/priscilla-figueroa.webp",
         bg: "bg-primary-100/20",
         especialidad: "Psicología",
         formacion: [
