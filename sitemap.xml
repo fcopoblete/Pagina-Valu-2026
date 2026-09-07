@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 Archivo: sitemap.xml
-Descripción: Mapa del sitio web de Centro Valu para indexación en buscadores y motores de IA.
-Fecha de última modificación: 2026-09-02
+Descripción: Mapa del sitio web de Centro Valu para indexación en buscadores y motores de IA con URLs canónicas limpias.
+Fecha de última modificación: 2026-09-07
 Autor: Antigravity (AI Assistant)
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://centrovalu.cl/</loc>
-        <lastmod>2026-09-02</lastmod>
+        <lastmod>2026-09-07</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/psicologia.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/psicologia</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/profesionales.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/profesionales</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/pediatria.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/pediatria</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/fonoaudiologia.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/fonoaudiologia</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/terapia-ocupacional.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/terapia-ocupacional</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/psicopedagogia.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/psicopedagogia</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/test-evaluaciones.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/test-evaluaciones</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/formacion.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/formacion</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/quienes-somos.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/quienes-somos</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/convenios.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/convenios</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/formulario-contacto.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/formulario-contacto</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/contacto-convenios.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/contacto-convenios</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/formulario-formacion.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/formulario-formacion</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/privacidad.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/privacidad</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://centrovalu.cl/terminos.html</loc>
-        <lastmod>2026-09-02</lastmod>
+        <loc>https://centrovalu.cl/terminos</loc>
+        <lastmod>2026-09-07</lastmod>
         <priority>0.5</priority>
     </url>
 </urlset>
