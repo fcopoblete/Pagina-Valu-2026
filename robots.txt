@@ -1,9 +1,22 @@
 # Archivo: robots.txt
 # Descripción: Directivas de rastreo para buscadores y motores de IA en Centro Valu.
-# Fecha de última modificación: 2026-09-02
+# Fecha de última modificación: 2026-09-09
 # Autor: Antigravity (AI Assistant)
 
 User-agent: *
+Allow: /
+
+# Agentes de IA explicados explícitamente
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://centrovalu.cl/sitemap.xml

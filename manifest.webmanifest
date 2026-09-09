@@ -1,0 +1,21 @@
+{
+  "name": "Centro Valú - Centro de Salud Integral",
+  "short_name": "Centro Valú",
+  "description": "Centro médico en Coquimbo especializado en Psicología presencial y Terapia Online, Fonoaudiología, Terapia Ocupacional y Pediatría con arancel Fonasa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/logo-valu.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
