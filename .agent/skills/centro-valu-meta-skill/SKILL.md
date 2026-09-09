@@ -53,10 +53,14 @@ Cualquier modificación al equipo médico (altas, bajas o modificaciones) DEBE s
 - **Navegación Intuitiva (Popstate)**: Cualquier menú móvil, modal o "drawer" (como el de profesionales) DEBE implementar la API de History (`pushState` y evento `popstate`). Así, si el usuario presiona el botón "Atrás" en su dispositivo físico/virtual para intentar cerrar el menú o modal, este simplemente se cerrará sin sacarlo de la página actual.
 - Si el usuario te pide modificar el encabezado (`index.html`) o el pie de página y te indica hacerlo *solo en una página*, **DEBES** registrar inmediatamente en `PENDIENTES.md` una tarea requerida para replicar ese mismo cambio en las 10+ páginas restantes del ecosistema, evitando discrepancias de diseño.
 
-## 📈 Estándares SEO Local (Coquimbo/La Serena)
+## 📈 Estándares SEO Local e Indexación para Motores de IA (LLMs)
 - **Titles**: `[Especialidad] en Coquimbo y La Serena | Centro Valu - [Promesa de Valor]`.
 - **Descriptions**: Incluir siempre la ubicación geográfica y el beneficio principal (ej. "Convenio Fonasa", "Atención integral").
-- **JSON-LD**: Cada nueva página de servicio debe incluir el script `MedicalWebPage` apuntando al `MedicalBusiness` principal.
+- **JSON-LD**: Cada nueva página de servicio debe incluir el script `MedicalWebPage` o schema correspondiente apuntando al `MedicalBusiness` principal.
+- **Directorio de IA (`llms.txt`)**: Toda nueva especialidad, cambio arancelario o incorporación de profesional debe reflejarse en `llms.txt` para ser consumido por ChatGPT, Gemini, Perplexity y Claude.
+- **Rastreo (`robots.txt`)**: Mantener directivas explícitas para rastreadores tradicionales y agentes de IA (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`).
+- **Sitemap (`sitemap.xml`)**: Toda nueva URL debe registrarse con su fecha `<lastmod>` actualizada.
+- **Google Search Console**: Propiedad verificada a nivel de dominio vía registro TXT en AWS Route 53 y Google Analytics. Sitemap validado continuamente.
 
 ## 🛠️ Escalabilidad (Cómo agregar una nueva especialidad)
 1. **Nueva Página**: Duplicar `psicologia.html` como base.

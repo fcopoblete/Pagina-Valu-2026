@@ -77,3 +77,19 @@ sudo chown -R www-data:www-data /var/www/html/
    sudo certbot --nginx -d centrovalu.cl -d www.centrovalu.cl
    ```
    Certbot configurará automáticamente `nginx` para que tengas HTTPS seguro con un certificado sin costo a través de Let's Encrypt.
+
+---
+
+## 🌐 Configuración DNS en AWS Route 53
+
+La zona alojada (`Hosted Zone`) de `centrovalu.cl` se gestiona directamente en **AWS Route 53**:
+
+### Registros Principales:
+- **NS / SOA**: Delegación oficial del dominio desde NIC Chile hacia AWS Route 53.
+- **A / CNAME**: Apuntamientos hacia AWS Amplify / CloudFront para la entrega de la web con SSL.
+- **TXT (Google Search Console)**:
+  - **Nombre**: `@` / vacío (`centrovalu.cl`)
+  - **Tipo**: `TXT`
+  - **TTL**: `300` segundos
+  - **Valor**: `"google-site-verification=lighW2iGBPOKmOsu0RZK46JL6QTdqVmZxvgH1ZproW0"`
+  - **Propósito**: Verificación de propiedad del dominio con el nivel más alto de privilegios en Google Search Console para indexación automática y monitoreo de sitemaps.
