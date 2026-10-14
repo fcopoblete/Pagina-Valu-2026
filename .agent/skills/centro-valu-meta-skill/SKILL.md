@@ -2,6 +2,12 @@
 name: centro-valu-meta-skill
 description: Manual Maestro y Generador de Habilidades para Centro Valu. Define los estándares de escalabilidad, mantenimiento de profesionales y coherencia visual del ecosistema digital.
 ---
+<!--
+Archivo: SKILL.md
+Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de indexación limpia para GSC.
+Fecha de última modificación: 2026-09-23
+Nombre del autor: Antigravity
+-->
 
 # 🎭 Rol: Arquitecto de Escabilidad y Guardián de Marca
 Eres el especialista senior encargado de la integridad técnica y visual de Centro Valu. Tu objetivo es asegurar que cada iteración del sitio mantenga la "calidez clínica" y los estándares premium.
@@ -56,11 +62,14 @@ Cualquier modificación al equipo médico (altas, bajas o modificaciones) DEBE s
 ## 📈 Estándares SEO Local e Indexación para Motores de IA (LLMs)
 - **Titles**: `[Especialidad] en Coquimbo y La Serena | Centro Valu - [Promesa de Valor]`.
 - **Descriptions**: Incluir siempre la ubicación geográfica y el beneficio principal (ej. "Convenio Fonasa", "Atención integral").
+- **URLs Canónicas Limpias (CRÍTICO)**: Toda página pública DEBE poseer su etiqueta `<link rel="canonical" href="https://centrovalu.cl/[slug]" />` sin extensión `.html` y sin slash final (excepto el home `/`).
+- **Enlaces Internos sin `.html` (CRÍTICO)**: Queda estrictamente prohibido enlazar internamente a rutas relativas o absolutas con extensión `.html` (ej. `formulario-contacto.html?especialidad=...`). Todo enlace interno debe apuntar a la ruta limpia absoluta `/formulario-contacto?especialidad=...` para evitar redirecciones (301) o errores 404 en Googlebot.
+- **Aislamiento de Páginas Internas**: Páginas marcadas con `noindex, nofollow` (ej. `/llenado-datos`) no deben ser enlazadas en la navegación pública principal para no consumir presupuesto de rastreo (crawl budget).
 - **JSON-LD**: Cada nueva página de servicio debe incluir el script `MedicalWebPage` o schema correspondiente apuntando al `MedicalBusiness` principal.
 - **Directorio de IA (`llms.txt`)**: Toda nueva especialidad, cambio arancelario o incorporación de profesional debe reflejarse en `llms.txt` para ser consumido por ChatGPT, Gemini, Perplexity y Claude.
 - **Rastreo (`robots.txt`)**: Mantener directivas explícitas para rastreadores tradicionales y agentes de IA (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`).
 - **Sitemap (`sitemap.xml`)**: Toda nueva URL debe registrarse con su fecha `<lastmod>` actualizada.
-- **Google Search Console**: Propiedad verificada a nivel de dominio vía registro TXT en AWS Route 53 y Google Analytics. Sitemap validado continuamente.
+- **Google Search Console**: Propiedad verificada a nivel de dominio vía registro TXT en AWS Route 53 y Google Analytics. Sitemap validado continuamente. Cobertura monitoreada para resolver cualquier alerta de páginas no indexadas.
 
 ## 🛠️ Escalabilidad (Cómo agregar una nueva especialidad)
 1. **Nueva Página**: Duplicar `psicologia.html` como base.
