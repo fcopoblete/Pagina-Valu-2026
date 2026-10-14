@@ -927,81 +927,159 @@ Nombre del autor: Antigravity (AI Assistant)
             </div>
         </section>
 
-        <!-- SECCIÓN: UBICACIÓN Y AGENDAR -->
-        <section class="py-20 bg-slate-950 text-white relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- SECCIÓN: UBICACIÓN Y DOS SEDES CON GOOGLE MAPS -->
+        <section id="ubicacion" class="py-20 lg:py-28 bg-slate-950 text-white relative overflow-hidden">
+            <!-- Fondos sutiles con blur -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[500px] h-[500px] bg-secondary-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- ENCABEZADO DE SECCIÓN -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 bg-primary-500/20 text-primary-400 border border-primary-500/30 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                        <span class="w-2 h-2 rounded-full bg-primary-400 animate-ping"></span>
+                        Presencia en Coquimbo
+                    </div>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold leading-tight mb-4">
+                        Nuestras <span class="text-primary-400">Sucursales</span>
+                    </h2>
+                    <p class="text-slate-400 text-base sm:text-lg">
+                        El Gimnasio Terapéutico está ubicado en nuestra nueva sucursal de <b>Gil de Castro 122</b>. También puedes acceder a atención clínica integral en nuestra sede principal de <b>Parque Lauca 1612</b>.
+                    </p>
+                </div>
+
+                <!-- CUADRÍCULA DE 2 COLUMNAS (AMBAS SEDES CON GOOGLE MAPS) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
                     
-                    <div>
-                        <div class="inline-block bg-primary-500/20 text-primary-400 border border-primary-500/30 text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider">
-                            Nueva Sucursal Coquimbo
-                        </div>
-                        <h2 class="font-display text-4xl sm:text-5xl font-bold leading-tight mb-6">
-                            ¿Comenzamos a <br><span class="text-primary-400">descubrir juntos?</span>
-                        </h2>
-                        <p class="text-slate-400 text-base leading-relaxed mb-8">
-                            Ven a conocer nuestro espacio en la nueva sucursal de Centro Valú. En esta sede también encontrarás atención especializada en <b>Fonoaudiología, Terapia Ocupacional, Apoyo Escolar y Psicopedagogía</b>.
-                        </p>
+                    <!-- COLUMNA 1: NUEVA SEDE GIL DE CASTRO (DONDE ESTÁ EL GIMNASIO) -->
+                    <div class="bg-slate-900/95 rounded-[2.5rem] p-6 sm:p-8 border-2 border-primary-500/50 shadow-2xl flex flex-col justify-between hover:border-primary-500/80 transition-all duration-300 group relative overflow-hidden">
+                        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start gap-4">
-                                <span class="text-primary-400 text-xl">📍</span>
-                                <div>
-                                    <p class="font-bold text-white text-base">Dirección:</p>
-                                    <p class="text-slate-400 text-sm">Gil de Castro 122, Coquimbo, Región de Coquimbo.</p>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between gap-3 mb-4">
+                                <span class="inline-flex items-center gap-1.5 bg-primary-500 text-slate-950 text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                                    ✨ Sede Gimnasio Terapéutico
+                                </span>
+                                <span class="text-xs text-primary-300 font-bold">Nueva Sucursal</span>
+                            </div>
+
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+                                Gil de Castro
+                            </h3>
+
+                            <address class="not-italic text-primary-300 text-sm sm:text-base font-semibold mb-4 flex items-start gap-2">
+                                <span>Gil de Castro 122, Coquimbo, Región de Coquimbo</span>
+                            </address>
+
+                            <div class="mb-5">
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Especialidades en esta sede:</p>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[11px] bg-primary-500/20 text-primary-200 border border-primary-500/30 px-2.5 py-1 rounded-lg font-bold">Gimnasio Terapéutico (hasta 6 años)</span>
+                                    <span class="text-[11px] bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg">Fonoaudiología</span>
+                                    <span class="text-[11px] bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg">Terapia Ocupacional</span>
+                                    <span class="text-[11px] bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg">Psicopedagogía & Apoyo Escolar</span>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
-                                <span class="text-primary-400 text-xl">⏰</span>
-                                <div>
-                                    <p class="font-bold text-white text-base">Horarios de Gimnasio:</p>
-                                    <p class="text-slate-400 text-sm">Lunes a Jueves durante las mañanas (turnos coordinados).</p>
-                                </div>
+
+                            <div class="space-y-2 mb-4 text-xs text-slate-300">
+                                <p><span class="font-bold text-white">⏰ Horario Gimnasio:</span> Lunes a Jueves durante las mañanas (turnos coordinados).</p>
+                            </div>
+
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <a href="https://maps.google.com/?q=Gil+de+Castro+122,+Coquimbo,+Chile" 
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="inline-flex items-center gap-2 text-xs font-bold text-primary-400 hover:text-white transition-colors py-1 group-hover:translate-x-1 transition-transform">
+                                    <span>Abrir en Google Maps / Waze</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                </a>
+                                <a href="https://wa.me/56972454921?text=Hola%20Centro%20Val%C3%BA%2C%20quisiera%20agendar%20una%20visita%20para%20conocer%20el%20gimnasio%20en%20Gil%20de%20Castro%20122" 
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="text-xs font-bold text-primary-300 hover:underline">
+                                    Coordinar por WhatsApp →
+                                </a>
                             </div>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="https://wa.me/56972454921?text=Hola%20Centro%20Val%C3%BA%2C%20quisiera%20agendar%20una%20visita%20para%20conocer%20el%20gimnasio%20en%20Gil%20de%20Castro%20122" 
-                               target="_blank" rel="noopener noreferrer"
-                               class="bg-primary-500 text-slate-950 px-8 py-4 rounded-xl font-bold text-center hover:bg-primary-400 transition-all shadow-lg">
-                                Coordinar Visita por WhatsApp
-                            </a>
-                            <a href="/formulario-contacto?servicio=gimnasio" 
-                               class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-center transition-all">
-                                Formulario de Admisión
-                            </a>
+                        <!-- MAPA GOOGLE EMBEBIDO: GIL DE CASTRO 122 -->
+                        <div class="rounded-2xl overflow-hidden border-2 border-primary-500/40 h-72 sm:h-80 w-full shadow-inner mt-4 relative z-10">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Gil%20de%20Castro%20122,%20Coquimbo,%20Chile&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                title="Mapa Nueva Sede Gil de Castro 122 - Gimnasio Terapéutico"></iframe>
                         </div>
                     </div>
 
-                    <!-- TARJETA DESTACADA VISUAL -->
-                    <div class="rounded-3xl p-8 bg-slate-900 border border-white/10 shadow-2xl relative overflow-hidden">
-                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-primary-500/10 rounded-full blur-3xl"></div>
-                        <h3 class="font-display text-2xl font-bold text-white mb-4">Sedes de Centro Valú</h3>
-                        
-                        <div class="space-y-6">
-                            <!-- Sede 1 -->
-                            <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h4 class="font-bold text-primary-400">Sede Principal (Parque Lauca)</h4>
-                                    <span class="text-[10px] bg-white/10 px-2 py-0.5 rounded text-slate-300">Bosque San Carlos</span>
-                                </div>
-                                <p class="text-xs text-slate-400">Parque Nacional Lauca 1612, Coquimbo</p>
-                                <p class="text-xs text-slate-500 mt-1">Psicología, Pediatría, Tests Diagnósticos y Evaluaciones Clínicas.</p>
+                    <!-- COLUMNA 2: SEDE PRINCIPAL (PARQUE LAUCA) -->
+                    <div class="bg-slate-900/90 rounded-[2.5rem] p-6 sm:p-8 border border-white/10 shadow-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group">
+                        <div>
+                            <div class="flex items-center justify-between gap-3 mb-4">
+                                <span class="inline-flex items-center gap-1.5 bg-white/10 text-slate-300 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    📍 Sede Central
+                                </span>
+                                <span class="text-xs text-slate-400 font-medium">Bosque San Carlos</span>
                             </div>
 
-                            <!-- Sede 2 -->
-                            <div class="p-5 rounded-2xl bg-primary-500/10 border border-primary-500/30">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h4 class="font-bold text-primary-300">Nueva Sede Gil de Castro</h4>
-                                    <span class="text-[10px] bg-primary-500 text-slate-950 font-bold px-2 py-0.5 rounded uppercase">Nueva</span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+                                Parque Nacional Lauca
+                            </h3>
+
+                            <address class="not-italic text-primary-300 text-sm sm:text-base font-semibold mb-4 flex items-start gap-2">
+                                <span>Parque Nacional Lauca 1612, Coquimbo</span>
+                            </address>
+
+                            <div class="mb-5">
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Especialidades en esta sede:</p>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[11px] bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg">Psicología Infanto-Juvenil & Adultos</span>
+                                    <span class="text-[11px] bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg">Pediatría Integral</span>
+                                    <span class="text-[11px] bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg">Tests ADOS-2 & WISC-V</span>
+                                    <span class="text-[11px] bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-lg">Convenio Fonasa</span>
                                 </div>
-                                <p class="text-xs text-slate-200">Gil de Castro 122, Coquimbo</p>
-                                <p class="text-xs text-primary-200/80 mt-1">Gimnasio Terapéutico, Fonoaudiología, Terapia Ocupacional, Apoyo Escolar y Psicopedagogía.</p>
                             </div>
+
+                            <div class="space-y-2 mb-4 text-xs text-slate-300">
+                                <p><span class="font-bold text-white">⏰ Horario Sede:</span> Lunes a Viernes 09:00 - 19:30 · Sábados 09:00 - 14:00.</p>
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Parque+Nacional+Lauca+1612,+Coquimbo,+Chile" 
+                               target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-2 text-xs font-bold text-primary-400 hover:text-white transition-colors py-1 mb-4 group-hover:translate-x-1 transition-transform">
+                                <span>Abrir en Google Maps / Waze</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- MAPA GOOGLE EMBEBIDO: PARQUE LAUCA -->
+                        <div class="rounded-2xl overflow-hidden border-2 border-white/10 h-72 sm:h-80 w-full shadow-inner mt-4 relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d800.349673934371!2d-71.3094892!3d-29.9693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f20!3m3!1m2!1s0x9691ca5c5f87b32d%3A0x1d3d0f0c0f0c0f0c!2sParque%20Nacional%20Lauca%201612%2C%20Coquimbo%2C%20Chile!5e0!3m2!1ses!2scl!4v1709580000000!5m2!1ses!2scl"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                title="Mapa Sede Central Parque Lauca 1612"></iframe>
                         </div>
                     </div>
 
                 </div>
+
+                <!-- BARRA INFERIOR DE ACCIÓN (WHATSAPP + FORMULARIO ADMISIÓN + DATOS) -->
+                <div class="mt-12 bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-slate-300">
+                    <div>
+                        <h4 class="font-display text-xl font-bold text-white mb-1">¿Quieres conocer las instalaciones o comenzar?</h4>
+                        <p class="text-xs sm:text-sm text-slate-400">Coordina una visita con nuestro equipo interdisciplinario o postula directamente.</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                        <a href="https://wa.me/56972454921?text=Hola%20Centro%20Val%C3%BA%2C%20quisiera%20agendar%20una%20visita%20para%20conocer%20el%20gimnasio%20en%20Gil%20de%20Castro%20122" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="bg-primary-500 hover:bg-primary-400 text-slate-950 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all shadow-md text-center">
+                            Coordinar Visita WhatsApp
+                        </a>
+                        <a href="/formulario-contacto?servicio=gimnasio" 
+                           class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all text-center">
+                            Formulario de Admisión
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
