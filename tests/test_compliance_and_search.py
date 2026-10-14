@@ -96,6 +96,12 @@ class TestCentroValuComplianceAndSearch(unittest.TestCase):
         self.assertIn('"cancelacion"', content)
         self.assertIn('"urgencias"', content)
 
+        # Nueva sucursal y Gimnasio Terapéutico
+        self.assertIn('"Gimnasio Terapéutico"', content)
+        self.assertIn('"gimnasio-terapeutico.html"', content)
+        self.assertIn('"estimulacion temprana"', content)
+        self.assertIn('"gil de castro"', content)
+
     def test_search_logic_enter_key(self):
         """Verifica que search-logic.js permita seleccionar y navegar directamente con Enter."""
         content = self._read_file('assets/js/search-logic.js')
@@ -107,6 +113,7 @@ class TestCentroValuComplianceAndSearch(unittest.TestCase):
         """Verifica que las principales páginas públicas enlacen a /privacidad y /terminos en el footer."""
         pages = [
             'index.html',
+            'gimnasio-terapeutico.html',
             'psicologia.html',
             'pediatria.html',
             'fonoaudiologia.html',
@@ -123,5 +130,25 @@ class TestCentroValuComplianceAndSearch(unittest.TestCase):
             self.assertIn('/privacidad', content, f"{page} debe tener enlace a /privacidad en el footer.")
             self.assertIn('/terminos', content, f"{page} debe tener enlace a /terminos en el footer.")
 
+    def test_gimnasio_terapeutico_compliance(self):
+        """Verifica que gimnasio-terapeutico.html cumpla con canonical limpio, SEO, sedes y datos clave."""
+        content = self._read_file('gimnasio-terapeutico.html')
+
+        # 1. Canonical limpio sin .html
+        self.assertIn('<link rel="canonical" href="https://centrovalu.cl/gimnasio-terapeutico"', content)
+
+        # 2. Dirección de nueva sucursal
+        self.assertIn('Gil de Castro 122', content)
+
+        # 3. Planes oficiales
+        self.assertIn('Plan Descubrimiento', content)
+        self.assertIn('Plan Exploración', content)
+        self.assertIn('Plan Crecimiento', content)
+        self.assertIn('Plan Integral', content)
+
+        # 4. Enlace a WhatsApp directo con mensaje predefinido
+        self.assertIn('wa.me/56972454921', content)
+
 if __name__ == '__main__':
     unittest.main()
+

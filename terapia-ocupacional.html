@@ -278,8 +278,14 @@ Autor: Antigravity (AI Assistant)
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
                         <button class="text-primary-600 font-bold hover:text-primary-700 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-64 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
+                                <li>
+                                    <a href="/gimnasio-terapeutico" class="block px-4 py-2 text-sm font-bold text-primary-700 bg-primary-50/80 rounded-xl hover:bg-primary-100 transition-colors flex items-center justify-between">
+                                        <span>🧸 Gimnasio Terapéutico</span>
+                                        <span class="text-[9px] bg-primary-200 text-primary-800 px-1.5 py-0.5 rounded font-black uppercase">Nuevo</span>
+                                    </a>
+                                </li>
                                 <li><a href="/psicologia" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
                                 <li><a href="/pediatria" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
                                 <li><a href="/fonoaudiologia" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
@@ -357,6 +363,7 @@ Autor: Antigravity (AI Assistant)
                         <div id="specialties-submenu"
                             class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
                             <ul class="py-4 px-6 space-y-4">
+                                <li><a href="/gimnasio-terapeutico" class="mobile-link block text-lg font-bold text-primary-700 bg-primary-100/60 p-2 rounded-lg">🧸 Gimnasio Terapéutico (Nuevo)</a></li>
                                 <li><a href="/psicologia" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a></li>
                                 <li><a href="/pediatria" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a></li>
                                 <li><a href="/fonoaudiologia" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Fonoaudiología</a></li>
@@ -413,10 +420,15 @@ Autor: Antigravity (AI Assistant)
                         Terapia <br><span class="text-secondary-500 italic">Ocupacional.</span>
                     </h1>
                     <div class="flex flex-wrap gap-3 mb-8">
+                        <!-- BANNER: SEDES -->
+                        <div class="inline-flex items-center gap-2 bg-primary-100/70 backdrop-blur-md px-4 py-2 rounded-full border border-primary-200/80 shadow-sm">
+                            <span class="text-sm">📍</span>
+                            <span class="text-[10px] font-bold text-primary-900 uppercase tracking-widest leading-none">Sede Gil de Castro 122 & Parque Lauca</span>
+                        </div>
                         <!-- BANNER: PRESENCIAL -->
                         <div class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
-                            <span class="text-sm">📍</span>
-                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Atención Presencial</span>
+                            <span class="text-sm">🧸</span>
+                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Salas de Integración Sensorial</span>
                         </div>
                     </div>
                     <p class="mt-8 text-lg text-slate-500 leading-relaxed border-l-4 border-secondary-500 pl-6">

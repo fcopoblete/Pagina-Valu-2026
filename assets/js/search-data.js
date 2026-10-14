@@ -421,6 +421,31 @@ window.searchData = [
     "category": "Modalidad",
     "url": "index.html#contacto",
     "keywords": ["sucursal", "oficina", "box", "centro", "coquimbo", "en persona", "físico", "lugar"]
+  },
+  // GIMNASIO TERAPÉUTICO Y ESTIMULACIÓN TEMPRANA
+  {
+    "type": "service",
+    "name": "Gimnasio Terapéutico",
+    "icon": "🧸",
+    "category": "Estimulación Temprana",
+    "url": "gimnasio-terapeutico.html",
+    "keywords": ["gimnasio", "gimnacio", "estimulacion temprana", "bebes", "lactantes", "desarrollo motor", "pikler", "montessori", "juego", "kinesiologia", "gil de castro"]
+  },
+  {
+    "type": "service",
+    "name": "Planes de Estimulación Temprana",
+    "icon": "🌱",
+    "category": "Aranceles",
+    "url": "gimnasio-terapeutico.html#planes",
+    "keywords": ["planes gimnasio", "precios gimnasio", "aranceles gimnasio", "50000", "85000", "100000", "120000", "descubrimiento", "exploracion", "crecimiento", "integral"]
+  },
+  {
+    "type": "service",
+    "name": "Nueva Sede Gil de Castro",
+    "icon": "📍",
+    "category": "Sucursal",
+    "url": "index.html#contacto",
+    "keywords": ["gil de castro", "sede gil de castro", "nueva sucursal", "nueva sede", "coquimbo", "gimnasio", "apoyo escolar"]
   }
 ];
 

@@ -12,15 +12,18 @@ Autor: Antigravity (AI Assistant)
 ## Información de la Entidad
 - **Nombre**: Centro Valú
 - **Razón Social / Actividad**: Centro de Salud Integral y Salud Mental Interdisciplinaria
-- **Dirección**: Parque Nacional Lauca 1612, Coquimbo, Región de Coquimbo, Chile
+- **Direcciones y Sedes en Coquimbo**:
+  - Sede Central: Parque Nacional Lauca 1612, Bosque San Carlos, Coquimbo.
+  - Nueva Sede Gil de Castro: Gil de Castro 122, Coquimbo (Gimnasio Terapéutico, Fonoaudiología, Terapia Ocupacional, Apoyo Escolar y Psicopedagogía).
 - **Sitio Web Oficial**: https://centrovalu.cl
 - **WhatsApp Oficial**: +56 9 7245 4921
 - **Modalidades de Atención**:
-  - Presencial: Boxes clínicos en Coquimbo (Región de Coquimbo).
+  - Presencial: Boxes clínicos y sala de estimulación en Coquimbo (Sede Parque Lauca y Sede Gil de Castro).
   - Online: Telemedicina y Terapia Online para consultantes de todo Chile y el extranjero.
 - **Convenios y Formas de Pago**: Convenio Fonasa (bonos), Isapres (emisión de boleta para reembolso) y particular. Convenios especiales para colegios y empresas.
 
 ## Especialidades Clínicas
+- [Gimnasio Terapéutico](https://centrovalu.cl/gimnasio-terapeutico): Espacio de estimulación temprana integral para bebés y niños menores de 2 años en Sede Gil de Castro 122. Abordaje interdisciplinario en motricidad (Kinesiología), cognición (Educación Parvularia), lenguaje (Fonoaudiología) y desarrollo sensorial (Terapia Ocupacional) con enfoque Pikler, Montessori y participación activa de la familia en sala.
 - [Psicología](https://centrovalu.cl/psicologia.html): Psicoterapia infanto-juvenil, terapia de adolescentes, adultos, terapia de parejas, terapia familiar, psicología perinatal y acompañamiento en neurodivergencias.
 - [Pediatría](https://centrovalu.cl/pediatria.html): Control de niño sano, consulta pediátrica general, lactancia materna y seguimiento del desarrollo infantil (Dra. Eugenia Ortiz).
 - [Fonoaudiología](https://centrovalu.cl/fonoaudiologia.html): Evaluación e intervención en habla, lenguaje, comunicación, deglución, motricidad orofacial, voz profesional y neurorrehabilitación post-ACV. Metodologías AMAR, TEACCH y CLAP.
@@ -50,6 +53,7 @@ Autor: Antigravity (AI Assistant)
 
 ## Directorio de Páginas
 - Inicio: https://centrovalu.cl/
+- Gimnasio Terapéutico: https://centrovalu.cl/gimnasio-terapeutico
 - Nuestro Equipo: https://centrovalu.cl/profesionales.html
 - Psicología: https://centrovalu.cl/psicologia.html
 - Pediatría: https://centrovalu.cl/pediatria.html

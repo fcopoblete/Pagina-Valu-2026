@@ -4,7 +4,7 @@ description: Manual Maestro y Generador de Habilidades para Centro Valu. Define 
 ---
 <!--
 Archivo: SKILL.md
-Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal (Ley 19.628, Ley 20.584, APDP), buscador global y suite de pruebas.
+Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal, buscador global, estructura de navegación de Formación, aranceles pediátricos y suite de pruebas.
 Fecha de última modificación: 2026-10-14
 Nombre del autor: Antigravity
 -->
@@ -57,6 +57,11 @@ Cualquier modificación al equipo médico (altas, bajas o modificaciones) DEBE s
 
 ## 🧱 Cambios Globales (Header, Footer, Navegación)
 - **Navegación Intuitiva (Popstate)**: Cualquier menú móvil, modal o "drawer" (como el de profesionales) DEBE implementar la API de History (`pushState` y evento `popstate`). Así, si el usuario presiona el botón "Atrás" en su dispositivo físico/virtual para intentar cerrar el menú o modal, este simplemente se cerrará sin sacarlo de la página actual.
+- **Jerarquía de Navegación del Banner**:
+    - La barra de navegación principal debe mantener exclusivamente los enlaces esenciales: `Inicio`, `Especialidades` (dropdown), `Quiénes Somos`, `Profesionales`, `Convenios`, `Contacto` y el CTA `Agendar Hora`.
+    - **Formación**: El acceso al servicio de Formación (`/formacion`) pertenece estrictamente al interior del menú desplegable `Especialidades` (en desktop y drawer móvil), evitando saturar el banner superior y asegurando coherencia visual en las 17 páginas.
+- **Prohibición de Scripts de Modificación Masiva**: Queda estrictamente prohibido utilizar scripts automatizados de regex o reemplazo masivo (como `update_headers.py`) para alterar componentes de cabecera o navegación. Las modificaciones deben realizarse de forma quirúrgica, manual y verificada archivo por archivo para preservar las clases activas, accesibilidad y rutas limpias particulares de cada plantilla.
+- **Modal de Aranceles y Duraciones Clínicas**: El modal `#prices-modal` en `index.html` centraliza los valores oficiales. Para **Pediatría**, las consultas estándar (presencial "Control Médico" y remota "Control Médico Online") tienen una duración estipulada de **10 minutos** (`Atención 10 min` / `Sesión remota 10 min`), con copago Fonasa $7.690 y Particular $50.000.
 - Si el usuario te pide modificar el encabezado (`index.html`) o el pie de página y te indica hacerlo *solo en una página*, **DEBES** registrar inmediatamente en `PENDIENTES.md` una tarea requerida para replicar ese mismo cambio en las 10+ páginas restantes del ecosistema, evitando discrepancias de diseño.
 
 ## 📈 Estándares SEO Local e Indexación para Motores de IA (LLMs)
