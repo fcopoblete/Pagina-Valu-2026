@@ -4,8 +4,8 @@ description: Manual Maestro y Generador de Habilidades para Centro Valu. Define 
 ---
 <!--
 Archivo: SKILL.md
-Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de indexación limpia para GSC.
-Fecha de última modificación: 2026-09-23
+Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal (Ley 19.628, Ley 20.584, APDP), buscador global y suite de pruebas.
+Fecha de última modificación: 2026-10-14
 Nombre del autor: Antigravity
 -->
 
@@ -91,17 +91,29 @@ Para asegurar previsualizaciones profesionales en WhatsApp y redes sociales, tod
 - **Primario**: `#75cfcf` (Verde Agua Valu).
 - **Texto**: `slate-900` para impacto, `slate-500` para lectura.
 - **Tipografía**: `Abhaya Libre` para el espíritu (serifa), `Poppins` para la claridad (sans).
-56: 
-57: ## 🛡️ Reglas de Seguridad Críticas (Head Check)
-58: Jamás se debe limpiar o reconstruir el bloque `<head>` omitiendo estos 4 pilares:
-59: 1. **CDN de Tailwind CSS**: `<script src="https://cdn.tailwindcss.com"></script>` (Vital para el renderizado).
-60: 2. **Configuración Inline de Tailwind**: Script de `tailwind.config` con los tokens de color del Centro Valu.
-61: 3. **Fuentes de Google**: Enlace a `Abhaya Libre` y `Poppins`.
-62: 4. **Tracking & Analytics**: Google Tag (gtag.js) y Meta Pixel.
-63: 
-64: > [!CAUTION]
-65: > La eliminación parcial de estos elementos resultará en un "Efecto Texto Plano" (pérdida total de diseño). Siempre verifica la presencia de Tailwind antes de guardar cambios en el head.
-66: 
+## 🛡️ Reglas de Seguridad Críticas (Head Check)
+Jamás se debe limpiar o reconstruir el bloque `<head>` omitiendo estos 4 pilares:
+1. **CDN de Tailwind CSS**: `<script src="https://cdn.tailwindcss.com"></script>` (Vital para el renderizado).
+2. **Configuración Inline de Tailwind**: Script de `tailwind.config` con los tokens de color del Centro Valu.
+3. **Fuentes de Google**: Enlace a `Abhaya Libre` y `Poppins`.
+4. **Tracking & Analytics**: Google Tag (gtag.js) y Meta Pixel.
+
+> [!CAUTION]
+> La eliminación parcial de estos elementos resultará en un "Efecto Texto Plano" (pérdida total de diseño). Siempre verifica la presencia de Tailwind antes de guardar cambios en el head.
+
+## ⚖️ Estándares Legales, Privacidad y Buscador
+- **Identificación Legal Obligatoria**: La entidad jurídica oficial es **CENTRO VALÚ SALUD INTEGRAL SPA** (RUT **77.058.617-8**), domiciliada en Coquimbo, Chile.
+- **Marco Regulatorio**:
+  - **Ley N° 19.628 y Nueva Ley de Protección de Datos (APDP/GDPR)**: Tratamiento de datos personales, bases de licitud, protocolo de brechas de seguridad y ejercicio de derechos **ARCOP** (Acceso, Rectificación, Cancelación, Oposición, Portabilidad, Bloqueo) con plazo legal perentorio de 15 días hábiles.
+  - **Ley N° 20.584**: Deber de reserva médica, confidencialidad estricta y custodia legal mínima de 15 años para fichas clínicas (D.S. N° 41 MINSAL).
+  - **Ley N° 21.430**: Consentimiento expreso de padres o tutores para la atención de niños, niñas y adolescentes.
+  - **Exclusión de Urgencias**: En `terminos.html` debe mantenerse la advertencia expresa de no atención de riesgo vital, derivando al 131 (SAMU) o *4141.
+- **Sincronización del Buscador (`search-data.js` & `search-logic.js`)**:
+  - Toda nueva página, servicio o sección debe agregarse al array maestro `window.searchData` en `assets/js/search-data.js` con sus `keywords` normalizadas sin tildes.
+  - El buscador debe permitir selección directa con tecla `Enter` para maximizar la conversión y velocidad de navegación.
+- **Suite de Pruebas Automatizadas**:
+  - Ejecutar siempre `python -m unittest tests/test_compliance_and_search.py` antes de cualquier despliegue a producción para validar que las cláusulas legales y los enlaces del buscador permanezcan íntegros.
+
 
 ## 📝 Gobernanza y Gestión de Tareas
 - **Consulta Previa**: Antes de crear cualquier subpágina, popup o componente mayor, se DEBE consultar al usuario para validar la necesidad y el diseño. No se deben dejar partes a medias o funcionando mal.
