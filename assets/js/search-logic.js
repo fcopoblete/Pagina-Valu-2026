@@ -1,9 +1,8 @@
 /**
  * Archivo: search-logic.js
- * Descripción: Lógica global para el buscador modal de Centro Valu. 
- * Inyecta el modal dinámicamente y maneja el filtrado de profesionales y servicios.
- * Fecha: 2026-03-27
- * Autor: Antigravity
+ * Descripción: Lógica global para el buscador modal de Centro Valu. Inyecta el modal dinámicamente, maneja el filtrado de profesionales, servicios y páginas legales, con selección directa con Enter.
+ * Fecha de última modificación: 2026-10-14
+ * Autor: Antigravity (AI Assistant)
  */
 
 (function() {
@@ -255,6 +254,17 @@
     closeBtn.addEventListener('click', closeSearch);
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeSearch();
+    });
+
+    // Permitir navegar directamente al primer resultado al presionar Enter
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const firstResult = resultsArea.querySelector('.search-item');
+            if (firstResult) {
+                e.preventDefault();
+                firstResult.click();
+            }
+        }
     });
 
     // Atajos de teclado

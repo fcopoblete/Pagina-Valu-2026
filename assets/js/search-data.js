@@ -1,7 +1,7 @@
 /**
  * Archivo: search-data.js
- * Descripción: Datos del buscador de Centro Valu (incorporados nuevos psicólogos).
- * Fecha de última modificación: 2026-09-02
+ * Descripción: Datos del buscador de Centro Valu. Incluye profesionales, especialidades, aranceles y páginas legales (Privacidad y Términos).
+ * Fecha de última modificación: 2026-10-14
  * Autor: Antigravity (AI Assistant)
  */
 window.searchData = [
@@ -342,6 +342,22 @@ window.searchData = [
     "icon": "🏢",
     "url": "quienes-somos.html",
     "keywords": ["historia", "misión", "visión", "centro", "valu"]
+  },
+  {
+    "type": "page",
+    "name": "Política de Privacidad",
+    "icon": "🔒",
+    "category": "Legal",
+    "url": "privacidad.html",
+    "keywords": ["privacidad", "politica de privacidad", "datos", "proteccion de datos", "datos personales", "confidencialidad", "arco", "arcop", "seguridad", "ley 19628", "ley 20584", "consentimiento", "cookies"]
+  },
+  {
+    "type": "page",
+    "name": "Términos y Condiciones",
+    "icon": "📄",
+    "category": "Legal",
+    "url": "terminos.html",
+    "keywords": ["terminos", "terminos y condiciones", "terminos del servicio", "condiciones", "legal", "normas", "reglamento", "cancelacion", "urgencias", "pagos", "devolucion", "inasistencias", "acuerdo"]
   },
   {
     "type": "page",
