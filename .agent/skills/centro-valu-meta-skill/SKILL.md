@@ -92,14 +92,34 @@ Para asegurar previsualizaciones profesionales en WhatsApp y redes sociales, tod
 - **Texto**: Solo el nombre de la especialidad en español (ej. "Psicopedagogía") con tipografía limpia y clara.
 - **Archivos**: Guardar siempre en `assets/brand/og-[nombre].jpg`.
 
-## 🎨 Paleta de Identidad
+## 🏥 Infraestructura de Dos Sedes y Gimnasio Terapéutico
+Centro Valú opera formalmente en dos sucursales en Coquimbo:
+1. **Sede Central (Parque Nacional Lauca 1612, Bosque San Carlos)**:
+   - Psicología Infanto-Juvenil y Adultos, Pediatría Integral, Tests Diagnósticos (ADOS-2, WISC-V, ADI-R) y Convenio Fonasa.
+2. **Nueva Sede (Gil de Castro 122, Coquimbo)**:
+   - Gimnasio Terapéutico y de Estimulación Temprana (**niños y niñas de hasta 6 años**), Fonoaudiología, Terapia Ocupacional, Psicopedagogía y Apoyo Escolar.
+   - **Estándar de Iconografía**: Prohibido el uso de emojis informales como `🧸` en menús, desplegables y formularios; se debe mantener una identidad clínica sobria, cálida y profesional.
+
+### Estándar de Sección de Ubicaciones (2 Columnas con Google Maps)
+Toda sección de sucursales (`#contacto` o `#ubicacion`) debe estructurarse con:
+- **Cuadrícula en 2 columnas simétricas**: Sede Central (Parque Lauca) y Nueva Sede (Gil de Castro) en paralelo.
+- **Mapas interactivos embebidos**: Iframe de Google Maps en cada columna con altura estandarizada `h-64 sm:h-72` y bordes suaves `rounded-2xl`.
+- **Enfoque directo**: Tarjetas centradas en nombre de sede, dirección y enlace externo a Google Maps / Waze. Evitar listas saturadas de especialidades dentro de las tarjetas del mapa.
+- **Barra inferior unificada**: Horarios consolidados, teléfonos/WhatsApp corporativo y CTA de contacto.
+
+## 🎨 Paleta de Identidad y Reglas de Contraste (Modo Oscuro)
 - **Primario**: `#75cfcf` (Verde Agua Valu).
-- **Texto**: `slate-900` para impacto, `slate-500` para lectura.
+- **Escala Primaria Obligatoria en `tailwind.config`**:
+  - `50: '#f0fdf9'`, `100: '#ddf4f4'`, `200: '#bce8e8'`, `300: '#99dede'`, `400: '#8be0e0'`, `500: '#75cfcf'`, `600: '#4a8d8d'`, `700: '#2d5a5a'`.
+- **Texto**: `slate-900` para impacto en fondos claros, `slate-500` para lectura, `text-white` y `text-primary-300` para fondos oscuros (`slate-950`/`slate-900`).
 - **Tipografía**: `Abhaya Libre` para el espíritu (serifa), `Poppins` para la claridad (sans).
+- **Regla Crítica de Contraste en Fondos Oscuros**: Queda estrictamente prohibido aplicar clases CSS globales con colores oscuros hardcodeados (ej. `.contact-priority-bold` que fuerza `#0f172a`) dentro de contenedores oscuros. Siempre verificar contraste AAA contra el fondo.
+- **Píldoras y Badges en Fondos Oscuros**: Los textos de badges informativos deben utilizar `text-white font-bold tracking-wider` con fondos semitransparentes (`bg-primary-500/25 border-primary-400/60 backdrop-blur-sm`) y puntos de estado pulsantes (`animate-ping`) bien contrastados.
+
 ## 🛡️ Reglas de Seguridad Críticas (Head Check)
 Jamás se debe limpiar o reconstruir el bloque `<head>` omitiendo estos 4 pilares:
 1. **CDN de Tailwind CSS**: `<script src="https://cdn.tailwindcss.com"></script>` (Vital para el renderizado).
-2. **Configuración Inline de Tailwind**: Script de `tailwind.config` con los tokens de color del Centro Valu.
+2. **Configuración Inline de Tailwind**: Script de `tailwind.config` con los tokens de color del Centro Valu (incluyendo escala `primary` completa: 50 a 700).
 3. **Fuentes de Google**: Enlace a `Abhaya Libre` y `Poppins`.
 4. **Tracking & Analytics**: Google Tag (gtag.js) y Meta Pixel.
 
