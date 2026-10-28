@@ -2,7 +2,7 @@
  * Archivo: assets/js/pro-data.js
  * Descripción: Base de datos centralizada de profesionales de Centro Valu.
  *              Datos actualizados con incorporación de nuevos psicólogos (Nicolás Schifferli, Susana Riquelme, Priscilla Figueroa).
- * Fecha de última modificación: 2026-09-02
+ * Fecha de última modificación: 2026-10-28
  * Autor: Antigravity (AI Assistant)
  */
 
@@ -197,7 +197,7 @@ window.proDataExtended = {
     "bruno-araya": {
         nombre: "Bruno Araya",
         cargo: "Fonoaudiólogo",
-        img: "assets/img/team/bruno-araya.webp?v=top_framed",
+        img: "assets/img/team/bruno-araya.webp?v=202610",
         bg: "bg-brand-lila/20",
         especialidad: "Fonoaudiología",
         formacion: [
