@@ -1,7 +1,7 @@
 /**
  * Archivo: search-data.js
  * Descripción: Datos del buscador de Centro Valu. Incluye profesionales, especialidades, aranceles y páginas legales (Privacidad y Términos).
- * Fecha de última modificación: 2026-10-14
+ * Fecha de última modificación: 2026-10-28
  * Autor: Antigravity (AI Assistant)
  */
 window.searchData = [
@@ -100,7 +100,7 @@ window.searchData = [
     "specialty": "Fonoaudiología",
     "position": "Fonoaudiólogo",
     "url": "fonoaudiologia.html#bruno-araya",
-    "img": "assets/img/team/bruno-araya.webp"
+    "img": "assets/img/team/bruno-araya.webp?v=202610"
   },
   {
     "type": "professional",
