@@ -1,6 +1,6 @@
 <!--
 Que hace el archivo: Bitácora de Obsidian que documenta el lanzamiento de la nueva sucursal Gil de Castro 122, el Gimnasio Terapéutico y de Estimulación Temprana (hasta 6 años), el rediseño de ubicaciones en 2 columnas con mapas de Google Maps embebidos, y la resolución de problemas de contraste y compatibilidad en Tailwind.
-Fecha de última modificación: 2026-10-14
+Fecha de última modificación: 2026-11-18
 Nombre del autor: Antigravity & fcopoblete
 -->
 # 🗺️ Bitácora: Nueva Sucursal Gil de Castro, Gimnasio Terapéutico y Rediseño de Ubicaciones en 2 Columnas
@@ -74,5 +74,41 @@ Por solicitud directa del usuario, se eliminó el listado de especialidades dent
 
 ## ✅ 5. Verificación y Calidad
 
-- **Pruebas Unitarias:** Ejecución de `python -m unittest tests/test_compliance_and_search.py` pasando al 100% (6/6 tests).
-- **Ramas Git:** Cambios comiteados y desplegados en `origin/test` (commits `efac7bf` y `695cabc`).
+- **Pruebas Unitarias:** Ejecución de `python -m unittest tests/test_compliance_and_search.py` pasando al 100% (7/7 tests).
+- **Ramas Git:** Cambios comiteados y desplegados en `origin/test` (commits `efac7bf`, `695cabc` y `4b3c8e4`).
+
+---
+
+## 📸 6. Actualización Selectiva en Producción: Fotografía de Bruno Araya (2026-10-28)
+
+- **Requerimiento:** Actualizar la fotografía del fonoaudiólogo Bruno Araya en producción (`main`) sin desplegar los cambios en curso de la nueva sucursal y Gimnasio Terapéutico alojados en `test`.
+- **Procesamiento de Imagen (`assets/img/team/bruno-araya.webp`):**
+  - A partir del archivo original `assets/img/team/originales/bruno-araya.jpeg`, se eliminó el fondo oscuro a transparencia total con bordes suavizados.
+  - Encuadre estandarizado en lienzo `1000x1000 px`, alineación basal (`y=1000`) y aire superior del 15.8% (`y=158`), logrando un peso optimizado de **34.5 KB** (< 100 KB).
+- **Cache-Busting (`?v=202610`):** Sincronizado en `assets/js/pro-data.js`, `assets/js/search-data.js`, `fonoaudiologia.html` y `profesionales.html`.
+- **Estrategia Git Multi-Rama:** Se aplicó el commit tanto en `test` (`4b3c8e4`) como de forma aislada en `main` (`4550088`), manteniendo intacto el aislamiento del Gimnasio Terapéutico hasta su lanzamiento oficial.
+
+---
+
+## 🧸 7. Actualización de Imágenes del Gimnasio y Reestructuración de Terapia Ocupacional (2026-11-18)
+
+- **Fotografías Reales del Gimnasio Terapéutico (`assets/img/gimnasio/`):**
+  - **Hero Principal:** Reemplazo de render/stock por `Colgantes.jpeg` (estimulación vestibular y hamacas suspendidas).
+  - **Galería de Espacios:**
+    - Izquierda: `Sensorial.jpeg` con encuadre inferior optimizado (`object-[center_90%]`) y aspect ratio `4/3` para visualización íntegra de bandejas de estimulación táctil.
+    - Derecha: `piscina pelotas.jpeg` mostrando el área de psicomotricidad y piscina de pelotas.
+- **Terapia Ocupacional (`terapia-ocupacional.html`):**
+  - Actualización de imagen Hero con `Colgantes.jpeg`.
+  - Incorporación de dos nuevas áreas de desarrollo:
+    - **Habilidades Sociales:** Fomento de interacción lúdica, turnos, límites y resolución con pares.
+    - **Selectividad Alimentaria:** Abordaje sensible de dificultades sensoriales (texturas, sabores y olores).
+  - Incorporación de la sección **Modalidades y Programas** (Evaluación de TO, Plan Individual, Plan en Pareja, Plan Grupal).
+- **Desvinculación de Profesionales:**
+  - Retiro de Valeria Alfaro (TO) y Priscilla Figueroa (Psicología) de:
+    - `profesionales.html`
+    - `psicologia.html`
+    - `terapia-ocupacional.html` (reemplazado por tarjeta de atención institucional del equipo de TO)
+    - Base de datos de drawer `assets/js/pro-data.js`
+    - Índice del buscador `assets/js/search-data.js`
+- **Control de Calidad Automatizado:**
+  - Ampliación de la suite de pruebas unitarias (`tests/test_compliance_and_search.py`), totalizando **9/9 tests exitosos**.

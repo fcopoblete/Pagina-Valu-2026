@@ -3,7 +3,7 @@ Archivo: tests/test_compliance_and_search.py
 Descripción: Suite de pruebas automatizadas para verificar el cumplimiento normativo legal
              (Ley 19.628, Ley 20.584, Ley 21.430, APDP/GDPR) de privacidad y términos,
              así como la integración y navegación del buscador global de Centro Valu.
-Fecha de última modificación: 2026-10-14
+Fecha de última modificación: 2026-11-18
 Autor: Antigravity (AI Assistant)
 """
 
@@ -148,6 +148,59 @@ class TestCentroValuComplianceAndSearch(unittest.TestCase):
 
         # 4. Enlace a WhatsApp directo con mensaje predefinido
         self.assertIn('wa.me/56972454921', content)
+
+    def test_bruno_araya_photo_standard_and_sync(self):
+        """Verifica que la foto de Bruno Araya exista, cumpla con el peso máximo (<100KB) y tenga versión sincronizada."""
+        webp_path = os.path.join(BASE_DIR, 'assets', 'img', 'team', 'bruno-araya.webp')
+        self.assertTrue(os.path.exists(webp_path), "La imagen WebP de Bruno Araya debe existir.")
+        file_size = os.path.getsize(webp_path)
+        self.assertLess(file_size, 100 * 1024, f"El archivo bruno-araya.webp debe pesar menos de 100KB (actual: {file_size} bytes).")
+
+        target_ref = 'assets/img/team/bruno-araya.webp?v=202610'
+        for rel_file in ['assets/js/pro-data.js', 'assets/js/search-data.js', 'fonoaudiologia.html', 'profesionales.html']:
+            content = self._read_file(rel_file)
+            self.assertIn(target_ref, content, f"{rel_file} debe referenciar {target_ref} con cache-busting actualizado.")
+
+    def test_gimnasio_and_to_images_and_programs(self):
+        """Verifica que las imágenes y nuevos contenidos de gimnasio y terapia ocupacional existan y estén enlazados."""
+        colgantes = os.path.join(BASE_DIR, 'assets', 'img', 'gimnasio', 'Colgantes.jpeg')
+        sensorial = os.path.join(BASE_DIR, 'assets', 'img', 'gimnasio', 'Sensorial.jpeg')
+        piscina = os.path.join(BASE_DIR, 'assets', 'img', 'gimnasio', 'piscina pelotas.jpeg')
+        self.assertTrue(os.path.exists(colgantes), 'Colgantes.jpeg debe existir')
+        self.assertTrue(os.path.exists(sensorial), 'Sensorial.jpeg debe existir')
+        self.assertTrue(os.path.exists(piscina), 'piscina pelotas.jpeg debe existir')
+
+        gim_html = self._read_file('gimnasio-terapeutico.html')
+        self.assertIn('assets/img/gimnasio/Colgantes.jpeg', gim_html)
+        self.assertIn('assets/img/gimnasio/Sensorial.jpeg', gim_html)
+        self.assertIn('assets/img/gimnasio/piscina%20pelotas.jpeg', gim_html)
+        self.assertIn('object-[center_90%]', gim_html)
+
+        to_html = self._read_file('terapia-ocupacional.html')
+        self.assertIn('assets/img/gimnasio/Colgantes.jpeg', to_html)
+        self.assertIn('Habilidades Sociales', to_html)
+        self.assertIn('Selectividad Alimentaria', to_html)
+        self.assertIn('Modalidades y Programas', to_html)
+        self.assertIn('Evaluación de Terapia Ocupacional', to_html)
+        self.assertIn('Plan Individual', to_html)
+        self.assertIn('Plan en Pareja', to_html)
+        self.assertIn('Plan Grupal', to_html)
+
+    def test_retired_professionals_removed(self):
+        """Verifica que Valeria Alfaro y Priscilla Figueroa hayan sido retiradas de páginas y buscadores."""
+        files_to_check = [
+            'profesionales.html',
+            'psicologia.html',
+            'terapia-ocupacional.html',
+            'assets/js/pro-data.js',
+            'assets/js/search-data.js'
+        ]
+        for rel_path in files_to_check:
+            content = self._read_file(rel_path)
+            self.assertNotIn('valeria-alfaro', content, f'valeria-alfaro no debe existir en {rel_path}')
+            self.assertNotIn('priscilla-figueroa', content, f'priscilla-figueroa no debe existir en {rel_path}')
+            self.assertNotIn('Valeria Alfaro', content, f'Valeria Alfaro no debe existir en {rel_path}')
+            self.assertNotIn('Priscilla Figueroa', content, f'Priscilla Figueroa no debe existir en {rel_path}')
 
 if __name__ == '__main__':
     unittest.main()

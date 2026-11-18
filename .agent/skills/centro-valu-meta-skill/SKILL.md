@@ -5,7 +5,7 @@ description: Manual Maestro y Generador de Habilidades para Centro Valu. Define 
 <!--
 Archivo: SKILL.md
 Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal, buscador global, estructura de navegación de Formación, aranceles pediátricos y suite de pruebas.
-Fecha de última modificación: 2026-10-14
+Fecha de última modificación: 2026-11-18
 Nombre del autor: Antigravity
 -->
 
@@ -53,6 +53,7 @@ Cualquier modificación al equipo médico (altas, bajas o modificaciones) DEBE s
     3. **Aire Superior (Top breathing)**: Dejar entre un 10% y 15% de espacio vacío sobre la cabeza del profesional.
     4. **Centrado y Escala**: Centrado horizontal a escala máxima permitida por el aire superior. Usar `object-contain`.
     5. **Formato y Peso**: WebP optimizado (Máx 1000px altura, peso < 100KB).
+    6. **Sincronización y Cache-Busting (CRÍTICO)**: Al actualizar la fotografía de un profesional existente, se DEBE actualizar el parámetro de versión (`?v=YYYYMM`) en `assets/js/pro-data.js`, `assets/js/search-data.js`, `profesionales.html` y en la página de su especialidad correspondiente para invalidar el caché del navegador. Si existen avances en la rama `test` aún no publicados, aplicar el cambio mediante commit aislado en `main`.
 - Si la foto original tiene un fondo complejo, solicita la versión "recortada" o usa la herramienta de remoción de fondo disponible.
 
 ## 🧱 Cambios Globales (Header, Footer, Navegación)

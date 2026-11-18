@@ -1,7 +1,7 @@
 /**
  * Archivo: search-data.js
  * Descripción: Datos del buscador de Centro Valu. Incluye profesionales, especialidades, aranceles y páginas legales (Privacidad y Términos).
- * Fecha de última modificación: 2026-10-28
+ * Fecha de última modificación: 2026-11-18
  * Autor: Antigravity (AI Assistant)
  */
 window.searchData = [
@@ -80,14 +80,6 @@ window.searchData = [
   },
   {
     "type": "professional",
-    "name": "Priscilla Figueroa",
-    "specialty": "Psicología",
-    "position": "Psicóloga",
-    "url": "psicologia.html#priscilla-figueroa",
-    "img": "assets/img/team/priscilla-figueroa.webp"
-  },
-  {
-    "type": "professional",
     "name": "Eugenia Ortiz",
     "specialty": "Pediatría",
     "position": "Pediatra",
@@ -117,14 +109,6 @@ window.searchData = [
     "position": "Fonoaudióloga",
     "url": "fonoaudiologia.html#ulda-castillo",
     "img": "assets/img/team/ulda-castillo.webp"
-  },
-  {
-    "type": "professional",
-    "name": "Valeria Alfaro",
-    "specialty": "Terapia Ocupacional",
-    "position": "Terapeuta Ocupacional",
-    "url": "terapia-ocupacional.html#valeria-alfaro",
-    "img": "assets/img/team/valeria-alfaro.webp"
   },
   {
     "type": "professional",

@@ -1,8 +1,7 @@
 /**
  * Archivo: assets/js/pro-data.js
  * Descripción: Base de datos centralizada de profesionales de Centro Valu.
- *              Datos actualizados con incorporación de nuevos psicólogos (Nicolás Schifferli, Susana Riquelme, Priscilla Figueroa).
- * Fecha de última modificación: 2026-10-28
+ * Fecha de última modificación: 2026-11-18
  * Autor: Antigravity (AI Assistant)
  */
 
@@ -137,33 +136,6 @@ window.proDataExtended = {
             "Formación en Terapia Cognitivo-Conductual, ACT, Terapia Narrativa y evaluación laboral (STAR, DISC)."
         ],
         descripcion: "Psicóloga clínica con amplia experiencia en neurodivergencias y evaluación psicológica integral en niños, adolescentes y adultos. Combina un enfoque sistémico-relacional con herramientas cognitivo-conductuales y ACT, ofreciendo un espacio de escucha empático y riguroso."
-    },
-    "priscilla-figueroa": {
-        nombre: "Priscilla Figueroa",
-        cargo: "Psicóloga",
-        img: "assets/img/team/priscilla-figueroa.webp",
-        bg: "bg-primary-100/20",
-        especialidad: "Psicología",
-        formacion: [
-            "Psicóloga, mención Clínica-Comunitaria – Universidad Academia de Humanismo Cristiano.",
-            "Formación en el ámbito laboral, género e intervención comunitaria.",
-            "Especialización en procesos de revinculación familiar, fortalecimiento de relaciones y reconstrucción de alianzas."
-        ],
-        descripcion: "Psicóloga con más de <span class='dynamic-exp' data-start-year='2011'>15</span> años de trayectoria profesional en los ámbitos clínico, comunitario y educacional. Desde un enfoque sistémico, acompaña a niños, adolescentes, adultos y familias en procesos de revinculación con un estilo cercano y orientado a soluciones concretas."
-    },
-    "valeria-alfaro": {
-        nombre: "Valeria Alfaro",
-        cargo: "Terapeuta Ocupacional",
-        img: "assets/img/team/valeria-alfaro.webp?v=top_framed",
-        bg: "bg-brand-rosa/20",
-        especialidad: "Terapia Ocupacional",
-        formacion: [
-            "Diplomado en Condición del Espectro Autista y Enfoque de Derechos.",
-            "Diplomado en Selectividad Alimentaria.",
-            "Certificación en Perfil Sensorial (Adultos y Niños).",
-            "Certificación en Control de Esfínter."
-        ],
-        descripcion: "Especialista en evaluación e intervención clínica orientada a la autonomía y participación en actividades cotidianas. Posee amplia experiencia en integración sensorial, adaptando cada proceso a las necesidades individuales y dinámicas del contexto familiar."
     },
     "gabriela-pereira": {
         nombre: "Gabriela Pereira",
