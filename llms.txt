@@ -23,7 +23,7 @@ Autor: Antigravity (AI Assistant)
 - **Convenios y Formas de Pago**: Convenio Fonasa (bonos), Isapres (emisión de boleta médica para reembolso) y particular. Convenios institucionales para colegios y empresas.
 
 ## Especialidades Clínicas
-- [Gimnasio Terapéutico](https://centrovalu.cl/gimnasio-terapeutico): Espacio terapéutico y de estimulación temprana para niños y niñas de hasta 6 años en Sede Gil de Castro 122. Enfoque interdisciplinario en motricidad (Kinesiología), cognición (Educación Parvularia), lenguaje (Fonoaudiología) y sensorial (Terapia Ocupacional) bajo metodologías Pikler y Montessori, en grupos reducidos con participación activa de la familia.
+- [Gimnasio Terapéutico](https://centrovalu.cl/gimnasio-terapeutico): Espacio terapéutico y de estimulación temprana para niños y niñas de hasta 4 años en Sede Gil de Castro 122. Enfoque interdisciplinario en motricidad (Kinesiología), cognición (Educación Parvularia), lenguaje (Fonoaudiología) y sensorial (Terapia Ocupacional) bajo metodologías Pikler y Montessori, en grupos reducidos con participación activa de la familia.
 - [Psicología](https://centrovalu.cl/psicologia): Psicoterapia infanto-juvenil, adolescentes, adultos, terapia de parejas, terapia familiar, psicología perinatal y acompañamiento en neurodivergencias.
 - [Pediatría](https://centrovalu.cl/pediatria): Control de niño sano, consulta pediátrica general, lactancia materna y seguimiento integral del desarrollo infantil (Dra. Eugenia Ortiz).
 - [Fonoaudiología](https://centrovalu.cl/fonoaudiologia): Evaluación e intervención en habla, lenguaje, comunicación, deglución, motricidad orofacial, voz profesional y neurorrehabilitación post-ACV. Metodologías AMAR, TEACCH y CLAP.

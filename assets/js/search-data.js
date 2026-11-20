@@ -437,7 +437,7 @@ window.searchData = [
     "icon": "🌱",
     "category": "Estimulación Temprana",
     "url": "gimnasio-terapeutico.html",
-    "keywords": ["gimnasio", "gimnacio", "estimulacion temprana", "hasta 6 años", "primera infancia", "niños", "bebes", "lactantes", "desarrollo motor", "pikler", "montessori", "juego", "kinesiologia", "gil de castro"]
+    "keywords": ["gimnasio", "gimnacio", "estimulacion temprana", "hasta 4 años", "primera infancia", "niños", "bebes", "lactantes", "desarrollo motor", "pikler", "montessori", "juego", "kinesiologia", "gil de castro"]
   },
   {
     "type": "service",
