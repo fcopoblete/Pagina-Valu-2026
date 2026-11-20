@@ -1,11 +1,35 @@
 /**
  * Archivo: search-data.js
  * Descripción: Datos del buscador de Centro Valu. Incluye profesionales, especialidades, aranceles y páginas legales (Privacidad y Términos).
- * Fecha de última modificación: 2026-11-18
+ * Fecha de última modificación: 2026-11-20
  * Autor: Antigravity (AI Assistant)
  */
 window.searchData = [
   // PROFESIONALES
+  {
+    "type": "professional",
+    "name": "Valentina Castillo",
+    "specialty": "Psicopedagogía",
+    "position": "Educadora de Párvulos",
+    "url": "psicopedagogia.html#valentina-castillo",
+    "img": "assets/img/team/valentina-castillo.webp?v=202611"
+  },
+  {
+    "type": "professional",
+    "name": "Camila Lorca",
+    "specialty": "Kinesiología",
+    "position": "Kinesióloga",
+    "url": "gimnasio-terapeutico.html#camila-lorca",
+    "img": "assets/img/team/camila-lorca.webp?v=202611"
+  },
+  {
+    "type": "professional",
+    "name": "Claudia Salgado",
+    "specialty": "Terapia Ocupacional",
+    "position": "Terapeuta Ocupacional",
+    "url": "terapia-ocupacional.html#claudia-salgado",
+    "img": "assets/img/team/claudia-salgado.webp?v=202611"
+  },
   {
     "type": "professional",
     "name": "Valentina Jiménez",

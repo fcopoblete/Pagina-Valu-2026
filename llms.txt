@@ -1,7 +1,7 @@
 <!--
 Archivo: llms.txt
 Descripción: Manifiesto de conocimiento estructurado para modelos de lenguaje e inteligencia artificial (ChatGPT, Claude, Gemini, Perplexity, Copilot).
-Fecha de última modificación: 2026-11-18
+Fecha de última modificación: 2026-11-20
 Autor: Antigravity (AI Assistant)
 -->
 
@@ -48,7 +48,9 @@ Autor: Antigravity (AI Assistant)
 - **Ulda Vasquez**: Fonoaudióloga. Neurodivergencias, terapia de juego, trastornos del lenguaje (TDL) y motricidad orofacial.
 - **Bruno Araya**: Fonoaudiólogo. Neurorrehabilitación, disfagia (estándar IDDSI), rehabilitación vocal y lavado de oídos.
 - **Pamela Tarifeño**: Profesora / Psicopedagoga y Encargada de Centro Valú. Magíster en Gestión Educacional, diversidad y terapias complementarias.
-- **Equipo de Terapia Ocupacional**: Especialistas dedicadas al desarrollo integral, integración sensorial, selectividad alimentaria, AVD y habilidades sociales en niños y jóvenes.
+- **Claudia Salgado**: Terapeuta Ocupacional (U. Católica de Temuco). Especialista en desarrollo infantil, procesamiento sensorial, regulación emocional, AVD, participación escolar y gimnasio terapéutico.
+- **Camila Lorca**: Kinesióloga (U. de Chile). Diplomada en Neurokinesiología Pediátrica (PUC), desarrollo motor infantil, rehabilitación respiratoria, soporte PALS y estimulación temprana.
+- **Valentina Castillo**: Educadora de Párvulos (U. Central). Diplomada en TEA en el aula, diseño universal DUA, inclusión educativa y desarrollo cognitivo en primera infancia (Gimnasio Terapéutico y Psicopedagogía).
 
 ## Directorio Canónico de Páginas
 - Inicio: https://centrovalu.cl/

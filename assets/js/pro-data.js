@@ -1,11 +1,54 @@
 /**
  * Archivo: assets/js/pro-data.js
  * Descripción: Base de datos centralizada de profesionales de Centro Valu.
- * Fecha de última modificación: 2026-11-18
+ * Fecha de última modificación: 2026-11-20
  * Autor: Antigravity (AI Assistant)
  */
 
 window.proDataExtended = {
+    "valentina-castillo": {
+        nombre: "Valentina Castillo",
+        cargo: "Educadora de Párvulos",
+        img: "assets/img/team/valentina-castillo.webp?v=202611",
+        bg: "bg-brand-beige/40",
+        especialidad: "Psicopedagogía y Gimnasio Terapéutico",
+        formacion: [
+            "Educadora de Párvulos y Licenciada en Educación – Universidad Central.",
+            "Técnico de Nivel Medio en Atención de Párvulos.",
+            "Diplomada en Trastorno del Espectro Autista: Estrategias y Abordaje en el Aula.",
+            "Formación en Herramientas Socioemocionales y Metodología en Primera Infancia.",
+            "Planificación curricular DUA e Inclusión Escolar en Síndrome de Down (EDUDOWN)."
+        ],
+        descripcion: "Educadora de Párvulos con <span data-start-year='2013' class='dynamic-exp'>13</span> años de experiencia en contextos educativos y de inclusión temprana. Especialista en mediación del aprendizaje, diseño curricular universal (DUA) y estimulación del desarrollo cognitivo infantil a través del juego."
+    },
+    "camila-lorca": {
+        nombre: "Camila Lorca",
+        cargo: "Kinesióloga",
+        img: "assets/img/team/camila-lorca.webp?v=202611",
+        bg: "bg-brand-azul/20",
+        especialidad: "Kinesiología",
+        formacion: [
+            "Kinesióloga y Licenciada en Kinesiología – Universidad de Chile.",
+            "Diplomada en Neurokinesiología Pediátrica: Terapias Adjuntas – Pontificia Universidad Católica de Chile.",
+            "Kinesiología Pediátrica y Respiratoria (Sociedad Chilena de Pediatría, ventilación mecánica y neuromuscular).",
+            "Acreditación en Diagnóstico Clínico ADOS-2 (SELCAP), PALS y Soporte Asistencial IAAS."
+        ],
+        descripcion: "Kinesióloga dedicada a la rehabilitación infantil y el desarrollo motor en contextos clínicos y domiciliarios. Desde un enfoque interdisciplinario y centrado en la familia, promueve el control postural, la motricidad y la calidad de vida en niñ@s y adultos."
+    },
+    "claudia-salgado": {
+        nombre: "Claudia Salgado",
+        cargo: "Terapeuta Ocupacional",
+        img: "assets/img/team/claudia-salgado.webp?v=202611",
+        bg: "bg-brand-rosa/20",
+        especialidad: "Terapia Ocupacional",
+        formacion: [
+            "Terapeuta Ocupacional y Licenciada en Ciencias de la Ocupación – Universidad Católica de Temuco.",
+            "Diplomada en Atención Temprana y Neurodivergencia.",
+            "Formación en Procesamiento Sensorial, Regulación Emocional y Derechos de NNA.",
+            "Especialización en Habilidades Motoras, AVD y Participación Escolar."
+        ],
+        descripcion: "Terapeuta Ocupacional dedicada a favorecer el desempeño ocupacional, la autonomía y la regulación emocional en niñ@s y adolescentes. Su abordaje integra el procesamiento sensorial, el juego y las rutinas cotidianas en el hogar y la escuela."
+    },
     "valentina-jimenez": {
         nombre: "Valentina Jiménez",
         cargo: "Psicóloga / Directora",
