@@ -1,6 +1,6 @@
 <!--
-Que hace el archivo: Bitácora de Obsidian que documenta el lanzamiento de la nueva sucursal Gil de Castro 122, el Gimnasio Terapéutico y de Estimulación Temprana (hasta 6 años), el rediseño de ubicaciones en 2 columnas con mapas de Google Maps embebidos, y la resolución de problemas de contraste y compatibilidad en Tailwind.
-Fecha de última modificación: 2026-11-18
+Que hace el archivo: Bitácora de Obsidian que documenta el lanzamiento de la nueva sucursal Gil de Castro 122, el Gimnasio Terapéutico y de Estimulación Temprana (hasta 4 años, Mar a Sáb), el rediseño de ubicaciones en 2 columnas con mapas de Google Maps embebidos, y la actualización de equipo profesional y modalidades de TO.
+Fecha de última modificación: 2026-11-23
 Nombre del autor: Antigravity & fcopoblete
 -->
 # 🗺️ Bitácora: Nueva Sucursal Gil de Castro, Gimnasio Terapéutico y Rediseño de Ubicaciones en 2 Columnas
@@ -112,3 +112,22 @@ Por solicitud directa del usuario, se eliminó el listado de especialidades dent
     - Índice del buscador `assets/js/search-data.js`
 - **Control de Calidad Automatizado:**
   - Ampliación de la suite de pruebas unitarias (`tests/test_compliance_and_search.py`), totalizando **9/9 tests exitosos**.
+
+---
+
+## 👥 8. Incorporación de Profesionales y Ajustes de Operación (2026-11-23)
+
+- **Nuevas Profesionales:**
+  - **Claudia Salgado:** Terapeuta Ocupacional (U. Católica de Temuco). Integrada en `profesionales.html`, `terapia-ocupacional.html` y como especialista sensorial en `gimnasio-terapeutico.html`.
+  - **Camila Lorca:** Kinesióloga (U. de Chile). Especialista en neurokinesiología pediátrica, integrada en `profesionales.html` (sección Kinesiología) y `gimnasio-terapeutico.html` (desarrollo motor).
+  - **Valentina Castillo:** Educadora de Párvulos (U. Central). Integrada en `psicopedagogia.html`, `profesionales.html` y `gimnasio-terapeutico.html` (desarrollo cognitivo y juego).
+- **Ajustes Operativos y Clínicos en Gimnasio Terapéutico:**
+  - Rango de atención: Ajustado a **hasta los 4 años**.
+  - Horario: Establecido de **Martes a Sábado**.
+  - Tarifas en Landing: Se retiraron los precios explícitos en las tarjetas de planes, priorizando el número de sesiones y frecuencia mensual para consulta directa.
+- **Terapia Ocupacional:**
+  - Atención exclusiva en **Sede Gil de Castro 122** con ruteo automático en `formulario-contacto.html`.
+  - Reemplazo de *Plan en Pareja* por **Plan Dúo**.
+  - Ajuste en Plan Grupal agregando *"y necesidades de apoyo mutuo"*.
+- **Suite de Pruebas:**
+  - Ampliación a **10/10 tests unitarios exitosos** cubriendo las nuevas incorporaciones y reglas de negocio.

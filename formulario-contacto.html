@@ -1615,7 +1615,7 @@ Autor: Antigravity (AI Assistant)
                 for (let opt of selector.options) {
                     if (opt.value.toLowerCase().includes(lower) || lower.includes(opt.value.toLowerCase())) {
                         selector.value = opt.value;
-                        if (opt.value === 'Gimnasio Terapéutico' && sucursalSelector) {
+                        if ((opt.value === 'Gimnasio Terapéutico' || opt.value === 'Terapia Ocupacional') && sucursalSelector) {
                             sucursalSelector.value = 'Nueva Sede Gil de Castro 122';
                         }
                         break;

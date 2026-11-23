@@ -183,8 +183,26 @@ class TestCentroValuComplianceAndSearch(unittest.TestCase):
         self.assertIn('Modalidades y Programas', to_html)
         self.assertIn('Evaluación de Terapia Ocupacional', to_html)
         self.assertIn('Plan Individual', to_html)
-        self.assertIn('Plan en Pareja', to_html)
+        self.assertIn('Plan Dúo', to_html)
         self.assertIn('Plan Grupal', to_html)
+        self.assertIn('necesidades de apoyo mutuo', to_html)
+        self.assertIn('Exclusivo Sede Gil de Castro 122', to_html)
+
+    def test_new_team_members_and_gym_settings(self):
+        """Verifica la incorporación de Claudia Salgado, Camila Lorca, Valentina Castillo y configuración de Gimnasio."""
+        pro_data = self._read_file('assets/js/pro-data.js')
+        search_data = self._read_file('assets/js/search-data.js')
+        gim_html = self._read_file('gimnasio-terapeutico.html')
+
+        # Profesionales en pro-data y search-data
+        for pro_id in ['claudia-salgado', 'camila-lorca', 'valentina-castillo']:
+            self.assertIn(pro_id, pro_data, f'{pro_id} debe existir en pro-data.js')
+            self.assertIn(pro_id, search_data, f'{pro_id} debe existir en search-data.js')
+
+        # Gimnasio: hasta 4 años y martes a sábado
+        self.assertIn('hasta 4 años', gim_html)
+        self.assertNotIn('hasta 6 años', gim_html)
+        self.assertIn('Martes a sábado', gim_html)
 
     def test_retired_professionals_removed(self):
         """Verifica que Valeria Alfaro y Priscilla Figueroa hayan sido retiradas de páginas y buscadores."""

@@ -4,8 +4,8 @@ description: Manual Maestro y Generador de Habilidades para Centro Valu. Define 
 ---
 <!--
 Archivo: SKILL.md
-Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal, buscador global, estructura de navegación de Formación, aranceles pediátricos y suite de pruebas.
-Fecha de última modificación: 2026-11-18
+Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal, buscador global, estructura de navegación de Formación, aranceles pediátricos, programas de TO y suite de pruebas.
+Fecha de última modificación: 2026-11-23
 Nombre del autor: Antigravity
 -->
 
@@ -98,7 +98,9 @@ Centro Valú opera formalmente en dos sucursales en Coquimbo:
 1. **Sede Central (Parque Nacional Lauca 1612, Bosque San Carlos)**:
    - Psicología Infanto-Juvenil y Adultos, Pediatría Integral, Tests Diagnósticos (ADOS-2, WISC-V, ADI-R) y Convenio Fonasa.
 2. **Nueva Sede (Gil de Castro 122, Coquimbo)**:
-   - Gimnasio Terapéutico y de Estimulación Temprana (**niños y niñas de hasta 6 años**), Fonoaudiología, Terapia Ocupacional, Psicopedagogía y Apoyo Escolar.
+   - Gimnasio Terapéutico y de Estimulación Temprana (**niños y niñas de hasta 4 años**, horario Martes a Sábado).
+   - Terapia Ocupacional exclusiva en Sede Gil de Castro (Programas: Evaluación, Plan Individual, Plan Dúo y Plan Grupal con apoyo mutuo).
+   - Fonoaudiología, Psicopedagogía y Apoyo Escolar.
    - **Estándar de Iconografía**: Prohibido el uso de emojis informales como `🧸` en menús, desplegables y formularios; se debe mantener una identidad clínica sobria, cálida y profesional.
 
 ### Estándar de Sección de Ubicaciones (2 Columnas con Google Maps)
