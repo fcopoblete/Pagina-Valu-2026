@@ -156,7 +156,7 @@
                 return `
                     <a href="${item.url}" class="search-item flex items-center gap-4 p-3 rounded-2xl transition-all group">
                         <div class="h-12 w-12 rounded-xl overflow-hidden bg-primary-50 shrink-0">
-                            <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover">
+                            <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='assets/img/team/placeholder.webp';">
                         </div>
                         <div class="flex-grow">
                             <h4 class="font-bold text-slate-900 group-hover:text-primary-600 transition-colors">${item.name}</h4>

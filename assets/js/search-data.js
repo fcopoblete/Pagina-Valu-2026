@@ -1,11 +1,27 @@
 /**
  * Archivo: search-data.js
  * Descripción: Datos del buscador de Centro Valu. Incluye profesionales, especialidades, aranceles y páginas legales (Privacidad y Términos).
- * Fecha de última modificación: 2026-10-28
+ * Fecha de última modificación: 2026-11-26
  * Autor: Antigravity (AI Assistant)
  */
 window.searchData = [
   // PROFESIONALES
+  {
+    "type": "professional",
+    "name": "Valentina Castillo",
+    "specialty": "Psicopedagogía",
+    "position": "Educadora de Párvulos",
+    "url": "psicopedagogia.html#valentina-castillo",
+    "img": "assets/img/team/valentina-castillo.webp?v=202611"
+  },
+  {
+    "type": "professional",
+    "name": "Camila Lorca",
+    "specialty": "Kinesiología",
+    "position": "Kinesióloga",
+    "url": "gimnasio-terapeutico.html#camila-lorca",
+    "img": "assets/img/team/camila-lorca.webp?v=202611"
+  },
   {
     "type": "professional",
     "name": "Valentina Jiménez",
@@ -80,14 +96,6 @@ window.searchData = [
   },
   {
     "type": "professional",
-    "name": "Priscilla Figueroa",
-    "specialty": "Psicología",
-    "position": "Psicóloga",
-    "url": "psicologia.html#priscilla-figueroa",
-    "img": "assets/img/team/priscilla-figueroa.webp"
-  },
-  {
-    "type": "professional",
     "name": "Eugenia Ortiz",
     "specialty": "Pediatría",
     "position": "Pediatra",
@@ -117,14 +125,6 @@ window.searchData = [
     "position": "Fonoaudióloga",
     "url": "fonoaudiologia.html#ulda-castillo",
     "img": "assets/img/team/ulda-castillo.webp"
-  },
-  {
-    "type": "professional",
-    "name": "Valeria Alfaro",
-    "specialty": "Terapia Ocupacional",
-    "position": "Terapeuta Ocupacional",
-    "url": "terapia-ocupacional.html#valeria-alfaro",
-    "img": "assets/img/team/valeria-alfaro.webp"
   },
   {
     "type": "professional",
@@ -421,6 +421,31 @@ window.searchData = [
     "category": "Modalidad",
     "url": "index.html#contacto",
     "keywords": ["sucursal", "oficina", "box", "centro", "coquimbo", "en persona", "físico", "lugar"]
+  },
+  // GIMNASIO TERAPÉUTICO Y ESTIMULACIÓN TEMPRANA
+  {
+    "type": "service",
+    "name": "Gimnasio Terapéutico",
+    "icon": "🌱",
+    "category": "Estimulación Temprana",
+    "url": "gimnasio-terapeutico.html",
+    "keywords": ["gimnasio", "gimnacio", "estimulacion temprana", "hasta 4 años", "primera infancia", "niños", "bebes", "lactantes", "desarrollo motor", "pikler", "montessori", "juego", "kinesiologia", "gil de castro"]
+  },
+  {
+    "type": "service",
+    "name": "Planes de Estimulación Temprana",
+    "icon": "🌱",
+    "category": "Aranceles",
+    "url": "gimnasio-terapeutico.html#planes",
+    "keywords": ["planes gimnasio", "precios gimnasio", "aranceles gimnasio", "50000", "85000", "100000", "120000", "descubrimiento", "exploracion", "crecimiento", "integral"]
+  },
+  {
+    "type": "service",
+    "name": "Nueva Sede Gil de Castro",
+    "icon": "📍",
+    "category": "Sucursal",
+    "url": "index.html#contacto",
+    "keywords": ["gil de castro", "sede gil de castro", "nueva sucursal", "nueva sede", "coquimbo", "gimnasio", "apoyo escolar"]
   }
 ];
 

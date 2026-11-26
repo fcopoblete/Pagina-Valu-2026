@@ -4,8 +4,8 @@ description: Manual Maestro y Generador de Habilidades para Centro Valu. Define 
 ---
 <!--
 Archivo: SKILL.md
-Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal (Ley 19.628, Ley 20.584, APDP), buscador global y suite de pruebas.
-Fecha de última modificación: 2026-10-14
+Descripción: Manual Maestro y Generador de Habilidades para Centro Valu. Actualizado con estándares de cumplimiento legal, buscador global, estructura de navegación de Formación, aranceles pediátricos, programas de TO y suite de pruebas.
+Fecha de última modificación: 2026-11-23
 Nombre del autor: Antigravity
 -->
 
@@ -53,10 +53,16 @@ Cualquier modificación al equipo médico (altas, bajas o modificaciones) DEBE s
     3. **Aire Superior (Top breathing)**: Dejar entre un 10% y 15% de espacio vacío sobre la cabeza del profesional.
     4. **Centrado y Escala**: Centrado horizontal a escala máxima permitida por el aire superior. Usar `object-contain`.
     5. **Formato y Peso**: WebP optimizado (Máx 1000px altura, peso < 100KB).
+    6. **Sincronización y Cache-Busting (CRÍTICO)**: Al actualizar la fotografía de un profesional existente, se DEBE actualizar el parámetro de versión (`?v=YYYYMM`) en `assets/js/pro-data.js`, `assets/js/search-data.js`, `profesionales.html` y en la página de su especialidad correspondiente para invalidar el caché del navegador. Si existen avances en la rama `test` aún no publicados, aplicar el cambio mediante commit aislado en `main`.
 - Si la foto original tiene un fondo complejo, solicita la versión "recortada" o usa la herramienta de remoción de fondo disponible.
 
 ## 🧱 Cambios Globales (Header, Footer, Navegación)
 - **Navegación Intuitiva (Popstate)**: Cualquier menú móvil, modal o "drawer" (como el de profesionales) DEBE implementar la API de History (`pushState` y evento `popstate`). Así, si el usuario presiona el botón "Atrás" en su dispositivo físico/virtual para intentar cerrar el menú o modal, este simplemente se cerrará sin sacarlo de la página actual.
+- **Jerarquía de Navegación del Banner**:
+    - La barra de navegación principal debe mantener exclusivamente los enlaces esenciales: `Inicio`, `Especialidades` (dropdown), `Quiénes Somos`, `Profesionales`, `Convenios`, `Contacto` y el CTA `Agendar Hora`.
+    - **Formación**: El acceso al servicio de Formación (`/formacion`) pertenece estrictamente al interior del menú desplegable `Especialidades` (en desktop y drawer móvil), evitando saturar el banner superior y asegurando coherencia visual en las 17 páginas.
+- **Prohibición de Scripts de Modificación Masiva**: Queda estrictamente prohibido utilizar scripts automatizados de regex o reemplazo masivo (como `update_headers.py`) para alterar componentes de cabecera o navegación. Las modificaciones deben realizarse de forma quirúrgica, manual y verificada archivo por archivo para preservar las clases activas, accesibilidad y rutas limpias particulares de cada plantilla.
+- **Modal de Aranceles y Duraciones Clínicas**: El modal `#prices-modal` en `index.html` centraliza los valores oficiales. Para **Pediatría**, las consultas estándar (presencial "Control Médico" y remota "Control Médico Online") tienen una duración estipulada de **10 minutos** (`Atención 10 min` / `Sesión remota 10 min`), con copago Fonasa $7.690 y Particular $50.000.
 - Si el usuario te pide modificar el encabezado (`index.html`) o el pie de página y te indica hacerlo *solo en una página*, **DEBES** registrar inmediatamente en `PENDIENTES.md` una tarea requerida para replicar ese mismo cambio en las 10+ páginas restantes del ecosistema, evitando discrepancias de diseño.
 
 ## 📈 Estándares SEO Local e Indexación para Motores de IA (LLMs)
@@ -87,14 +93,36 @@ Para asegurar previsualizaciones profesionales en WhatsApp y redes sociales, tod
 - **Texto**: Solo el nombre de la especialidad en español (ej. "Psicopedagogía") con tipografía limpia y clara.
 - **Archivos**: Guardar siempre en `assets/brand/og-[nombre].jpg`.
 
-## 🎨 Paleta de Identidad
+## 🏥 Infraestructura de Dos Sedes y Gimnasio Terapéutico
+Centro Valú opera formalmente en dos sucursales en Coquimbo:
+1. **Sede Central (Parque Nacional Lauca 1612, Bosque San Carlos)**:
+   - Psicología Infanto-Juvenil y Adultos, Pediatría Integral, Tests Diagnósticos (ADOS-2, WISC-V, ADI-R) y Convenio Fonasa.
+2. **Nueva Sede (Gil de Castro 122, Coquimbo)**:
+   - Gimnasio Terapéutico y de Estimulación Temprana (**niños y niñas de hasta 4 años**, horario Martes a Sábado).
+   - Terapia Ocupacional exclusiva en Sede Gil de Castro (Programas: Evaluación, Plan Individual, Plan Dúo y Plan Grupal con apoyo mutuo).
+   - Fonoaudiología, Psicopedagogía y Apoyo Escolar.
+   - **Estándar de Iconografía**: Prohibido el uso de emojis informales como `🧸` en menús, desplegables y formularios; se debe mantener una identidad clínica sobria, cálida y profesional.
+
+### Estándar de Sección de Ubicaciones (2 Columnas con Google Maps)
+Toda sección de sucursales (`#contacto` o `#ubicacion`) debe estructurarse con:
+- **Cuadrícula en 2 columnas simétricas**: Sede Central (Parque Lauca) y Nueva Sede (Gil de Castro) en paralelo.
+- **Mapas interactivos embebidos**: Iframe de Google Maps en cada columna con altura estandarizada `h-64 sm:h-72` y bordes suaves `rounded-2xl`.
+- **Enfoque directo**: Tarjetas centradas en nombre de sede, dirección y enlace externo a Google Maps / Waze. Evitar listas saturadas de especialidades dentro de las tarjetas del mapa.
+- **Barra inferior unificada**: Horarios consolidados, teléfonos/WhatsApp corporativo y CTA de contacto.
+
+## 🎨 Paleta de Identidad y Reglas de Contraste (Modo Oscuro)
 - **Primario**: `#75cfcf` (Verde Agua Valu).
-- **Texto**: `slate-900` para impacto, `slate-500` para lectura.
+- **Escala Primaria Obligatoria en `tailwind.config`**:
+  - `50: '#f0fdf9'`, `100: '#ddf4f4'`, `200: '#bce8e8'`, `300: '#99dede'`, `400: '#8be0e0'`, `500: '#75cfcf'`, `600: '#4a8d8d'`, `700: '#2d5a5a'`.
+- **Texto**: `slate-900` para impacto en fondos claros, `slate-500` para lectura, `text-white` y `text-primary-300` para fondos oscuros (`slate-950`/`slate-900`).
 - **Tipografía**: `Abhaya Libre` para el espíritu (serifa), `Poppins` para la claridad (sans).
+- **Regla Crítica de Contraste en Fondos Oscuros**: Queda estrictamente prohibido aplicar clases CSS globales con colores oscuros hardcodeados (ej. `.contact-priority-bold` que fuerza `#0f172a`) dentro de contenedores oscuros. Siempre verificar contraste AAA contra el fondo.
+- **Píldoras y Badges en Fondos Oscuros**: Los textos de badges informativos deben utilizar `text-white font-bold tracking-wider` con fondos semitransparentes (`bg-primary-500/25 border-primary-400/60 backdrop-blur-sm`) y puntos de estado pulsantes (`animate-ping`) bien contrastados.
+
 ## 🛡️ Reglas de Seguridad Críticas (Head Check)
 Jamás se debe limpiar o reconstruir el bloque `<head>` omitiendo estos 4 pilares:
 1. **CDN de Tailwind CSS**: `<script src="https://cdn.tailwindcss.com"></script>` (Vital para el renderizado).
-2. **Configuración Inline de Tailwind**: Script de `tailwind.config` con los tokens de color del Centro Valu.
+2. **Configuración Inline de Tailwind**: Script de `tailwind.config` con los tokens de color del Centro Valu (incluyendo escala `primary` completa: 50 a 700).
 3. **Fuentes de Google**: Enlace a `Abhaya Libre` y `Poppins`.
 4. **Tracking & Analytics**: Google Tag (gtag.js) y Meta Pixel.
 

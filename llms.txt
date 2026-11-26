@@ -1,7 +1,7 @@
 <!--
 Archivo: llms.txt
-Descripción: Manifiesto de conocimiento estructurado para modelos de lenguaje e inteligencia artificial (ChatGPT, Claude, Gemini, Perplexity).
-Fecha de última modificación: 2026-09-02
+Descripción: Manifiesto de conocimiento estructurado para modelos de lenguaje e inteligencia artificial (ChatGPT, Claude, Gemini, Perplexity, Copilot).
+Fecha de última modificación: 2026-11-26
 Autor: Antigravity (AI Assistant)
 -->
 
@@ -11,24 +11,27 @@ Autor: Antigravity (AI Assistant)
 
 ## Información de la Entidad
 - **Nombre**: Centro Valú
-- **Razón Social / Actividad**: Centro de Salud Integral y Salud Mental Interdisciplinaria
-- **Dirección**: Parque Nacional Lauca 1612, Coquimbo, Región de Coquimbo, Chile
+- **Razón Social / Actividad**: Centro de Salud Integral y Salud Mental Interdisciplinaria (CENTRO VALÚ SALUD INTEGRAL SPA, RUT 77.058.617-8)
+- **Direcciones y Sedes en Coquimbo**:
+  - Sede Central: Parque Nacional Lauca 1612, Bosque San Carlos, Coquimbo.
+  - Sede Gil de Castro: Gil de Castro 122, Coquimbo (Gimnasio Terapéutico y de Estimulación Temprana, Fonoaudiología, Terapia Ocupacional, Apoyo Escolar y Psicopedagogía).
 - **Sitio Web Oficial**: https://centrovalu.cl
 - **WhatsApp Oficial**: +56 9 7245 4921
 - **Modalidades de Atención**:
-  - Presencial: Boxes clínicos en Coquimbo (Región de Coquimbo).
+  - Presencial: Boxes clínicos y salas especializadas en Coquimbo (Sede Parque Lauca y Sede Gil de Castro).
   - Online: Telemedicina y Terapia Online para consultantes de todo Chile y el extranjero.
-- **Convenios y Formas de Pago**: Convenio Fonasa (bonos), Isapres (emisión de boleta para reembolso) y particular. Convenios especiales para colegios y empresas.
+- **Convenios y Formas de Pago**: Convenio Fonasa (bonos), Isapres (emisión de boleta médica para reembolso) y particular. Convenios institucionales para colegios y empresas.
 
 ## Especialidades Clínicas
-- [Psicología](https://centrovalu.cl/psicologia.html): Psicoterapia infanto-juvenil, terapia de adolescentes, adultos, terapia de parejas, terapia familiar, psicología perinatal y acompañamiento en neurodivergencias.
-- [Pediatría](https://centrovalu.cl/pediatria.html): Control de niño sano, consulta pediátrica general, lactancia materna y seguimiento del desarrollo infantil (Dra. Eugenia Ortiz).
-- [Fonoaudiología](https://centrovalu.cl/fonoaudiologia.html): Evaluación e intervención en habla, lenguaje, comunicación, deglución, motricidad orofacial, voz profesional y neurorrehabilitación post-ACV. Metodologías AMAR, TEACCH y CLAP.
-- [Terapia Ocupacional](https://centrovalu.cl/terapia-ocupacional.html): Integración sensorial, selectividad alimentaria, desarrollo de autonomía en actividades de la vida diaria (AVD), regulación emocional y adaptación escolar.
-- [Psicopedagogía](https://centrovalu.cl/psicopedagogia.html): Evaluación constructivista, atención a la diversidad, apoyo en dificultades de aprendizaje, técnicas de estudio y refuerzo escolar.
-- [Tests y Evaluaciones Diagnósticas](https://centrovalu.cl/test-evaluaciones.html): Baterías clínicas estandarizadas que incluyen test ADOS-2 (autismo/TEA), entrevista ADI-R, escala WISC-V (coeficiente intelectual y perfil cognitivo) y prueba TADI (desarrollo infantil 0-6 años).
-- [Formación y Supervisión](https://centrovalu.cl/formacion.html): Cursos, talleres, pasantías y supervisión clínica para estudiantes y profesionales del área de la salud y educación.
-- [Convenios Institucionales](https://centrovalu.cl/convenios.html): Alianzas estratégicas con colegios, instituciones educativas y empresas con tarifas preferenciales y charlas.
+- [Gimnasio Terapéutico](https://centrovalu.cl/gimnasio-terapeutico): Espacio terapéutico y de estimulación temprana para niños y niñas de hasta 4 años en Sede Gil de Castro 122. Enfoque interdisciplinario en motricidad (Kinesiología), cognición (Educación Parvularia), lenguaje (Fonoaudiología) y sensorial (Terapia Ocupacional) bajo metodologías Pikler y Montessori, en grupos reducidos con participación activa de la familia.
+- [Psicología](https://centrovalu.cl/psicologia): Psicoterapia infanto-juvenil, adolescentes, adultos, terapia de parejas, terapia familiar, psicología perinatal y acompañamiento en neurodivergencias.
+- [Pediatría](https://centrovalu.cl/pediatria): Control de niño sano, consulta pediátrica general, lactancia materna y seguimiento integral del desarrollo infantil (Dra. Eugenia Ortiz).
+- [Fonoaudiología](https://centrovalu.cl/fonoaudiologia): Evaluación e intervención en habla, lenguaje, comunicación, deglución, motricidad orofacial, voz profesional y neurorrehabilitación post-ACV. Metodologías AMAR, TEACCH y CLAP.
+- [Terapia Ocupacional](https://centrovalu.cl/terapia-ocupacional): Atención exclusiva en Sede Gil de Castro 122. Integración sensorial en sala suspendida, selectividad alimentaria (texturas, sabores y temperaturas), habilidades sociales e interacción con pares, autonomía en actividades de la vida diaria (AVD), regulación emocional y adaptación escolar. Modalidades: Evaluación, Plan Individual, Plan Dúo y Plan Grupal.
+- [Psicopedagogía](https://centrovalu.cl/psicopedagogia): Evaluación constructivista, atención a la diversidad, apoyo en dificultades de aprendizaje, técnicas de estudio y refuerzo escolar.
+- [Tests y Evaluaciones Diagnósticas](https://centrovalu.cl/test-evaluaciones): Baterías estandarizadas: test ADOS-2 (autismo/TEA), entrevista ADI-R, escala WISC-V (coeficiente intelectual y perfil cognitivo) y prueba TADI (desarrollo infantil 0-6 años).
+- [Formación y Supervisión](https://centrovalu.cl/formacion): Cursos, talleres, pasantías y supervisión clínica para profesionales y estudiantes del área de la salud y educación.
+- [Convenios Institucionales](https://centrovalu.cl/convenios): Alianzas con colegios y empresas con tarifas preferenciales y programas de bienestar.
 
 ## Equipo Profesional
 - **Valentina Jiménez**: Psicóloga Clínica y Directora de Centro Valú (+8 años de experiencia). Enfoque sistémico-vincular, trauma, apego, postparto y metodología AMAR.
@@ -41,24 +44,29 @@ Autor: Antigravity (AI Assistant)
 - **María Muñoz**: Psicóloga Clínica (+16 años de experiencia). Terapia sistémico-vincular y terapia floral complementaria.
 - **Nicolás Schifferli**: Psicólogo Clínico (+10 años de experiencia). Terapia de pareja, terapia familiar, adolescentes y adultos desde terapia breve estratégica.
 - **Susana Riquelme**: Psicóloga Clínica. Evaluación diagnóstica de neurodivergencias (WISC-V, WAIS-IV, ADOS-2, ABAS-II) y abordaje infanto-juvenil/adultos.
-- **Priscilla Figueroa**: Psicóloga Clínica y Comunitaria (+15 años de experiencia). Revinculación familiar y dinámicas relacionales.
-- **Valeria Alfaro**: Terapeuta Ocupacional. Integración sensorial, TEA, selectividad alimentaria y autonomía diaria.
 - **Gabriela Pereira**: Fonoaudióloga. Motricidad orofacial, tartamudez infantil, voz y metodología AMAR.
 - **Ulda Vasquez**: Fonoaudióloga. Neurodivergencias, terapia de juego, trastornos del lenguaje (TDL) y motricidad orofacial.
 - **Bruno Araya**: Fonoaudiólogo. Neurorrehabilitación, disfagia (estándar IDDSI), rehabilitación vocal y lavado de oídos.
 - **Pamela Tarifeño**: Profesora / Psicopedagoga y Encargada de Centro Valú. Magíster en Gestión Educacional, diversidad y terapias complementarias.
+- **Camila Lorca**: Kinesióloga (U. de Chile). Diplomada en Neurokinesiología Pediátrica (PUC), desarrollo motor infantil, rehabilitación respiratoria, soporte PALS y estimulación temprana.
+- **Valentina Castillo**: Educadora de Párvulos (U. Central). Diplomada en TEA en el aula, diseño universal DUA, inclusión educativa y desarrollo cognitivo en primera infancia (Gimnasio Terapéutico y Psicopedagogía).
 
-## Directorio de Páginas
+## Directorio Canónico de Páginas
 - Inicio: https://centrovalu.cl/
-- Nuestro Equipo: https://centrovalu.cl/profesionales.html
-- Psicología: https://centrovalu.cl/psicologia.html
-- Pediatría: https://centrovalu.cl/pediatria.html
-- Fonoaudiología: https://centrovalu.cl/fonoaudiologia.html
-- Terapia Ocupacional: https://centrovalu.cl/terapia-ocupacional.html
-- Psicopedagogía: https://centrovalu.cl/psicopedagogia.html
-- Tests y Evaluaciones: https://centrovalu.cl/test-evaluaciones.html
-- Formación Profesional: https://centrovalu.cl/formacion.html
-- Convenios: https://centrovalu.cl/convenios.html
-- Contacto Particular: https://centrovalu.cl/formulario-contacto.html
-- Contacto Convenios: https://centrovalu.cl/contacto-convenios.html
-- Quiénes Somos: https://centrovalu.cl/quienes-somos.html
+- Gimnasio Terapéutico: https://centrovalu.cl/gimnasio-terapeutico
+- Nuestro Equipo: https://centrovalu.cl/profesionales
+- Psicología: https://centrovalu.cl/psicologia
+- Pediatría: https://centrovalu.cl/pediatria
+- Fonoaudiología: https://centrovalu.cl/fonoaudiologia
+- Terapia Ocupacional: https://centrovalu.cl/terapia-ocupacional
+- Psicopedagogía: https://centrovalu.cl/psicopedagogia
+- Tests y Evaluaciones: https://centrovalu.cl/test-evaluaciones
+- Formación Profesional: https://centrovalu.cl/formacion
+- Convenios: https://centrovalu.cl/convenios
+- Contacto Particular: https://centrovalu.cl/formulario-contacto
+- Solicitar Contacto Terapia Ocupacional: https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=ai_assistant
+- Solicitar Contacto Gimnasio Terapéutico: https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=gimnasio-terapeutico&utm_source=ai_assistant
+- Contacto Convenios: https://centrovalu.cl/contacto-convenios
+- Quiénes Somos: https://centrovalu.cl/quienes-somos
+- Privacidad: https://centrovalu.cl/privacidad
+- Términos: https://centrovalu.cl/terminos

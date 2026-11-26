@@ -1,7 +1,7 @@
 <!--
 Archivo: terapia-ocupacional.html
-Descripción: Información sobre el servicio de Terapia Ocupacional en Centro Valu. Normalización de enlaces internos para SEO.
-Fecha de última modificación: 2026-09-23
+Descripción: Información sobre el servicio de Terapia Ocupacional en Centro Valu (Atención exclusiva en Sede Gil de Castro).
+Fecha de última modificación: 2026-11-26
 Autor: Antigravity (AI Assistant)
 -->
 <!DOCTYPE html>
@@ -17,6 +17,7 @@ Autor: Antigravity (AI Assistant)
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="assets/brand/logo-valu.png">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Centro Valu">
@@ -45,20 +46,20 @@ Autor: Antigravity (AI Assistant)
 
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'META_PIXEL_ID');
-    fbq('track', 'PageView');
+    const META_PIXEL_ID = null; // Reemplazar por ID real cuando esté disponible
+    if (META_PIXEL_ID) {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', META_PIXEL_ID);
+        fbq('track', 'PageView');
+    }
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- JSON-LD: Medical WebPage -->
@@ -94,6 +95,20 @@ Autor: Antigravity (AI Assistant)
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
+                "name": "Selectividad Alimentaria"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Habilidades Sociales e Interacción con Pares"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
                 "name": "Autonomía y Actividades de la Vida Diaria (AVD)"
               }
             },
@@ -108,7 +123,14 @@ Autor: Antigravity (AI Assistant)
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Evaluación de Perfil Sensorial"
+                "name": "Evaluación de Perfil Sensorial y Desempeño Ocupacional"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Planes Individuales, en Dúo y Grupales de TO"
               }
             }
           ]
@@ -278,14 +300,21 @@ Autor: Antigravity (AI Assistant)
                     <!-- Especialidades Dropdown -->
                     <div class="relative group">
                         <button class="text-primary-600 font-bold hover:text-primary-700 transition-colors flex items-center gap-1">Especialidades <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-64 bg-white shadow-2xl rounded-2xl border border-primary-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 before:absolute before:-top-6 before:left-0 before:w-full before:h-6">
                             <ul class="py-3 px-2 flex flex-col gap-1">
+                                <li>
+                                    <a href="/gimnasio-terapeutico" class="block px-4 py-2 text-sm font-bold text-primary-700 bg-primary-50/80 rounded-xl hover:bg-primary-100 transition-colors flex items-center justify-between">
+                                        <span>Gimnasio Terapéutico</span>
+                                        <span class="text-[9px] bg-primary-200 text-primary-800 px-1.5 py-0.5 rounded font-black uppercase">Nuevo</span>
+                                    </a>
+                                </li>
                                 <li><a href="/psicologia" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicología</a></li>
                                 <li><a href="/pediatria" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Pediatría</a></li>
                                 <li><a href="/fonoaudiologia" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                                 <li><a href="/terapia-ocupacional" class="block px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-xl transition-colors">Terapia Ocupacional</a></li>
                                 <li><a href="/psicopedagogia" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Psicopedagogía</a></li>
                                 <li><a href="/test-evaluaciones" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Tests & Evaluaciones</a></li>
+                                <li><a href="/formacion" class="block px-4 py-2 text-sm font-semibold text-slate-600 rounded-xl hover:bg-primary-50 hover:text-primary-600 transition-colors">Formación</a></li>
                             </ul>
                         </div>
                     </div>
@@ -298,7 +327,6 @@ Autor: Antigravity (AI Assistant)
                             </ul>
                         </div>
                     </div>
-                    <a href="/formacion" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Formación</a>
                     <a href="/profesionales" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Nuestro Equipo</a>
                     <a href="/#contacto" class="text-slate-500 font-bold hover:text-primary-600 transition-colors">Ubicación</a>
                 </nav>
@@ -309,7 +337,7 @@ Autor: Antigravity (AI Assistant)
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </button>
-                <a href="/formulario-contacto"
+                <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=web" data-agenda-contact-link="true"
                     class="hidden sm:flex bg-primary-600 text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm px-3 xs:px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-lg sm:rounded-xl font-bold hover:shadow-lg hover:shadow-primary-600/20 transition-all text-center uppercase tracking-tighter sm:tracking-widest whitespace-nowrap glow-effect">
                     Contáctanos
                 </a>
@@ -357,12 +385,14 @@ Autor: Antigravity (AI Assistant)
                         <div id="specialties-submenu"
                             class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 rounded-xl mt-2">
                             <ul class="py-4 px-6 space-y-4">
+                                <li><a href="/gimnasio-terapeutico" class="mobile-link block text-lg font-bold text-primary-700 bg-primary-100/60 p-2 rounded-lg">Gimnasio Terapéutico (Nuevo)</a></li>
                                 <li><a href="/psicologia" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicología</a></li>
                                 <li><a href="/pediatria" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Pediatría</a></li>
                                 <li><a href="/fonoaudiologia" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Fonoaudiología</a></li>
                                 <li><a href="/terapia-ocupacional" class="mobile-link block text-lg font-bold text-primary-600">Terapia Ocupacional</a></li>
                                 <li><a href="/psicopedagogia" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Psicopedagogía</a></li>
                                 <li><a href="/test-evaluaciones" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Tests & Evaluaciones</a></li>
+                                <li><a href="/formacion" class="mobile-link block text-lg font-semibold text-slate-500 hover:text-primary-600">Formación</a></li>
                             </ul>
                         </div>
                     </li>
@@ -384,12 +414,11 @@ Autor: Antigravity (AI Assistant)
                             </ul>
                         </div>
                     </li>
-                    <li><a href="/formacion" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Formación</a></li>
                     <li><a href="/profesionales" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Nuestro Equipo</a></li>
                     <li><a href="/#contacto" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Ubicación</a></li>
                     <li><a href="/#precios" id="mobile-prices-open" class="mobile-link text-2xl font-bold text-slate-400 hover:text-primary-600 transition-colors">Precios</a></li>
                     <li class="pt-8 border-t border-slate-100">
-                        <a href="/formulario-contacto"
+                        <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=web" data-agenda-contact-link="true"
                             class="mobile-link group flex items-center justify-center gap-3 w-full bg-gradient-to-r from-primary-600 to-primary-500 text-white text-center py-4 rounded-xl font-bold text-base shadow-lg shadow-primary-600/20 glow-effect transition-all hover:shadow-xl active:scale-[0.98]">
                             Formulario de contacto
                         </a>
@@ -413,10 +442,15 @@ Autor: Antigravity (AI Assistant)
                         Terapia <br><span class="text-secondary-500 italic">Ocupacional.</span>
                     </h1>
                     <div class="flex flex-wrap gap-3 mb-8">
+                        <!-- BANNER: SEDES -->
+                        <div class="inline-flex items-center gap-2 bg-primary-100/70 backdrop-blur-md px-4 py-2 rounded-full border border-primary-200/80 shadow-sm">
+                            <span class="text-sm">📍</span>
+                            <span class="text-[10px] font-bold text-primary-900 uppercase tracking-widest leading-none">Exclusivo Sede Gil de Castro 122</span>
+                        </div>
                         <!-- BANNER: PRESENCIAL -->
                         <div class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-white shadow-sm">
-                            <span class="text-sm">📍</span>
-                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Atención Presencial</span>
+                            <span class="text-sm">🧸</span>
+                            <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest leading-none">Salas de Integración Sensorial</span>
                         </div>
                     </div>
                     <p class="mt-8 text-lg text-slate-500 leading-relaxed border-l-4 border-secondary-500 pl-6">
@@ -436,8 +470,8 @@ Autor: Antigravity (AI Assistant)
                 </div>
                 <div class="mt-16 lg:mt-0 lg:col-span-6">
                     <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3]">
-                        <img src="assets/img/reales/box-terapia-ocupacional.webp"
-                            alt="Box de Terapia Ocupacional en Centro Valu Coquimbo - Equipamiento para integración sensorial" width="800"
+                        <img src="assets/img/gimnasio/Colgantes.jpeg"
+                            alt="Sala y equipamiento suspendido para Terapia Ocupacional e Integración Sensorial en Centro Valu Coquimbo" width="800"
                             height="600" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -463,15 +497,63 @@ Autor: Antigravity (AI Assistant)
                         <h3 class="font-bold text-slate-900 mb-2">Regulación Emocional</h3>
                         <p class="text-xs text-slate-500 leading-relaxed">Trabajamos la autorregulación a través del cuerpo y el reconocimiento de estados internos para un mayor bienestar emocional.</p>
                     </div>
+                    <div id="to-sociales" class="scroll-mt-32 p-8 bg-brand-lila/30 rounded-3xl border border-brand-lila/50 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🤝</span>
+                        <h3 class="font-bold text-slate-900 mb-2">Habilidades Sociales</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Fomentamos la interacción en el juego y actividades compartidas: toma de turnos, límites, acuerdos y resolución positiva de conflictos con pares.</p>
+                    </div>
                     <div id="to-escolar" class="scroll-mt-32 p-8 bg-brand-lila/30 rounded-3xl border border-brand-lila/50 group hover:shadow-lg transition-all">
                         <span class="text-3xl mb-4 block">🎒</span>
                         <h3 class="font-bold text-slate-900 mb-2">Adaptación Escolar</h3>
                         <p class="text-xs text-slate-500 leading-relaxed">Acompañamos los procesos educativos facilitando herramientas para el aprendizaje y la convivencia en el aula.</p>
                     </div>
+                    <div id="to-alimentaria" class="scroll-mt-32 p-8 bg-brand-lila/30 rounded-3xl border border-brand-lila/50 group hover:shadow-lg transition-all">
+                        <span class="text-3xl mb-4 block">🍎</span>
+                        <h3 class="font-bold text-slate-900 mb-2">Selectividad Alimentaria</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Abordaje sensible ante dificultades con texturas, sabores y olores. Exploración sensorial respetuosa y acompañamiento familiar en las comidas.</p>
+                    </div>
                     <div id="to-avd" class="scroll-mt-32 p-8 bg-brand-lila/30 rounded-3xl border border-brand-lila/50 group hover:shadow-lg transition-all">
                         <span class="text-3xl mb-4 block">🏠</span>
                         <h3 class="font-bold text-slate-900 mb-2">Actividades de la Vida Diaria</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed">Entrenamiento en autonomía para alimentación, vestuario, higiene y rutinas diarias.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Entrenamiento en autonomía para vestuario, higiene, rutinas diarias e independencia funcional.</p>
+                    </div>
+                </div>
+
+                <!-- PROGRAMAS DE INTERVENCIÓN -->
+                <div class="mt-16">
+                    <h3 class="font-display text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center md:text-left">Modalidades y Programas</h3>
+                    <div class="grid md:grid-cols-2 gap-6 not-prose">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-brand-lila transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-8 h-8 rounded-lg bg-primary-100 text-primary-700 font-bold text-sm flex items-center justify-center">1</span>
+                                <h4 class="font-bold text-slate-900 text-base">Evaluación de Terapia Ocupacional</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed pl-11">Evaluamos el desempeño ocupacional mediante entrevista familiar, observación clínica y tests estandarizados.</p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-brand-lila transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-8 h-8 rounded-lg bg-primary-100 text-primary-700 font-bold text-sm flex items-center justify-center">2</span>
+                                <h4 class="font-bold text-slate-900 text-base">Plan Individual</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed pl-11">Trabajo especializado en sala, enfocado de forma exclusiva y personalizada en el niño o niña.</p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-brand-lila transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-8 h-8 rounded-lg bg-primary-100 text-primary-700 font-bold text-sm flex items-center justify-center">3</span>
+                                <h4 class="font-bold text-slate-900 text-base">Plan Dúo</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed pl-11">Dos niños o niñas por sala, seleccionados según afinidad de perfil ocupacional y necesidades de apoyo mutuo.</p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-brand-lila transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="w-8 h-8 rounded-lg bg-primary-100 text-primary-700 font-bold text-sm flex items-center justify-center">4</span>
+                                <h4 class="font-bold text-slate-900 text-base">Plan Grupal</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed pl-11">Metodología con respaldo científico internacional. Grupos de máximo 4 niños organizados por perfil ocupacional y necesidades de apoyo mutuo.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -480,50 +562,11 @@ Autor: Antigravity (AI Assistant)
                 <h3 class="font-display text-2xl font-bold text-slate-900 mb-4">Herramientas para la Vida</h3>
                 <p class="text-slate-800 text-lg">Trabajamos estrechamente con la familia y el entorno escolar para generalizar los aprendizajes y asegurar un impacto positivo duradero en la vida del usuario.</p>
                 <div class="mt-8">
-                    <a href="/formulario-contacto?especialidad=terapia-ocupacional"
+                    <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=web" data-agenda-contact-link="true"
                         class="inline-flex bg-primary-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/20 transition-all uppercase tracking-widest text-sm">
                         RESERVA TU HORA
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFESIONALES RELACIONADOS: CARRUSEL SWIPER -->
-    <section id="equipo" class="py-24 bg-slate-50 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-display text-4xl font-bold text-slate-900 mb-16 text-center">Nuestro Especialista</h2>
-
-            <div class="swiper proSwiper pb-12">
-                <div class="swiper-wrapper">
-                    <!-- PROFESIONAL: Valeria Alfaro -->
-                    <div class="swiper-slide h-auto max-w-sm mx-auto">
-                        <div id="valeria-alfaro"
-                            class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
-                            data-pro-id="valeria-alfaro">
-                            <div
-                                class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-brand-rosa/20 text-brand-rosa flex items-center justify-center">
-                                <img src="assets/img/team/valeria-alfaro.webp?v=top_framed" alt="Valeria Alfaro - Terapeuta Ocupacional en Centro Valu Coquimbo"
-                                    width="200" height="200" loading="lazy"
-                                    class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <h3 class="font-bold text-xl text-slate-900">Valeria Alfaro</h3>
-                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-4">Terapeuta Ocupacional</p>
-                            <div class="mt-auto">
-                                <button class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
-                                    Ver Perfil
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="mt-8 text-center">
-                <a href="/profesionales"
-                    class="inline-flex items-center text-primary-600 font-bold hover:gap-2 transition-all">Ver todo el
-                    equipo <span class="ml-2">→</span></a>
             </div>
         </div>
     </section>
@@ -545,7 +588,7 @@ Autor: Antigravity (AI Assistant)
             </div>
 
             <div class="p-8 border-t border-slate-100 bg-slate-50/50">
-                <a href="/formulario-contacto" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
+                <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=web" data-agenda-contact-link="true" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
                     CONTÁCTANOS
                 </a>
             </div>
@@ -595,7 +638,8 @@ Autor: Antigravity (AI Assistant)
                 <div class="md:col-span-1 text-center md:text-left">
                     <h5 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-8 border-b border-primary-100 pb-2 inline-block">Servicios</h5>
                     <ul class="space-y-4">
-                        <li><a href="/psicologia" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicología</a></li>
+                                                <li><a href="/gimnasio-terapeutico" class="text-sm font-bold text-primary-700 hover:text-primary-800 transition-colors">Gimnasio Terapéutico (Nuevo)</a></li>
+<li><a href="/psicologia" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Psicología</a></li>
                         <li><a href="/pediatria" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Pediatría</a></li>
                         <li><a href="/fonoaudiologia" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors">Fonoaudiología</a></li>
                         <li><a href="/terapia-ocupacional" class="text-sm font-semibold text-slate-500 hover:text-primary-600 transition-colors font-bold">Terapia Ocupacional</a></li>
@@ -621,7 +665,7 @@ Autor: Antigravity (AI Assistant)
                             <a href="mailto:centrovalu@gmail.com" class="text-sm font-bold text-slate-700 hover:text-primary-600 transition-colors contact-priority-bold">centrovalu@gmail.com</a>
                         </li>
                         <li class="pt-4">
-                            <a href="/formulario-contacto" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar ahora</a>
+                            <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=web" data-agenda-contact-link="true" class="inline-block bg-primary-600 text-white text-[10px] font-bold px-6 py-3 rounded-xl hover:bg-primary-700 transition-all uppercase tracking-widest">Contactar ahora</a>
                         </li>
                     </ul>
                 </div>
@@ -693,18 +737,19 @@ Autor: Antigravity (AI Assistant)
         });
     </script>
     <script src="assets/js/drawer-logic.js"></script>
-    </script>
 
     <!-- SWIPER JS Y LÓGICA VISUAL -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const initVisualComponents = () => {
             try {
+                const slides = document.querySelectorAll('.proSwiper .swiper-slide');
+                const shouldLoop = slides.length > 1;
                 new Swiper('.proSwiper', {
                     slidesPerView: 1,
                     spaceBetween: 30,
-                    loop: true,
-                    autoplay: { delay: 3000, disableOnInteraction: false },
+                    loop: shouldLoop,
+                    autoplay: shouldLoop ? { delay: 3000, disableOnInteraction: false } : false,
                     pagination: { el: '.swiper-pagination', clickable: true },
                     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
                     breakpoints: { 640: { slidesPerView: 1 }, 1024: { slidesPerView: 1 } }
@@ -720,4 +765,17 @@ Autor: Antigravity (AI Assistant)
     <script src="assets/js/search-logic.js"></script>
     <script src="assets/js/tracking-logic.js"></script>
 </body>
+<script>
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  var keys = ['utm_source','utm_medium','utm_campaign','utm_content','gclid','wbraid','gbraid','fbclid'];
+  document.querySelectorAll('a[data-agenda-contact-link="true"]').forEach(function(a){
+    try {
+      var target = new URL(a.href);
+      keys.forEach(function(k){ if (p.get(k)) target.searchParams.set(k, p.get(k)); });
+      a.href = target.toString();
+    } catch(e){}
+  });
+})();
+</script>
 </html>
