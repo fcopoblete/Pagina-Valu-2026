@@ -1,7 +1,7 @@
 <!--
 Archivo: gimnasio-terapeutico.html
 Descripción: Subpágina dedicada al Gimnasio Terapéutico y de Estimulación Temprana (niños de hasta 4 años) en la nueva sucursal Gil de Castro 122, Coquimbo.
-Fecha de última modificación: 2026-11-18
+Fecha de última modificación: 2026-11-26
 Nombre del autor: Antigravity (AI Assistant)
 -->
 <!DOCTYPE html>
@@ -681,7 +681,7 @@ Nombre del autor: Antigravity (AI Assistant)
                             </p>
                         </div>
                     </div>
-                    <a href="/formulario-contacto?servicio=gimnasio" class="bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-primary-600 transition-colors whitespace-nowrap">
+                    <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=gimnasio-terapeutico&utm_source=web" data-agenda-contact-link="true" class="bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-primary-600 transition-colors whitespace-nowrap">
                         Consultar Modalidades
                     </a>
                 </div>
@@ -712,25 +712,6 @@ Nombre del autor: Antigravity (AI Assistant)
                             <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-3">Kinesióloga · Desarrollo Motor</p>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
                                 Especialista en neurokinesiología pediátrica, control postural, estimulación temprana y rehabilitación infantil centrada en la familia.
-                            </p>
-                            <button class="open-pro-drawer w-full bg-slate-900 text-white text-xs font-bold py-3.5 px-6 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
-                                Ver Perfil Completo
-                            </button>
-                        </div>
-
-                        <!-- TARJETA: Claudia Salgado -->
-                        <div id="claudia-salgado"
-                            class="pro-card group bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 flex flex-col"
-                            data-pro-id="claudia-salgado">
-                            <div class="relative mb-6 aspect-square rounded-[2rem] overflow-hidden flex items-center justify-center bg-brand-rosa/20 group-hover:bg-brand-rosa/10 transition-colors">
-                                <img src="assets/img/team/claudia-salgado.webp?v=202611" alt="Terapeuta Ocupacional Claudia Salgado - Centro Valú"
-                                    width="400" height="400" loading="lazy"
-                                    class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <h4 class="font-display text-xl font-bold text-slate-900">Claudia Salgado</h4>
-                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-3">Terapeuta Ocupacional · Desarrollo Sensorial</p>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
-                                Especialista en integración sensorial, autorregulación, motricidad fina y desarrollo del juego en la primera infancia.
                             </p>
                             <button class="open-pro-drawer w-full bg-slate-900 text-white text-xs font-bold py-3.5 px-6 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
                                 Ver Perfil Completo
@@ -1132,7 +1113,7 @@ Nombre del autor: Antigravity (AI Assistant)
                            class="bg-primary-500 hover:bg-primary-400 text-slate-950 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all shadow-md text-center">
                             Coordinar Visita WhatsApp
                         </a>
-                        <a href="/formulario-contacto?servicio=gimnasio" 
+                        <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=gimnasio-terapeutico&utm_source=web" data-agenda-contact-link="true" 
                            class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all text-center">
                             Formulario de Admisión
                         </a>
@@ -1160,7 +1141,7 @@ Nombre del autor: Antigravity (AI Assistant)
             </div>
 
             <div class="p-8 border-t border-slate-100 bg-slate-50/50">
-                <a href="/formulario-contacto?servicio=gimnasio" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
+                <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=gimnasio-terapeutico&utm_source=web" data-agenda-contact-link="true" class="flex items-center justify-center gap-3 w-full bg-primary-600 text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary-600/30 hover:scale-[1.02] transition-all">
                     CONTACTAR GIMNASIO
                 </a>
             </div>
@@ -1324,4 +1305,17 @@ Nombre del autor: Antigravity (AI Assistant)
     <script src="assets/js/drawer-logic.js"></script>
     <script src="assets/js/tracking-logic.js"></script>
 </body>
+<script>
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  var keys = ['utm_source','utm_medium','utm_campaign','utm_content','gclid','wbraid','gbraid','fbclid'];
+  document.querySelectorAll('a[data-agenda-contact-link="true"]').forEach(function(a){
+    try {
+      var target = new URL(a.href);
+      keys.forEach(function(k){ if (p.get(k)) target.searchParams.set(k, p.get(k)); });
+      a.href = target.toString();
+    } catch(e){}
+  });
+})();
+</script>
 </html>

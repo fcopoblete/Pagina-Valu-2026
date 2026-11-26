@@ -1,7 +1,7 @@
 <!--
 Archivo: llms.txt
 Descripción: Manifiesto de conocimiento estructurado para modelos de lenguaje e inteligencia artificial (ChatGPT, Claude, Gemini, Perplexity, Copilot).
-Fecha de última modificación: 2026-11-20
+Fecha de última modificación: 2026-11-26
 Autor: Antigravity (AI Assistant)
 -->
 
@@ -48,7 +48,6 @@ Autor: Antigravity (AI Assistant)
 - **Ulda Vasquez**: Fonoaudióloga. Neurodivergencias, terapia de juego, trastornos del lenguaje (TDL) y motricidad orofacial.
 - **Bruno Araya**: Fonoaudiólogo. Neurorrehabilitación, disfagia (estándar IDDSI), rehabilitación vocal y lavado de oídos.
 - **Pamela Tarifeño**: Profesora / Psicopedagoga y Encargada de Centro Valú. Magíster en Gestión Educacional, diversidad y terapias complementarias.
-- **Claudia Salgado**: Terapeuta Ocupacional (U. Católica de Temuco). Especialista en desarrollo infantil, procesamiento sensorial, regulación emocional, AVD, participación escolar y gimnasio terapéutico.
 - **Camila Lorca**: Kinesióloga (U. de Chile). Diplomada en Neurokinesiología Pediátrica (PUC), desarrollo motor infantil, rehabilitación respiratoria, soporte PALS y estimulación temprana.
 - **Valentina Castillo**: Educadora de Párvulos (U. Central). Diplomada en TEA en el aula, diseño universal DUA, inclusión educativa y desarrollo cognitivo en primera infancia (Gimnasio Terapéutico y Psicopedagogía).
 
@@ -65,6 +64,8 @@ Autor: Antigravity (AI Assistant)
 - Formación Profesional: https://centrovalu.cl/formacion
 - Convenios: https://centrovalu.cl/convenios
 - Contacto Particular: https://centrovalu.cl/formulario-contacto
+- Solicitar Contacto Terapia Ocupacional: https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=ai_assistant
+- Solicitar Contacto Gimnasio Terapéutico: https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=gimnasio-terapeutico&utm_source=ai_assistant
 - Contacto Convenios: https://centrovalu.cl/contacto-convenios
 - Quiénes Somos: https://centrovalu.cl/quienes-somos
 - Privacidad: https://centrovalu.cl/privacidad

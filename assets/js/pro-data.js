@@ -1,7 +1,7 @@
 /**
  * Archivo: assets/js/pro-data.js
  * Descripción: Base de datos centralizada de profesionales de Centro Valu.
- * Fecha de última modificación: 2026-11-20
+ * Fecha de última modificación: 2026-11-26
  * Autor: Antigravity (AI Assistant)
  */
 
@@ -34,20 +34,6 @@ window.proDataExtended = {
             "Acreditación en Diagnóstico Clínico ADOS-2 (SELCAP), PALS y Soporte Asistencial IAAS."
         ],
         descripcion: "Kinesióloga dedicada a la rehabilitación infantil y el desarrollo motor en contextos clínicos y domiciliarios. Desde un enfoque interdisciplinario y centrado en la familia, promueve el control postural, la motricidad y la calidad de vida en niñ@s y adultos."
-    },
-    "claudia-salgado": {
-        nombre: "Claudia Salgado",
-        cargo: "Terapeuta Ocupacional",
-        img: "assets/img/team/claudia-salgado.webp?v=202611",
-        bg: "bg-brand-rosa/20",
-        especialidad: "Terapia Ocupacional",
-        formacion: [
-            "Terapeuta Ocupacional y Licenciada en Ciencias de la Ocupación – Universidad Católica de Temuco.",
-            "Diplomada en Atención Temprana y Neurodivergencia.",
-            "Formación en Procesamiento Sensorial, Regulación Emocional y Derechos de NNA.",
-            "Especialización en Habilidades Motoras, AVD y Participación Escolar."
-        ],
-        descripcion: "Terapeuta Ocupacional dedicada a favorecer el desempeño ocupacional, la autonomía y la regulación emocional en niñ@s y adolescentes. Su abordaje integra el procesamiento sensorial, el juego y las rutinas cotidianas en el hogar y la escuela."
     },
     "valentina-jimenez": {
         nombre: "Valentina Jiménez",

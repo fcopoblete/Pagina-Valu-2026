@@ -1,7 +1,7 @@
 <!--
 Archivo: terapia-ocupacional.html
 Descripción: Información sobre el servicio de Terapia Ocupacional en Centro Valu (Atención exclusiva en Sede Gil de Castro).
-Fecha de última modificación: 2026-11-23
+Fecha de última modificación: 2026-11-26
 Autor: Antigravity (AI Assistant)
 -->
 <!DOCTYPE html>
@@ -562,51 +562,11 @@ Autor: Antigravity (AI Assistant)
                 <h3 class="font-display text-2xl font-bold text-slate-900 mb-4">Herramientas para la Vida</h3>
                 <p class="text-slate-800 text-lg">Trabajamos estrechamente con la familia y el entorno escolar para generalizar los aprendizajes y asegurar un impacto positivo duradero en la vida del usuario.</p>
                 <div class="mt-8">
-                    <a href="/formulario-contacto?especialidad=terapia-ocupacional"
+                    <a href="https://www.irusalud.cl/contacto/c_ctB8uEei?servicio=terapia-ocupacional&utm_source=web" data-agenda-contact-link="true"
                         class="inline-flex bg-primary-600 text-white px-10 py-5 rounded-2xl font-bold hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/20 transition-all uppercase tracking-widest text-sm">
                         RESERVA TU HORA
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFESIONALES RELACIONADOS: CARRUSEL SWIPER -->
-    <section id="equipo" class="py-24 bg-slate-50 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-display text-4xl font-bold text-slate-900 mb-16 text-center">Nuestro Especialista</h2>
-
-            <div class="swiper proSwiper pb-12">
-                <div class="swiper-wrapper">
-                    <!-- PROFESIONAL: Claudia Salgado -->
-                    <div class="swiper-slide h-auto max-w-sm mx-auto">
-                        <div id="claudia-salgado"
-                            class="pro-card group bg-white p-8 rounded-[2rem] border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300 h-full flex flex-col"
-                            data-pro-id="claudia-salgado">
-                            <div
-                                class="relative mb-6 aspect-square rounded-[1.5rem] overflow-hidden bg-brand-rosa/20 text-brand-rosa flex items-center justify-center">
-                                <img src="assets/img/team/claudia-salgado.webp?v=202611" alt="Claudia Salgado - Terapeuta Ocupacional en Centro Valu Coquimbo"
-                                    width="200" height="200" loading="lazy"
-                                    class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <h3 class="font-bold text-xl text-slate-900">Claudia Salgado</h3>
-                            <p class="text-primary-600 font-bold text-xs uppercase tracking-wider mb-2">Terapeuta Ocupacional</p>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">Acompañamiento en desarrollo infantil, necesidades sensoriales y emocionales, autonomía en AVD y desempeño escolar.</p>
-                            <div class="mt-auto">
-                                <button class="open-pro-drawer w-full bg-slate-900 text-white text-[10px] font-bold py-3 px-4 rounded-xl hover:bg-primary-600 transition-all uppercase tracking-widest">
-                                    Ver Perfil
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="mt-8 text-center">
-                <a href="/profesionales"
-                    class="inline-flex items-center text-primary-600 font-bold hover:gap-2 transition-all">Ver todo el
-                    equipo <span class="ml-2">→</span></a>
             </div>
         </div>
     </section>
@@ -805,4 +765,17 @@ Autor: Antigravity (AI Assistant)
     <script src="assets/js/search-logic.js"></script>
     <script src="assets/js/tracking-logic.js"></script>
 </body>
+<script>
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  var keys = ['utm_source','utm_medium','utm_campaign','utm_content','gclid','wbraid','gbraid','fbclid'];
+  document.querySelectorAll('a[data-agenda-contact-link="true"]').forEach(function(a){
+    try {
+      var target = new URL(a.href);
+      keys.forEach(function(k){ if (p.get(k)) target.searchParams.set(k, p.get(k)); });
+      a.href = target.toString();
+    } catch(e){}
+  });
+})();
+</script>
 </html>
